@@ -1,0 +1,489 @@
+<?xml version="1.0"?>
+<ArrayOfTechnologyModuleConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--  科技模块配置说明
+Description of Technology Module Configuration
+TechnologyModuleConfig  包含一个科技模块
+A technology module is contained
+ID int 科技模块ID，唯一，与HardTechnology中的模块ID对应
+The technology module ID is unique and corresponds to the module ID in HardTechnology
+Name string 科技模块的名字
+The Name of the Technology Module
+IndustryType  int 对应枚举中的科技类型枚举
+The technology type in the corresponding enumeration
+Icon int 科技模块图标文件名
+The File Name of Technology Module Icon
+Idx int 与IndustryType保持一致
+Consistent with IndustryType
+RowCount  int 该科技模块页面一共有多少行
+How many lines in total are there on this technology module page
+ClomnCount  int 该科技模块页面一共有多少列
+How many columns in total are there on this technology module page
+TechIdList   该科技模块包含的科技ID列表
+List of Technology IDs Included in this Tech Module
+TechId  int 模块中包含的全部科技的Id，无顺序要求
+IDs of all technology included in the module in no particular order
+ShowWin bool 该模块是否在界面中展示
+Is the module displayed in the interface
+  科技类型枚举
+Technology Type Enumeration
+IndustryType_Trade=  1;  // 贸易
+// Trade
+IndustryType_Education=  2;  // 教育
+// Education
+IndustryType_Mine=  3;  // 矿物
+// Minerals
+IndustryType_Build=  4;  // 建造
+// Construction
+IndustryType_Farming=  5;  // 农业
+// Agriculture
+IndustryType_Processing=  6;  // 加工业
+// Processing Industry
+IndustryType_Express=  7;  // 物流
+// Logistics
+IndustryType_Home=  8;  // 宜居
+// Good for living
+IndustryType_Moai=  9;  // 复活节岛专属
+// Exclusively for the Easter Island
+
+-->  
+
+
+
+  <TechnologyModuleConfig>
+    <ID>8</ID>
+    <Name>TechnologyModule_Name_8</Name>
+	<!--工业类型宜居-->
+	<IndustryType>8</IndustryType>
+	<!--模块图标-->
+	<Icon>btn_icon3</Icon>
+    <!--模块ID-->
+    <Idx>8</Idx>
+    <!--行-->
+    <RowCount>6</RowCount>
+    <!--列-->
+    <ClomnCount>5</ClomnCount>
+    <!--包含科技-->
+    <TechIdList>
+      <TechId>3701</TechId>
+      <TechId>3702</TechId>
+      <TechId>3805</TechId>
+      <TechId>3803</TechId>
+      
+	  <TechId>3704</TechId>
+      <TechId>3709</TechId>
+      <TechId>3706</TechId>
+      <TechId>3707</TechId>
+
+      <TechId>1402</TechId>
+      <TechId>3705</TechId>
+      <TechId>3703</TechId>
+      
+      <TechId>2201</TechId>
+      <TechId>2205</TechId>
+      <TechId>2207</TechId>
+      <TechId>2106</TechId>
+      
+      <TechId>2107</TechId>
+	  <!--隐藏供暖-->
+      <TechId>2108</TechId>
+	  <TechId>2109</TechId>
+    </TechIdList>
+  </TechnologyModuleConfig>  
+  
+  <TechnologyModuleConfig>
+    <ID>2</ID>
+    <Name>TechnologyModule_Name_2</Name>
+	<!--工业类型教育-->
+	<IndustryType>2</IndustryType>
+	<!--模块图标-->
+	<Icon>btn_icon5</Icon>
+    <!--模块ID-->
+    <Idx>2</Idx>
+    <!--行-->
+    <RowCount>6</RowCount>
+    <!--列-->
+    <ClomnCount>5</ClomnCount>
+    <!--包含科技-->
+    <TechIdList>
+      <TechId>3101</TechId>
+      <TechId>3203</TechId>
+      <TechId>3205</TechId>
+      <TechId>3207</TechId>
+      <TechId>3105</TechId>
+      <TechId>3303</TechId>
+      <TechId>3305</TechId>
+      <TechId>3307</TechId>
+      <TechId>3106</TechId>
+      <TechId>3107</TechId>
+    </TechIdList>
+  </TechnologyModuleConfig>
+  
+  <TechnologyModuleConfig>
+    <ID>1</ID>
+    <Name>TechnologyModule_Name_1</Name>
+	<!--工业类型贸易-->
+	<IndustryType>1</IndustryType>
+	<!--模块图标-->
+	<Icon>btn_icon8</Icon>
+    <!--模块ID-->
+    <Idx>1</Idx>
+    <!--行-->
+    <RowCount>6</RowCount>
+    <!--列-->
+    <ClomnCount>5</ClomnCount>
+    <!--包含科技-->
+    <TechIdList>
+	  <TechId>1</TechId>
+	  <TechId>2</TechId>
+	  <TechId>3</TechId>
+	  <TechId>4</TechId>
+	  <TechId>5</TechId>
+	  <TechId>6</TechId>
+	  <TechId>7</TechId>
+	  <TechId>8</TechId>
+	  <TechId>9</TechId>
+      <TechId>10</TechId>
+      <TechId>11</TechId>
+	  <TechId>4605</TechId>
+	  <TechId>4705</TechId>
+      <TechId>2704</TechId>
+      <TechId>4608</TechId>
+      <TechId>1607</TechId>
+    </TechIdList>
+  </TechnologyModuleConfig>
+  
+  
+   <TechnologyModuleConfig>
+    <ID>3</ID>
+    <Name>TechnologyModule_Name_3</Name>
+	<!--工业类型矿物-->
+	<IndustryType>3</IndustryType>
+	<!--模块图标-->
+	<Icon>btn_icon7</Icon>
+    <!--模块ID-->
+    <Idx>3</Idx>
+    <!--行-->
+    <RowCount>6</RowCount>
+    <!--列-->
+    <ClomnCount>5</ClomnCount>
+    <!--包含科技-->
+    <TechIdList>
+      <TechId>2501</TechId>
+      <TechId>2505</TechId>
+      <TechId>2507</TechId>
+
+      <TechId>2606</TechId>
+      <TechId>2607</TechId>
+      <TechId>2608</TechId>
+
+      <TechId>2802</TechId>
+      <TechId>2806</TechId>
+      <TechId>2807</TechId>
+      <TechId>2808</TechId>
+
+      <TechId>2502</TechId>
+      <TechId>2503</TechId>
+      <TechId>2604</TechId>
+	  <TechId>2409</TechId>
+      
+      <TechId>2703</TechId>
+      <TechId>2504</TechId>
+      <TechId>2701</TechId>
+      <TechId>2702</TechId>
+	 <!--隐藏挖凿
+      <TechId>2702</TechId>-->
+    </TechIdList>
+  </TechnologyModuleConfig>
+  
+   <TechnologyModuleConfig>
+    <ID>4</ID>
+    <Name>TechnologyModule_Name_4</Name>
+	<!--工业类型建造-->
+	<IndustryType>4</IndustryType>
+	<!--模块图标-->
+	<Icon>btn_icon4</Icon>
+    <!--模块ID-->
+    <Idx>4</Idx>
+    <!--行-->
+    <RowCount>6</RowCount>
+    <!--列-->
+    <ClomnCount>5</ClomnCount>
+    <!--包含科技-->
+    <TechIdList>
+      <TechId>2304</TechId>
+      <TechId>2306</TechId>
+      <TechId>2307</TechId>
+	  <TechId>2308</TechId>
+
+      <TechId>2402</TechId>
+      <TechId>2403</TechId>
+      <TechId>1804</TechId>
+      <TechId>2404</TechId>
+      
+      <TechId>2407</TechId>
+      <TechId>2408</TechId>
+      <TechId>2410</TechId>
+
+      <TechId>2804</TechId>
+      <TechId>4801</TechId>
+      <TechId>4804</TechId>
+      <TechId>4805</TechId>
+    </TechIdList>
+  </TechnologyModuleConfig>
+
+   <TechnologyModuleConfig>
+    <ID>5</ID>
+    <Name>TechnologyModule_Name_5</Name>
+	<!--工业类型农业-->
+	<IndustryType>5</IndustryType>
+	<!--模块图标-->
+	<Icon>btn_icon1</Icon>
+    <!--模块ID-->
+    <Idx>5</Idx>
+    <!--行-->
+    <RowCount>6</RowCount>
+    <!--列-->
+    <ClomnCount>5</ClomnCount>
+    <!--包含科技-->
+    <TechIdList>
+      <TechId>3602</TechId>
+      <TechId>3603</TechId>
+      <TechId>3504</TechId>
+      <TechId>3605</TechId>
+      
+      <TechId>3402</TechId>
+      <TechId>3403</TechId>
+      <TechId>3401</TechId>
+      <TechId>3406</TechId>
+
+      <TechId>3502</TechId>
+      <TechId>3503</TechId>
+      <TechId>1201</TechId>
+      <TechId>3506</TechId>
+
+      <TechId>1301</TechId>
+      <TechId>3404</TechId>
+      <TechId>3801</TechId>
+      <TechId>3405</TechId>
+
+      <TechId>3802</TechId>
+    </TechIdList>
+  </TechnologyModuleConfig>  
+  
+   <TechnologyModuleConfig>
+    <ID>6</ID>
+    <Name>TechnologyModule_Name_6</Name>
+	<!--工业类型加工-->
+	<IndustryType>6</IndustryType>
+	<!--模块图标-->
+	<Icon>btn_icon2</Icon>
+    <!--模块ID-->
+    <Idx>6</Idx>
+    <!--行-->
+    <RowCount>6</RowCount>
+    <!--列-->
+    <ClomnCount>5</ClomnCount>
+    <!--包含科技-->
+    <TechIdList>
+      <TechId>1203</TechId>
+      <TechId>1504</TechId>
+      <TechId>1505</TechId>
+
+      <TechId>1103</TechId>
+      <TechId>1104</TechId>
+      <TechId>1105</TechId>
+      
+      <TechId>1503</TechId>
+      <TechId>1303</TechId>
+      <TechId>1304</TechId>
+
+      <TechId>1702</TechId>
+      <TechId>1805</TechId>
+      <TechId>1807</TechId>
+
+      <TechId>1603</TechId>
+      <TechId>1606</TechId>
+      <TechId>1605</TechId>
+    </TechIdList>
+  </TechnologyModuleConfig>  
+  
+  
+ <TechnologyModuleConfig>
+    <ID>7</ID>
+    <Name>TechnologyModule_Name_7</Name>
+	<!--工业类型物流-->
+	<IndustryType>7</IndustryType>
+	<!--模块图标-->
+	<Icon>btn_icon6</Icon>
+    <!--模块ID-->
+    <Idx>7</Idx>
+    <!--行-->
+    <RowCount>6</RowCount>
+    <!--列-->
+    <ClomnCount>5</ClomnCount>
+    <!--包含科技-->
+    <TechIdList>
+      <TechId>4202</TechId>
+      <TechId>4205</TechId>
+      <TechId>4105</TechId>
+      <TechId>4107</TechId>
+
+	  <TechId>4304</TechId>
+	  <TechId>4305</TechId>
+      <TechId>4306</TechId>
+      
+      <TechId>4401</TechId>
+      <TechId>4403</TechId>
+      <TechId>4404</TechId>
+      <TechId>4405</TechId>
+      <TechId>4406</TechId>
+      
+      <TechId>4503</TechId>
+      <TechId>4505</TechId>
+      <TechId>4504</TechId>
+    </TechIdList>
+  </TechnologyModuleConfig>  
+
+
+
+ 
+  
+  
+    <TechnologyModuleConfig>
+    <ID>9</ID>
+    <Name>TechnologyModule_Name_9</Name>
+	<!--复活节岛专用模块-->
+	<IndustryType>9</IndustryType>
+	<!--是否在科技界面展示-->
+	<ShowWin>false</ShowWin>
+	<!--包含科技-->
+    <TechIdList>
+      <TechId>100001</TechId>
+	  <TechId>100002</TechId>
+	  <TechId>100003</TechId>
+	  <TechId>100004</TechId>
+    </TechIdList>
+	<!--专用模块以下配置不需要-->
+	<Icon>btn_icon8</Icon>
+    <Idx>9</Idx>
+    <RowCount>6</RowCount>
+    <ClomnCount>5</ClomnCount>
+  </TechnologyModuleConfig>
+  
+  
+   <TechnologyModuleConfig>
+    <ID>10</ID>
+    <Name>TechnologyModule_Name_10</Name>
+	<!--势力专用模块-->
+	<IndustryType>10</IndustryType>
+	<!--是否在科技界面展示-->
+	<ShowWin>false</ShowWin>
+	<!--包含科技-->
+    <TechIdList>
+      <TechId>20001</TechId>
+	  <TechId>20002</TechId>
+	  <TechId>20003</TechId>
+	  <TechId>20004</TechId>
+	  <TechId>20005</TechId>
+	  <TechId>20006</TechId>
+	  <TechId>20007</TechId>
+	  <TechId>20008</TechId>
+	  <TechId>20009</TechId>
+	  <TechId>20010</TechId>
+	  <TechId>20011</TechId>  
+    </TechIdList>
+	<!--专用模块以下配置不需要-->
+	<Icon>btn_icon8</Icon>
+    <Idx>10</Idx>
+    <RowCount>6</RowCount>
+    <ClomnCount>5</ClomnCount>
+  </TechnologyModuleConfig>
+  
+   <TechnologyModuleConfig>
+    <ID>11</ID>
+    <Name>TechnologyModule_Name_11</Name>
+	<!--势力专用模块-->
+	<IndustryType>11</IndustryType>
+	<!--是否在科技界面展示-->
+	<ShowWin>false</ShowWin>
+	<!--包含科技-->
+    <TechIdList>
+      <TechId>30001</TechId>
+	  <TechId>30002</TechId>
+	  <TechId>30003</TechId>
+	  <TechId>30004</TechId>
+	  <TechId>30005</TechId>
+	  <TechId>30006</TechId>
+	  <TechId>30007</TechId>
+	  <TechId>30008</TechId>
+	  <TechId>30009</TechId>
+	  <TechId>30010</TechId>
+	  <TechId>30011</TechId>  
+    </TechIdList>
+	<!--专用模块以下配置不需要-->
+	<Icon>btn_icon8</Icon>
+    <Idx>11</Idx>
+    <RowCount>6</RowCount>
+    <ClomnCount>5</ClomnCount>
+  </TechnologyModuleConfig>
+  
+  <TechnologyModuleConfig>
+    <ID>12</ID>
+    <Name>TechnologyModule_Name_12</Name>
+	<!--势力专用模块-->
+	<IndustryType>12</IndustryType>
+	<!--是否在科技界面展示-->
+	<ShowWin>false</ShowWin>
+	<!--包含科技-->
+    <TechIdList>
+      <TechId>40001</TechId>
+	  <TechId>40002</TechId>
+	  <TechId>40003</TechId>
+	  <TechId>40004</TechId>
+	  <TechId>40005</TechId>
+	  <TechId>40006</TechId>
+	  <TechId>40007</TechId>
+	  <TechId>40008</TechId>
+	  <TechId>40009</TechId>
+	  <TechId>40010</TechId>
+    </TechIdList>
+	<!--专用模块以下配置不需要-->
+	<Icon>btn_icon8</Icon>
+    <Idx>12</Idx>
+    <RowCount>6</RowCount>
+    <ClomnCount>5</ClomnCount>
+  </TechnologyModuleConfig>
+
+<TechnologyModuleConfig>
+    <ID>13</ID>
+    <Name>TechnologyModule_Name_13</Name>
+	<!--势力专用模块-->
+	<IndustryType>13</IndustryType>
+	<!--是否在科技界面展示-->
+	<ShowWin>false</ShowWin>
+	<!--包含科技-->
+    <TechIdList>
+      <TechId>50001</TechId>
+	  <TechId>50002</TechId>
+	  <TechId>50003</TechId>
+	  <TechId>50004</TechId>
+	  <TechId>50005</TechId>
+	  <TechId>50006</TechId>
+	  <TechId>50007</TechId>
+	  <TechId>50008</TechId>
+	  <TechId>50009</TechId>
+	  <TechId>50010</TechId>
+	  <TechId>50011</TechId>
+    </TechIdList>
+	<!--专用模块以下配置不需要-->
+	<Icon>btn_icon8</Icon>
+    <Idx>13</Idx>
+    <RowCount>6</RowCount>
+    <ClomnCount>5</ClomnCount>
+  </TechnologyModuleConfig>
+
+
+
+
+</ArrayOfTechnologyModuleConfig>
+

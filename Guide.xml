@@ -1,0 +1,543 @@
+<?xml version="1.0"?>
+<ArrayOfGuideConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <!--   引导信息配置说明：  Description of Guide Information Configuration:
+  字段        类型    说明     
+  ID          int         唯一ID  Unique ID
+  DesTop        string       上部分描述  Description of the first half
+  DesBottom     string       下半部分描述  Description of the second half
+  Icon1       string       中间的图标  Icon in the middle
+  Icon2       string       中间的图标  Icon in the middle
+  GuideType     int        事件类型（对应的枚举类型，查看下方）  Event Type (see the corresponding enumerated type below)
+  ParamList              时间类型参数   （根据上方事件类型改表）  Time Type Parameter (change the list according to the above event type)
+    Param     int        （根据上方事件类型改表）  (Change the lists according to the above event type)
+      引导枚举：  Guide Enumeration:
+    BuildingPrepareList =1,      //    放下多个建筑中的一个     需要参数  建筑id列表  Place one of the multiple buildings     Parameters required  Building ID list
+    DayNight = 2,                  //    夜晚来临                   Night comes                 
+    CitizenState = 3,             //    人物第一次触发此状态    需要参数int  对应人物状态枚举   This status is first triggered by the character Parameters int required Corresponding to character status enumeration 
+     人物状态枚举：  Character status enumeration:
+  hunger = 0,          //   饥饿  Hunger
+    thirsty = 1,          //   口渴  Thirst
+    cold = 2,          //   寒冷  Cold
+    tired = 3,          //   疲劳  Fatigue
+    homeless = 4,       //   无家可归  Homeless
+    illness = 5,       //   瘟疫           左侧警示显示  Plague           Warning on the left side
+    noTool = 6,       //   没有工具  No tools
+    noBuilding = 7,       //   工人没有工作场所  Workers do not have a workplace
+    getDevelopPoint = 8, //    获得了新的发展点  New development point obtained
+    animal = 9,       //   动物  Animals
+    seed = 10,       //   种子  Seeds
+    boat = 11,       //   商船  Merchant ships
+    recruit = 12,       //   流民  Immigration
+    harvest = 13,       //   秋收  Fall harvest
+    ripe = 14,        //   成年  Adultjianzhu
+    buyBoat = 15,      //    订购船  Order ship
+    noFixer = 16,      //    未安排修理工  No mechanics arranged
+    noHerb = 17,      //    药草库存不足  Insufficient medicinal herbs in stock
+    noWood = 18,      //    木材库存不足  Insufficient lumber in stock
+    noStone = 19,      //    石头库存不足  Insufficient stone in stock
+    noFuel = 20,      //    燃料库存不足  Insufficient fuel in stock
+    mayorExpire = 21, //    市长持续时间到期  Mayor's term has expired
+    noClothes = 22,       //   没有衣服  No clothes
+    warehourseFull = 23,   //   仓库已满  Warehouse is full
+    illnessA = 24,       //   疾病  A      左侧警示显示  Disease A       Warning on the left side
+    illnessB = 25,       //   疾病  B      状态图标显示  Disease B      Status Icon
+    illnessC = 26,       //   疾病  C      状态图标显示  Disease C      Status Icon
+    noLaborer = 27,       //   缺少闲工  Lack of idle workers
+    liaoduiFull = 28,       //   料堆已满  The pile is full
+    Disaster_Tornado = 29,       //    龙卷风 灾难在线警告  Tornado Disaster Online Warning
+    Disaster_Snow = 30,       //    暴风雪 灾难在线警告  Blizzard Disaster Online Warning
+    murderer = 31,       //    有人是杀人犯  Someone is a murderer
+    illnessD = 33,       //   瘟疫  D      状态图标显示  Plague  D      Status Icon
+    illnessE = 34,       //   瘟疫  E      状态图标显示  Plague  E      Status Icon
+    illnessF = 35,       //   瘟疫  F      状态图标显示  Plague  F      Status Icon
+    illnessG = 36,       //   瘟疫  G      状态图标显示  Plague  G      Status Icon
+
+     实例：  Instance:
+     见下方  See below
+-->   
+
+  
+  
+  <GuideConfig>
+    <!--夜晚-->
+    <ID>1</ID>
+    <DesTop>DesTop_1</DesTop>
+    <DesBottom>DesBottom_1</DesBottom>
+    <Icon1>30</Icon1>
+    <GuideType>2</GuideType>
+  </GuideConfig>
+
+  <!--<GuideConfig>
+    大水井
+    <ID>2</ID>
+    <DesTop>DesTop_2</DesTop>
+    <DesBottom>DesBottom_2</DesBottom>
+    <Icon1>31</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>2035</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+   <!--<GuideConfig>
+   农田
+    <ID>3</ID>
+    <DesTop>DesTop_3</DesTop>
+    <DesBottom>DesBottom_3</DesBottom>
+    <Icon2>32</Icon2>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>2002</Param>
+      <Param>2014</Param>
+      <Param>2021</Param>
+      <Param>2022</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+   <!--<GuideConfig>
+    果林
+    <ID>4</ID>
+    <DesTop>DesTop_4</DesTop>
+    <DesBottom>DesBottom_4</DesBottom>
+    <Icon1>33</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>2015</Param>
+      <Param>2003</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+    <!-- <GuideConfig>
+    钓鱼小屋
+    <ID>5</ID>
+    <DesTop>DesTop_5</DesTop>
+    <DesBottom>DesBottom_5</DesBottom>
+    <Icon1>41</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>2016</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+    <GuideConfig>
+    <!-- 狩猎小屋-->
+    <ID>6</ID>
+    <DesTop>DesTop_6</DesTop>
+    <DesBottom>DesBottom_6</DesBottom>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>2006</Param>
+    </ParamList>
+  </GuideConfig>
+
+   <!-- <GuideConfig>
+    劈柴小屋 
+    <ID>7</ID>
+    <DesTop>DesTop_7</DesTop>
+    <DesBottom>DesBottom_7</DesBottom>
+    <Icon1>34</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>3001</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+   <!-- <GuideConfig>
+     铁匠铺
+    <ID>8</ID>
+    <DesTop>DesTop_8</DesTop>
+    <DesBottom>DesBottom_8</DesBottom>
+    <Icon1>35</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>3004</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+   <!-- <GuideConfig>
+    裁缝铺 
+    <ID>9</ID>
+    <DesTop>DesTop_9</DesTop>
+    <DesBottom>DesBottom_9</DesBottom>
+    <Icon1>36</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>3005</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+   <!--  <GuideConfig>
+    学校
+    <ID>10</ID>
+    <DesTop>DesTop_10</DesTop>
+    <DesBottom>DesBottom_10</DesBottom>
+    <Icon1>37</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>4002</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <GuideConfig>
+     <!--采集小屋-->
+    <ID>11</ID>
+    <DesTop>DesTop_11</DesTop>
+    <DesBottom>DesBottom_11</DesBottom>
+    <Icon1>39</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>2007</Param>
+    </ParamList>
+  </GuideConfig>
+
+  <!-- <GuideConfig>
+   药草屋 
+    <ID>12</ID>
+    <DesTop>DesTop_12</DesTop>
+    <DesBottom>DesBottom_12</DesBottom>
+    <Icon1>38</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>3003</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+     护林小屋
+    <ID>13</ID>
+    <DesTop>DesTop_13</DesTop>
+    <DesBottom>DesBottom_13</DesBottom>
+    <Icon1>40</Icon1>
+     <GuideType>1</GuideType>
+    <ParamList>
+      <Param>3002</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+     杂货店
+    <ID>14</ID>
+    <DesTop>DesTop_14</DesTop>
+    <DesBottom>DesBottom_14</DesBottom>
+    <Icon1>16</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>4010</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+    酿酒作坊 
+    <ID>15</ID>
+    <DesTop>DesTop_15</DesTop>
+    <DesBottom>DesBottom_15</DesBottom>
+    <Icon1>17</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>3054</Param>
+     </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+    市政厅 
+    <ID>16</ID>
+    <DesTop>DesTop_16</DesTop>
+    <DesBottom>DesBottom_16</DesBottom>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>4008</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+     教堂
+    <ID>17</ID>
+    <DesTop>DesTop_17</DesTop>
+    <DesBottom>DesBottom_17</DesBottom>
+    <Icon1>19</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>4004</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+     诊所
+    <ID>18</ID>
+    <DesTop>DesTop_18</DesTop>
+    <DesBottom>DesBottom_18</DesBottom>
+    <Icon1>20</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>4012</Param>
+     </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+    墓地 
+    <ID>19</ID>
+    <DesTop>DesTop_19</DesTop>
+    <DesBottom>DesBottom_19</DesBottom>
+    <Icon1>21</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>4003</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+    渡口 
+    <ID>20</ID>
+    <DesTop>DesTop_20</DesTop>
+    <DesBottom>DesBottom_20</DesBottom>
+    <Icon1>22</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>4001</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+     公寓
+    <ID>21</ID>
+    <DesTop>DesTop_21</DesTop>
+    <DesBottom>DesBottom_21</DesBottom>
+    <Icon1>42</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>3</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!-- <GuideConfig>
+    成人学校
+    <ID>22</ID>
+    <DesTop>DesTop_22</DesTop>
+    <DesBottom>DesBottom_22</DesBottom>
+    <Icon1>43</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>4011</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+    寄宿学校 
+    <ID>23</ID>
+    <DesTop>DesTop_23</DesTop>
+    <Icon1>23</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>4015</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+ <!--市集  <GuideConfig>
+     
+    <ID>24</ID>
+    <DesTop>DesTop_24</DesTop>
+    <DesBottom>DesBottom_24</DesBottom>
+    <Icon1>24</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>1007</Param>
+    </ParamList>
+  </GuideConfig> -->
+
+   <!--   <GuideConfig>
+ 矿坑
+    <ID>25</ID>
+    <DesTop>DesTop_25</DesTop>
+    <DesBottom>DesBottom_25</DesBottom>
+    <Icon1>25</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>3007</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+ <!-- <GuideConfig>
+    采石场 
+    <ID>26</ID>
+    <DesTop>DesTop_26</DesTop>
+    <DesBottom>DesBottom_26</DesBottom>
+    <Icon1>26</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>2010</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+    <!--   <GuideConfig>
+ 锯木厂/水上锯木厂
+    <ID>27</ID>
+    <DesTop>DesTop_27</DesTop>
+    <Icon1>27</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>3011</Param>
+      <Param>3012</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!-- <GuideConfig>
+   木屋/双层住宅
+    <ID>28</ID>
+    <DesTop>DesTop_28</DesTop>
+    <DesBottom>DesBottom_28</DesBottom>
+    <Icon1>28</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>1</Param>
+      <Param>2</Param>
+    </ParamList>
+  </GuideConfig>-->
+
+  <!--<GuideConfig>
+    雕刻屋/奢侈品店/陶器坊/银质餐具/珠宝坊 
+    <ID>29</ID>
+    <DesTop>DesTop_29</DesTop>
+    <DesBottom>DesBottom_29</DesBottom>
+    <Icon1>29</Icon1>
+    <GuideType>1</GuideType>
+    <ParamList>
+      <Param>4014</Param>
+      <Param>3055</Param>
+      <Param>3041</Param>
+      <Param>3053</Param>
+    </ParamList>
+  </GuideConfig>-->
+  
+  <GuideConfig>
+    <!--状态：饥饿-->
+    <ID>30</ID>
+    <DesTop>DesTop_30</DesTop>
+    <DesBottom>DesBottom_30</DesBottom>
+    <GuideType>3</GuideType>
+	<ParamList>
+      <Param>0</Param>
+    </ParamList>
+  </GuideConfig>
+  
+  <GuideConfig>
+    <!--状态：口渴-->
+    <ID>31</ID>
+    <DesTop>DesTop_31</DesTop>
+    <DesBottom>DesBottom_31</DesBottom>
+    <Icon1>57</Icon1>
+    <GuideType>3</GuideType>
+	<ParamList>
+      <Param>1</Param>
+    </ParamList>
+  </GuideConfig>
+  
+  <GuideConfig>
+    <!--状态：缺工具-->
+     <ID>32</ID>
+    <DesTop>DesTop_32</DesTop>
+    <DesBottom>DesBottom_32</DesBottom>
+    <Icon1>56</Icon1>
+    <GuideType>3</GuideType>
+	<ParamList>
+      <Param>6</Param>
+    </ParamList>
+  </GuideConfig>
+   
+  <GuideConfig>
+    <!--状态：寒冷-->
+    <ID>33</ID>
+    <DesTop>DesTop_33</DesTop>
+    <DesBottom>DesBottom_33</DesBottom>
+    <Icon1>55</Icon1>
+    <GuideType>3</GuideType>
+	<ParamList>
+      <Param>2</Param>
+    </ParamList>
+  </GuideConfig>
+  
+  <GuideConfig>
+    <!--状态：仓库满-->
+    <ID>34</ID>
+    <DesTop>DesTop_34</DesTop>
+    <DesBottom>DesBottom_34</DesBottom>
+    <Icon1>54</Icon1>
+    <GuideType>3</GuideType>
+	<ParamList>
+      <Param>23</Param>
+    </ParamList>
+  </GuideConfig>  
+
+  <GuideConfig>
+    <!--杀人111-->
+    <ID>35</ID>
+    <DesTop>DesTop_35</DesTop>
+    <DesBottom>DesBottom_35</DesBottom>
+    <GuideType>4</GuideType>
+  </GuideConfig>
+  
+  <GuideConfig>
+    <!--灾难：龙卷风-->
+    <ID>36</ID>
+    <DesTop>DesTop_36</DesTop>
+    <DesBottom>DesBottom_36</DesBottom>
+    <GuideType>5</GuideType>
+	<ParamList>
+      <Param>1</Param>
+    </ParamList>
+  </GuideConfig>
+
+    
+  <GuideConfig>
+    <!--物品类型为0：药品111-->
+    <ID>37</ID>
+    <DesTop>DesTop_37</DesTop>
+    <DesBottom>DesBottom_37</DesBottom>
+    <GuideType>6</GuideType>
+	<ParamList>
+      <Param>21</Param>
+    </ParamList>
+  </GuideConfig>
+
+    
+  <GuideConfig>
+    <!--商船到来，银币100以下1111-->
+    <ID>38</ID>
+    <DesTop>DesTop_38</DesTop>
+    <DesBottom>DesBottom_38</DesBottom>
+    <GuideType>7</GuideType>
+  </GuideConfig>
+  
+  <GuideConfig>
+    <!--职业为0：建筑工 11111111-->
+    <ID>39</ID>
+    <DesTop>DesTop_39</DesTop>
+    <DesBottom>DesBottom_39</DesBottom>
+    <GuideType>8</GuideType>
+	<ParamList>
+      <Param>2</Param>
+    </ParamList>
+  </GuideConfig>
+  
+  <GuideConfig>
+    <!--触发疾病：所有瘟疫-->
+    <ID>40</ID>
+    <DesTop>DesTop_40</DesTop>
+    <DesBottom>DesBottom_40</DesBottom>
+    <GuideType>9</GuideType>
+	<ParamList>
+      <Param>10</Param>
+      <Param>11</Param>
+      <Param>12</Param>
+      <Param>13</Param>
+  </ParamList>
+  </GuideConfig>
+
+  <GuideConfig>
+    <!--没有科技点-->
+    <ID>41</ID>
+    <DesTop>DesTop_41</DesTop>
+    <DesBottom>DesBottom_41</DesBottom>
+    <GuideType>10</GuideType>
+  </GuideConfig>
+
+</ArrayOfGuideConfig>

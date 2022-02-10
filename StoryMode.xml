@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<ArrayOfStoryModeConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--  剧本模块配置说明
+Description of Screenplay Mission Configuration
+  字段				所属类型	 		描述  
+
+ID  int  ID不重复
+No Duplicates for IDs
+Name string 模式的名字
+The Name of the Mode
+HardID int 对应hardmode中的难度ID
+Corresponding to the Difficulty ID in the hardmode
+Map int 对应mapmode中的地图ID（目前只包括固定地图）
+The IDs of the Maps in Mapmode (Only fixed maps)
+Tempertuer int 对应TemperatureChange中的ID，这里比hardmode优先生效
+The IDs in TemperatureChange, taking precedence over hardmode
+IsDisaster bool 是否开启灾难（和stroy 的灾难控制相同）
+Whether to enable the disaster (Same as story's disaster control)
+TreeNum int 树木密度（1 ，2 ，3  稀疏， 适中 ， 稠密）
+Tree Density (1, 2, 3 Low, Medium, High)
+StoneNum int 矿石密度（1 ，2 ，3  稀疏， 适中 ， 稠密）
+Ore Density (1, 2, 3 Low, Medium, High)
+BeginTask int 该难度起始任务
+The initial task on this difficulty
+StoryTaskNum int 剧本任务总数量（任务显示计数用）
+Total Script Task (For task count)
+BanBuildingList  禁用建筑列表
+Disabled Building List
+ BanBuilding int 建筑ID
+Building ID
+BanTechList  禁用科技列表
+Disabled Technology List
+ BanTech int 科技ID
+Technology ID
+FreeTechList  赠送科技列表
+Free Technology List
+ FreeTech int 科技ID
+Technology ID
+buildingDebuffList  可触发buff 的建筑列表
+List of buildings that can trigger buffs
+ buildingDebuff   建筑对应的buff
+The buff corresponding to the building
+ID int 建筑ID
+Building ID
+buffIDList  该建筑对应的buff列表
+List of buffs corresponding to the building
+buffID int 对应的buffID
+Corresponding buff ID
+StartShow  开局弹窗展示的内容（和storytask的结构相同）
+Content in the pop-ups at the start (Same structure as that of storytask)
+Title string 弹窗的标题
+The Title of the Pop-ups
+Content string 弹窗的描述
+Description of Pop-ups
+Icon string 弹窗对应的图片（文件路径固定，不需要对应语言表中的多语言）
+The pop-up pictures (File path is fixed and multiple languages in the corresponding language list are not required)
+Btn1 string 按钮文字
+Button Text
+Des1 string 按钮文字描述
+Button Description
+
+
+	
+	
+	备注：
+	int			整型，只能填整数
+    string		字符串类型，字母或者文字
+	bool		布尔类型，true或者false
+	此配置表中所有string类型的需要对应多语言中的ID
+	
+	
+	实例：
+  <StoryMdeConfig>
+    <ID>101</ID>
+    <Name>StoryMode_Name_1</Name>
+    <HardID>101</HardID>
+	初始任务
+	<BeginTask>1001</BeginTask>
+	剧本任务总数
+	<StoryTaskNum>21</StoryTaskNum>
+    <Map>4</Map>
+    温度选择
+    <Tempertuer>101</Tempertuer>
+    树木密度
+    <TreeNum>2</TreeNum>
+    矿产密度
+    <StoneNum>2</StoneNum>
+    是否开启灾难
+    <IsDisaster>true</IsDisaster>
+    赠送科技列表
+    <FreeTechList>
+      <FreeTech>2201</FreeTech>
+	  <FreeTech>100005</FreeTech>
+    </FreeTechList>
+    禁用建筑列表
+    <BanBuildingList>
+      <BanBuilding>2003</BanBuilding>
+	  <BanBuilding>4004</BanBuilding>
+	  <BanBuilding>3054</BanBuilding>
+    </BanBuildingList>
+	初始赠送buff
+    <FreeBuffList>
+      <FreeBuff>5024</FreeBuff>
+      <FreeBuff>5025</FreeBuff>
+    </FreeBuffList>
+	建筑该难度下触发buff列表
+    <buildingDebuffList>
+	  增加树木成熟时间的建筑
+	  <buildingDebuff>
+        <ID>2002</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+
+    </buildingDebuffList>	
+	
+	 <StartShow> 
+       <Title>StoryMode_Title_2</Title>
+       <Content>StoryMode_Content_2</Content>
+       <Icon>story_1_000</Icon>
+       <Btn1>StoryMode_Btn1_1</Btn1>
+       <Des1>StoryMode_Des1_1</Des1>
+     </StartShow> 
+  </StoryModeConfig>
+	
+	
+  -->
+
+
+ <!--复活节剧本有剧情-->
+  <StoryModeConfig>
+    <ID>101</ID>
+    <Name>StoryMode_Name_1</Name>
+    <HardID>101</HardID>
+	<!--初始任务-->
+	<BeginTask>1001</BeginTask>
+	<!--剧本任务总数-->
+	<StoryTaskNum>21</StoryTaskNum>
+	
+    <Map>4</Map>
+    <!--温度选择-->
+    <Tempertuer>101</Tempertuer>
+    <!--树木密度-->
+    <TreeNum>2</TreeNum>
+    <!--矿产密度-->
+    <StoneNum>2</StoneNum>
+    <!--是否开启灾难-->
+    <IsDisaster>true</IsDisaster>
+    <!--故事模式设置-->
+    <!--赠送科技列表-->
+    <FreeTechList>
+      <FreeTech>2201</FreeTech>
+	  <FreeTech>100005</FreeTech>
+    </FreeTechList>
+    <!--禁用建筑列表-->
+    <BanBuildingList>
+      <BanBuilding>2003</BanBuilding>
+	  <BanBuilding>4004</BanBuilding>
+	  <BanBuilding>3054</BanBuilding>
+    </BanBuildingList>
+	<!--初始赠送buff-->
+    <FreeBuffList>
+      <FreeBuff>5024</FreeBuff>
+      <FreeBuff>5025</FreeBuff>
+	  <!--钓鱼产出减少-->
+	  <FreeBuff>5002</FreeBuff>
+	  <FreeBuff>5003</FreeBuff>
+	  <FreeBuff>5004</FreeBuff>
+	   <!--水井产出减少-->
+	  <FreeBuff>5009</FreeBuff>
+	  <FreeBuff>5010</FreeBuff>
+	  <!--渡口间隔增加-->
+	  <FreeBuff>5020</FreeBuff>
+	  <!--触发瘟疫-->
+	  <FreeBuff>5023</FreeBuff>
+	  <!--控制移民数量-->
+	  <FreeBuff>5006</FreeBuff>
+	  <!--发展点赠送-->
+	  <FreeBuff>5007</FreeBuff>
+	  <!--野外产出-->
+	  <FreeBuff>5011</FreeBuff>
+	  <FreeBuff>5012</FreeBuff>
+	  <FreeBuff>5013</FreeBuff>
+    </FreeBuffList>
+    <!--建筑该难度下触发buff列表-->
+    <buildingDebuffList>
+	  <!--增加树木成熟时间的建筑-->
+	  <buildingDebuff>
+        <ID>2002</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2004</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2014</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2020</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2021</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2022</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2023</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2024</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	   <buildingDebuff>
+        <ID>2025</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2026</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <!--增加树木寿命的建筑-->
+	  <buildingDebuff>
+        <ID>2002</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2004</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2014</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2020</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2021</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2022</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2023</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2024</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	   <buildingDebuff>
+        <ID>2025</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2026</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+    </buildingDebuffList>	
+	
+	 <StartShow> 
+	   <!--开局展示-->
+       <Title>StoryMode_Title_2</Title>
+       <Content>StoryMode_Content_2</Content>
+       <Icon>story_1_000</Icon>
+       <Btn1>StoryMode_Btn1_1</Btn1>
+       <Des1>StoryMode_Des1_1</Des1>
+     </StartShow> 
+
+	
+    <EventList> 
+	  <!--支线任务列表-->
+      <OtherEvent>
+	  </OtherEvent>
+    </EventList>
+  </StoryModeConfig>
+  
+  
+    <!--复活节剧本没有剧情-->
+  <StoryModeConfig>
+    <ID>102</ID>
+    <Name>StoryMode_Name_1</Name>
+    <HardID>102</HardID>
+    <Map>4</Map>
+    <!--温度选择-->
+    <Tempertuer>101</Tempertuer>
+    <!--树木密度-->
+    <TreeNum>2</TreeNum>
+    <!--矿产密度-->
+    <StoneNum>2</StoneNum>
+    <!--是否开启灾难-->
+    <IsDisaster>true</IsDisaster>
+    <!--故事模式设置-->
+    <!--赠送科技列表-->
+    <FreeTechList>
+      <FreeTech>2201</FreeTech>
+	  <FreeTech>100005</FreeTech>
+    </FreeTechList>
+    <!--禁用建筑列表-->
+    <BanBuildingList>
+      <BanBuilding>2003</BanBuilding>
+	  <BanBuilding>4004</BanBuilding>
+	  <BanBuilding>3054</BanBuilding>
+    </BanBuildingList>
+	<!--初始赠送buff-->
+    <FreeBuffList>
+      <FreeBuff>5024</FreeBuff>
+      <FreeBuff>5025</FreeBuff>
+	  <!--钓鱼产出减少-->
+	  <FreeBuff>5002</FreeBuff>
+	  <FreeBuff>5003</FreeBuff>
+	  <FreeBuff>5004</FreeBuff>
+	  <!--水井产出减少-->
+	  <FreeBuff>5009</FreeBuff>
+	  <FreeBuff>5010</FreeBuff>
+	  <!--渡口间隔增加-->
+	  <FreeBuff>5020</FreeBuff>
+	  <!--触发瘟疫-->
+	  <FreeBuff>5023</FreeBuff>
+	  <!--控制移民-->
+	  <FreeBuff>5006</FreeBuff>
+	  <!--发展点赠送-->
+	  <FreeBuff>5007</FreeBuff>
+	  <!--野外产出-->
+	  <FreeBuff>5011</FreeBuff>
+	  <FreeBuff>5012</FreeBuff>
+	  <FreeBuff>5013</FreeBuff>
+    </FreeBuffList>
+    <!--建筑该难度下触发buff列表-->
+    <buildingDebuffList>
+	  <!--增加树木成熟时间的建筑-->
+	  <buildingDebuff>
+        <ID>2002</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2004</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2014</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2020</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2021</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2022</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2023</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2024</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	   <buildingDebuff>
+        <ID>2025</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2026</ID>
+        <buffIDList>
+          <buffID>5005</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <!--增加树木寿命的建筑-->
+	  <buildingDebuff>
+        <ID>2002</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2004</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2014</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2020</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2021</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2022</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2023</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2024</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	   <buildingDebuff>
+        <ID>2025</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+	  <buildingDebuff>
+        <ID>2026</ID>
+        <buffIDList>
+          <buffID>5008</buffID>
+        </buffIDList>
+      </buildingDebuff>
+    </buildingDebuffList>
+	
+    <EventList> 
+	  <!--支线任务列表-->
+      <OtherEvent>
+	  </OtherEvent>
+    </EventList>
+  </StoryModeConfig>
+
+
+
+</ArrayOfStoryModeConfig>

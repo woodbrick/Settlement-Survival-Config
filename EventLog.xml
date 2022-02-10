@@ -1,0 +1,484 @@
+<?xml version="1.0"?>
+<ArrayOfEventLogConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <!--   事件日志配置说明（左下角文字信息）：  Event Log Configuration Description (text information in the lower left corner ):
+  字段        类型        说明     
+  ID          int            唯一ID  Unique ID
+  Type        int            日志类型（查看下方的枚举）  Log type (see the enumeration below)
+  Icon        string           有图标就填，定位图标（图标的路径，不对应多语言）  Fill in with the locating icon if applicable (The path of the icon, not correspond to multiple languages)
+  ContentColor    string           文本的颜色（不对应多语言）  Text color (non-corresponding to multiple languages)
+  Content       string           文本的内容  Text content
+  TombContent     string           有墓碑的描述  There is a description of the tombstone
+  CD          int            同一个事件显示的日志时间间隔  Log Time Interval for the Same Event Display
+  事件日志枚举：     
+  Citizen_Born = 1,            //     人物出生                      ( 人物名字 )    Birth of the character (Character Name)  
+    Citizen_Die = 2,             //     人物死亡                       ( 人物名字 )    Death of the character (Character Name)  
+    Citizen_Adult = 3,           //    人物成年                       ( 人物名字 )    Growing up of the character (Character Name)  
+    Citizen_Student = 4,         //    人物入学                       ( 人物名字 )    School Enrollment of the character (Character Name)  
+    Citizen_TakeJob = 5,          //    接替工作                      ( 人物名字 人物名字 工作职业)    Taking over the job (Character Name, character name, occupation)  
+    Goods_TagStorage = 6,         //     资源存量 一级资源             ( 一级tag名 )    Resource Stock Level 1 Resources (Level 1 tag)  
+    City_Warehouse = 7,           //     仓库已满  Warehouse is full
+    City_Recruit = 8,            //    流民到访  Immigration visits
+    City_Boat= 9,               //    商船到访  Merchant ship visits
+    Weather_Change = 10,          //    季节变化                          ( 季节名 )    Seasonal changes (season)  
+    Disaster_Tornado = 11,          //    灾难龙卷风  Disaster Tornado
+    Disaster_Plague = 12,          //    灾难瘟疫  Disaster Plague
+    Disaster_Snow = 13,          //    灾难暴风雪  Disaster Blizzard
+    Disaster_Fire = 14,          //    灾难火灾  Disaster Fire
+    Citizen_Die_Hunger = 15,      //    人物死亡   饿死                    ( 人物名字 )    Death of character Starvation (Character Name)  
+    Citizen_Die_Thirsty = 16,     //     人物死亡   渴死                    ( 人物名字 )    Death of character Thirst (Character Name)  
+    Citizen_Die_Cold = 17,        //     人物死亡   冻死                   ( 人物名字 )    Death of character Frozen to Death (Character Name)  
+    Citizen_Die_Illness = 18,     //     人物死亡   病死                   ( 人物名字 )    Death of character Disease (Character Name)  
+    Citizen_Die_Tornado = 19,     //     人物死亡   龙卷风                   ( 人物名字 )    Death of character Tornado (Character Name)  
+    Animal_Appear = 20,           //     动物生成出现提示                   ( 动物名字 )    Hints for animal generation (Animal name)  
+    Animal_Get = 21,                //     猎人获得幼雏                   ( 动物名字 )    The hunter gets a baby (Animal name )  
+    City_NoShort = 22,           //     缺少原料                          ( 建筑名字 )    Lack of raw materials (Building name)  
+    City_Stack = 23,           //     生产堆积                          ( 建筑名字 )    Accumulated production (Building name)  
+    City_Yield = 24,           //     产量耗尽                          ( 建筑名字 )   Out of production (Building name) 
+    Citizen_Baby = 26,           //    婴儿统计                          ( 婴儿数量 )    Infant statistics (Number of infants)  
+    Citizen_HappyDown = 27,           //    幸福度大量下降                          ( 人物名字 )   Happiness drops significantly (Character Name) 
+  City_BuyBoat = 28,           //    谋杀提示                         ( 人物名字 )   Happiness drops significantly (Character Name) 
+  City_BuyBoat = 29,           //    订购商船到访  Order ship visits
+    Disaster_Foison = 30,           //    秋收  Fall harvest
+    Disaster_Summer = 31,           //    干旱  Drought
+    Disaster_Rain = 32,           //    酸雨  Acid rain
+    Disaster_Winter = 33,           //    寒冬   Cold winter 
+
+    Citizen_Banish = 34,           // 流放提示                            ( 人物名字{0} )  
+
+    Event_Passivity = 35,           // 被动事件提示                            ( 被动配置id )  
+
+    CatchFish = 36,           // 摸鱼提示                              ( lang key )  
+    TechHint = 37,           // 科技提示                               ( 科技名字 )  
+
+    Citizen_Die_Tornado2 = 38,     //  职业人物死亡   龙卷风(对应灾难中死亡的人物提示CitizenDieEventLogID) 人物名字{0} 工作职业{1} )  
+
+    Disaster_Common = 39,     //  灾难通用提示                 (灾难id配置中获取)
+	
+     实例：  Instance:
+     见下方  See below
+-->   
+
+	
+  <EventLogConfig>
+    <ID>1</ID>
+	<!--事件类型-->
+    <Type>1</Type>   
+	<!--是否有图标，没有则不填-->
+    <Icon></Icon>                      
+	 <!--字体颜色-->
+	<ContentColor></ContentColor>  
+    <Content>EventLog_Content_1</Content> 
+    <CD>300</CD>                        
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>2</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_2</Content>
+	<TombContent>EventLog_TombContent_1</TombContent>	
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>3</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_3</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>4</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_4</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>5</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>FEF1C2</ContentColor> 
+    <Content>EventLog_Content_5</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>6</ID>
+    <Type>2</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_6</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>7</ID>
+    <Type>2</Type>
+    <Icon>Icon_common_max</Icon>
+	<!--字体颜色-->
+	<ContentColor>C9EEFF</ContentColor> 
+    <Content>EventLog_Content_7</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>8</ID>
+    <Type>3</Type>
+    <Icon>Icon_common_nomad</Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+    <Content>EventLog_Content_8</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>9</ID>
+    <Type>2</Type>
+    <Icon>Icon_common_question</Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+    <Content>EventLog_Content_9</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>10</ID>
+    <Type>4</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>4FD171</ContentColor> 
+    <Content>EventLog_Content_10</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>11</ID>
+    <Type>5</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+    <Content>EventLog_Content_11</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+  <EventLogConfig>
+    <ID>12</ID>
+    <Type>5</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+    <Content>EventLog_Content_12</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+  <EventLogConfig>
+    <ID>13</ID>
+    <Type>5</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+    <Content>EventLog_Content_13</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+  <EventLogConfig>
+    <ID>14</ID>
+    <Type>5</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+    <Content>EventLog_Content_14</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>15</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_15</Content>
+	<TombContent>EventLog_TombContent_2</TombContent>
+    <CD>300</CD>
+  </EventLogConfig>
+  <EventLogConfig>
+    <ID>16</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_16</Content>
+	<TombContent>EventLog_TombContent_3</TombContent>
+    <CD>300</CD>
+  </EventLogConfig>
+  <EventLogConfig>
+    <ID>17</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_17</Content>
+	<TombContent>EventLog_TombContent_4</TombContent>
+    <CD>300</CD>
+  </EventLogConfig>
+  <EventLogConfig>
+    <ID>18</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_18</Content>
+	<TombContent>EventLog_TombContent_5</TombContent>
+    <CD>300</CD>
+  </EventLogConfig>
+  <EventLogConfig>
+    <ID>19</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_19</Content>
+	<TombContent>EventLog_TombContent_6</TombContent>
+    <CD>300</CD>
+  </EventLogConfig>
+  
+  <!--超稀有动物出现提示-->
+  <EventLogConfig>
+    <ID>20</ID>
+    <Type>2</Type>
+    <Icon>Icon_common_question</Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_20</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>21</ID>
+    <Type>2</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>C9EEFF</ContentColor> 
+    <Content>EventLog_Content_21</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>22</ID>
+    <Type>22</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>C9EEFF</ContentColor> 
+    <Content>EventLog_Content_22</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>23</ID>
+    <Type>2</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>C9EEFF</ContentColor> 
+    <Content>EventLog_Content_23</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>24</ID>
+    <Type>2</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>C9EEFF</ContentColor> 
+    <Content>EventLog_Content_24</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>25</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_25</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+    <EventLogConfig>
+    <ID>26</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>FEB8C7</ContentColor> 
+    <Content>EventLog_Content_26</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+      <EventLogConfig>
+    <ID>27</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_27</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>28</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_28</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+
+    <EventLogConfig>
+    <ID>29</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+    <Content>EventLog_Content_29</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+    <EventLogConfig>
+    <ID>30</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_30</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+    <EventLogConfig>
+    <ID>31</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+    <Content>EventLog_Content_31</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+    <EventLogConfig>
+    <ID>32</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_32</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+    <EventLogConfig>
+    <ID>33</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_33</Content>
+    <CD>300</CD>
+  </EventLogConfig>
+  <EventLogConfig>
+    <ID>34</ID>
+	<!--事件类型-->
+    <Type>1</Type>   
+	<!--是否有图标，没有则不填-->
+    <Icon></Icon>                      
+	 <!--字体颜色-->
+	<ContentColor></ContentColor>  
+    <Content>EventLog_Content_34</Content> 
+    <CD>300</CD>                        
+  </EventLogConfig>
+
+  <EventLogConfig>
+    <ID>35</ID>
+	<!--事件类型-->
+    <Type>1</Type>     
+	<!--是否有图标，没有则不填-->
+    <Icon></Icon>            
+	 <!--字体颜色-->
+	  <ContentColor>ffce4a</ContentColor>  
+    <Content>EventLog_Content_35</Content>                      
+  </EventLogConfig>
+  
+  <EventLogConfig>
+    <ID>36</ID>
+	<!--事件类型-->
+    <Type>1</Type>              
+	 <!--字体颜色-->
+	  <ContentColor>ffce4a</ContentColor>                
+  </EventLogConfig>
+
+<!--市长提示-->
+    <EventLogConfig>
+    <ID>37</ID>
+    <Type>1</Type>    
+	  <ContentColor>ffce4a</ContentColor>    
+    <Content>EventLog_Content_36</Content>                    
+  </EventLogConfig>
+  
+  
+  <EventLogConfig>
+    <ID>38</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor></ContentColor> 
+    <Content>EventLog_Content_SandStorm</Content>
+	<TombContent>EventLog_TombContent_SandStorm</TombContent>
+    <CD>300</CD>
+  </EventLogConfig>
+
+
+  <EventLogConfig>
+    <ID>39</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+    <CD>300</CD>
+  </EventLogConfig>
+  
+  <EventLogConfig>
+    <ID>40</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+	<Content>Unknow_1002</Content>
+    <CD>1</CD>
+  </EventLogConfig>
+  
+  <EventLogConfig>
+    <ID>41</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+	<Content>Unknow_1003</Content>
+    <CD>1</CD>
+  </EventLogConfig>
+  
+    <EventLogConfig>
+    <ID>42</ID>
+    <Type>1</Type>
+    <Icon></Icon>
+	<!--字体颜色-->
+	<ContentColor>ffce4a</ContentColor> 
+	<Content>Unknow_1001</Content>
+    <CD>1</CD>
+  </EventLogConfig>
+  
+  
+  
+  
+  
+</ArrayOfEventLogConfig>

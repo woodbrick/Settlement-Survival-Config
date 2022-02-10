@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ArrayOfAchievementConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--剧本成就达成提示-->
+  <AchievementConfig>
+    <ID>10001</ID>
+    <Name>Achievement_Name_1</Name>
+    <Des>Achievement_Des_1</Des>
+    <Icon></Icon>
+  </AchievementConfig>
+	<AchievementConfig>
+    <ID>10002</ID>
+    <Name>Achievement_Name_2</Name>
+    <Des>Achievement_Des_2</Des>
+    <Icon></Icon>
+  </AchievementConfig>
+
+</ArrayOfAchievementConfig>

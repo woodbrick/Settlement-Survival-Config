@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ArrayOfLangIconConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--   此文件已弃用  This file is deprecated
+-->
+ <LangIconConfig>
+    <ID>Main_RaceBtn</ID>
+    <LangList>
+      <Lang>
+	  <LangType>Chinese</LangType>
+	  <LangValue>Icon_animal_Chinese</LangValue>
+	  </Lang>
+      <Lang><LangType>English</LangType>
+	  <LangValue>Icon_animal_English</LangValue>
+	  </Lang>
+    </LangList>
+  </LangIconConfig>
+  <LangIconConfig>
+    <ID>Menu_Logo</ID>
+    <LangList>
+      <Lang>
+        <LangType>Chinese</LangType>
+        <LangValue>menu_logo_chinese</LangValue>
+      </Lang>
+      <Lang>
+        <LangType>English</LangType>
+        <LangValue>menu_logo_english</LangValue>
+      </Lang>
+    </LangList>
+  </LangIconConfig>
+</ArrayOfLangIconConfig>

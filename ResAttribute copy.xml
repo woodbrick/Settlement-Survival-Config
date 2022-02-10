@@ -1,0 +1,3925 @@
+<?xml version="1.0"?>
+<ArrayOfResAttributeConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--  地图的物件配置说明
+Description of the Item Configuration of the Map
+ID  int  ID不重复
+No Duplicates for IDs
+Name string 物件的名字（备注使用不对应多语言）
+Item Name (The remarks us in non-corresponding multi-language)
+canOverlay bool 是否能叠加（模型是否可以叠加）
+Whether it can be superimposed (Whether the model can be superimposed)
+ModelList  对应的模型列表
+Model List
+Model string 模型的路径，从列表中随机（不对应的多语言）
+Model’s path is randomly chosen from list (Non-corresponding multi-language)
+SwitchModelList  可以切换的模型列表（）
+List of Switchable Models ()
+SwitchModel string 模型的路径，从列表中随机（不对应的多语言）
+Model’s path is randomly chosen from list (Non-corresponding multi-language)
+AnimalPowerModel string 动物畜力模型（增加了驼货模型），模型的路径（不对应的多语言）
+Animal strength model (Goods-carrying is added), Model’s path (Non-corresponding multi-language)
+ModelBaseSize float 模型对应的尺寸大小
+Model’s Size
+LifeCircle  生命周期循环数据
+Life Cycle Data
+MinSize float 模型最小值
+Model’s Min Value
+MaxSize float 模型最大值
+Model’s Max Value
+Grow int 成熟周期
+Maturity Cycle
+DeadRange ConfigLowerUpper 作物寿命范围 
+
+FinishResList  采集产出列表
+Collection Output List
+FinishRes  
+
+ID int 产出的物品ID
+IDs of Outputs
+NumRange ConfigLowerUpper 受教育产出物品的数量范围、
+The quantity range of cultivated items,
+UnEducatedNumRange ConfigLowerUpper 未受教育产出物品的数量范围
+The quantity range of uncultivated items
+RandomRange int 掉落的范围
+The range of drop
+UnlockTech int 该掉落需要解锁的科技（未配置则不需要科技）
+The Unlocked Technology Required for This Drop (No technology required if not configured)
+FinishUIShowResList  采集产出列表显示（仅用于UI显示物品ID即可）
+The Display of Collection Output List (Only for UI. Only item IDs will be displayed)
+FinishRes  
+
+ID int  产出的物品ID
+ IDs of Outputs
+Block int 是否阻碍（阻碍其他作物的生成）
+Whether it hampers (the generation of other crops)
+EntityType int 物件类型（具体查看下方枚举）
+Object Type (See the enumeration below)
+ActionType int 采集的动作ID（具体查看citizenaction中的ID）
+Acquisition ID (See IDs in the citizenaction)
+CreateRate int 采集成功的概率（百分比）
+Probability of Successful Acquisition (%)
+DeadTmc ConfigLowerUpper 生存温度范围（温度在此范围内该作物才能存活）华氏度
+Temperature Range for Survival (The crop can survive when the temperature is within this range) Fahrenheit
+GrowTmc ConfigLowerUpper 生长温度范围（温度在此范围内该作物才生长）华氏度
+Temperature Range for Growth (The crop can grow when the temperature is within this range) Fahrenheit
+DependMature bool 采集获得的物品是否和成熟度相关
+Whether the acquired item is related to maturity
+UnlockTech int 采集该物品需要解锁的科技（未解锁则不能采集）
+The unlocked technology required to acquire the item (Unavailable if not unlocked)
+NatureDeadResList  自然死亡掉落的物件列表
+List of Items Dropped from Natural Death
+NatureDeadRes  自然死亡掉落的物件
+Items Dropped From Natural Death
+ID int 物件ID（对应当前表中的ID）
+Item IDs (Corresponding to the IDs in the current table)
+UnlockTech int 掉落该物件需要解锁的科技ID
+The Technology ID to Be Unlocked to Drop This Item
+Range ConfigLowerUpper 掉落的数量范围
+Range of Drop Quantity
+Rate int 掉落的概率（百分比）
+Probability of Drops (%)
+CanSeedByStartRandom bool 该作物是否参与初始种子点的随机（ 默认true）
+Randomly select whether the crop will participate in the initial seed (Default is true)
+  （果树的专有配置）
+(Exclusive configuration of fruit tree)
+FruitID int 收获的水果对应的物品ID
+The object ID of the Fruit Harvested
+RipeDays int 水果成熟的天数
+The number of days it takes for the fruit to ripen
+NumRange ConfigLowerUpper 成熟后对应的数量范围
+Quantity Range after Ripening
+FruitGrowTmc ConfigLowerUpper 可以产出水果的温度范围
+The Temperature Range for Fruit Output
+FruitAction int 水果的采集动作ID（具体查看citizenaction中的ID）
+Fruit Acquisition ID (See IDs in the citizenaction)
+
+	
+			
+
+
+
+
+	备注：
+   int			整型，只能填整数
+   string		字符串类型，字母或者文字
+   float		浮点数类型，小数
+   ConfigLowerUpper 自定义双整数类型（Lower对应最小值 Upper对应最大值）
+
+
+
+
+
+
+
+	枚举：
+	public static int tree = 1; //树木类：野生树	1
+	public static int stone = 2; // 石头类：野外石头 2
+	public static int iron = 3; // 矿产：野外铁 3
+	public static int plant = 4; //  野生植物：洋葱 蘑菇 野菜 草药  4
+	public static int herb = 5; // 药草类: （弃用合并到植物中）   5
+	public static int build = 6; // 建筑类： 6
+	public static int road = 7; // 道路类： 7
+	public static int boat = 8; //船
+	public static int animal = 9; // 动物：家养动物 9
+	public static int tomb = 10; //墓碑
+	public static int wildAnim = 11; //野生动物
+	public static int fruitTree = 12; //果树
+	public static int crop = 13; //农作物
+	
+	实例：
+	见下方
+
+-->
+<ResAttributeConfig>
+    <ID>1001</ID>
+    <!--土豆-->
+    <Name>ResAttribute_Name_11</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Ppotato01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>100</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>1</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>15</Lower>
+          <Upper>15</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>22</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>25</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1002</ID>
+    <!--豌豆-->
+    <Name>ResAttribute_Name_12</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pbean01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>125</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>403</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1003</ID>
+    <!--花椰菜-->
+    <Name>ResAttribute_Name_13</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pbroccoli01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>80</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>105</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1004</ID>
+    <!--玉米-->
+    <Name>ResAttribute_Name_14</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pcorn01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>125</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+    <FinishRes>
+      <!--物品ID-->
+      <ID>2</ID>
+      <!--受教育物品数量范围-->
+      <NumRange>
+        <Lower>12</Lower>
+        <Upper>12</Upper>
+      </NumRange>
+      <!--未受教育物品数量范围-->
+      <UnEducatedNumRange>
+        <Lower>10</Lower>
+        <Upper>10</Upper>
+      </UnEducatedNumRange>
+      <!--掉落范围-->
+      <RandomRange>1</RandomRange>
+    </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1005</ID>
+    <!--辣椒-->
+    <Name>ResAttribute_Name_15</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Ppepper01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>80</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>106</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1006</ID>
+    <!--南瓜-->
+    <Name>ResAttribute_Name_16</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Ppumpkin01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>80</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>107</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1007</ID>
+    <!--小麦-->
+    <Name>ResAttribute_Name_17</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pwheat01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>100</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>3</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1008</ID>
+    <!--卷心菜-->
+    <Name>ResAttribute_Name_18</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pcabbage01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>80</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>108</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1009</ID>
+    <!--种植药草-->
+    <Name>ResAttribute_Name_19</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pyaocao01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>100</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>2001</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>16</Lower>
+          <Upper>16</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>14</Lower>
+          <Upper>14</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1012</ID>
+    <!--亚麻-->
+    <Name>ResAttribute_Name_22</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Plinen01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>100</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>6005</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1013</ID>
+    <!--棉花-->
+    <Name>ResAttribute_Name_23</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pcotton01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>100</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>6006</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1014</ID>
+    <!--燕麦-->
+    <Name>ResAttribute_Name_24</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Poats01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>100</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>4</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1017</ID>
+    <!--黄豆-->
+    <Name>ResAttribute_Name_26</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Psoybean01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>125</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>404</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1018</ID>
+    <!--鹰角豆-->
+    <Name>ResAttribute_Name_27</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pchickpea01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>100</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>405</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1019</ID>
+    <!--笋瓜-->
+    <Name>ResAttribute_Name_28</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Psquash01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>80</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>110</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1020</ID>
+    <!--生菜-->
+    <Name>ResAttribute_Name_29</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Plettuce01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>80</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>111</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1021</ID>
+    <!--番茄-->
+    <Name>ResAttribute_Name_30</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Ptomato01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>80</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>112</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1022</ID>
+    <!--糖甜菜-->
+    <Name>ResAttribute_Name_31</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pbeet01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>100</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>33010</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1023</ID>
+    <!--甘蔗-->
+    <Name>ResAttribute_Name_32</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Psugarcane01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>100</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>33011</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>1029</ID>
+    <!--仙人掌-->
+    <Name>ResAttribute_Name_36</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/cactus</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.2</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <!--成熟时间（单位：天）-->
+      <Grow>100</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>200018</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--生存温度-->
+    <DeadTmc>      <Lower>32</Lower>
+      <Upper>130</Upper></DeadTmc>
+    <!--成长温度-->
+    <GrowTmc>      <Lower>35</Lower>
+      <Upper>120</Upper></GrowTmc>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2001</ID>
+    <!--家养绵羊-->
+    <Name>ResAttribute_Name_37</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>SheepSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.8</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>288</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>1800</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>303</ID>
+        <NumRange>
+          <Lower>40</Lower>
+          <Upper>40</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>30</Lower>
+          <Upper>30</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>303</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2002</ID>
+    <!--家养奶牛-->
+    <Name>ResAttribute_Name_38</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>CowSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.5</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>288</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>1800</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>304</ID>
+        <NumRange>
+          <Lower>45</Lower>
+          <Upper>45</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>35</Lower>
+          <Upper>35</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>304</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2003</ID>
+    <!--家养鸡-->
+    <Name>ResAttribute_Name_39</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>ChickenSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>3.4</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>90</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>990</Lower>
+        <Upper>1170</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>305</ID>
+        <NumRange>
+          <Lower>18</Lower>
+          <Upper>18</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>15</Lower>
+          <Upper>15</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>305</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2005</ID>
+    <!--家养火鸡-->
+    <Name>ResAttribute_Name_40</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>TurkeySkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.3</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>90</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>990</Lower>
+        <Upper>1170</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>306</ID>
+        <NumRange>
+          <Lower>18</Lower>
+          <Upper>18</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>15</Lower>
+          <Upper>15</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>306</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2006</ID>
+    <!--家养鹅-->
+    <Name>ResAttribute_Name_41</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>GooseSkin</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>90</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>990</Lower>
+        <Upper>1170</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>307</ID>
+        <NumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>6003</ID>
+        <NumRange>
+          <Lower>4</Lower>
+          <Upper>4</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>4</Lower>
+          <Upper>4</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>6003</ID>
+        <NumRange>
+          <Lower>4</Lower>
+          <Upper>4</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>4</Lower>
+          <Upper>4</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <UnlockTech>1201</UnlockTech>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>307</ID>
+      </FinishRes>
+      <FinishRes>
+        <ID>6003</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2007</ID>
+    <!--家养羊驼-->
+    <Name>ResAttribute_Name_42</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>AlpacaSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.4</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>288</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>1800</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>308</ID>
+        <NumRange>
+          <Lower>40</Lower>
+          <Upper>40</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>40</Lower>
+          <Upper>40</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>308</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2008</ID>
+    <!--家养肉牛-->
+    <Name>ResAttribute_Name_43</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>BeefCowSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.5</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>288</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>1800</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>304</ID>
+        <NumRange>
+          <Lower>60</Lower>
+          <Upper>60</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>50</Lower>
+          <Upper>50</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+	        <FinishRes>
+        <ID>6001</ID>
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>	        
+      <FinishRes>
+        <ID>6001</ID>
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <UnlockTech>1201</UnlockTech>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>304</ID>
+      </FinishRes>
+      <FinishRes>
+        <ID>6001</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2009</ID>
+    <!--家养鸭子-->
+    <Name>ResAttribute_Name_44</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>DuckSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>3.6</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>90</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>990</Lower>
+        <Upper>1170</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>312</ID>
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+	  <FinishRes>
+        <ID>6003</ID>
+        <NumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>5</Lower>
+          <Upper>5</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+	  <FinishRes>
+        <ID>6003</ID>
+        <NumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>5</Lower>
+          <Upper>5</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <UnlockTech>1201</UnlockTech>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>312</ID>
+      </FinishRes>
+      <FinishRes>
+        <ID>6003</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2010</ID>
+    <!--家养猪-->
+    <Name>ResAttribute_Name_45</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>PigSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.5</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>288</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>1800</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>313</ID>
+        <NumRange>
+          <Lower>120</Lower>
+          <Upper>120</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>100</Lower>
+          <Upper>100</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>313</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2011</ID>
+    <!--家养马-->
+    <Name>ResAttribute_Name_46</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>HorseSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.8</ModelBaseSize>
+    <!--畜力模型-->
+    <AnimalPowerModel>GoodsHorseSkin</AnimalPowerModel>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>288</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>1800</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>314</ID>
+        <NumRange>
+          <Lower>60</Lower>
+          <Upper>60</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>50</Lower>
+          <Upper>50</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>314</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2012</ID>
+    <!--家养驴-->
+    <Name>ResAttribute_Name_47</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>WesternHorseSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.8</ModelBaseSize>
+    <!--畜力模型-->
+    <AnimalPowerModel>GoodsDonkeySkin</AnimalPowerModel>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>288</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>1800</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>315</ID>
+        <NumRange>
+          <Lower>60</Lower>
+          <Upper>60</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>50</Lower>
+          <Upper>50</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>315</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>2013</ID>
+    <!--家养呆鸡-->
+    <Name>ResAttribute_Name_48</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>ChickenDaiSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>90</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>990</Lower>
+        <Upper>1170</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+   <FinishRes>
+        <ID>7001</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>7001</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <UnlockTech>1201</UnlockTech>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>7001</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>23</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+
+<ResAttributeConfig>
+    <ID>2014</ID>
+    <!--家养野牛-->
+    <Name>ResAttribute_Name_49</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>AncientBisonSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.8</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>288</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>1800</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>309</ID>
+        <NumRange>
+          <Lower>60</Lower>
+          <Upper>60</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>50</Lower>
+          <Upper>50</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>6001</ID>
+        <NumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>6001</ID>
+        <NumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <UnlockTech>1201</UnlockTech>
+      </FinishRes>
+</FinishResList>
+<!--宰杀产出UI显示用-->
+    <FinishUIShowResList>
+      <FinishRes>
+        <ID>309</ID>
+      </FinishRes>
+      <FinishRes>
+        <ID>6001</ID>
+      </FinishRes>
+</FinishUIShowResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>9</EntityType>
+    <!--采集动作-->
+    <ActionType>24</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3000</ID>
+    <!--野生龙舌兰-->
+    <Name>ResAttribute_Name_21</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Ptequila01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>33003</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>101009</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>200</Rate>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>4</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3001</ID>
+    <!--野菜-->
+    <Name>ResAttribute_Name_50</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pyecai01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+      <!--死亡时间（单位：天）-->
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>101</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+    <FinishRes>
+        <!--物品ID-->
+        <ID>101010</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>300</Rate>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>4</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3002</ID>
+    <!--洋葱-->
+    <Name>ResAttribute_Name_51</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pyangcong01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+      <!--死亡时间（单位：天）-->
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>102</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+	      <FinishRes>
+        <!--物品ID-->
+        <ID>101010</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>300</Rate>
+      </FinishRes>
+	        <FinishRes>
+        <!--物品ID-->
+        <ID>101001</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>300</Rate>
+      </FinishRes>
+		      <FinishRes>
+        <!--物品ID-->
+        <ID>101011</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+		<UnlockTech>1603</UnlockTech>
+        <Rate>200</Rate>
+      </FinishRes>  
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>4</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3003</ID>
+    <!--蘑菇-->
+    <Name>ResAttribute_Name_52</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pmogu01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+      <!--死亡时间（单位：天）-->
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>103</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+	      <FinishRes>
+        <!--物品ID-->
+        <ID>101010</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>300</Rate>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>4</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3004</ID>
+    <!--药草-->
+    <Name>ResAttribute_Name_53</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pyaocao01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+      <!--死亡时间（单位：天）-->
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>2001</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>101902</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <UnlockTech>3802</UnlockTech>
+        <Rate>1000</Rate>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>4</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+    <!--是否参与初始随机-->
+    <CanSeedByStartRandom>false</CanSeedByStartRandom>	
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3005</ID>
+    <!--野生树-->
+    <Name>ResAttribute_Name_54</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Tree/Tluoye01</Model>
+      <Model>Props/Tree/Tluoye02</Model>
+      <Model>Props/Tree/Tluoye03</Model>      
+      <Model>Props/Tree/Tluoye01</Model>
+      <Model>Props/Tree/Tluoye02</Model>
+      <Model>Props/Tree/Tluoye03</Model>
+      <Model>Props/Tree/Tluoye01</Model>
+      <Model>Props/Tree/Tluoye02</Model>
+      <Model>Props/Tree/Tluoye03</Model>	  
+      <Model>Props/Tree/Tluoye04</Model>
+      <Model>Props/Tree/Tluoye05</Model>
+      <Model>Props/Tree/Tluoye06</Model>
+      <Model>Props/Tree/Tzhenye01</Model>
+      <Model>Props/Tree/Tzhenye02</Model>
+      <Model>Props/Tree/Tzhenye03</Model>
+	  <Model>Props/Tree/Tzhenye01</Model>
+      <Model>Props/Tree/Tzhenye02</Model>
+      <Model>Props/Tree/Tzhenye03</Model>
+	  <Model>Props/Tree/Tzhenye01</Model>
+      <Model>Props/Tree/Tzhenye02</Model>
+      <Model>Props/Tree/Tzhenye03</Model>
+      <Model>Props/Tree/Tzhenye05</Model>
+      <Model>Props/Tree/Tzhenye06</Model>
+      <Model>Props/Tree/Twildtree01</Model>
+      <Model>Props/Tree/Twildtree02</Model>
+      <Model>Props/Tree/Twildtree03</Model>
+	  <Model>Props/Tree/Twildtree01</Model>
+      <Model>Props/Tree/Twildtree02</Model>
+      <Model>Props/Tree/Twildtree03</Model>
+	  <Model>Props/Tree/Twildtree01</Model>
+      <Model>Props/Tree/Twildtree02</Model>
+      <Model>Props/Tree/Twildtree03</Model>
+      <Model>Props/Tree/Twildtree04</Model>
+      <Model>Props/Tree/Twildtree05</Model>
+      <Model>Props/Tree/Twildtree06</Model>
+      <Model>Props/Tree/Tluoye01</Model>
+      <Model>Props/Tree/Tluoye02</Model>
+      <Model>Props/Tree/Tluoye03</Model>  
+</ModelList>
+  <!--物件模型列表-->
+  <SwitchModelList>
+    <SwitchModel>Props/Tree/Tluoye01</SwitchModel>
+  </SwitchModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.1</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <Grow>240</Grow>
+      <!--成熟时间（单位：天）-->
+      <DeadRange>
+        <Lower>2160</Lower>
+        <Upper>7200</Upper>
+      </DeadRange>
+      <!--死亡时间（单位：天）-->
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>3001</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>4</Lower>
+          <Upper>4</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>3</Lower>
+          <Upper>3</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>1</EntityType>
+    <!--采集动作-->
+    <ActionType>5</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+    <!--自然死亡产出
+    <NatureDeadResList>
+      <NatureDeadRes>
+        <ID>3014</ID>
+        <Rate>5000</Rate>
+      </NatureDeadRes>
+      <NatureDeadRes>
+        <ID>3016</ID>
+        <Rate>5000</Rate>
+      </NatureDeadRes>
+</NatureDeadResList>-->
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3006</ID>
+    <!--石头-->
+    <Name>ResAttribute_Name_55</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Static/Sshitou01</Model>
+      <Model>Props/Static/Sshitou02</Model>
+      <Model>Props/Static/Sshitou03</Model>
+</ModelList>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>4001</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>8</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>12</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>2</EntityType>
+    <!--采集动作-->
+    <ActionType>14</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3007</ID>
+    <!--铁矿-->
+    <Name>ResAttribute_Name_56</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Static/Stiekuang01</Model>
+      <Model>Props/Static/Stiekuang02</Model>
+      <Model>Props/Static/Stiekuang03</Model>
+</ModelList>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>5001</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>8</Lower>
+          <Upper>12</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>12</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>3</EntityType>
+    <!--采集动作-->
+    <ActionType>14</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3008</ID>
+    <!--野生鹿-->
+    <Name>ResAttribute_Name_57</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>StagSkin</Model>
+      <Model>DoeSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>2.2</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>50</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>900</Lower>
+        <Upper>1260</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>301</ID>
+        <NumRange>
+          <Lower>30</Lower>
+          <Upper>30</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>25</Lower>
+          <Upper>25</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>6001</ID>
+        <NumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>6001</ID>
+        <NumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <UnlockTech>1201</UnlockTech>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>11</EntityType>
+    <!--采集动作-->
+    <ActionType>26</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3009</ID>
+    <!--野生火鸡-->
+    <Name>ResAttribute_Name_58</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>TurkeySkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.3</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>50</Grow>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>900</Lower>
+        <Upper>1260</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>306</ID>
+        <NumRange>
+          <Lower>35</Lower>
+          <Upper>35</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>30</Lower>
+          <Upper>30</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>102005</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <Rate>33</Rate>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>11</EntityType>
+    <!--采集动作-->
+    <ActionType>26</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3010</ID>
+    <!--野生鹅-->
+    <Name>ResAttribute_Name_59</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>GooseSkin</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>90</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>990</Lower>
+        <Upper>1170</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>307</ID>
+        <NumRange>
+          <Lower>15</Lower>
+          <Upper>15</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>12</Lower>
+          <Upper>12</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>6003</ID>
+        <NumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>5</Lower>
+          <Upper>5</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>6003</ID>
+        <NumRange>
+          <Lower>4</Lower>
+          <Upper>4</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>3</Lower>
+          <Upper>3</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <UnlockTech>1201</UnlockTech>
+      </FinishRes>
+      <FinishRes>
+        <ID>102006</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <Rate>75</Rate>
+      </FinishRes>
+	<FinishRes>
+        <ID>102009</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <Rate>50</Rate>
+      </FinishRes>
+	   <FinishRes>
+        <ID>102003</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <Rate>50</Rate>
+      </FinishRes>  
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>11</EntityType>
+    <!--采集动作-->
+    <ActionType>26</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3011</ID>
+    <!--野生羊驼-->
+    <Name>ResAttribute_Name_60</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>AlpacaSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.4</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>288</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>1800</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>308</ID>
+        <NumRange>
+          <Lower>20</Lower>
+          <Upper>20</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>18</Lower>
+          <Upper>18</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+	  <FinishRes>
+        <ID>6004</ID>
+        <NumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>5</Lower>
+          <Upper>5</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>6004</ID>
+        <NumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>5</Lower>
+          <Upper>5</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <UnlockTech>1201</UnlockTech>
+      </FinishRes>
+      <FinishRes>
+        <ID>102007</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <Rate>75</Rate>
+      </FinishRes>
+	  <FinishRes>
+	   <ID>102002</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <Rate>75</Rate>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>11</EntityType>
+    <!--采集动作-->
+    <ActionType>26</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3012</ID>
+    <!--野生野牛-->
+    <Name>ResAttribute_Name_61</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>AncientBisonSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1.8</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>288</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>1800</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>309</ID>
+        <NumRange>
+          <Lower>18</Lower>
+          <Upper>18</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>15</Lower>
+          <Upper>15</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>102014</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <Rate>50</Rate>
+      </FinishRes>
+	  <FinishRes>
+        <ID>102010</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <Rate>50</Rate>
+      </FinishRes>  
+      <FinishRes>
+        <ID>6001</ID>
+        <NumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <ID>6001</ID>
+        <NumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <UnlockTech>1201</UnlockTech>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>11</EntityType>
+    <!--采集动作-->
+    <ActionType>26</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3013</ID>
+    <!--野生呆鸡-->
+    <Name>ResAttribute_Name_62</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>ChickenDaiSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>90</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>990</Lower>
+        <Upper>1170</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>7001</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>	  
+      <FinishRes>
+        <ID>7001</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <UnlockTech>1201</UnlockTech>
+      </FinishRes>
+      <FinishRes>
+        <ID>102013</ID>
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+        <Rate>1</Rate>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>11</EntityType>
+    <!--采集动作-->
+    <ActionType>26</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3014</ID>
+    <!--蜂巢-->
+    <Name>ResAttribute_Name_63</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Static/Shoneycomb01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+      <!--死亡时间（单位：天）-->
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>501</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>20</Lower>
+          <Upper>20</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>18</Lower>
+          <Upper>18</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>33001</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>14</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3015</ID>
+    <!--芦苇-->
+    <Name>ResAttribute_Name_64</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Static/Sreed01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+      <!--死亡时间（单位：天）-->
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>33002</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>6</Lower>
+          <Upper>6</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>4</Lower>
+          <Upper>4</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>16</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3016</ID>
+    <!--水果-->
+    <Name>ResAttribute_Name_65</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Static/Sfruit01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+      <!--死亡时间（单位：天）-->
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>202</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>34</Lower>
+          <Upper>34</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>34</Lower>
+          <Upper>34</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>203</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>34</Lower>
+          <Upper>34</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>34</Lower>
+          <Upper>34</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>206</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>34</Lower>
+          <Upper>34</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>34</Lower>
+          <Upper>34</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>101502</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>100</Rate>
+      </FinishRes>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>101503</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>100</Rate>
+      </FinishRes>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>101506</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>100</Rate>
+      </FinishRes>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>101508</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>100</Rate>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>16</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>3017</ID>
+    <!--野生（豌豆）黄豆-->
+    <Name>ResAttribute_Name_26</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Pbean01</Model>
+ </ModelList>
+    <!--生命周期-->
+  <LifeCircle>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+ </LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>403</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+    <FinishRes>
+        <!--物品ID-->
+        <ID>101014</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>300</Rate>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>4</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+
+<ResAttributeConfig>
+    <ID>3018</ID>
+    <!--野生燕麦-->
+    <Name>ResAttribute_Name_24</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Plant/Poats01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--死亡时间（单位：天）-->
+      <DeadRange>
+        <Lower>360</Lower>
+        <Upper>360</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>4</ID>
+        <!--受教育物品数量范围-->
+        <NumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </NumRange>
+        <!--未受教育物品数量范围-->
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+        <FinishRes>
+        <!--物品ID-->
+        <ID>101012</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+        <Rate>200</Rate>
+      </FinishRes>
+	   <FinishRes>
+        <!--物品ID-->
+        <ID>101004</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+		<UnlockTech>3502</UnlockTech>
+        <Rate>1000</Rate>
+      </FinishRes>
+	       <FinishRes>
+        <!--物品ID-->
+        <ID>101020</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>1</Lower>
+          <Upper>1</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+		<UnlockTech>1303</UnlockTech>
+        <Rate>200</Rate>
+      </FinishRes>  
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>4</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+
+<ResAttributeConfig>
+    <ID>3019</ID>
+    <!--野生老鼠-->
+    <Name>ResAttribute_Name_62</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>MouseSkin</Model>
+</ModelList>
+	<!--模型基础大小-->
+    <ModelBaseSize>1</ModelBaseSize>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.5</MinSize>
+      <MaxSize>1</MaxSize>
+      <Grow>90</Grow>
+      <!--死亡时间（单位：天）-->
+      <!--死亡时间区间（单位：天）-->
+      <DeadRange>
+        <Lower>990</Lower>
+        <Upper>1170</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <ID>511</ID>
+        <NumRange>
+          <Lower>12</Lower>
+          <Upper>15</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>12</Upper>
+        </UnEducatedNumRange>
+        <RandomRange>1</RandomRange>
+      </FinishRes>	  
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>11</EntityType>
+    <!--采集动作-->
+    <ActionType>26</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+</ResAttributeConfig>
+
+<ResAttributeConfig>
+    <ID>3020</ID>
+    <!--剧本野生树-->
+    <Name>ResAttribute_Name_54</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+        <Model>Props/Tree/Ttree01</Model> 
+		<Model>Props/Tree/Ttree02</Model>
+		<Model>Props/Tree/Ttree03</Model>
+		<Model>Props/Tree/Ttree04</Model>
+		<Model>Props/Tree/Ttree05</Model>
+		<Model>Props/Tree/Ttree06</Model>
+		<Model>Props/Tree/Ttree07</Model>
+	</ModelList>
+  <!--物件模型列表-->
+  <SwitchModelList>
+    <SwitchModel>Props/Tree/Tmaple01</SwitchModel>
+  </SwitchModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.1</MinSize>
+      <MaxSize>1.0</MaxSize>
+      <Grow>240</Grow>
+      <!--成熟时间（单位：天）-->
+      <DeadRange>
+        <Lower>2160</Lower>
+        <Upper>7200</Upper>
+      </DeadRange>
+      <!--死亡时间（单位：天）-->
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>3001</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>4</Lower>
+          <Upper>4</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>3</Lower>
+          <Upper>3</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>1</EntityType>
+    <!--采集动作-->
+    <ActionType>5</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+    <!--自然死亡产出
+    <NatureDeadResList>
+      <NatureDeadRes>
+        <ID>3014</ID>
+        <Rate>5000</Rate>
+      </NatureDeadRes>
+      <NatureDeadRes>
+        <ID>3016</ID>
+        <Rate>5000</Rate>
+      </NatureDeadRes>
+</NatureDeadResList>-->
+</ResAttributeConfig>
+
+
+<ResAttributeConfig>
+    <ID>4001</ID>
+    <!--墓碑-->
+    <Name>ResAttribute_Name_66</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Static/Smubei001</Model>
+      <Model>Props/Static/Smubei002</Model>
+      <Model>Props/Static/Smubei003</Model>
+      <Model>Props/Static/Smubei004</Model>
+      <Model>Props/Static/Smubei005</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <DeadRange>
+        <Lower>10</Lower>
+        <Upper>10</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>10</EntityType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>4002</ID>
+    <!--物品名称-->
+    <Name>ResAttribute_Name_67</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Static/Sfeces01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <DeadRange>
+        <Lower>60</Lower>
+        <Upper>60</Upper>
+      </DeadRange>
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>30005</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>3</Lower>
+          <Upper>3</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>2</Lower>
+          <Upper>2</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>15</EntityType>
+    <!--采集动作-->
+    <ActionType>16</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>false</DependMature>
+    <!--采集解锁科技-->
+    <UnlockTech>3402</UnlockTech>
+</ResAttributeConfig>
+<ResAttributeConfig>
+    <ID>5001</ID>
+    <!--种植树-->
+    <Name>ResAttribute_Name_68</Name>
+    <!--能否堆叠-->
+    <canOverlay>false</canOverlay>
+    <!--物件模型列表-->
+    <ModelList>
+      <Model>Props/Tree/Tzhenye01</Model>
+</ModelList>
+    <!--生命周期-->
+    <LifeCircle>
+      <!--最小尺寸（表示寿命为0的尺寸，不填为默认尺寸，为1。填了表示寿命为0的尺寸，会随着寿命长大，成年时长到1，然后不变）-->
+      <MinSize>0.1</MinSize>
+      <MaxSize>0.7</MaxSize>
+      <Grow>360</Grow>
+      <!--成熟时间（单位：天）-->
+      <DeadRange>
+        <Lower>1440</Lower>
+        <Upper>2160</Upper>
+      </DeadRange>
+      <!--死亡时间（单位：天）-->
+</LifeCircle>
+    <!--采集产出-->
+    <FinishResList>
+      <FinishRes>
+        <!--物品ID-->
+        <ID>3001</ID>
+        <!--物品数量范围-->
+        <NumRange>
+          <Lower>10</Lower>
+          <Upper>10</Upper>
+        </NumRange>
+        <UnEducatedNumRange>
+          <Lower>8</Lower>
+          <Upper>8</Upper>
+        </UnEducatedNumRange>
+        <!--掉落范围-->
+        <RandomRange>1</RandomRange>
+      </FinishRes>
+</FinishResList>
+    <!--是否阻挡-->
+    <Block>true</Block>
+    <!--物件类型-->
+    <EntityType>13</EntityType>
+    <!--采集动作-->
+    <ActionType>5</ActionType>
+    <!--采集成功概率-->
+    <CreateRate>100</CreateRate>
+    <!--采集产量是否依赖成熟度-->
+    <DependMature>true</DependMature>
+</ResAttributeConfig>
+
+
+  </ArrayOfResAttributeConfig>

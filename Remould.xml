@@ -1,0 +1,720 @@
+<?xml version="1.0"?>
+<ArrayOfRemouldConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--   建筑改造效果配置说明
+Description of the Configuration of the Reconstruction
+ID int 唯一ID
+Unique ID
+Name string 改造的名字
+Reconstruction Name
+Des string 改造的描述说明
+Description of Reconstruction
+Icon string 改造效果对应的图标（文件路径不需要对应多语言）
+Reconstruction Effect Icon (File path does not need to correspond to multiple languages)
+UnLockTechId int 需要解锁的科技ID
+ID of Technology to Be Unlocked
+Module string 改造后显示的模型名字（模型名字，不需要对应多语言）
+Model Name Displayed After Modification (Model Name. Corresponding multiple languages are not required)
+AnimalModule string 改造后显示的动物模型（多个用|隔开）不需要对应多语言
+The Animal Model Displayed after Modification (separate with | if multiple) Corresponding multiple languages are not required
+ConsumeResList  改造消耗的材料列表
+List of Materials Consumed by the Modification
+ConsumeRes  
+
+ID int 物品ID
+Item ID
+Num int 物品数量
+Number of Items
+AbilitysList  改造后建筑获得的能力列表
+List of Abilities Acquired by the Reconstructed Building
+Abilitys int 对应BuildingAbility中的ID
+Corresponding IDs in BuildingAbility
+
+			
+	
+	备注：
+   int			整型，只能填整数
+   string		字符串类型，字母或者文字
+				所有的string类型对应多语言表，特殊说明除外
+   float		浮点数类型，小数
+   
+   实例：
+   见下方
+	
+-->
+	
+  <!--建筑耐久度-->
+  <RemouldConfig>
+    <ID>1</ID>
+	<!--结构强化-->
+    <Name>Remould_Name_1</Name>
+    <Icon>ItemIcon/Icon_item_32005</Icon>
+	<!--对建筑整体结构进行强化，更能经受风雨，建筑不会损坏。-->
+    <Des>Remould_Des_1</Des>
+	<UnLockTechId>2307</UnLockTechId>
+	<Module>Structure</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32005</ID>
+        <Num>20</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1001</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+
+ <!--仓库增加容量-->
+  <RemouldConfig>
+    <ID>2</ID>
+	<!--扩容-->
+    <Name>Remould_Name_2</Name>
+    <Icon>ItemIcon/Icon_item_32003</Icon>
+	<!--对仓库进行加固，可以容纳更多的物品。-->
+    <Des>Remould_Des_2</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32003</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1002</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+
+ <!--市集增加容量-->
+  <RemouldConfig>
+    <ID>3</ID>
+	<!--扩容-->
+    <Name>Remould_Name_2</Name>
+    <Icon>ItemIcon/Icon_item_32003</Icon>
+	<!--对仓库进行加固，可以容纳更多的物品。-->
+    <Des>Remould_Des_2</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32003</ID>
+        <Num>100</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1003</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+   <!--增加建筑范围-->
+  <RemouldConfig>
+    <ID>4</ID>
+	<!--钟楼-->
+    <Name>Remould_Name_4</Name>
+    <Icon>ItemIcon/Icon_item_32015</Icon>
+	<!--对教堂进行改造，增加钟楼，可以在更大范围内进行传教。-->
+    <Des>Remould_Des_4</Des>
+	<!--模型命名-->
+	<Module>BellTower</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32015</ID>
+        <Num>1</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1004</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--厕所增加健康-->
+  <RemouldConfig>
+    <ID>5</ID>
+	<!--厕所-->
+    <Name>Remould_Name_5</Name>
+    <Icon>ItemIcon/Icon_item_32017</Icon>
+	<!--对住房进行改造，增加厕所，可以给居民提供卫生场所增加健康。-->
+    <Des>Remould_Des_5</Des>
+    <UnLockTechId>2403</UnLockTechId>
+	<!--模型命名-->
+	<Module>Toilet</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32017</ID>
+        <Num>1</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1005</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+ 
+  <!--稻草人增加产量-->
+  <RemouldConfig>
+    <ID>6</ID>
+	<!--稻草人-->
+    <Name>Remould_Name_6</Name>
+    <Icon>ItemIcon/Icon_item_32016</Icon>
+	<!--对农田、果林、林场进行改造，稻草人可以赶走吃种子的飞禽，增加产出。-->
+    <Des>Remould_Des_6</Des>
+	<!--模型命名-->
+	<Module>Scarecrow</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32016</ID>
+        <Num>1</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1006</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+    <!--降低工作时间-->
+  <RemouldConfig>
+    <ID>7</ID>
+	<!--齿轮-->
+    <Name>Remould_Name_7</Name>
+    <Icon>ItemIcon/Icon_item_51012</Icon>
+	<!--对风车水车进行改造，转动更加的流畅，提升工作效率。-->
+    <Des>Remould_Des_7</Des>
+	<UnLockTechId>2409</UnLockTechId>
+	<!--模型命名-->
+	<Module>Gear</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>51012</ID>
+        <Num>100</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1007</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+    <!--增加工作效率-->
+  <RemouldConfig>
+    <ID>8</ID>
+	<!--烤炉-->
+    <Name>Remould_Name_8</Name>
+    <Icon>ItemIcon/Icon_item_32018</Icon>
+	<!--对建筑进行改造增加烤炉，烘焙食物相关的工作效率提升-->
+    <Des>Remould_Des_8</Des>
+	<UnLockTechId>2408</UnLockTechId>
+	<!--模型命名-->
+	<Module>Chimney</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32018</ID>
+        <Num>1</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1007</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--居住人数+1-->
+  <RemouldConfig>
+    <ID>9</ID>
+	<!--床铺-->
+    <Name>Remould_Name_9</Name>
+    <Icon>ItemIcon/Icon_item_32007</Icon>
+	<!--用家纺对住房进行改造，增加了床铺居住人数增加-->
+    <Des>Remould_Des_9</Des>
+	<UnLockTechId>1804</UnLockTechId>
+	<!--模型命名-->
+	<Module>Quilt</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32007</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1009</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--居住人数+2-->
+  <RemouldConfig>
+    <ID>10</ID>
+	<!--豪华床铺-->
+    <Name>Remould_Name_10</Name>
+    <Icon>ItemIcon/Icon_item_32013</Icon>
+	<!--用豪华家纺对住房进行改造，更多的增加了床铺居住人数增加-->
+    <Des>Remould_Des_10</Des>
+	<UnLockTechId>1804</UnLockTechId>
+	<!--模型命名-->
+	<Module>SeniorQuilt</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32013</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1010</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--增加工作效率-->
+  <RemouldConfig>
+    <ID>11</ID>
+	<!--砖窑-->
+    <Name>Remould_Name_11</Name>
+    <Icon>TechIcon/Icon_Tech_11</Icon>
+	<!--用砖窑对建筑进行改造，炉火可以烧得更旺，工作效率提升-->
+    <Des>Remould_Des_11</Des>
+	<UnLockTechId>2408</UnLockTechId>
+	<!--模型命名-->
+	<Module>Brick</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32003</ID>
+        <Num>100</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1007</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+   <!--提升健康度下限-->
+  <RemouldConfig>
+    <ID>12</ID>
+	<!--洗浴-->
+    <Name>Remould_Name_12</Name>
+    <Icon>ItemIcon/Icon_item_51011</Icon>
+	<!--对建筑进行改造，搓澡工使用药皂为市民清洁保证健康。-->
+    <Des>Remould_Des_12</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>51011</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1011</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--提升住房幸福度下限-->
+  <RemouldConfig>
+    <ID>13</ID>
+	<!--家具-->
+    <Name>Remould_Name_13</Name>
+    <Icon>ItemIcon/Icon_item_32008</Icon>
+	<!--用家具对住房进行装修，市民居住温馨，提高市民的幸福度。-->
+    <Des>Remould_Des_13</Des>
+	<UnLockTechId>2404</UnLockTechId>
+	<!--模型命名-->
+	<Module>Furniture</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32008</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1012</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+   <!--提升住房幸福度下限-->
+  <RemouldConfig>
+    <ID>14</ID>
+	<!--豪华家具-->
+    <Name>Remould_Name_14</Name>
+    <Icon>ItemIcon/Icon_item_32014</Icon>
+	<!--用家具对住房进行装修，市民居住更加温馨，提高市民的幸福度。-->
+    <Des>Remould_Des_14</Des>
+	<UnLockTechId>2404</UnLockTechId>
+	<!--模型命名-->
+	<Module>Furniture</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32014</ID>
+        <Num>100</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1013</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+   <!--矿井增加效率-->
+  <RemouldConfig>
+    <ID>15</ID>
+	<!--提灯-->
+    <Name>Remould_Name_15</Name>
+    <Icon>ItemIcon/Icon_item_32009</Icon>
+	<!--用提灯对矿井和采石场进行装饰，矿工采石工能更深入的挖掘，提高工作效率。-->
+    <Des>Remould_Des_15</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32009</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1007</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--增加健康度下限-->
+  <RemouldConfig>
+    <ID>16</ID>
+	<!--药用酒精-->
+    <Name>Remould_Name_16</Name>
+    <Icon>ItemIcon/Icon_item_2006</Icon>
+	<!--用药用酒精对诊所医院进行消毒，可以给居民提供医疗场所增加健康。-->
+    <Des>Remould_Des_16</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>2006</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1011</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--增加效率-->
+  <RemouldConfig>
+    <ID>17</ID>
+	<!--镰刀/锄头-->
+    <Name>Remould_Name_17</Name>
+    <Icon>ItemIcon/Icon_item_51002</Icon>
+	<!--用锄头对农田、果林、林场、牧场进行松土，提高工人的工作效率。-->
+    <Des>Remould_Des_17</Des>
+	<!--模型命名-->
+	<Module>Hoe</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>51002</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1007</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--增加效率-->
+  <RemouldConfig>
+    <ID>18</ID>
+	<!--钢制工具-->
+    <Name>Remould_Name_18</Name>
+    <Icon>ItemIcon/Icon_item_51009</Icon>
+	<!--用钢制工具对建筑进行改造，工人工作更加顺手提高工作效率。-->
+    <Des>Remould_Des_18</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>51009</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1007</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--书籍-->
+  <RemouldConfig>
+    <ID>19</ID>
+	<!--书籍-->
+    <Name>Remould_Name_19</Name>
+    <Icon>ItemIcon/Icon_item_33014</Icon>
+	<!--用书籍进一步研读科技，提升发展点的产出效率。-->
+    <Des>Remould_Des_19</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>33014</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1007</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--饲料-->
+  <RemouldConfig>
+    <ID>20</ID>
+	<!--鱼饵-->
+    <Name>Remould_Name_20</Name>
+    <Icon>ItemIcon/Icon_item_30004</Icon>
+	<!--用饲料做诱饵，吸引附近鱼群，可以提升钓鱼的效率。-->
+    <Des>Remould_Des_20</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>30004</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1007</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+   <!--增加建筑范围-->
+  <RemouldConfig>
+    <ID>21</ID>
+	<!--礼服-->
+    <Name>Remould_Name_21</Name>
+    <Icon>ItemIcon/Icon_item_80201</Icon>
+	<!--用礼服对剧院的戏服进行改造，有更高的知名度提升戏院的范围。-->
+    <Des>Remould_Des_21</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>80201</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1004</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--地窖二次增加的容量-->
+  <RemouldConfig>
+    <ID>22</ID>
+	<!--深挖-->
+    <Name>Remould_Name_22</Name>
+    <Icon>ItemIcon/Icon_item_51002</Icon>
+	<!--对地窖进行再次的深挖，可以容纳更多的物品。-->
+    <Des>Remould_Des_22</Des>
+	<Module>Dig</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>51002</ID>
+        <Num>100</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1003</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--采集小屋增加采集效率-->
+  <RemouldConfig>
+    <ID>23</ID>
+	<!--篮子-->
+    <Name>Remould_Name_23</Name>
+    <Icon>ItemIcon/Icon_item_50008</Icon>
+	<!--对地窖进行再次的深挖，可以容纳更多的物品。-->
+    <Des>Remould_Des_23</Des>
+	<Module>StackBasket</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>50008</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1007</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+    
+  <!--捕猎小屋增加概率-->
+  <RemouldConfig>
+    <ID>24</ID>
+	<!--捕兽夹-->
+    <Name>Remould_Name_24</Name>
+    <Icon>ItemIcon/Icon_item_51013</Icon>
+	<!--对猎人休息站进行改造，使用捕兽夹增加猎人捕捉动物幼崽的概率。-->
+    <Des>Remould_Des_24</Des>
+	<UnLockTechId>2410</UnLockTechId>
+	<Module>Traps</Module>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>51013</ID>
+        <Num>100</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1018</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+    <!--宠物降压-->
+  <RemouldConfig>
+    <ID>25</ID>
+	<!--猫咪-->
+    <Name>Remould_Name_25</Name>
+    <Icon>ItemIcon/Icon_item_32019</Icon>
+	<!--在住房中饲养猫咪，可以给住房内的人物降低压力-->
+    <Des>Remould_Des_25</Des>	
+		<AnimalModule>CatSkin|CatSkin1|CatSkin2</AnimalModule>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32019</ID>
+        <Num>2</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1014</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--增加岗位-->
+  <RemouldConfig>
+    <ID>26</ID>
+	<!--岗位增加-->
+    <Name>Remould_Name_26</Name>
+    <Icon>ItemIcon/Icon_item_32008</Icon>
+	<!--工作建筑中增加家具，可以让建筑中的工作人数上限增加-->
+    <Des>Remould_Des_26</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32014</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1015</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+   <!--材料消耗降低-->
+  <RemouldConfig>
+    <ID>27</ID>
+	<!--减损-->
+    <Name>Remould_Name_27</Name>
+    <Icon>BuffIcon/Remould_Icon_27</Icon>
+	<!--使用工具套件对建筑进行改造，可以降低加工建筑的材料损耗-->
+    <Des>Remould_Des_27</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>51010</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1016</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <!--增加服务人数-->
+  <RemouldConfig>
+    <ID>28</ID>
+	<!--扩招-->
+    <Name>Remould_Name_28</Name>
+    <Icon>ItemIcon/Icon_item_32008</Icon>
+	<!--学校增加桌椅进行改造，可以增加学校的学习人数-->
+    <Des>Remould_Des_28</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32014</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1017</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  
+    <!--提升帐篷福度下限-->
+  <RemouldConfig>
+    <ID>29</ID>
+	<!--篝火-->
+    <Name>Remould_Name_29</Name>
+    <Icon>ItemIcon/Icon_item_30001</Icon>
+	<!--用篝火对帐篷进行改造，市民居住温馨，提高市民的幸福度。-->
+    <Des>Remould_Des_29</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>30001</ID>
+        <Num>10</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1013</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+      <!--狗狗改造-->
+  <RemouldConfig>
+    <ID>30</ID>
+	<!--小狗-->
+    <Name>Remould_Name_30</Name>
+    <Icon>ItemIcon/Icon_item_32020</Icon>
+	<!--在住房中饲养小狗狗，可以给住房内的人物降低压力-->
+	<AnimalModule>DogSkin</AnimalModule>
+    <Des>Remould_Des_30</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32020</ID>
+        <Num>2</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1014</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+<!--提升住房幸福度下限-->
+  <RemouldConfig>
+    <ID>31</ID>
+	<!--圣诞树改造，效果同豪华家具-->
+    <Name>Remould_Name_31</Name>
+    <Icon>ItemIcon/Icon_item_Remould31</Icon>
+	<!--用圣诞树对住房进行装修，市民居住更加温馨，提高市民的幸福度。-->
+    <Des>Remould_Des_31</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>103001</ID>
+        <Num>1</Num>
+      </ConsumeRes>
+      <ConsumeRes>
+        <ID>51007</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1013</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <RemouldConfig>
+    <ID>32</ID>
+	<!--结构强化-->
+    <Name>Remould_Name_32</Name>
+    <Icon>ItemIcon/Icon_item_32005</Icon>
+	<!--对建筑整体结构进行强化，更能经受风雨，建筑不会损坏。-->
+    <Des>Remould_Des_32</Des>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>32005</ID>
+        <Num>20</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1001</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  <RemouldConfig>
+    <ID>33</ID>
+	<!--商队增加-->
+    <Name>Remould_Name_33</Name>
+    <Icon>ItemIcon/Icon_item_50009</Icon>
+	<!--对建筑进行扩建，建筑容纳的商队数量+1。-->
+    <Des>Remould_Des_33</Des>
+	<UnLockTechId>8</UnLockTechId>
+    <ConsumeResList>
+      <ConsumeRes>
+        <ID>50009</ID>
+        <Num>50</Num>
+      </ConsumeRes>
+	  <ConsumeRes>
+        <ID>51012</ID>
+        <Num>20</Num>
+      </ConsumeRes>
+    </ConsumeResList>
+	<AbilitysList>
+        <Abilitys>1019</Abilitys>
+    </AbilitysList>	
+  </RemouldConfig>
+  
+  
+</ArrayOfRemouldConfig>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ArrayOfFestivalConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FestivalConfig>
+    <ID>1</ID>
+    <Name>新春</Name>
+    <FestivalDay>355</FestivalDay>
+    <LastDays>30</LastDays>
+    <RealBeginDays>
+      <Year>2022</Year>
+      <Month>1</Month>
+      <Day>1</Day>
+    </RealBeginDays>
+    <RealEndDays>
+      <Year>2022</Year>
+      <Month>4</Month>
+      <Day>30</Day>
+    </RealEndDays>
+    <GiveItems>
+      <Career>99</Career>
+      <EquipList>
+        <Equip>130003</Equip>
+      </EquipList>
+    </GiveItems>
+	
+	
+	
+    <BubbleMessage>
+      <BubblesMessage>CitizenTip_RedPacket</BubblesMessage>
+      <Career>99</Career>
+      <Num>1</Num>
+      <LastDays>7</LastDays>
+    </BubbleMessage>
+  
+</FestivalConfig>
+</ArrayOfFestivalConfig>

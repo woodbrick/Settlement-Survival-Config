@@ -1,0 +1,582 @@
+<?xml version="1.0"?>
+<ArrayOfDisasterConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <!--   灾难配置说明：  Disaster Configuration Instructions:
+  字段        类型        说明     
+  ID          int            唯一ID  Unique ID
+  EventLogID      int              
+  Type        int         灾难ID（查看下方灾难枚举）   灾难提示ID（查看下方灾难提示枚举）  Disaster Prompt ID (see the following disaster prompt enumeration)
+  Name        string           灾难名字  Name of Disaster
+  Icon        string           灾难图标（右上角的事件图标，文件路径不对应多语言）  Disaster icon (Event icon in the upper right corner. The path does not correspond to multiple languages)
+  Des         string           灾难描述（右上角的tips描述）  Disaster description (tips description in upper right corner)
+  DesNochurch     string           没有教堂的灾难描述（右上角的tips描述）  Disaster description of no church (tips description in the upper right corner)
+  DesSaid       string           人物头顶的描述（弃用）  A description of the character’s top of the head (deprecation)
+  Year        int            该灾难间隔的时间（年）  Interval between this disaster (years)
+  Citizen       int            触发该灾难的最小人数  The minimum number of people triggering the disaster
+  IgnoreTimes     int            跳过前几个触发周期（即前Year*IgnoreTimes 的时间内不会出现该灾难）   Skip the first trigger cycles (It will not occur before Year*IgnoreTimes)
+  DaysRange     ConfigLowerUpper     这一年内的哪些天数会触发该灾难（0~360）（Lower对应最小值 Upper对应最大值）  Which days in the year will trigger the disaster (0~360) (Lower is the minimum value and upper is the maximum)
+  Rate        int            出现的概率（百分比）  Probability of occurrence (%)
+  LastDays      int           持续的天数  Number of Days Lasted
+  BuffList                   该灾难触发的buff列表  List of buffs triggered by the disaster
+    Buff        int         buffID     
+   龙卷风的灾难数据配置（对应类型的灾难触发即可）：  Disaster data configuration of tornadoes (The disaster of corresponding type):
+  Tornado     
+    NumRange      ConfigLowerUpper     数量区间  Quantity Interval
+    StartRange      ConfigLowerUpper     开始范围  Starting Range
+    EndRange      ConfigLowerUpper       结束范围  Scope of closure
+    MoveSpeed       int      
+    Time        int                    限制移动时间  Limit Movement Time
+    MoveMaxDistance   int                 限制最大移动距离  Limit Max Movement Distance
+    Angle       int                  偏移角度  Offset angle
+    AngleMoveRange    ConfigLowerUpper     偏移移动距离  Offset Distance
+    CheckRadius     int                    摧毁范围半径  Radius of Destruction Range
+    CheckTime       int                    摧毁判定时间  Determination Time of Destruction
+   暴风雪的灾难数据配置（对应类型的灾难触发即可）：  Disaster data configuration of blizzard (The disaster of corresponding type):
+  Snowstorm     
+    StartMonth      int            开始月份  Start Month
+    Temperature     int            降温  Cool down
+    BuildingHurt    int              建筑耐久度伤害  Damage to Building HP
+   火灾的灾难数据配置（对应类型的灾难触发即可）：   Disaster data configuration for fire (The disaster of corresponding type): 
+  Fire     
+    LastRange     ConfigLowerUpper     火灾的持续天数（Lower对应最小值 Upper对应最大值）  The number of days of fire (Lower is the minimum value and upper is the maximum)
+    SpreadDay     int            传播时间  Time of transmission
+    MaxHelp       int            最大响应人数（救火人数）  Maximum number of responders (number of fire extinguishers)
+    BeKilledTimes   int            救火次数  Number of fire fighting
+    LevelList                  火灾等级列表  List of Fire Levels
+    SpreadRange     int            传播范围（米，每格为2.5m）  Transmission range (m, 2.5m per grid)
+    SpreadRate      int            传播概率（百分比）  Transmission probability (%)
+    SoundEffect     string           火灾对应的音效（音效的路径）  Sound effect of the fire (Path of sound effect)
+    Soundradio      float          火灾音效范围（单位：米（Unity中的距离单位））  Range of fire sound effect (Unit: Meter (The length unit in Unitity)
+    MaxSpread     int            最大一次传染个数  Maximum number of single infection
+    ReduceDurability  Config2Int         减少房屋耐久度（Int1多久扣一次 Int2扣减的值）  Reduce the durability of the house (Int1 frequency of deduction Int2 deduction value)
+   瘟疫的灾难数据配置（对应类型的灾难触发即可）：  Disaster data configuration of the plague (The disaster of corresponding type):
+  CitizenPlague     
+    HealthTrigger   int            低于多少健康值会触发  Lowest health value that won’t trigger it
+   丰收 严寒 的灾难数据配置（对应类型的灾难触发即可）：  Disaster data configuration of harvest and severe cold(The disaster of corresponding type):
+  Harvest      
+    AddPer        int            增产百分比（负数为减产）  Production increase percentage (negative means reduction)
+    EffectBuildingList               受影响的建筑列表的  List of the Impacted Buildings
+      EffectBuilding    int            收到影响的建筑ID  IDs of Impacted Building
+   干旱的移除资源配置（对应类型的灾难触发即可）：  Removal resource configuration of drought (The disaster of corresponding type):
+  Drought     
+    RemovePointList                移除的资源点的列表  List of Removed Resource Points
+      RemovePoint     Config2Int         资源点的列表（Int1移除的枚举类型 Int2移除的数量）  List of Resource Points (int1 removed enumeration types int2 number of removal)
+                             资源点枚举查看下方  View below Resource Node Enumeration
+     灾难提示枚举：  Disaster Hint Enumeration:
+    Disaster_Tornado = 11,          //    灾难龙卷风  Disaster Tornado
+    Disaster_Plague = 12,         //    灾难瘟疫  Disaster Plague
+    Disaster_Snow = 13,           //    灾难暴风雪  Disaster Blizzard
+    Disaster_Fire = 14,           //    灾难火灾  Disaster Fire
+    Disaster_Foison = 30,           //   秋收  Fall harvest
+    Disaster_Summer = 31,           //   干旱  Drought
+    Disaster_Rain = 32,             //    酸雨  Acid rain
+    Disaster_Winter = 33,           //   严寒    Severe cold  
+     灾难枚举：  Disaster Enumeration:
+  DisasterType_Tornado    = 1;  //    龙卷风  Tornado
+  DisasterType_SnowStorm    = 2;  //    暴风雪  Blizzard
+  DisasterType_Fire       = 3;  //    火灾  Fire
+  DisasterType_CitizenPlague  = 4;  //    人类瘟疫  Human Plague
+  DisasterType_BuildingPlague = 5;  //    建筑瘟疫 农田灾难  Plague in buildings, farmland disaster
+  DisasterType_Harvest    = 6;  //    丰收/严寒  Harvest/Severe Cold
+  DisasterType_AcidRain     = 7;  //    酸雨  Acid rain
+  DisasterType_Drought    = 8;  //    干旱  Drought
+	DisasterType_Flood 			= 9;	// 洪水
+	DisasterType_Earthquake 	= 10;	// 地震
+	DisasterType_AnimalPlague 	= 11;	// 动物瘟疫
+	DisasterType_DustStorms 	= 12;	// 沙尘暴
+	
+
+
+     资源点的枚举：  Resource Points Enumeration:
+  MapInitResourceType_Farm    = 1;  //    沃土   Fertile Farm
+  MapInitResourceType_Pasture   = 2;  //    牧场  Pasture
+  MapInitResourceType_PropsSeed = 3;  //    种子  Seeds
+  MapInitResourceType_Animal    = 4;  //    动物  Animals
+  MapInitResourceType_Fishing   = 5;  //   鱼点  Fishing points
+
+	
+  
+     实例：  Instance:
+     见下方  See below
+-->   
+
+
+
+
+<!--龙卷风-->	
+ <DisasterConfig>
+    <ID>1</ID>
+	<!--对应事件提示ID-->	
+	<EventLogID>11</EventLogID>
+    <Name>Disaster_Name_1</Name>
+    <Type>1</Type>
+    <Icon>timeEvent_Tornado</Icon>
+    <!--描述-->		
+    <Des>Disaster_Des_1</Des>
+    <!--没有教堂描述-->	
+    <DesNochurch>Disaster_DesNochurch_1</DesNochurch>	
+    <!--气泡描述-->		
+    <DesSaid>Disaster_DesSaid_1</DesSaid>
+    <DaysRange>
+      <Lower>0</Lower>
+      <Upper>360</Upper>
+    </DaysRange>
+    <!--出现概率 默认100-->
+    <Rate>15</Rate>
+    <!--间隔年-->
+    <Year>3</Year>
+    <Citizen>100</Citizen>
+    <!--忽略前几个周期-->
+    <IgnoreTimes>10</IgnoreTimes>
+	
+    <!--龙卷风配置-->
+    <Tornado>
+	<!--龙卷风死人描述-->
+	<CitizenDieEventLogID>19</CitizenDieEventLogID>
+	
+	<!--龙卷风的特效-->
+	<ModelPath>Prefab/TornadoTMP</ModelPath>
+      <NumRange>
+        <Lower>1</Lower>
+        <Upper>1</Upper>
+      </NumRange>
+      <StartRange>
+        <Lower>10</Lower>
+        <Upper>40</Upper>
+      </StartRange>
+      <EndRange>
+        <Lower>60</Lower>
+        <Upper>90</Upper>
+      </EndRange>
+      <MoveSpeed>2</MoveSpeed>
+      <Time>10000</Time>
+      <MoveMaxDistance>10000</MoveMaxDistance>
+      <Angle>30</Angle>
+      <AngleMoveRange>
+        <Lower>100</Lower>
+        <Upper>200</Upper>
+      </AngleMoveRange>
+      <CheckRadius>10</CheckRadius>
+      <CheckTime>10</CheckTime>
+    </Tornado>
+  </DisasterConfig>
+
+  <DisasterConfig>
+    <!--暴雪-->	
+    <ID>2</ID>
+	<!--对应事件提示ID-->	
+	<EventLogID>13</EventLogID>
+    <Name>Disaster_Name_2</Name>
+    <Type>2</Type>
+    <Icon>timeEvent_Snow</Icon>
+    <Des>Disaster_Des_2</Des>
+    <!--没有教堂描述-->	
+    <DesNochurch>Disaster_DesNochurch_1</DesNochurch>
+    <DesSaid>Disaster_DesSaid_2</DesSaid>
+    <DaysRange>
+      <Lower>211</Lower>
+      <Upper>360</Upper>
+    </DaysRange>
+    <Rate>20</Rate>
+    <Year>3</Year>
+    <Citizen>50</Citizen>
+    <BuffList>
+      <Buff>20101</Buff>
+    </BuffList>
+    <!--忽略前几个周期-->
+    <IgnoreTimes>5</IgnoreTimes>
+	<!--持续时间（表现层面使用）-->
+    <LastDays>90</LastDays>
+  </DisasterConfig>
+
+  <DisasterConfig>
+    <!--火灾-->
+    <ID>3</ID>
+	<!--对应事件提示ID-->	
+	<EventLogID>14</EventLogID>
+    <Name>Disaster_Name_3</Name>
+    <Type>3</Type>
+    <Icon>timeEvent_Fire</Icon>
+    <Des>Disaster_Des_3</Des>
+    <!--没有教堂描述-->	
+    <DesNochurch>Disaster_DesNochurch_1</DesNochurch>	
+    <DesSaid>Disaster_DesSaid_3</DesSaid>
+    <DaysRange>
+      <Lower>0</Lower>
+      <Upper>360</Upper>
+    </DaysRange>
+    <Rate>20</Rate>
+    <Year>3</Year>
+    <Citizen>20</Citizen>
+    <!--忽略前几个周期-->
+    <IgnoreTimes>1</IgnoreTimes>
+    <Fire>
+      <!--火灾持续时间-->
+      <LastRange>
+        <Lower>30</Lower>
+        <Upper>45</Upper>
+      </LastRange>
+      <!--传播间隔时间（单位：天）-->
+      <SpreadDay>10</SpreadDay>
+      <!--最大救火人数-->
+      <MaxHelp>50</MaxHelp>
+      <!--救火所需次数-->
+      <BeKilledTimes>20</BeKilledTimes>
+      <!--火灾音效-->
+      <SoundEffect></SoundEffect>
+      <!--火灾音效范围-->
+      <SoundEffect></SoundEffect>
+      <!--传播范围（单位：米）-->
+      <SpreadRange>8</SpreadRange>
+      <!--传播概率（单位：百分比）-->
+      <SpreadRate>30</SpreadRate>
+      <!--减少房屋耐久度-->
+      <ReduceDurability>
+        <!--多久扣一次-->
+        <Int1>1</Int1>
+        <!--房屋耐久度减少值-->
+        <Int2>-15</Int2>
+      </ReduceDurability>
+    </Fire>
+  </DisasterConfig>
+
+  <DisasterConfig>
+    <!--瘟疫-->	
+    <ID>4</ID>
+	<!--对应事件提示ID-->	
+	<EventLogID>12</EventLogID>
+    <Name>Disaster_Name_4</Name>
+    <Type>4</Type>
+    <Icon>timeEvent_Plague</Icon>
+    <Des>Disaster_Des_4</Des>
+    <!--没有教堂描述-->	
+    <DesNochurch>Disaster_DesNochurch_1</DesNochurch>	
+    <DesSaid>Disaster_DesSaid_4</DesSaid>
+    <DaysRange>
+      <Lower>0</Lower>
+      <Upper>360</Upper>
+    </DaysRange>
+    <Rate>18</Rate>
+    <Year>3</Year>
+    <Citizen>1</Citizen>
+    <!--忽略前几个周期-->
+    <IgnoreTimes>6</IgnoreTimes>
+    <CitizenPlague>
+      <!--健康状态下：低于多少值会触发-->
+      <HealthTrigger>2000</HealthTrigger>
+    </CitizenPlague>
+  </DisasterConfig>
+
+  <DisasterConfig>
+    <!--瘟疫-->	
+    <ID>5</ID>
+	<!--对应事件提示ID-->	
+	<EventLogID>12</EventLogID>
+    <Name>Disaster_Name_5</Name>
+    <Type>4</Type>
+    <Icon>timeEvent_Plague</Icon>
+    <Des>Disaster_Des_5</Des>
+    <!--没有教堂描述-->	
+    <DesNochurch>Disaster_DesNochurch_1</DesNochurch>	
+    <DesSaid>Disaster_DesSaid_5</DesSaid>
+    <DaysRange>
+      <Lower>0</Lower>
+      <Upper>360</Upper>
+    </DaysRange>
+    <Rate>18</Rate>
+    <Year>3</Year>
+    <Citizen>1</Citizen>
+    <!--忽略前几个周期-->
+    <IgnoreTimes>6</IgnoreTimes>
+    <CitizenPlague>
+      <!--非健康状态下：低于多少值会触发-->
+      <HealthTrigger>400</HealthTrigger>
+    </CitizenPlague>
+  </DisasterConfig>
+
+  <DisasterConfig>
+    <!--丰收-->
+    <ID>6</ID>
+	<!--对应事件提示ID-->	
+	<EventLogID>30</EventLogID>
+    <Name>Disaster_Name_6</Name>
+    <Type>6</Type>
+    <Icon>timeEvent_Foison</Icon>
+    <Des>Disaster_Des_6</Des>
+    <!--没有教堂描述-->	
+    <DesNochurch>Disaster_DesNochurch_1</DesNochurch>
+    <Rate>20</Rate>
+    <Year>3</Year>
+    <Citizen>1</Citizen>
+    <!--忽略前几个周期-->
+    <IgnoreTimes>1</IgnoreTimes>
+    <!--一年的哪几天会触发-->
+    <DaysRange>
+        <Lower>0</Lower>
+        <Upper>120</Upper>
+    </DaysRange>
+    <!--另一种实现方式：通过BUFF来实现提升的百分比-->
+    <BuffList>
+      <Buff>20105</Buff>
+      <Buff>20106</Buff>
+	  <Buff>20118</Buff>
+    </BuffList>
+  </DisasterConfig>
+
+
+  <DisasterConfig>
+    <!--干旱减产-->	
+    <ID>7</ID>
+	<!--对应事件提示ID-->	
+	<EventLogID>31</EventLogID>
+    <Name>Disaster_Name_7</Name>
+    <Type>8</Type>
+    <Icon>timeEvent_Summer</Icon>
+    <Des>Disaster_Des_7</Des>
+    <!--没有教堂描述-->	
+    <DesNochurch>Disaster_DesNochurch_1</DesNochurch>
+    <Rate>20</Rate>
+    <Year>5</Year>
+    <Citizen>0</Citizen>
+    <!--忽略前几个周期-->
+    <IgnoreTimes>2</IgnoreTimes>
+	<!--持续时间（表现层面使用）-->
+    <LastDays>120</LastDays>
+	<!--一年的哪几天会触发-->
+    <DaysRange>
+      <Lower>120</Lower>
+      <Upper>210</Upper>
+    </DaysRange>
+	 <!--触发一个持续时间的buff-->
+      <BuffList>
+        <Buff>20107</Buff>
+        <Buff>20108</Buff>
+		<Buff>20109</Buff>
+        <Buff>20110</Buff>
+		<Buff>20111</Buff>
+        <Buff>20112</Buff>
+		<Buff>20113</Buff>
+        <Buff>20114</Buff>
+		<Buff>20115</Buff>
+		<Buff>20116</Buff>
+      </BuffList>
+	<!--移除资源点类型--> 
+	<Drought>    
+	  <RemovePointList>
+        <RemovePoint>
+			<!--移除的枚举类型-->
+			<Int1>5</Int1>
+			<!--移除资源点的数量-->
+			<Int2>5</Int2>
+		</RemovePoint>
+      </RemovePointList>
+	</Drought> 
+	<!--农田果林减产-->
+	<Harvest>
+      <!--产量下降的百分比-->
+      <AddPer>-30</AddPer>
+      <!--建筑类型列表-->
+      <EffectBuildingList>
+        <EffectBuilding>6</EffectBuilding>
+        <EffectBuilding>7</EffectBuilding>
+      </EffectBuildingList>
+    </Harvest>
+  </DisasterConfig>
+
+
+  <DisasterConfig>
+    <!--动物瘟疫-->
+    <ID>8</ID>
+	<!--对应事件提示ID-->	
+	<EventLogID>39</EventLogID>
+	<!--事件的文本-->	
+	<EventLog>EventLog_Content_40</EventLog>
+    <Name>Disaster_Name_12</Name>
+    <!--类型ID-->
+    <Type>11</Type>
+    <Icon>timeEvent_Worm</Icon>
+    <Des>Disaster_Des_12</Des>
+    <!--没有教堂描述-->	
+    <DesNochurch>Disaster_DesNochurch_1</DesNochurch>
+    <Rate>20</Rate>
+    <Year>3</Year>
+    <Citizen>100</Citizen>
+    <!--忽略前几个周期-->
+    <IgnoreTimes>6</IgnoreTimes>
+    <!--一年的哪几天会触发-->
+    <DaysRange>
+      <Lower>0</Lower>
+      <Upper>360</Upper>
+    </DaysRange> 
+	 <!--动物瘟疫-->
+	<AnimalPlague>
+	  <SpreadRate>50</SpreadRate>
+	  <SpreadRadis>5</SpreadRadis>
+	  <SpreadDays>
+       <Lower>10</Lower>
+       <Upper>20</Upper>
+      </SpreadDays> 
+      <DeathDays>
+       <Lower>20</Lower>
+       <Upper>30</Upper>
+      </DeathDays>   
+    </AnimalPlague> 
+  </DisasterConfig>
+  
+
+  <DisasterConfig>
+    <!--沙尘暴-->
+    <ID>9</ID>
+	<!--对应事件提示ID-->	
+	<EventLogID>39</EventLogID>
+	<!--事件的文本-->	
+	<EventLog>EventLog_Content_41</EventLog>
+    <Name>Disaster_Name_13</Name>
+    <Type>1</Type>
+    <Icon>timeEvent_SandStorm</Icon>
+    <Des>Disaster_Des_13</Des>
+    <!--没有教堂描述-->	
+    <DesNochurch>Disaster_DesNochurch_1</DesNochurch>	
+    <DaysRange>
+      <Lower>0</Lower>
+      <Upper>360</Upper>
+    </DaysRange>
+    <!--出现概率 默认100-->
+    <Rate>15</Rate>
+    <!--间隔年-->
+    <Year>3</Year>
+    <Citizen>100</Citizen>
+    <!--忽略前几个周期-->
+    <IgnoreTimes>10</IgnoreTimes>	
+    <!--沙尘暴配置和龙卷风字段相同-->
+    <Tornado>
+	<!--沙尘暴的特效-->
+	<ModelPath>Prefab/SandStorm_FX</ModelPath>
+	<!--摧毁树木后缩小的体积千分比-->
+	<ReduceScale>5</ReduceScale>
+      <NumRange>
+        <Lower>1</Lower>
+        <Upper>1</Upper>
+      </NumRange>
+      <StartRange>
+        <Lower>10</Lower>
+        <Upper>40</Upper>
+      </StartRange>
+      <EndRange>
+        <Lower>60</Lower>
+        <Upper>90</Upper>
+      </EndRange>
+      <MoveSpeed>2</MoveSpeed>
+      <Time>10000</Time>
+      <MoveMaxDistance>10000</MoveMaxDistance>
+      <Angle>30</Angle>
+      <AngleMoveRange>
+        <Lower>100</Lower>
+        <Upper>200</Upper>
+      </AngleMoveRange>
+      <CheckRadius>50</CheckRadius>
+      <CheckTime>10</CheckTime>
+    </Tornado>
+  </DisasterConfig>
+  
+  
+   <!--洪涝-->
+  <DisasterConfig>
+    <ID>10</ID>
+	<EventLogID>39</EventLogID>
+	<!--事件的文本-->	
+	<EventLog>EventLog_Content_38</EventLog>
+    <Name>Disaster_Name_10</Name>
+    <Type>9</Type>
+    <Icon>timeEvent_Flood</Icon>
+    <Des>Disaster_Des_10</Des>	
+    <Rate>20</Rate>
+    <Year>4</Year>
+    <Citizen>15</Citizen>
+    <IgnoreTimes>1</IgnoreTimes>
+      <DaysRange>
+        <Lower>60</Lower>
+        <Upper>240</Upper>
+      </DaysRange>
+  </DisasterConfig>
+  
+
+  
+     <!--地震-->
+  <DisasterConfig>
+    <ID>11</ID>
+	<EventLogID>39</EventLogID>
+	<!--事件的文本-->	
+	<EventLog>EventLog_Content_39</EventLog>
+    <Name>Disaster_Name_11</Name>
+    <Type>10</Type>
+    <Icon>timeEvent_Earthquake</Icon>
+    <Des>Disaster_Des_11</Des>	
+    <Rate>20</Rate>
+    <Year>3</Year>
+    <Citizen>20</Citizen>
+    <IgnoreTimes>5</IgnoreTimes>
+    <DaysRange>
+      <Lower>0</Lower>
+      <Upper>360</Upper>
+    </DaysRange>
+	<!--地震-->
+    <EarthQuake>
+      <camShakeRange>0.5</camShakeRange>
+      <camShakeFrequency>1</camShakeFrequency>
+      <useTime>4</useTime>
+	  <!--查找空地次数-->
+      <flatMaxFindTimes>10</flatMaxFindTimes>
+	   <!--查找的概率-->
+      <generHillPersent>50</generHillPersent>
+	  <!--平地尺寸-->
+      <size>
+		<x>15</x>
+        <z>30</z>
+	  </size>
+	  <!--生成的山高度尺寸大小-->
+      <hillParam>
+	  
+        <h2Size>20</h2Size>
+		
+        <h2Scale>60</h2Scale>
+		
+        <cutH>20</cutH>
+		
+        <startH>5</startH>
+      </hillParam>
+    </EarthQuake>    
+  </DisasterConfig>
+
+
+
+  <DisasterConfig>
+    <!--瘟疫 麻疹-->
+    <ID>12</ID>
+    <!--对应事件提示ID-->
+    <EventLogID>12</EventLogID>
+    <Name>CitizenPlague_Name_11</Name>
+    <!--灾难的类型：病、火、风等-->
+    <Type>4</Type>
+    <Icon>timeEvent_Plague</Icon>
+    <Des>CitizenPlague_Name_11</Des>
+    <!--没有教堂描述-->
+    <DesNochurch>Disaster_DesNochurch_1</DesNochurch>
+    <DesSaid>Disaster_DesSaid_4</DesSaid>
+    <DaysRange>
+      <Lower>0</Lower>
+      <Upper>360</Upper>
+    </DaysRange>
+    <Rate>18</Rate>
+    <Year>3</Year>
+    <!--CitizenPlagueType-->
+    <P1>11</P1>
+    <P2>3</P2>
+    <Citizen>1</Citizen>
+    <!--忽略前几个周期-->
+    <IgnoreTimes>6</IgnoreTimes>
+    <CitizenPlague>
+      <!--健康状态下：低于多少值会触发-->
+      <HealthTrigger>2000</HealthTrigger>
+    </CitizenPlague>
+  </DisasterConfig>
+</ArrayOfDisasterConfig>

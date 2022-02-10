@@ -1,0 +1,4755 @@
+<?xml version="1.0"?>
+<ArrayOfBuffConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--   城镇的BUFF配置说明：  Description of Buff Configuration for Towns:
+  ID          int          唯一ID  Unique ID
+  Type        int          建筑能力的枚举，查看下方枚举  Enumeration of building capability. See the enumeration below
+  Name        string        建筑能力名字，（备注使用,不对应多语言)  Name of Building Capacity, (For remarks. Non-corresponding multi-language)
+  Des         string         建筑能力描述,需要对应多语言  The description of building capacity. Corresponding multiple languages are required
+  Icon        string         对应的图标路径（不对应多语言）  Path of Corresponding Icons (Non-corresponding to multiple languages)
+  NumRange      ConfigLowerUpper     范围随机数（Lower为最小值，Upper为最大值）  Range random number (Lower is the minimum value and Upper is the maximum)
+  Num         int          加成的数量  Quantity of Bonus
+  Percent       int          加成的百分比  Percentage of Bonus
+  P1          int          自定义参数1查看枚举中对应  Custom Parameter 1 See correspondence in the enumeration
+  P2          int          自定义参数2查看枚举中对应  Custom Parameter 2 See correspondence in the enumeration
+  CannotReduce    int          不可扣除 负值不处理    No deductions and negative value will not be processed  
+  LastTime      int          持续时间（时间 =0 无限）  Duration (Time=0 Infinite)
+
+     BUFF的类型枚举：  Enumeration of Buff types:
+  BuffType_Unknow           = 0;     
+  BuffType_ItemCreate         = 1;  //    物件数量的buff   The buff of the item quantity
+  BuffType_BuildingAddServerNum     = 2;  //    指定建筑增加服务人数 p1 id p2类型  Number of people served of certain buildings increased p1 id p2 type
+  BuffType_BuildingAddRange       = 3;  //    指定建筑增加范围 p1 id p2类型  Range of certain buildings increased p1 id p2 type
+  BuffType_BuildingAddMaxDurability   = 4;  //    指定建筑增加耐久度上限  p1 id p2类型  Durability upper limit of certain buildings increased p1 id p2 type
+  BuffType_BuildingAddFireRate    = 5;  //    指定建筑减少着火概率 p1 id p2类型  Probability of fire of certain buildings reduced p1 id p2 type
+  BuffType_BuildingAddTechPoint     = 6;  //    指定建筑科技点获得  p1 id p2类型  Certain buildings technology point p1 id p2 types
+  BuffType_BuildingAddBuildPoint    = 7;  //    指定建筑建造点增加  p1 id p2类型  Construction point of certain buildings increased p1 id p2 type
+  BuffType_BuildingAddRuinPoint     = 8;  //    指定建筑摧毁点增加  p1 id p2类型  Destruction point of certain buildings increased p1 id p2 type
+  BuffType_BuildingAddReturnItem    = 9;  //    指定建筑摧毁物品增加 p1 id p2类型  Destructed items of certain buildings increased p1 id p2 type
+  BuffType_BuildingAddBuildConsume  = 10; //    指定建筑建筑材料调整 p1 id p2类型  Building materials of certain buildings adjusted p1 id p2 type
+  BuffType_BuildingAddProduce     = 11; //    产物加成 p1 id p2类型  Product bonus p1 id p2 type
+  BuffType_BuildingAddPastureAdopt  = 12; //    动物容量加成 p1 id p2类型  Animal capacity bonus p1 id p2 type
+  BuffType_BuildingAddFixConsume    = 13; //    建筑维修 p1 id p2类型  Building repair p1 id p2type
+  BuffType_BuildingAddTradeInterval   = 14; //    调整贸易战时间间隔  Adjust the trade war interval
+  BuffType_BuildingTradeBringPlague   = 15; //    贸易带来瘟疫  Trade Brings Plague
+  BuffType_DevelopmentAddPoint    = 16; //    发展点增加  Increase development points
+  BuffType_BuildingRecoverDurability  = 17; //    房屋恢复耐久  House durability is restored
+  BuffType_TradingPostAddBringNum   = 18; //    贸易船增加更多的物品类型  Increase the number of item types available on the Export Ship
+  BuffType_TradingPostAddOrderTime  = 19; //    贸易船增加订购时间 可以正负  Increase Export Ship’s order time, which can be positive or negative
+  BuffType_BuildingAddWeight      = 20; //    建筑增加库存重量  Increase building’s inventory weight
+  BuffType_DevelopmentAddLevel    = 21; //    发展等级增加  The Increase of Development Level
+  BuffType_IndustryAddLevel       = 22; //    产业等级增加 P1工业类型  The Increase of Industry Level P1 industrial type
+  BuffType_BuildingAddLiveNum     = 23; //    建筑增加居住人口  Increase the number of residents in the building
+  BuffType_IndustryAddPointSpeed    = 24; //    工业熟练度 增加 p1为工业类型  Increase the industrial proficiency p1 as an industrial type
+  BuffType_DevelopmentAddRandomTech   = 25; //    随机获得一个可激活的科技  Obtain a random available technology
+  BuffType_FreeAddCitizen       = 26; //    免费赠送人物 random 年龄 p1 数量 /负数为减少一些人物仅支持数量  Free character random Age p1 Number / Negative numbers indicate fewer people Only numbers are available
+  BuffType_TradePostBiggerBoat    = 27; //    船只都变为最高级的  NUM  All ships are at the highest level NUM
+  BuffType_KillCitizen        = 28; //    市民随机死亡  p1性别 range 年龄范围 num 数量  Citizens die randomly p1 Gender Range Age range Num Quantity
+  BuffType_BuildingProcessCount   = 29; //    指定建筑加工 次数变化 id type  Change the number of times of certain buildings processing id type
+  BuffType_BuildingAddHappyLower    = 30; //    建筑幸福度下限 id type  Lower limit of building happiness id type
+  BuffType_BuildingAddHealthLower   = 31; //    建筑健康度下限 id type  Lower limit of building health id type
+  BuffType_CitizenEnergy        = 101;  //    人类buff  p1为职业  常驻类型  Human buff  p1 is occupation type  Resident type
+  BuffType_CitizenSpeed       = 102;  //    人类buff  p1为职业 速度  Human buff  p1 is occupation  Speed
+  BuffType_CitizenWorkingTime     = 103;  //    人类buff  减少工作时间  p1为职业  Human buff  Reduce the working time  p1 is occupation
+  BuffType_CitizenDeathChange     = 104;  //    人类buff  减少死亡概率  p1为职业  Human buff  Reduces the probability of death  p1 is occupation
+  BuffType_CitizenEnergyUpper     = 105;  //    人类buff  增加体力值上限  p1为职业  Human buff  Increases the upper limit of strength  p1 is occupation
+  BuffType_CitizenDeathAge      = 106;  //    人类buff  增加寿命  Human buff  Increases life
+  BuffType_CitizenStudyTimes      = 107;  //    学生学习次数  Number of student’s study
+  BuffType_CitizenAddAttr       = 108;  //    人类buff 增加属性值上限 p1为属性  Human buff Increases the upper limit of the attribute value p1 is attribute
+  BuffType_CitizenAddAttrLower    = 109;  //    人类buff 增加属性值下限 p1为属性  Human buff Increases the lower limit of attribute value p1 is attribute
+  BuffType_CitizenBirthInterval   = 110;  //    人类buff 生育间隔  Human buff Birth interval
+  BuffType_CitizenImmigrationInterval = 111;  //    人类buff 流民间隔  Human buff Immigration interval
+  BuffType_CitizenAddAttrValue    = 112;  //    人类buff 属性值数值  Human buff Attribute value
+  BuffType_CitizenPressureTech    = 113;  //    人类buff 人口压力计算值 科技  Human buff Population pressure calculation value Technology
+  BuffType_CitizenPressureMayor   = 114;  //    人类buff 人口压力计算值 市长  Human buff Population pressure calculation value Mayor
+  BuffType_CitizenPressureBuilding  = 115;  //    人类buff 人口压力计算值 建筑  Human buff Population pressure calculation value Building
+  BuffType_CitizenAgePercent      = 116;  //    人类buff 市民年龄百分比 正常偏差  Human buff Percentage of citizen’s age Normal deviation
+  BuffType_CitizenMaxFamilyNum    = 117;  //    人类buff 家庭人数buff  Human buff Buff of the number of families
+  BuffType_CitizenAddPlague     = 118;  //    人类buff 触发指定瘟疫p1 ID  Human buff Trigger the designated plague p1 ID
+  BuffType_CitizenExtraCareerDeath  = 119;  //    人类buff 职业意外死亡循环 p1职业num天数  Human buff Occupational accidental death cycle p1 Occupation num Days
+  BuffType_CitizenAddImmigration    = 120;  //    人类buff 控制移民人口  Human buffs Control the immigration
+  BuffType_CitizenEvicted				= 121;	// 人类buff 流放人口
+  BuffType_CitizenIgnoreRoughFood		= 122;	// 人类buff 无视粗糙食物的debuff
+
+  BuffType_GameTemperature    = 201;  //    游戏设置总体 温度buff  Overall Game Setting Temperature buff
+  BuffType_GameFrozenTemperature  = 202;  //    游戏设置总体 温度buff 设置在恒定温度  Overall Game Setting Temperature buff At constant temperature
+ 
+
+  BuffType_ItemsDurablility   = 301;  //    物品buff 增加耐久度  p1 id p2类型 弃用 现在=302 不可删除 否则读档错误  Item buff Increase durability p1 id p2 Type Deprecated Now =302 It cannot be deleted, or the file reading error occurs
+  BuffType_EquipDurability    = 302;  //    物品buff 增加耐久度  p1 id p2类型  Item buff Increase durability p1 id p2 Type
+  BuffType_ItemAddFuelNum     = 303;  //    木材燃料值 增加  Lumber Fuel Value Increase
+  BuffType_TradeItemSellWorth   = 304;  //    售卖价格提高  Increase in sales price
+  BuffType_TradeItemOrderWorth  = 305;  //    订购价格  Order Price
+  BuffType_ItemAddFree      = 306;  //    免费赠送物品 种子动物科技点金币等  Free items, such as seeds, animal, technology points, coins, etc.
+  BuffType_ItemAddWileAnimal    = 308;  //    增加野生动物  Increase Wildlife
+  BuffType_TradeItemBuyWorth    = 309;  //    买入价格降低  Lower Buying Price
+  BuffType_AddItems				= 310;	// 增加物品 赠送物品
+  BuffType_CaravanAddBuyPer		= 311;	// 增加物品购买基础金钱率
+  BuffType_CaravanAddSellPer		= 312;	// 增加物品出售基础金钱率
+  BuffType_CaravanAddTradePer		= 313;	// 增加物品价格浮动
+  BuffType_CaravanAddReputation	= 314;	// 增加声望
+  BuffType_CaravanAddInsurance	= 315;	// 增加保险金额
+  BuffType_CaravanAddCompensation	= 316;	// 增加保险赔偿金额
+		
+
+  BuffType_PropsRelife      = 501;  //    植株buff 重生时间调整-1不可再生  p1 id p2 type  Plant buff Adjust rebirth time -1 Non-renewable p1 id p2 type
+  BuffType_PropsGrow        = 502;  //    植株buff 植物成熟时间调整  p1 id p2 type  Plant buff Adjust plant ripening time p1 id p2 type
+  BuffType_PropsDead        = 503;  //    植株buff 植物死亡时间调整  p1 id p2 type  Plant buff Adjust plant death time p1 id p2 type
+  BuffType_AnimalCatchRate    = 504;  //    动物buff 崽概率  p1 id p2 type  Animal buff Cub probability p1 id p2 type
+  BuffType_PropsDeadRes     = 505;  //    资源死亡创建buff加成  Resource Death Create buff Bonus
+  BuffType_PropsKillType			= 506;	// 杀死地图上所有的该类型植物
+  BuffType_PropsModleSize			= 507;	// 植物模型 更改大小
+
+	
+	
+	人物属性：CitizenAttribute：
+	CitizenAttribute_Unknow			=	0;	//未定义
+	CitizenAttribute_Life			=	1;	//生命值
+	CitizenAttribute_Food			=	2;	//食物
+	CitizenAttribute_Drink			=	3;	//饮水
+	CitizenAttribute_Energy			=	4;	//体力
+	CitizenAttribute_Load			=	5;	//负重
+	CitizenAttribute_Career			=	6;	//职业
+	CitizenAttribute_IsSick			=	7;	//是否疾病
+	CitizenAttribute_IsEducation	=	8;	//是否教育
+	CitizenAttribute_Tool			=	9;	//工具
+	CitizenAttribute_Clothes		=	10;	//衣服
+	CitizenAttribute_Sex			=	11;	//性别
+	CitizenAttribute_Speed			=	12;	//移动速度
+	CitizenAttribute_Warm			=	13;	//保暖
+	CitizenAttribute_DeathAge		=	14;	//死亡年龄
+	CitizenAttribute_LiveDay		=	15;	//生存天数
+	CitizenAttribute_BuildingPer	=	16;	//建造建筑点数
+	CitizenAttribute_Health	        =	17;	//健康度
+	CitizenAttribute_Happy			=	18;	//幸福度
+	
+	
+	
+     实例：  Instance:
+     见下方  See below
+-->   
+
+
+  <!--科技人口压力buff-->
+  <BuffConfig>
+    <ID>1</ID>
+    <Name>增加科技点buff</Name>
+        <Type>21</Type>
+    <Num>100</Num>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>2</ID>
+    <Name>增加科技点buff</Name>
+        <Type>21</Type>
+    <Num>1</Num>
+  </BuffConfig>
+  
+   <BuffConfig>
+    <ID>3</ID>
+    <Name>沙盒模式建造材料减少</Name>
+    <!--枚举类型-->
+    <Type>10</Type>
+    <!--效果增强百分比-->
+    <Percent>-100</Percent>
+    <!--效果描述-->
+    <Des>Buff_Des_10017</Des>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>4</ID>
+    <Name>沙盒模式建造材料减少</Name>
+    <!--枚举类型-->
+    <Type>7</Type>
+    <!--效果增强百分比-->
+    <Percent>-100</Percent>
+    <!--效果描述-->
+    <Des>Buff_Des_10017</Des>
+  </BuffConfig>
+  
+
+  <!--科技人口压力减少buff-->
+  <BuffConfig>
+    <ID>101</ID>
+    <Name>科技减少压力buff</Name>
+        <Type>113</Type>
+    <Num>10</Num>
+      
+  </BuffConfig>
+
+  <!--建筑人口压力buff-->
+
+  <BuffConfig>
+    <ID>201</ID>
+    <Name>狮子雕像</Name>
+        <Type>115</Type>
+    <Num>25</Num>
+      
+  </BuffConfig>
+
+
+  <!--摸鱼勇者buff-->
+  <BuffConfig>
+    <Des>Buff_moyu_Des_1</Des>
+    <ID>601</ID>
+    <Name>获得市民</Name>
+        <Type>26</Type>
+    <!--年龄范围-->
+    <NumRange>
+      <Lower>1260</Lower>
+      <Upper>2440</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>99</P1>     
+  </BuffConfig>
+
+  <BuffConfig>
+    <Des>Buff_moyu_Des_2</Des>
+    <ID>602</ID>
+    <Name>减少市民</Name>
+        <Type>26</Type>
+    <!--人数-->
+    <P1>-99</P1>    
+  </BuffConfig>
+
+  <BuffConfig>
+    <Des>Buff_moyu_Des_3</Des>
+    <ID>603</ID>
+    <Name>获得银币</Name>
+        <Type>306</Type>
+    <!--年龄范围-->
+    <Num>99999</Num>
+    <P1>110002</P1>     
+  </BuffConfig>
+
+  <BuffConfig>
+    <Des>Buff_moyu_Des_4</Des>
+    <ID>604</ID>
+    <Name>减少银币</Name>
+        <Type>306</Type>
+    <!--年龄范围-->
+    <Num>-99999</Num>
+    <P1>110002</P1>    
+  </BuffConfig>
+
+  <BuffConfig>
+    <Des>Buff_moyu_Des_5</Des>
+    <ID>605</ID>
+    <Name>增加健康度</Name>
+        <Type>112</Type>
+    <Num>990</Num>
+    <!--人数-->
+    <P1>17</P1>     
+  </BuffConfig>
+
+  <BuffConfig>
+    <Des>Buff_moyu_Des_6</Des>
+    <ID>606</ID>
+    <Name>减少健康度</Name>
+        <Type>112</Type>
+    <Num>-990</Num>
+    <!--人数-->
+    <P1>17</P1>     
+  </BuffConfig>
+
+  <BuffConfig>
+    <Des>Buff_moyu_Des_7</Des>
+    <ID>607</ID>
+    <Name>增加幸福度</Name>
+        <Type>112</Type>
+    <Num>990</Num>
+    <!--人数-->
+    <P1>18</P1> 
+  </BuffConfig>
+
+  <BuffConfig>
+    <Des>Buff_moyu_Des_8</Des>
+    <ID>608</ID>
+    <Name>减少幸福度</Name>
+        <Type>112</Type>
+    <Num>-990</Num>
+    <!--人数-->
+    <P1>18</P1>    
+  </BuffConfig>
+
+  <BuffConfig>
+    <Des>Buff_moyu_Des_9</Des>
+    <ID>609</ID>
+    <Name>获得呆鸡</Name>
+        <Type>308</Type>
+    <Num>9</Num>
+    <P1>1009</P1>    
+  </BuffConfig>
+
+  <BuffConfig>
+    <Des>Buff_moyu_Des_10</Des>
+    <ID>610</ID>
+    <Name>获得火鸡</Name>
+        <Type>308</Type>
+    <Num>9</Num>
+    <P1>1005</P1>     
+  </BuffConfig>
+
+
+  <!--蓝图建筑buff-->
+  <BuffConfig>
+    <ID>701</ID>
+    <Name>市民健康度下限+5</Name>
+        <Type>109</Type>
+    <Num>50</Num>
+    <P1>17</P1>     
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>702</ID>
+    <Name>市民幸福度下限+5</Name>
+        <Type>109</Type>
+    <Num>50</Num>
+    <P1>18</P1>     
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>703</ID>
+    <Name>移动速度+5%</Name>
+        <Type>102</Type>
+    <Percent>5</Percent> 
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>704</ID>
+    <Name>古树生育间隔-5%</Name>
+        <Type>110</Type>
+    <Num>-5</Num> 
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>705</ID>
+    <Name>狩猎小屋野生动物捕捉+1%</Name>
+    <Type>504</Type>
+    <Percent>100</Percent>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>706</ID>
+    <Name>天使增加寿命5</Name>
+    <Type>106</Type>
+    <Num>5</Num>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>707</ID>
+    <Name>骷髅增加寿命-5</Name>
+    <Type>106</Type>
+    <Num>-5</Num>     
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>708</ID>
+    <Name>石中剑压力+3</Name>
+     <Type>115</Type>
+    <Num>25</Num>  
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>709</ID>
+    <Name>摩艾石像压力</Name>
+    <Type>115</Type>
+    <Num>10</Num>  
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>710</ID>
+    <Name>大巴扎</Name>
+    <Type>313</Type>
+    <Percent>-50</Percent> 
+	<P1>4032</P1>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>711</ID>
+    <Name>含元殿声望加快</Name>
+    <!--枚举类型-->
+    <Type>314</Type>
+	<!--效果增强百分比-->
+    <Percent>100</Percent>
+  </BuffConfig>
+  
+   <BuffConfig>
+    <ID>712</ID>
+    <Name>未受教育变成受教育</Name>
+    <!--枚举类型-->
+    <Type>34</Type>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <!--科技点产出加成-->
+    <ID>713</ID>
+    <Name>研究院</Name>
+    <!--枚举类型-->
+    <Type>6</Type>
+    <!--效果百分比-->
+    <Percent>25</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>20</P2>
+  </BuffConfig>
+
+
+  <!--事件对应的buff-->
+  <!--漂流箱buff-->
+  
+   <BuffConfig>
+    <ID>901</ID>
+    <Name>增加渔民的意外死亡率增加50%</Name>
+    <!--枚举类型-->
+    <Type>104</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+	<P1>6</P1>
+	<!--持续时间-->
+    <LastTime>180</LastTime>
+  </BuffConfig>
+  
+    <!--抓熊死亡-->
+    <BuffConfig>
+    <ID>902</ID>
+    <Name>随机死亡市民</Name>
+    <Type>26</Type>
+    <P1>-3</P1>
+  </BuffConfig>
+ <!--移植树木-->
+  <BuffConfig>
+    <ID>903</ID>
+    <Name>树木再生时间缩短10%</Name>
+    <!--枚举类型-->
+    <Type>501</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+	<!--持续时间-->
+    <LastTime>1080</LastTime>
+  </BuffConfig>
+   <!--砍树-->
+  <BuffConfig>
+    <ID>904</ID>
+    <Name>树木再生时间延长10%</Name>
+    <!--枚举类型-->
+    <Type>501</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+	<!--持续时间-->
+    <LastTime>1080</LastTime>
+  </BuffConfig>
+  
+    <BuffConfig>
+    <Des>Buff_moyu_Des_9</Des>
+    <ID>905</ID>
+    <Name>获得呆鸡</Name>
+        <Type>308</Type>
+    <Num>2</Num>
+    <P1>1009</P1>    
+  </BuffConfig>
+
+    <!--抓熊死亡-->
+    <BuffConfig>
+    <ID>906</ID>
+    <Name>随机死亡市民</Name>
+    <Type>26</Type>
+    <P1>-2</P1>
+  </BuffConfig>
+  
+    <BuffConfig>
+    <ID>907</ID>
+    <Name>丰收提升农田产量50</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>6</P2>
+	<!--持续时间-->
+    <LastTime>240</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>908</ID>
+    <Name>房屋修缮</Name>
+    <!--枚举类型-->
+    <Type>5</Type>
+    <!--效果增强百分比-->
+    <Percent>100</Percent>
+	<!--持续时间-->
+    <LastTime>1080</LastTime>
+  </BuffConfig>
+
+
+
+
+
+  <!--任务奖励-->
+  <BuffConfig>
+    <ID>801</ID>
+    <Name>任务奖励400银币</Name>
+        <Type>310</Type>
+    <P1>110002</P1>
+    <Num>400</Num>  
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>802</ID>
+    <Name>任务奖励700银币</Name>
+        <Type>310</Type>
+    <P1>110002</P1>
+    <Num>700</Num>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>803</ID>
+    <Name>任务奖励900银币</Name>
+        <Type>310</Type>
+    <P1>110002</P1>
+    <Num>900</Num> 
+  </BuffConfig>
+
+
+
+
+  <!--科技buff配置-->
+  <BuffConfig>
+    <ID>1001</ID>
+    <Name>快速准备</Name>
+    <!--枚举类型-->
+    <Type>102</Type>
+    <!--效果增强百分比-->
+    <Percent>5</Percent>
+	<P1>17</P1>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>1002</ID>
+    <Name>快速准备</Name>
+    <!--枚举类型-->
+    <Type>105</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+	<P1>17</P1>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>1011</ID>
+    <Name>精致织物</Name>
+    <!--枚举类型-->
+    <Type>301</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--p1 id p2类型-->
+    <P2>501</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>1012</ID>
+    <Name>精致织物</Name>
+    <!--枚举类型-->
+    <Type>301</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--p1 id p2类型-->
+    <P2>804</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>1021</ID>
+    <Name>精致食物</Name>
+    <!--枚举类型-->
+    <Type>105</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+    <!--自定义参数，P1为职业-->
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>1031</ID>
+    <Name>商业奇才</Name>
+    <!--枚举类型-->
+    <Type>19</Type>
+    <!--效果增强百分比-->
+    <Percent>-25</Percent>
+    <!--自定义参数，P1为职业-->
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>1041</ID>
+    <Name>海运</Name>
+    <!--枚举类型-->
+    <Type>18</Type>
+    <!--效果增强百分比-->
+    <Num>2</Num>
+    <!--自定义参数，P1为职业-->
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>2011</ID>
+    <Name>房屋修缮</Name>
+    <!--枚举类型-->
+    <Type>4</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>2012</ID>
+    <Name>房屋修缮</Name>
+    <!--枚举类型-->
+    <Type>5</Type>
+    <!--效果增强百分比-->
+    <Percent>-50</Percent>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>2021</ID>
+    <Name>动作如潮</Name>
+    <!--枚举类型-->
+    <Type>102</Type>
+    <!--效果增强百分比-->
+    <Percent>5</Percent>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>2022</ID>
+    <Name>动作如潮</Name>
+    <!--枚举类型-->
+    <Type>102</Type>
+    <!--效果增强百分比-->
+    <Percent>5</Percent>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>2031</ID>
+    <Name>建造技艺</Name>
+    <!--枚举类型-->
+    <Type>8</Type>
+    <!--效果增强百分比-->
+    <Percent>0</Percent>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>2032</ID>
+    <Name>建造技艺</Name>
+    <!--枚举类型-->
+    <Type>8</Type>
+    <!--效果增强百分比-->
+    <Percent>-75</Percent>
+  </BuffConfig>
+
+
+  <BuffConfig>
+    <ID>2033</ID>
+    <Name>材料回收</Name>
+    <!--枚举类型-->
+    <Type>9</Type>
+    <!--效果增强百分比-->
+    <Percent>100</Percent>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>2041</ID>
+    <Name>勘探技术1</Name>
+    <!--枚举类型-->
+    <Type>104</Type>
+    <!--效果增强百分比-->
+    <Percent>-50</Percent>
+    <!--P1为职业-->
+    <P1>11</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>2051</ID>
+    <Name>开采技术1</Name>
+    <!--枚举类型-->
+    <Type>104</Type>
+    <!--效果增强百分比-->
+    <Percent>-50</Percent>
+    <!--P1为职业-->
+    <P1>12</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>2061</ID>
+    <Name>建造技艺1</Name>
+    <!--枚举类型-->
+    <Type>17</Type>
+    <!--增强数值-->
+    <Num>300</Num>
+    <!--P2为建筑类型-->
+    <P2>1</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>2071</ID>
+    <Name>壁炉</Name>
+    <!--枚举类型-->
+    <Type>303</Type>
+    <!--增强数值-->
+    <Percent>50</Percent>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3011</ID>
+    <Name>学校扩容</Name>
+    <!--枚举类型-->
+    <Type>2</Type>
+    <!--效果增强百分比-->
+    <Num>5</Num>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>11</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3012</ID>
+    <Name>学校扩容2</Name>
+    <!--枚举类型-->
+    <Type>6</Type>
+    <!--效果增强百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>11</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3021</ID>
+    <Name>学生效率</Name>
+    <!--枚举类型-->
+    <Type>6</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>11</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3022</ID>
+    <Name>增加熟练度获取百分比</Name>
+    <Type>24</Type>
+    <Percent>25</Percent> 
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3031</ID>
+    <Name>采集效率</Name>
+    <!--枚举类型-->
+    <Type>3</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>5</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3032</ID>
+    <Name>采集效率</Name>
+    <!--枚举类型-->
+    <Type>3</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>9</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3033</ID>
+    <Name>采集效率</Name>
+    <!--枚举类型-->
+    <Type>3</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>15</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3034</ID>
+    <Name>采集效率</Name>
+    <!--枚举类型-->
+    <Type>3</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>17</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3035</ID>
+    <Name>采集效率</Name>
+    <!--枚举类型-->
+    <Type>3</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>24</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3041</ID>
+    <Name>种植园</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2026</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3042</ID>
+    <Name>农民工作时间</Name>
+    <!--枚举类型产量增加-->
+    <Type>103</Type>
+    <!--效果增强百分比-->
+    <Percent>-50</Percent>
+    <!--自定义参数， p1为职业-->
+    <P1>3</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3051</ID>
+    <Name>畜栏</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2025</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>3052</ID>
+    <Name>畜栏</Name>
+    <!--枚举类型容量增加-->
+    <Type>12</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2025</P1>
+	<P2>8</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>4011</ID>
+    <Name>仓库加固</Name>
+    <!--枚举类型-->
+    <Type>4</Type>
+    <!--效果增强百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>1</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>4012</ID>
+    <Name>仓库加固</Name>
+    <!--枚举类型-->
+    <Type>4</Type>
+    <!--效果增强百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>2</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>4021</ID>
+    <Name>搬运</Name>
+    <!--枚举类型-->
+    <Type>102</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>4022</ID>
+    <Name>搬运</Name>
+    <!--枚举类型-->
+    <Type>102</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>4031</ID>
+    <Name>堆叠</Name>
+    <!--枚举类型-->
+    <Type>20</Type>
+    <!--效果增强百分比-->
+    <Percent>25</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>1004</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>4041</ID>
+    <Name>健康</Name>
+    <!--枚举类型-->
+    <Type>106</Type>
+    <!--效果增强百分比-->
+    <NumRange>
+      <Lower>10</Lower>
+      <Upper>20</Upper>
+    </NumRange>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>1004</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>4051</ID>
+    <Name>衣服耐久+50%</Name>
+    <!--枚举类型-->
+    <Type>302</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+    <!--道具类型-->
+    <P2>501</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>4061</ID>
+    <Name>集市范围+20%</Name>
+    <!--枚举类型-->
+    <Type>3</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>16</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>4062</ID>
+    <Name>口袋扩容市民负重+80</Name>
+        <Type>112</Type>
+    <Num>80</Num>
+    <!--类型-->
+    <P1>5</P1>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>4071</ID>
+    <Name>教堂升级幸福度下限+20</Name>
+        <Type>30</Type>
+    <Num>200</Num>
+    <!--类型-->
+    <P1>4004</P1>
+      
+  </BuffConfig>
+
+
+  <!--剧本模式buff-->
+  <BuffConfig>
+    <ID>5001</ID>
+    <Name>树木不可再生 P1 id P2 type</Name>
+    <!--枚举类型-->
+    <Type>501</Type>
+    <!--效果增强百分比-->
+    <Percent>-100</Percent>
+    <P1>3005</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <!--复活节岛简单模式产出debuff-->
+    <ID>5002</ID>
+    <Name>渔场产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果百分比-->
+    <Percent>-10</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2005</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <!--复活节岛简单模式产出debuff-->
+    <ID>5003</ID>
+    <Name>二级渔场产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果百分比-->
+    <Percent>-10</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2016</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <!--复活节岛简单模式产出debuff-->
+    <ID>5004</ID>
+    <Name>捕捞港产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果百分比-->
+    <Percent>-10</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2030</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5005</ID>
+    <Name>植株buff   P1 id P2 type</Name>
+    <!--枚举类型-->
+    <Type>502</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <P1>3005</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5006</ID>
+    <Name>移民数量为0</Name>
+    <!--枚举类型-->
+    <Type>120</Type>
+    <!--效果增强百分比-->
+    <Percent>-100</Percent>
+  </BuffConfig>
+
+
+  <BuffConfig>
+    <ID>5007</ID>
+    <Name>发展点赠送</Name>
+    <!--枚举类型-->
+    <Type>16</Type>
+    <!--效果增强百分比-->
+    <Num>3</Num>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5008</ID>
+    <Name>植株buff   P1 id P2 type</Name>
+    <!--枚举类型-->
+    <Type>503</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <P1>3005</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <!--复活节岛简单模式产出debuff-->
+    <ID>5009</ID>
+    <Name>水井产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果百分比-->
+    <Percent>-10</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2035</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <!--复活节岛简单模式产出debuff-->
+    <ID>5010</ID>
+    <Name>蓄水池产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果百分比-->
+    <Percent>-10</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2036</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5011</ID>
+    <Name>采集木头数量</Name>
+     <Type>505</Type>
+    <Num>-2</Num>
+    <P1>3005</P1>   
+  </BuffConfig>
+  <BuffConfig>
+    <ID>5012</ID>
+    <Name>采集石头数量</Name>
+        <Type>505</Type>
+    <Num>-2</Num>
+    <P1>3006</P1>  
+  </BuffConfig>
+  <BuffConfig>
+    <ID>5013</ID>
+    <Name>采集铁矿数量</Name>
+     <Type>505</Type>
+    <Num>-2</Num>
+    <P1>3007</P1>
+  </BuffConfig>
+
+
+
+  <BuffConfig>
+    <!--复活节岛成就解锁buff-->
+    <ID>5020</ID>
+    <Name>简单模式贸易增加时间间隔</Name>
+    <!--枚举类型-->
+    <Type>14</Type>
+    <!--效果百分比-->
+    <Percent>100</Percent>
+    <!--p1 id p2类型-->
+    <P2>19</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5023</ID>
+    <Name>贸易站带来疾病</Name>
+    <!--枚举类型-->
+    <Type>15</Type>
+    <P1>9</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5024</ID>
+    <Name>植株buff   P1 id P2 type</Name>
+    <!--枚举类型-->
+    <Type>502</Type>
+    <!--效果增强百分比-->
+    <Percent>200</Percent>
+    <P1>3005</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5025</ID>
+    <Name>植株buff   P1 id P2 type</Name>
+    <!--枚举类型-->
+    <Type>503</Type>
+    <!--效果增强百分比-->
+    <Percent>200</Percent>
+    <P1>3005</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5030</ID>
+    <Name>增加幸福度</Name>
+    <Type>112</Type>
+    <Num>200</Num>
+    <!--人数-->
+    <P1>18</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5031</ID>
+    <Name>增加幸福度</Name>
+    <Type>112</Type>
+    <Num>-100</Num>
+    <!--人数-->
+    <P1>18</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5032</ID>
+    <Name>增加幸福度</Name>
+    <Type>112</Type>
+    <Num>-400</Num>
+    <!--人数-->
+    <P1>18</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5033</ID>
+    <Name>地图上生成可抓老鼠</Name>
+    <Type>308</Type>
+    <Num>60</Num>
+    <!--人数-->
+    <P1>1010</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5034</ID>
+    <Name>地图上生成不可抓老鼠</Name>
+    <Type>308</Type>
+    <Num>30</Num>
+    <!--人数-->
+    <P1>1011</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5035</ID>
+    <Name>农田产量减少20%</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P2>6</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5036</ID>
+    <Name>植株成长buff   P1 id P2 type</Name>
+    <!--枚举类型-->
+    <Type>502</Type>
+    <!--效果增强百分比-->
+    <Percent>90</Percent>
+    <P1>3005</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>5037</ID>
+    <Name>植株寿命buff   P1 id P2 type</Name>
+    <!--枚举类型-->
+    <Type>503</Type>
+    <!--效果增强百分比-->
+    <Percent>90</Percent>
+    <P1>3005</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <!--狂热建造-->
+    <ID>5038</ID>
+    <Name>持续死人buff</Name>
+    <!--枚举类型-->
+    <Type>119</Type>
+    <Num>30</Num>
+    <P1>2</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5039</ID>
+    <Name>建筑工时间减少</Name>
+    <!--枚举类型-->
+    <Type>103</Type>
+    <!--效果增强百分比-->
+    <Percent>-60</Percent>
+    <P1>2</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5040</ID>
+    <Name>赠送羊的幼崽（家畜）</Name>
+    <Type>306</Type>
+    <Num>5</Num>
+    <P1>102001</P1>
+    <CannotReduce>true</CannotReduce>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5041</ID>
+    <Name>触发瘟疫</Name>
+    <Type>118</Type>
+    <P1>9</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <!--抵抗殖民者-->
+    <ID>5042</ID>
+    <Name>随机死亡市民</Name>
+    <Type>26</Type>
+    <P1>-10</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <!--鸟人节活动-->
+    <ID>5043</ID>
+    <Name>随机死亡成年男性</Name>
+    <Type>28</Type>
+    <Num>10</Num>
+    <!--年龄范围-->
+    <NumRange>
+      <Lower>1260</Lower>
+      <Upper>2440</Upper>
+    </NumRange>
+    <P1>1</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>5044</ID>
+    <Name>建筑工时间减少</Name>
+    <!--枚举类型-->
+    <Type>104</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <P1>2</P1>
+  </BuffConfig>
+  
+  <!--势力相关buff-->
+  <BuffConfig>
+    <ID>6001</ID>
+    <Name>粗糙食物不降低健康</Name>
+    <!--枚举类型-->
+    <Type>122</Type>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>6002</ID>
+    <Name>狩猎间隔</Name>
+    <!--枚举类型-->
+    <Type>33</Type>
+	<!--效果增强百分比-->
+    <Percent>100</Percent>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>6003</ID>
+    <Name>贸易品价值提升</Name>
+    <!--枚举类型-->
+    <Type>311</Type>
+	<!--效果增强百分比-->
+    <Percent>25</Percent>
+	<P2>71</P2>
+  </BuffConfig>
+  
+   <BuffConfig>
+    <ID>6004</ID>
+    <Name>声望获取加快</Name>
+    <!--枚举类型-->
+    <Type>314</Type>
+	<!--效果增强百分比-->
+    <Percent>25</Percent>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>6005</ID>
+    <Name>降低保险的金额</Name>
+    <!--枚举类型-->
+    <Type>315</Type>
+	<!--效果增强百分比-->
+    <Percent>-25</Percent>
+  </BuffConfig>
+  
+    <BuffConfig>
+    <ID>6006</ID>
+    <Name>增加赔付的额度</Name>
+    <!--枚举类型-->
+    <Type>316</Type>
+	<!--效果增强百分比-->
+    <Percent>25</Percent>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>6007</ID>
+    <Name>增加所有市民保暖度上限15</Name>
+        <Type>108</Type>
+        <Num>100</Num>
+        <P1>13</P1>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>6008</ID>
+    <Name>淘金产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3056</P1>
+  </BuffConfig>
+  
+   <BuffConfig>
+    <ID>6009</ID>
+    <Name>矿场产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2027</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>6010</ID>
+    <Name>矿场产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2028</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>6011</ID>
+    <Name>矿场产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2029</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>6012</ID>
+    <Name>矿场产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3006</P1>
+  </BuffConfig>
+  
+    <BuffConfig>
+    <ID>6013</ID>
+    <Name>硬木牧场</Name>
+    <!--枚举类型容量增加-->
+    <Type>12</Type>
+    <!--效果增强百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2041</P1>
+	<P2>8</P2>
+  </BuffConfig>
+  
+   <BuffConfig>
+    <ID>6014</ID>
+    <Name>增加商队数量</Name>
+    <!--枚举类型容量增加-->
+    <Type>318</Type>
+    <Num>1</Num>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>42</P2>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>6015</ID>
+    <Name>降低海上商队的遇险概率</Name>
+    <!--枚举类型容量增加-->
+    <Type>319</Type>
+    <!--效果增强百分比-->
+    <Percent>-50</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>4034</P1>
+  </BuffConfig>
+  
+    <BuffConfig>
+    <ID>6016</ID>
+    <Name>增加陆地商队的负重</Name>
+    <!--枚举类型容量增加-->
+    <Type>320</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>4035</P1>
+  </BuffConfig>
+  
+   <BuffConfig>
+    <ID>6017</ID>
+    <Name>增加陆地商队的负重</Name>
+    <!--枚举类型容量增加-->
+    <Type>320</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>4036</P1>
+  </BuffConfig>
+  
+   <BuffConfig>
+    <ID>6018</ID>
+    <Name>增加陆地商队的负重</Name>
+    <!--枚举类型容量增加-->
+    <Type>320</Type>
+    <!--效果增强百分比-->
+    <Percent>50</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>4032</P1>
+  </BuffConfig>
+  
+  <BuffConfig>
+    <ID>6019</ID>
+    <Name>降低商队的往返速度</Name>
+    <!--枚举类型容量增加-->
+    <Type>321</Type>
+    <!--效果增强百分比-->
+    <Percent>-20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>42</P2>
+  </BuffConfig>
+  
+   <BuffConfig>
+    <ID>6020</ID>
+    <Name>降低指定建筑ID或商队标准人数</Name>
+    <!--枚举类型容量增加-->
+    <Type>322</Type>
+    <Num>-1</Num>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>42</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>6021</ID>
+    <Name>密植农田buff</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2037</P1>
+  </BuffConfig>
+  
+    <BuffConfig>
+    <ID>6022</ID>
+    <Name>水上苗圃buff</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>100</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2044</P1>
+  </BuffConfig>
+
+
+
+  <!--市长赠送buff-->
+  <BuffConfig>
+    <ID>10001</ID>
+    <Name>墓碑消失时间-50%</Name>
+    <!--枚举类型-->
+    <Type>503</Type>
+    <!--效果增强百分比-->
+    <Percent>-50</Percent>
+    <!--物件的ID或者类型-->
+    <P1>4001</P1>
+    <!--效果描述-->
+    <Des>Buff_Des_10001</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10002</ID>
+    <Name>温度提升10度</Name>
+    <!--枚举类型-->
+    <Type>201</Type>
+    <!--效果增强百分比-->
+    <Num>10</Num>
+    <!--效果描述-->
+    <Des>Buff_Des_10002</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10003</ID>
+    <Name>市民移动速度增加20%</Name>
+    <!--枚举类型-->
+    <Type>102</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--效果描述-->
+    <Des>Buff_Des_10003</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10004</ID>
+    <Name>商船来访间隔-10%</Name>
+    <!--枚举类型-->
+    <Type>14</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--效果描述-->
+    <Des>Buff_Des_10004</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10005</ID>
+    <Name>市民意外死亡率降低50%</Name>
+    <!--枚举类型-->
+    <Type>104</Type>
+    <!--效果增强百分比-->
+    <Percent>-50</Percent>
+    <!--效果描述-->
+    <Des>Buff_Des_10005</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10006</ID>
+    <Name>树木再生时间缩短10%</Name>
+    <!--枚举类型-->
+    <Type>501</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--效果描述-->
+    <Des>Buff_Des_10006</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10007</ID>
+    <Name>工具耐久增加20</Name>
+    <!--枚举类型-->
+    <Type>302</Type>
+    <!--效果增强百分比-->
+    <Num>20</Num>
+    <!--道具类型-->
+    <P2>511</P2>
+    <!--效果描述-->
+    <Des>Buff_Des_10007</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10008</ID>
+    <Name>衣服耐久增加20</Name>
+    <!--枚举类型-->
+    <Type>302</Type>
+    <!--效果增强百分比-->
+    <Num>20</Num>
+    <!--道具类型-->
+    <P2>501</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10009</ID>
+    <Name>农田产量提升10%</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--建筑类型-->
+    <P2>6</P2>
+    <!--效果描述-->
+    <Des>Buff_Des_10009</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10010</ID>
+    <Name>果林产量提升10%</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--效果描述-->
+    <Des>果林产量提升20%</Des>
+    <!--建筑类型-->
+    <P2>7</P2>
+    <!--效果描述-->
+    <Des>Buff_Des_10010</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10011</ID>
+    <Name>牧场产量提升10%</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--建筑类型-->
+    <P2>8</P2>
+    <!--效果描述-->
+    <Des>Buff_Des_10011</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10012</ID>
+    <Name>护林小屋产量提升10%</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--护林、采集、狩猎、蜂房、药草屋产量提升20%-->
+    <P2>17</P2>
+    <!--效果描述-->
+    <Des>Buff_Des_10012</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10013</ID>
+    <Name>采集小屋产量提升10%</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--效果描述-->
+    <Des>采集小屋产量提升20%</Des>
+    <!--道具类型-->
+    <P2>5</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10014</ID>
+    <Name>狩猎小屋产量提升10%</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--效果描述-->
+    <Des>狩猎小屋产量提升20%</Des>
+    <!--道具类型-->
+    <P2>15</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10015</ID>
+    <Name>蜂房产量提升10%</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--效果描述-->
+    <Des>蜂房产量提升20%</Des>
+    <!--道具类型-->
+    <P2>24</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10016</ID>
+    <Name>药草屋产量提升10%</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--效果描述-->
+    <Des>药草屋产量提升20%</Des>
+    <!--道具类型-->
+    <P2>9</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10017</ID>
+    <Name>建筑材料减少10%</Name>
+    <!--枚举类型-->
+    <Type>10</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--效果描述-->
+    <Des>Buff_Des_10017</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10018</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>8</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10019</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>13</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10020</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>14</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10021</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>15</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10022</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>27</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10023</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>28</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10024</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>29</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10025</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>30</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10026</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>31</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10027</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>32</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10028</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>33</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10029</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>34</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10030</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>36</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10031</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>38</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10032</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>39</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10033</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>46</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10034</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>47</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10035</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>48</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10036</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>49</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10037</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>50</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10038</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>51</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10039</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>52</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10040</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>53</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10041</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>56</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10042</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>57</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10043</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>59</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10044</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>62</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10045</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>63</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10046</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>64</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10047</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>65</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10048</ID>
+    <Name>加工工人工作时间减少20%</Name>
+        <Type>103</Type>
+        <Percent>-20</Percent>
+        <P1>66</P1>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10049</ID>
+    <Name>赠送黄豆种子（高产）</Name>
+        <Type>306</Type>
+        <Num>1</Num>
+        <P1>101015</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10050</ID>
+    <Name>赠送小麦种子（谷物）</Name>
+        <Type>306</Type>
+        <Num>1</Num>
+        <P1>101007</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10051</ID>
+    <Name>赠送烟叶种子（消费品）</Name>
+        <Type>306</Type>
+        <Num>1</Num>
+        <P1>101023</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10052</ID>
+    <Name>赠送牛的幼崽（家畜）</Name>
+        <Type>306</Type>
+        <Num>1</Num>
+        <P1>102008</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10053</ID>
+    <Name>赠送1点发展点</Name>
+        <Type>16</Type>
+        <Num>1</Num>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10054</ID>
+    <Name>赠送1级贸易熟练</Name>
+        <Type>22</Type>
+        <Num>1</Num>
+        <P1>1</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10055</ID>
+    <Name>赠送1级教育熟练</Name>
+        <Type>22</Type>
+        <Num>1</Num>
+        <P1>2</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10056</ID>
+    <Name>赠送1级矿物熟练</Name>
+        <Type>22</Type>
+        <Num>1</Num>
+        <P1>3</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10057</ID>
+    <Name>赠送1级建造熟练</Name>
+        <Type>22</Type>
+        <Num>1</Num>
+        <P1>4</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10058</ID>
+    <Name>赠送1级农业熟练</Name>
+        <Type>22</Type>
+        <Num>1</Num>
+        <P1>5</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10059</ID>
+    <Name>赠送1级加工熟练</Name>
+        <Type>22</Type>
+        <Num>1</Num>
+        <P1>6</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10060</ID>
+    <Name>赠送1级物流熟练</Name>
+        <Type>22</Type>
+        <Num>1</Num>
+        <P1>7</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10061</ID>
+    <Name>赠送1级宜居熟练</Name>
+        <Type>22</Type>
+        <Num>1</Num>
+        <P1>8</P1>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10062</ID>
+    <Name>增加所有市民生命上限50</Name>
+        <Type>108</Type>
+        <Num>50</Num>
+        <P1>1</P1>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10063</ID>
+    <Name>增加所有市民饱食上限15</Name>
+        <Type>108</Type>
+        <Num>15</Num>
+        <P1>2</P1>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10064</ID>
+    <Name>增加所有市民干渴度上限15</Name>
+        <Type>108</Type>
+        <Num>15</Num>
+        <P1>3</P1>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10065</ID>
+    <Name>增加所有市民保暖度上限15</Name>
+        <Type>108</Type>
+        <Num>15</Num>
+        <P1>13</P1>
+      
+  </BuffConfig>
+
+  <!--废档之后需要删掉的buff-->
+  <BuffConfig>
+    <ID>10066</ID>
+    <Name>增加熟练度获取百分比</Name>
+        <Type>24</Type>
+        <Percent>25</Percent>
+      
+  </BuffConfig>
+  <!--废档之后需要删掉的buff-->
+
+  <BuffConfig>
+    <ID>10067</ID>
+    <Name>激活一个科技</Name>
+        <Type>25</Type>
+        <Num>1</Num>
+    <CannotReduce>true</CannotReduce>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10068</ID>
+    <Name>家庭人数</Name>
+        <Type>117</Type>
+        <Num>1</Num>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10069</ID>
+    <Name>降低生育间隔</Name>
+        <Type>110</Type>
+        <Percent>-10</Percent>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10070</ID>
+    <Name>降低流民间隔</Name>
+        <Type>111</Type>
+        <Percent>-10</Percent>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10071</ID>
+    <Name>获得几个市民</Name>
+        <Type>26</Type>
+    <!--年龄范围-->
+    <NumRange>
+      <Lower>1260</Lower>
+      <Upper>2440</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>8</P1>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10072</ID>
+    <Name>贸易船都改为超大船</Name>
+        <Type>27</Type>
+    <!--商船ID-->
+    <Num>2</Num>
+    <!--建筑ID-->
+    <P2>19</P2>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10073</ID>
+    <Name>市长增加健康度下限</Name>
+        <Type>109</Type>
+    <!--商船ID-->
+    <Num>200</Num>
+    <!--建筑ID-->
+    <P1>17</P1>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10074</ID>
+    <Name>市长增加幸福度下限</Name>
+        <Type>109</Type>
+    <!--商船ID-->
+    <Num>200</Num>
+    <!--建筑ID-->
+    <P1>18</P1>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10075</ID>
+    <Name>市长减少人口压力</Name>
+        <Type>114</Type>
+    <Num>10</Num>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10076</ID>
+    <Name>居住人数+1</Name>
+        <Type>23</Type>
+    <Num>1</Num>
+    <!--建筑ID-->
+    <P1>1</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10077</ID>
+    <Name>居住人数+1</Name>
+        <Type>23</Type>
+    <Num>1</Num>
+    <!--建筑ID-->
+    <P1>2</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10078</ID>
+    <Name>居住人数+1</Name>
+        <Type>23</Type>
+    <Num>1</Num>
+    <!--建筑ID-->
+    <P1>5</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10079</ID>
+    <Name>居住人数+1</Name>
+        <Type>23</Type>
+    <Num>1</Num>
+    <!--建筑ID-->
+    <P1>7</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10080</ID>
+    <Name>居住人数+1</Name>
+        <Type>23</Type>
+    <Num>1</Num>
+    <!--建筑ID-->
+    <P1>9</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>10081</ID>
+    <Name>居住人数+1</Name>
+        <Type>23</Type>
+    <Num>1</Num>
+    <!--建筑ID-->
+    <P1>10</P1>
+      
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>10082</ID>
+    <Name>市长减少人口压力</Name>
+        <Type>114</Type>
+    <Num>30</Num>
+  </BuffConfig>
+
+
+
+  <!--暴风雪的温度降低-->
+  <BuffConfig>
+    <ID>20101</ID>
+    <Name>温度</Name>
+    <!--枚举类型-->
+    <Type>202</Type>
+    <!--效果增强百分比-->
+    <Num>-70</Num>
+    <LastTime>120</LastTime>
+  </BuffConfig>
+
+
+
+
+
+  <!--开局赠送的发展点-->
+  <BuffConfig>
+    <ID>20102</ID>
+    <Name>发展点赠送</Name>
+    <!--枚举类型-->
+    <Type>16</Type>
+    <!--效果增强百分比-->
+    <Num>1</Num>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20103</ID>
+    <Name>发展点赠送</Name>
+    <!--枚举类型-->
+    <Type>16</Type>
+    <!--效果增强百分比-->
+    <Num>3</Num>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20104</ID>
+    <Name>发展点赠送</Name>
+    <!--枚举类型-->
+    <Type>16</Type>
+    <!--效果增强百分比-->
+    <Num>5</Num>
+  </BuffConfig>
+
+  <!--灾难的buff-->
+  <!--农田和果林丰收buff/可以通过buff实现，也可以直接在灾难表中实现-->
+  <BuffConfig>
+    <ID>20105</ID>
+    <Name>丰收提升农田产量30</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>30</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>6</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20106</ID>
+    <Name>丰收提升果林产量30</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>30</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>7</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20107</ID>
+    <Name>干旱水力不产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-1000</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2011</P1>
+    <!--持续时间-->
+    <LastTime>60</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20108</ID>
+    <Name>干旱水力不产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-1000</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2012</P1>
+    <LastTime>60</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20109</ID>
+    <Name>干旱水力不产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-1000</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2013</P1>
+    <!--持续时间-->
+    <LastTime>60</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20110</ID>
+    <Name>干旱水力不产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-1000</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2016</P1>
+    <!--持续时间-->
+    <LastTime>60</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20111</ID>
+    <Name>干旱水力不产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-1000</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2030</P1>
+    <!--持续时间-->
+    <LastTime>60</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20112</ID>
+    <Name>干旱水力不产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-1000</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2036</P1>
+    <!--持续时间-->
+    <LastTime>60</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20113</ID>
+    <Name>干旱水力不产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-1000</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3010</P1>
+    <!--持续时间-->
+    <LastTime>60</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20114</ID>
+    <Name>干旱水力不产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-1000</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3012</P1>
+    <!--持续时间-->
+    <LastTime>60</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20115</ID>
+    <Name>干旱水力不产出</Name>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-1000</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3017</P1>
+    <!--持续时间-->
+    <LastTime>60</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20116</ID>
+    <Name>发船不来</Name>
+    <!--枚举类型-->
+    <Type>32</Type>
+    <!--持续时间-->
+    <LastTime>60</LastTime>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20117</ID>
+    <Name>减少健康度</Name>
+    <Type>112</Type>
+    <Num>-500</Num>
+    <!--属性类型-->
+    <P1>17</P1>     
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>20118</ID>
+    <Name>农田模型变大</Name>
+    <Type>507</Type>
+    <Percent>100</Percent> 
+	<P2>13</P2>
+	<!--持续时间-->
+    <LastTime>240</LastTime> 
+  </BuffConfig>
+
+
+
+  <!--难度对应的buff-->
+  <!--简单难度-->
+  <BuffConfig>
+    <ID>30001</ID>
+    <Name>农田加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P2>6</P2>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30002</ID>
+    <Name>果林加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P2>7</P2>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30003</ID>
+    <Name>牧场加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P2>8</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>30004</ID>
+    <Name>小水井加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P1>2001</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30005</ID>
+    <Name>渔场加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P1>2005</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30006</ID>
+    <Name>制盐加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P1>2011</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30007</ID>
+    <Name>芦苇加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P1>2012</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30008</ID>
+    <Name>泥沙加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P1>2013</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30009</ID>
+    <Name>二级渔场加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P1>2016</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30010</ID>
+    <Name>鱼塘加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P1>2019</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30011</ID>
+    <Name>捕捞港加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P1>2030</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30012</ID>
+    <Name>大水井加成</Name>
+    <Type>11</Type>
+    <Percent>20</Percent>
+    <P1>2035</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30013</ID>
+    <Name>增加幸福度</Name>
+        <Type>112</Type>
+    <Num>100</Num>
+    <P1>18</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30014</ID>
+    <Name>增加健康度</Name>
+        <Type>112</Type>
+    <Num>100</Num>
+    <P1>17</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30015</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>-1</Num>
+    <P1>2010</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30016</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>-1</Num>
+    <P1>2031</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30017</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>-1</Num>
+    <P1>2032</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30018</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>-1</Num>
+    <P1>2034</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30019</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>-1</Num>
+    <P1>3007</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30020</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>-1</Num>
+    <P1>2027</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30021</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>-1</Num>
+    <P1>2028</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30022</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>-1</Num>
+    <P1>2029</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30023</ID>
+    <Name>采集木头数量</Name>
+        <Type>505</Type>
+    <Num>1</Num>
+    <P1>3005</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30024</ID>
+    <Name>采集石头数量</Name>
+        <Type>505</Type>
+    <Num>1</Num>
+    <P1>3006</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30025</ID>
+    <Name>采集铁矿数量</Name>
+        <Type>505</Type>
+    <Num>1</Num>
+    <P1>3007</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>30026</ID>
+    <Name>降低流民间隔</Name>
+        <Type>111</Type>
+        <Percent>-50</Percent>
+      
+  </BuffConfig>
+
+
+  <!--困难难度-->
+  <BuffConfig>
+    <ID>32001</ID>
+    <Name>农田加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P2>6</P2>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32002</ID>
+    <Name>果林加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P2>7</P2>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32003</ID>
+    <Name>牧场加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P2>8</P2>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32004</ID>
+    <Name>小水井加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2001</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32005</ID>
+    <Name>渔场加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2005</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32006</ID>
+    <Name>制盐加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2011</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32007</ID>
+    <Name>芦苇加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2012</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32008</ID>
+    <Name>泥沙加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2013</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32009</ID>
+    <Name>二级渔场加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2016</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32010</ID>
+    <Name>鱼塘加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2019</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32011</ID>
+    <Name>捕捞港加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2030</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32012</ID>
+    <Name>大水井加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2035</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32013</ID>
+    <Name>减少幸福度</Name>
+        <Type>112</Type>
+    <Num>-100</Num>
+    <P1>18</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32014</ID>
+    <Name>减少健康度</Name>
+        <Type>112</Type>
+    <Num>-100</Num>
+    <P1>17</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32015</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>2</Num>
+    <P1>2010</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32016</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>2</Num>
+    <P1>2031</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32017</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>2</Num>
+    <P1>2032</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32018</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>2</Num>
+    <P1>2034</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32019</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>2</Num>
+    <P1>3007</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32020</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>2</Num>
+    <P1>2027</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32021</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>2</Num>
+    <P1>2028</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32022</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>2</Num>
+    <P1>2029</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32023</ID>
+    <Name>采集木头数量</Name>
+        <Type>505</Type>
+    <Num>-1</Num>
+    <P1>3005</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32024</ID>
+    <Name>采集石头数量</Name>
+        <Type>505</Type>
+    <Num>-2</Num>
+    <P1>3006</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32025</ID>
+    <Name>采集铁矿数量</Name>
+        <Type>505</Type>
+    <Num>-2</Num>
+    <P1>3007</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32026</ID>
+    <Name>蓄水池加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2036</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32027</ID>
+    <Name>学校科技产出降低</Name>
+    <Type>6</Type>
+    <Percent>-20</Percent>
+    <P2>11</P2>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32028</ID>
+    <Name>研究院科技产出降低</Name>
+    <Type>6</Type>
+    <Percent>-20</Percent>
+    <P2>20</P2>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32029</ID>
+    <Name>采集站加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2006</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>32030</ID>
+    <Name>狩猎加成</Name>
+    <Type>11</Type>
+    <Percent>-20</Percent>
+    <P1>2007</P1>
+  </BuffConfig>
+
+
+
+
+  <!--极难难度-->
+  <BuffConfig>
+    <ID>33001</ID>
+    <Name>农田加成</Name>
+    <Type>11</Type>
+    <Percent>-25</Percent>
+    <P2>6</P2>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33002</ID>
+    <Name>果林加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P2>7</P2>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33003</ID>
+    <Name>牧场加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P2>8</P2>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>33004</ID>
+    <Name>小水井加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2001</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33005</ID>
+    <Name>渔场加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2005</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33006</ID>
+    <Name>制盐加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2011</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33007</ID>
+    <Name>芦苇加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2012</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33008</ID>
+    <Name>泥沙加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2013</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33009</ID>
+    <Name>二级渔场加成</Name>
+    <Type>11</Type>
+    <Percent>-85</Percent>
+    <P1>2016</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33010</ID>
+    <Name>鱼塘加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2019</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33011</ID>
+    <Name>捕捞港加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2030</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33012</ID>
+    <Name>大水井加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2035</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33013</ID>
+    <Name>减少幸福度</Name>
+        <Type>112</Type>
+    <Num>-200</Num>
+    <P1>18</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33014</ID>
+    <Name>减少健康度</Name>
+        <Type>112</Type>
+    <Num>-200</Num>
+    <P1>17</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33015</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>5</Num>
+    <P1>2010</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33016</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>5</Num>
+    <P1>2031</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33017</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>5</Num>
+    <P1>2032</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33018</ID>
+    <Name>矿石流程数</Name>
+        <Type>29</Type>
+    <Num>5</Num>
+    <P1>2034</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33019</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>5</Num>
+    <P1>3007</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33020</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>5</Num>
+    <P1>2027</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33021</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>5</Num>
+    <P1>2028</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33022</ID>
+    <Name>铁矿流程数</Name>
+        <Type>29</Type>
+    <Num>5</Num>
+    <P1>2029</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33023</ID>
+    <Name>采集木头数量</Name>
+        <Type>505</Type>
+    <Num>-2</Num>
+    <P1>3005</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33024</ID>
+    <Name>采集石头数量</Name>
+        <Type>505</Type>
+    <Num>-4</Num>
+    <P1>3006</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33025</ID>
+    <Name>采集铁矿数量</Name>
+        <Type>505</Type>
+    <Num>-4</Num>
+    <P1>3007</P1>
+      
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33026</ID>
+    <Name>采集站加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2006</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33027</ID>
+    <Name>狩猎加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2007</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33028</ID>
+    <Name>农民工作时间</Name>
+    <Type>103</Type>
+    <Percent>50</Percent>
+    <P1>3</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33029</ID>
+    <Name>蓄水池加成</Name>
+    <Type>11</Type>
+    <Percent>-50</Percent>
+    <P1>2036</P1>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33030</ID>
+    <Name>学校科技产出降低</Name>
+    <Type>6</Type>
+    <Percent>-50</Percent>
+    <P2>11</P2>
+  </BuffConfig>
+  <BuffConfig>
+    <ID>33031</ID>
+    <Name>研究院科技产出降低</Name>
+    <Type>6</Type>
+    <Percent>-50</Percent>
+    <P2>20</P2>
+  </BuffConfig>
+
+  <!--教程3商船间隔-->
+  <BuffConfig>
+    <ID>34001</ID>
+    <Name>商船来访间隔-90%</Name>
+    <!--枚举类型-->
+    <Type>14</Type>
+    <!--效果增强百分比-->
+    <Percent>-90</Percent>
+  </BuffConfig>
+
+
+  <!--学院科技赠送的发展点-->
+  <BuffConfig>
+    <ID>100001</ID>
+    <Name>发展点赠送</Name>
+    <!--枚举类型-->
+    <Type>16</Type>
+    <!--效果增强百分比-->
+    <Num>3</Num>
+  </BuffConfig>
+
+  <!--科技基础buff-->
+  <!--贸易相关的buff-->
+  <BuffConfig>
+    <ID>101001</ID>
+    <Name>Buff_trade_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_1_1</Icon>
+    <!--枚举类型-->
+    <Type>321</Type>
+    <!--效果增强百分比-->
+    <Percent>5</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>42</P2>
+    <!--描述-->
+    <Des>Buff_trade_Des_1_1</Des>
+  </BuffConfig>
+   
+  <BuffConfig>
+    <ID>101002</ID>
+    <Name>Buff_trade_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_1_2</Icon>
+    <!--枚举类型-->
+    <Type>320</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>42</P2>
+    <!--描述-->
+    <Des>Buff_trade_Des_2_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>102001</ID>
+    <Name>Buff_trade_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_1_1</Icon>
+    <!--枚举类型-->
+    <Type>321</Type>
+    <!--效果增强百分比-->
+    <Percent>5</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>42</P2>
+    <!--描述-->
+    <Des>Buff_trade_Des_1_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>102002</ID>
+    <Name>Buff_trade_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_1_2</Icon>
+    <!--枚举类型-->
+    <Type>320</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>42</P2>
+    <!--描述-->
+    <Des>Buff_trade_Des_2_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>103001</ID>
+    <Name>Buff_trade_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_1_1</Icon>
+    <!--枚举类型-->
+    <Type>321</Type>
+    <!--效果增强百分比-->
+    <Percent>5</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>42</P2>
+    <!--描述-->
+    <Des>Buff_trade_Des_1_3</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>103002</ID>
+    <Name>Buff_trade_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_1_2</Icon>
+    <!--枚举类型-->
+    <Type>320</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>42</P2>
+    <!--描述-->
+    <Des>Buff_trade_Des_2_3</Des>
+  </BuffConfig>
+
+
+
+  <!--教育相关的buff-->
+  <BuffConfig>
+    <ID>201001</ID>
+    <Name>Buff_study_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_2_1</Icon>
+    <!--枚举类型-->
+    <Type>107</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--描述-->
+    <Des>Buff_study_Des_1_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>201002</ID>
+    <Name>Buff_study_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_2_2</Icon>
+    <!--枚举类型-->
+    <Type>6</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--研究院枚举-->
+    <P1>3030</P1>
+    <!--描述-->
+    <Des>Buff_study_Des_2_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>201003</ID>
+    <Name>Buff_study_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_2_2</Icon>
+    <!--枚举类型-->
+    <Type>6</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--研究院枚举-->
+    <P1>3052</P1>
+    <!--描述-->
+    <Des>Buff_study_Des_2_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>202001</ID>
+    <Name>Buff_study_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_2_1</Icon>
+    <!--枚举类型-->
+    <Type>107</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--描述-->
+    <Des>Buff_study_Des_1_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>202002</ID>
+    <Name>Buff_study_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_2_2</Icon>
+    <!--枚举类型-->
+    <Type>6</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--研究院枚举-->
+    <P1>3030</P1>
+    <!--描述-->
+    <Des>Buff_study_Des_2_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>202003</ID>
+    <Name>Buff_study_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_2_2</Icon>
+    <!--枚举类型-->
+    <Type>6</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--研究院枚举-->
+    <P1>3052</P1>
+    <!--描述-->
+    <Des>Buff_study_Des_2_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>203001</ID>
+    <Name>Buff_study_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_2_1</Icon>
+    <!--枚举类型-->
+    <Type>107</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--建筑类型枚举-->
+    <P2>11</P2>
+    <!--描述-->
+    <Des>Buff_study_Des_1_3</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>203002</ID>
+    <Name>Buff_study_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_2_2</Icon>
+    <!--枚举类型-->
+    <Type>6</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--研究院枚举-->
+    <P1>3030</P1>
+    <!--描述-->
+    <Des>Buff_study_Des_2_3</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>203003</ID>
+    <Name>Buff_study_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_2_2</Icon>
+    <!--枚举类型-->
+    <Type>6</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--研究院枚举-->
+    <P1>3052</P1>
+    <!--描述-->
+    <Des>Buff_study_Des_2_3</Des>
+  </BuffConfig>
+
+
+  <!--矿业基础buff-->
+  <BuffConfig>
+    <ID>301001</ID>
+    <Name>Buff_mine_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_3_2</Icon>
+    <!--枚举类型-->
+    <Type>103</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--职业枚举-->
+    <P1>11</P1>
+    <!--描述-->
+    <Des>Buff_mine_Des_1_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>301002</ID>
+    <Name>Buff_mine_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_3_1</Icon>
+    <!--枚举类型-->
+    <Type>104</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--职业枚举-->
+    <P1>12</P1>
+    <!--描述-->
+    <Des>Buff_mine_Des_2_1</Des>
+  </BuffConfig>
+
+
+  <BuffConfig>
+    <ID>302001</ID>
+    <Name>Buff_mine_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_3_2</Icon>
+    <!--枚举类型-->
+    <Type>103</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--职业枚举-->
+    <P1>11</P1>
+    <!--描述-->
+    <Des>Buff_mine_Des_1_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>302002</ID>
+    <Name>Buff_mine_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_3_3</Icon>
+    <!--枚举类型-->
+    <Type>104</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--职业枚举-->
+    <P1>12</P1>
+    <!--描述-->
+    <Des>Buff_mine_Des_2_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>303001</ID>
+    <Name>Buff_mine_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_3_2</Icon>
+    <!--枚举类型-->
+    <Type>103</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--职业枚举-->
+    <P1>11</P1>
+    <!--描述-->
+    <Des>Buff_mine_Des_1_3</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>303002</ID>
+    <Name>Buff_mine_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_3_3</Icon>
+    <!--枚举类型-->
+    <Type>104</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--职业枚举-->
+    <P1>12</P1>
+    <!--描述-->
+    <Des>Buff_mine_Des_2_3</Des>
+  </BuffConfig>
+
+
+  <!--建造基础buff-->
+  <BuffConfig>
+    <ID>401001</ID>
+    <Name>Buff_build_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_4_1</Icon>
+    <!--枚举类型-->
+    <Type>7</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--描述-->
+    <Des>Buff_build_Des_1_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>401002</ID>
+    <Name>Buff_build_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_4_2</Icon>
+    <!--枚举类型-->
+    <Type>4</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--描述-->
+    <Des>Buff_build_Des_2_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>402001</ID>
+    <Name>Buff_build_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_4_1</Icon>
+    <!--枚举类型-->
+    <Type>7</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--描述-->
+    <Des>Buff_build_Des_1_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>402002</ID>
+    <Name>Buff_build_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_4_2</Icon>
+    <!--枚举类型-->
+    <Type>4</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--描述-->
+    <Des>Buff_build_Des_2_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>403001</ID>
+    <Name>Buff_build_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_4_1</Icon>
+    <!--枚举类型-->
+    <Type>7</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--描述-->
+    <Des>Buff_build_Des_1_3</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>403002</ID>
+    <Name>Buff_build_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_4_2</Icon>
+    <!--枚举类型-->
+    <Type>4</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--描述-->
+    <Des>Buff_build_Des_2_3</Des>
+  </BuffConfig>
+
+  <!--农业基础buff-->
+  <BuffConfig>
+    <ID>501001</ID>
+    <Name>Buff_farm_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_5_1</Icon>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--作用建筑枚举-->
+    <P2>6</P2>
+    <!--描述-->
+    <Des>Buff_farm_Des_1_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>501002</ID>
+    <Name>Buff_farm_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_5_2</Icon>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--作用建筑枚举-->
+    <P2>8</P2>
+    <!--描述-->
+    <Des>Buff_farm_Des_2_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>502001</ID>
+    <Name>Buff_farm_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_5_1</Icon>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--作用建筑枚举-->
+    <P2>6</P2>
+    <!--描述-->
+    <Des>Buff_farm_Des_1_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>502002</ID>
+    <Name>Buff_farm_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_5_2</Icon>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--作用建筑枚举-->
+    <P2>8</P2>
+    <!--描述-->
+    <Des>Buff_farm_Des_2_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>503001</ID>
+    <Name>Buff_farm_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_5_1</Icon>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--作用建筑枚举-->
+    <P2>6</P2>
+    <!--描述-->
+    <Des>Buff_farm_Des_1_3</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>503002</ID>
+    <Name>Buff_farm_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_5_2</Icon>
+    <!--枚举类型-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--作用建筑枚举-->
+    <P2>8</P2>
+    <!--描述-->
+    <Des>Buff_farm_Des_2_3</Des>
+  </BuffConfig>
+
+  <!--加工基础buff-->
+  <BuffConfig>
+    <ID>601001</ID>
+    <Name>Buff_work_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_6_1</Icon>
+    <!--枚举类型-->
+    <Type>103</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--作用建筑枚举-->
+    <P2>4</P2>
+    <!--描述-->
+    <Des>Buff_work_Des_1_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>602001</ID>
+    <Name>Buff_work_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_6_1</Icon>
+    <!--枚举类型-->
+    <Type>103</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--作用建筑枚举-->
+    <P2>4</P2>
+    <!--描述-->
+    <Des>Buff_work_Des_1_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>603001</ID>
+    <Name>Buff_work_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_6_1</Icon>
+    <!--枚举类型-->
+    <Type>103</Type>
+    <!--效果增强百分比-->
+    <Percent>-10</Percent>
+    <!--作用建筑枚举-->
+    <P2>4</P2>
+    <!--描述-->
+    <Des>Buff_work_Des_1_3</Des>
+  </BuffConfig>
+
+  <!--物流基础buff-->
+  <BuffConfig>
+    <ID>701001</ID>
+    <Name>Buff_flow_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_7_1</Icon>
+    <!--枚举类型-->
+    <Type>20</Type>
+    <!--效果增强百分比-->
+    <Percent>15</Percent>
+    <!--属性枚举-->
+    <P2>2</P2>
+    <!--描述-->
+    <Des>Buff_flow_Des_1_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>701002</ID>
+    <Name>Buff_flow_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_7_2</Icon>
+    <!--枚举类型-->
+    <Type>102</Type>
+    <!--效果增强百分比-->
+    <Percent>5</Percent>
+    <!--描述-->
+    <Des>Buff_flow_Des_2_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>702001</ID>
+    <Name>Buff_flow_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_7_1</Icon>
+    <!--枚举类型-->
+    <Type>20</Type>
+    <!--效果增强百分比-->
+    <Percent>15</Percent>
+    <!--属性枚举-->
+    <P2>2</P2>
+    <!--描述-->
+    <Des>Buff_flow_Des_1_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>702002</ID>
+    <Name>Buff_flow_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_7_2</Icon>
+    <!--枚举类型-->
+    <Type>102</Type>
+    <!--效果增强百分比-->
+    <Percent>5</Percent>
+    <!--描述-->
+    <Des>Buff_flow_Des_2_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>703001</ID>
+    <Name>Buff_flow_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_7_1</Icon>
+    <!--枚举类型-->
+    <Type>20</Type>
+    <!--效果增强百分比-->
+    <Percent>15</Percent>
+    <!--属性枚举-->
+    <P2>2</P2>
+    <!--描述-->
+    <Des>Buff_flow_Des_1_3</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>703002</ID>
+    <Name>Buff_flow_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_7_2</Icon>
+    <!--枚举类型-->
+    <Type>102</Type>
+    <!--效果增强百分比-->
+    <Percent>5</Percent>
+    <!--描述-->
+    <Des>Buff_flow_Des_2_3</Des>
+  </BuffConfig>
+
+  <!--宜居基础buff-->
+  <BuffConfig>
+    <ID>801001</ID>
+    <Name>Buff_live_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_8_1</Icon>
+    <!--枚举类型-->
+    <Type>108</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--枚举类型-->
+    <P1>1</P1>
+    <!--描述-->
+    <Des>Buff_live_Des_1_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>801002</ID>
+    <Name>Buff_live_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_8_2</Icon>
+    <!--枚举类型-->
+    <Type>108</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--枚举类型-->
+    <P1>4</P1>
+    <!--描述-->
+    <Des>Buff_live_Des_2_1</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>802001</ID>
+    <Name>Buff_live_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_8_1</Icon>
+    <!--枚举类型-->
+    <Type>108</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--枚举类型-->
+    <P1>1</P1>
+    <!--描述-->
+    <Des>Buff_live_Des_1_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>802002</ID>
+    <Name>Buff_live_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_8_2</Icon>
+    <!--枚举类型-->
+    <Type>108</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--枚举类型-->
+    <P1>4</P1>
+    <!--描述-->
+    <Des>Buff_live_Des_2_2</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>803001</ID>
+    <Name>Buff_live_name_1</Name>
+    <!--图标-->
+    <Icon>Buff_8_1</Icon>
+    <!--枚举类型-->
+    <Type>108</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--枚举类型-->
+    <P1>1</P1>
+    <!--描述-->
+    <Des>Buff_live_Des_1_3</Des>
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>803002</ID>
+    <Name>Buff_live_name_2</Name>
+    <!--图标-->
+    <Icon>Buff_8_2</Icon>
+    <!--枚举类型-->
+    <Type>108</Type>
+    <!--效果增强百分比-->
+    <Percent>10</Percent>
+    <!--枚举类型-->
+    <P1>4</P1>
+    <!--描述-->
+    <Des>Buff_live_Des_2_3</Des>
+  </BuffConfig>
+
+<!--节日特殊buff-->
+
+  <!--万圣节buff-->
+  <BuffConfig>
+    <ID>900001</ID>
+    <Name>获得南瓜种子</Name>
+        <Type>306</Type>
+    <Num>1</Num>
+    <P1>101006</P1>     
+  </BuffConfig>
+
+  <!--春节buff-->
+  <BuffConfig>
+    <ID>900002</ID>
+    <Name>幸福度补满</Name>
+        <Type>112</Type>
+    <Num>2000</Num>
+    <P1>18</P1>     
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>900003</ID>
+    <Name>获得稻米种子</Name>
+        <Type>306</Type>
+    <Num>1</Num>
+    <P1>101013</P1>     
+  </BuffConfig>
+
+  <BuffConfig>
+    <ID>900004</ID>
+    <Name>市民意外死亡率降低100%</Name>
+    <!--枚举类型-->
+    <Type>104</Type>
+    <!--效果增强百分比-->
+    <Percent>-100</Percent>
+  </BuffConfig>
+
+<!--事件相关buff-->
+
+  <!--市民幸福度-5%-->
+  <BuffConfig>
+    <ID>100012</ID>
+    <Name>Empty</Name>
+        <Type>112</Type>
+    <Num>-50</Num>
+    <P1>18</P1>
+  </BuffConfig>
+
+  <!--获得市民8人-->
+  <BuffConfig>
+    <ID>100002</ID>
+    <Name>Empty</Name>
+    <Type>26</Type>
+    <!--年龄范围-->
+    <NumRange>
+      <Lower>1260</Lower>
+      <Upper>2440</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>8</P1>     
+  </BuffConfig>
+
+  <!--捕捞港产量增加30%一年-->
+  <BuffConfig>
+    <ID>100003</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>30</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2030</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+
+  <!--温度+5 一年-->
+  <BuffConfig>
+    <ID>100004</ID>
+    <Name>Empty</Name>
+    <!--枚举类型-->
+    <Type>201</Type>
+    <Num>5</Num>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+
+  <!--温度-5 一年-->
+  <BuffConfig>
+    <ID>100005</ID>
+    <Name>Empty</Name>
+    <!--枚举类型-->
+    <Type>201</Type>
+    <Num>-5</Num>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+
+  <!--炉料厂产量+20% 一年-->
+  <BuffConfig>
+    <ID>100006</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3013</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+
+  <!--烧窑厂产量+20% 一年-->
+  <BuffConfig>
+    <ID>100007</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3060</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+
+  <!--熔炼厂产量+20% 一年-->
+  <BuffConfig>
+    <ID>100008</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3026</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+
+  <!--锻造厂产量+20% 一年-->
+  <BuffConfig>
+    <ID>100009</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3028</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+
+  <!--钓鱼码头产量-20% 一年-->
+  <BuffConfig>
+    <ID>100010</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2016</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+  <!--鱼塘产量-20% 一年-->
+  <BuffConfig>
+    <ID>100011</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2019</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+
+  <!--腌制坊产量-20% 三个月-->
+  <BuffConfig>
+    <ID>100013</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>-20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3023</P1>
+    <LastTime>90</LastTime>
+  </BuffConfig>
+
+  <!--矿井产量+40% 一年-->
+  <BuffConfig>
+    <ID>100014</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>40</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>3007</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+
+  <!--高级矿井产量+40% 一年-->
+  <BuffConfig>
+    <ID>100015</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>40</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2027</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+
+  <!--深层矿井产量+40% 一年-->
+  <BuffConfig>
+    <ID>100016</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>40</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2028</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+  
+  <!--露天矿井产量+40% 一年-->
+  <BuffConfig>
+    <ID>100017</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>40</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>2029</P1>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+  
+  <!--幸福度+80%-->
+  <BuffConfig>
+    <ID>100018</ID>
+    <Name>Empty</Name>
+        <Type>112</Type>
+    <Num>800</Num>
+    <P1>18</P1>
+  </BuffConfig>
+  
+  <!--健康度+50%-->
+  <BuffConfig>
+    <ID>100019</ID>
+    <Name>Empty</Name>
+        <Type>112</Type>
+    <Num>500</Num>
+    <P1>17</P1>
+  </BuffConfig>
+  <!--健康度+20%-->
+  <BuffConfig>
+    <ID>100020</ID>
+    <Name>Empty</Name>
+        <Type>112</Type>
+    <Num>200</Num>
+    <P1>17</P1>
+  </BuffConfig>
+  <!--触发瘟疫-->
+  <BuffConfig>
+    <ID>100021</ID>
+    <Name>Empty</Name>
+    <Type>118</Type>
+    <P1>7</P1>
+  </BuffConfig>
+  
+  <!--幸福度-5%-->
+  <BuffConfig>
+    <ID>100022</ID>
+    <Name>Empty</Name>
+        <Type>112</Type>
+    <Num>-50</Num>
+    <P1>18</P1>
+  </BuffConfig>
+  
+  <!--获得市民27人-->
+  <BuffConfig>
+    <ID>100023</ID>
+    <Name>Empty</Name>
+        <Type>26</Type>
+    <!--年龄范围-->
+    <NumRange>
+      <Lower>1260</Lower>
+      <Upper>2440</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>27</P1>     
+  </BuffConfig>
+
+  <!--学者加入事件市民受过教育-->
+  <BuffConfig>
+    <ID>100024</ID>
+    <Name>Empty</Name>
+    <!--BuffType:Enum-->
+        <Type>26</Type>
+    <!--年龄范围-->
+    <NumRange>
+      <Lower>2000</Lower>
+      <Upper>3000</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>27</P1>
+    <!--增加CitizenAbility的id-->
+    <P2>80</P2>    
+    <!--增加Buff的概率-->
+    <P7List>
+      <P7>130014</P7>
+    </P7List>    
+  </BuffConfig>
+
+  <!--乡愁 1129 -->
+  <BuffConfig>
+    <ID>100025</ID>
+    <Name>Empty</Name>
+    <Type>121</Type>
+    <!--年龄范围-->
+    <NumRange>
+      <Lower>900</Lower>
+      <Upper>10000</Upper>
+    </NumRange>
+    <!--人数-->
+    <Num>27</Num>
+ 
+  </BuffConfig>
+
+  <!--接纳难民 市民很饿-->
+  <BuffConfig>
+    <ID>100026</ID>
+    <Name>Empty</Name>
+    <!--Enum, BuffType: FreeAddCtizen， 对这些市民该状态只能用citizen ability xml-->
+    <Type>26</Type>
+    <!--年龄范围-->
+    <NumRange>
+      <Lower>2000</Lower>
+      <Upper>3000</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>27</P1>
+    <!--增加Buff的概率-->
+    <P2>100</P2>    
+    <!--citizen ability 饥饿归0-->
+    <P7List>
+      <P7>130006</P7>
+    </P7List>
+  </BuffConfig>
+  
+  <!--部分作坊一年产量+40%-->
+  <BuffConfig>
+    <ID>100027</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>4</P2>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+  
+  <!--测试-->
+  <BuffConfig>
+    <ID>100028</ID>
+    <Name>Empty</Name>
+    <!--枚举类型产量增加-->
+    <Type>118</Type>
+    <!--效果增强百分比-->
+    <Percent>20</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P1>11</P1>
+    <P2>3</P2>
+
+  </BuffConfig>
+  <!--测试:增加商队数量-->
+  <BuffConfig>
+    <ID>100029</ID>
+    <Name>Empty</Name>
+    <!--年龄范围-->
+    <NumRange>
+      <Lower>1000</Lower>
+      <Upper>3000</Upper>
+    </NumRange>
+    <!--枚举类型杀人-->
+    <Type>28</Type>
+    <Num>2</Num>
+    <!--自定义参数，P1为性别，P2为是否驱逐，不驱逐则直接死-->
+    <P1>2</P1>
+    <P2>1</P2>
+  </BuffConfig>
+  <!--测试:增加商队数量-->
+  <BuffConfig>
+    <ID>100030</ID>
+    <Name>Empty</Name>
+    <Type>317</Type>
+    <!--自定义参数，P1为物品id，P2为要减少的百分比（整数）-->
+    <P1>80003</P1>
+    <Percent>10</Percent>
+  </BuffConfig>
+
+  <!--测试:增加商队数量-->
+  <BuffConfig>
+    <ID>100031</ID>
+    <Name>Empty</Name>
+    <!--商队buff枚举：
+    	BuffType_PropsRelife			= 501;	// 植株buff 重生时间调整-1不可再生  p1 id p2 type
+	BuffType_PropsGrow				= 502;	// 植株buff 植物成熟时间调整  p1 id p2 type
+	BuffType_PropsDead				= 503;	// 植株buff 植物死亡时间调整  p1 id p2 type
+	BuffType_AnimalCatchRate		= 504;	// 动物buff 崽概率  p1 id p2 type
+	BuffType_PropsDeadRes			= 505;	// 资源死亡创建buff加成
+	BuffType_PropsKillType			= 506;	// 杀死地图上所有的该类型植物
+	BuffType_PropsModleSize			= 507;	// 植物模型 更改大小
+  -->
+    <Type>318</Type>  
+    <!--增加的数量-->
+    <Num>1</Num>
+    <P1>4013</P1>
+    <P2>42</P2>
+  </BuffConfig>
+
+  <!--测试:改变商队负重-->
+  <BuffConfig>
+    <ID>100033</ID>
+    <Name>Empty</Name>
+    <!--商队buff枚举-->
+    <Type>320</Type>
+    <!--增加的负重数-->
+    <Num>1</Num>
+    <!--P1建筑编号buildConfig.ID-->
+    <!--P2建筑功能funcType-->
+    <P1>4013</P1>
+    <P2>42</P2>    
+  </BuffConfig>
+
+  <!--测试:改变商队往返时间-->
+  <BuffConfig>
+    <ID>100034</ID>
+    <Name>Empty</Name>
+    <!--商队buff枚举-->
+    <Type>321</Type>
+    <!--增加的往返天数-->
+    <Num>30</Num>
+    <P1>4013</P1>
+    <P2>42</P2>
+  </BuffConfig>
+  
+  <!--测试:增加/减少商队的人数-->
+  <BuffConfig>
+    <ID>100035</ID>
+    <Name>Empty</Name>
+    <!--商队buff枚举-->
+    <Type>322</Type>
+    <!--增加的往返天数-->
+    <Num>1</Num>
+    <P1>4013</P1>
+    <P2>42</P2>
+  </BuffConfig>
+  
+  <!--减少商队遇险概率-->
+  <BuffConfig>
+    <ID>100032</ID>
+    <Name>Buff_100032</Name>
+    <!--商队buff枚举-->
+    <Type>319</Type>
+    <!--增加的百分比-->
+    <Percent>-5</Percent>36
+    <P1>4013</P1>
+    <P2>42</P2>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+  
+  <!--洛伦佐移民申请带走人2010-->
+  <BuffConfig>
+    <ID>100036</ID>
+    <Name>Empty</Name>
+    <!--buff枚举KillCitizen-->
+    <Type>121</Type>
+    <!--num是人数，P1为性别，P2为是否驱逐，不驱逐则直接死-->
+    <NumRange>
+      <Lower>900</Lower>
+      <Upper>10000</Upper>
+    </NumRange>
+    <Num>20</Num>
+    <!--是否限制性别-->
+    <P1>0</P1>
+  </BuffConfig>
+  
+  <!--洛伦佐移民申请增加人 有鼠疫2011-->
+  <BuffConfig>
+    <ID>100037</ID>
+    <Name>Empty</Name>
+    <!--Enum, BuffType: FreeAddCtizen， 对这些市民该状态只能用citizen ability xml-->
+        <Type>26</Type>
+    <!--年龄范围-->
+    <NumRange>
+      <Lower>900</Lower>
+      <Upper>4500</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>30</P1>
+    <!--增加Buff的概率-->
+    <P2>10</P2>    
+    <!--瘟疫id-->
+    <P3>15</P3>
+  </BuffConfig>
+  
+  <!--洛伦佐交流畜牧业心得20122 牧场产出加成40%-->
+  <BuffConfig>
+    <ID>100038</ID>
+    <Name>Buff_100038</Name>
+    <Type>11</Type>
+    <!--效果增强百分比-->
+    <Percent>40</Percent>
+    <!--自定义参数，P1为建筑ID，P2为建筑类型-->
+    <P2>8</P2>
+    <LastTime>360</LastTime>
+  </BuffConfig>
+  
+  <!--卡洛斯的移民申请 2016 增加人 又渴又饿老人-->
+  <BuffConfig>
+    <ID>100039</ID>
+    <Name>Empty</Name>
+    <!--Enum, BuffType: FreeAddCtizen， 对这些市民该状态只能用citizen ability xml-->
+    <Type>26</Type>
+    <!--年龄范围  待确认！！！！！！！-->
+    <NumRange>
+      <Lower>4500</Lower>
+      <Upper>5200</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>18</P1>
+    <!--增加Buff的概率-->
+    <P2>100</P2>    
+    <P7List>
+      <P7>130006</P7>
+      <P7>130010</P7>
+    </P7List>   
+  </BuffConfig>
+  
+  <!--卡洛斯的移民申请 增加人 又渴又饿幸福健康为0老人-->
+  <BuffConfig>
+    <ID>100040</ID>
+    <Name>Empty</Name>
+    <!--Enum, BuffType: FreeAddCtizen， 对这些市民该状态只能用citizen ability xml-->
+    <Type>26</Type>
+    <!--年龄范围 -->
+    <NumRange>
+      <Lower>4500</Lower>
+      <Upper>5200</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>18</P1>
+    <!--增加Buff的概率-->
+    <P2>100</P2>    
+    <P7List>
+      <P7>130006</P7>
+      <P7>130010</P7>
+      <P7>130005</P7>
+      <P7>130016</P7>
+    </P7List>
+  </BuffConfig>
+  
+  <!--商队见闻 2029 全体幸福度增加-->
+  <BuffConfig>
+    <ID>100041</ID>
+    <Name>Buff_100041</Name>
+    <!--Enum, BuffType: CitizenAddAttrValue 对这些市民该状态只能用citizen ability xml-->
+    <Type>112</Type>
+    <!--attri Enum-->
+    <P1>18</P1>
+    <!--增加20%，也就是加200.-->
+    <Num>400</Num>
+  </BuffConfig>
+  
+  <!--回到故乡事件 增加一个又渴又累的人-->
+  <BuffConfig>
+    <ID>100042</ID>
+    <Name>Empty</Name>
+    <!--Enum, BuffType: FreeAddCtizen， 对这些市民该状态只能用citizen ability xml-->
+    <Type>26</Type>
+    <!--年龄范围  待确认！！！！！！！-->
+    <NumRange>
+      <Lower>7300</Lower>
+      <Upper>18250</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>1</P1>
+    <!--增加Buff的概率-->
+    <P2>100</P2>    
+    <!--瘟疫id-->
+    <P7List>
+      <P7>130006</P7>
+      <P7>130010</P7>
+    </P7List>
+  </BuffConfig>
+  
+  <!--老富翁回到故乡事件-->
+  <BuffConfig>
+    <ID>100043</ID>
+    <Name>Empty</Name>
+    <!--Enum, BuffType: FreeAddCtizen， 对这些市民该状态只能用citizen ability xml-->
+    <Type>26</Type>
+    <!--年龄范围  待确认！！！！！！！-->
+    <NumRange>
+      <Lower>18250</Lower>
+      <Upper>25550</Upper>
+    </NumRange>
+    <!--人数-->
+    <P1>1</P1>
+    <!--增加Buff的概率--> 
+  </BuffConfig>
+
+  <!--年兽吃人啦-->
+  <BuffConfig>
+    <ID>100044</ID>
+    <Name>Empty</Name>
+    <!--Enum, BuffType:KillCitizen-->
+    <Type>28</Type>
+    <!--年龄范围 -->
+    <NumRange>
+      <Lower>0</Lower>
+      <Upper>100000</Upper>
+    </NumRange>
+    <!--人数,人口百分之1-->
+    <Percent>1</Percent>
+  </BuffConfig>
+
+  <!--年兽吃食物啦-->
+  <BuffConfig>
+    <ID>100045</ID>
+    <Name>Empty</Name>
+    <!--Enum, BuffType:RemoveItem-->
+    <Type>324</Type>
+    <!--typeId-->
+    <P1>1</P1>
+    <!--去除比例-->
+    <Percent>50</Percent>
+  </BuffConfig>
+
+  <!--1增加声望20-->
+  <BuffConfig>
+    <ID>100046</ID>
+    <Name>Buff_Reputation20</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+        <Type>323</Type>
+    <!--CampId -->
+    <P1>1</P1>
+    <!--数量-->
+    <Num>20</Num>
+  </BuffConfig>
+    <!--1增加声望 60-->
+  <BuffConfig>
+    <ID>100047</ID>
+    <Name>Buff_Reputation60</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+        <Type>323</Type>
+    <!--CampId -->
+    <P1>1</P1>
+    <!--数量-->
+    <Num>60</Num>
+  </BuffConfig>
+    <!--1增加声望 150-->
+  <BuffConfig>
+    <ID>100048</ID>
+    <Name>Buff_Reputation150</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+          <Type>323</Type>
+    <!--CampId -->
+    <P1>1</P1>
+    <!--数量-->
+    <Num>150</Num>
+  </BuffConfig>
+      <!--1增加声望 200-->
+  <BuffConfig>
+    <ID>100049</ID>
+    <Name>Buff_Reputation200</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+          <Type>323</Type>
+    <!--CampId -->
+    <P1>1</P1>
+    <!--数量-->
+    <Num>200</Num>
+  </BuffConfig>
+      <!--1增加声望 300-->
+  <BuffConfig>
+    <ID>100050</ID>
+    <Name>Buff_Reputation300</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>1</P1>
+    <!--数量-->
+    <Num>300</Num>
+  </BuffConfig>
+  <!--2增加声望 20-->
+  <BuffConfig>
+    <ID>100051</ID>
+    <Name>Buff_Reputation20</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>2</P1>
+    <!--数量-->
+    <Num>20</Num>
+  </BuffConfig>
+    <!--2增加声望 60-->
+  <BuffConfig>
+    <ID>100052</ID>
+    <Name>Buff_Reputation60</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>2</P1>
+    <!--数量-->
+    <Num>60</Num>
+  </BuffConfig>
+    <!--2增加声望 150-->
+  <BuffConfig>
+    <ID>100053</ID>
+    <Name>Buff_Reputation150</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>2</P1>
+    <!--数量-->
+    <Num>150</Num>
+  </BuffConfig>
+      <!--2增加声望 200-->
+  <BuffConfig>
+    <ID>100054</ID>
+    <Name>Buff_Reputation200</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>2</P1>
+    <!--数量-->
+    <Num>200</Num>
+  </BuffConfig>
+      <!--2增加声望 300-->
+  <BuffConfig>
+    <ID>100055</ID>
+    <Name>Buff_Reputation300</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>2</P1>
+    <!--数量-->
+    <Num>300</Num>
+  </BuffConfig>
+    <!--3增加声望 20-->
+  <BuffConfig>
+    <ID>100056</ID>
+    <Name>Buff_Reputation20</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>3</P1>
+    <!--数量-->
+    <Num>20</Num>
+  </BuffConfig>
+    <!--3增加声望 60-->
+  <BuffConfig>
+    <ID>100057</ID>
+    <Name>Buff_Reputation60</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>3</P1>
+    <!--数量-->
+    <Num>60</Num>
+  </BuffConfig>
+    <!--3增加声望 150-->
+  <BuffConfig>
+    <ID>100058</ID>
+    <Name>Buff_Reputation150</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>3</P1>
+    <!--数量-->
+    <Num>150</Num>
+  </BuffConfig>
+      <!--100059   3增加声望 200-->
+  <BuffConfig>
+    <ID>100059</ID>
+    <Name>Buff_Reputation200</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+     <Type>323</Type>
+    <!--CampId -->
+    <P1>3</P1>
+    <!--数量-->
+    <Num>200</Num>
+  </BuffConfig>
+      <!--100060   3增加声望 300-->
+  <BuffConfig>
+    <ID>100060</ID>
+    <Name>Buff_Reputation300</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>3</P1>
+    <!--数量-->
+    <Num>300</Num>
+  </BuffConfig>
+    <!--4增加声望 20-->
+  <BuffConfig>
+    <ID>100061</ID>
+    <Name>Buff_Reputation20</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>4</P1>
+    <!--数量-->
+    <Num>20</Num>
+  </BuffConfig>
+    <!--4增加声望 60-->
+  <BuffConfig>
+    <ID>100062</ID>
+    <Name>Buff_Reputation60</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>4</P1>
+    <!--数量-->
+    <Num>60</Num>
+  </BuffConfig>
+    <!--4增加声望 150-->
+  <BuffConfig>
+    <ID>100063</ID>
+    <Name>Buff_Reputation150</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>4</P1>
+    <!--数量-->
+    <Num>150</Num>
+  </BuffConfig>
+      <!--4增加声望 200-->
+  <BuffConfig>
+    <ID>100064</ID>
+    <Name>Buff_Reputation200</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>4</P1>
+    <!--数量-->
+    <Num>200</Num>
+  </BuffConfig>
+      <!--4增加声望 300-->
+  <BuffConfig>
+    <ID>100065</ID>
+    <Name>Buff_Reputation300</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--CampId -->
+    <P1>4</P1>
+    <!--数量-->
+    <Num>300</Num>         
+  </BuffConfig>
+  
+  <!--测试：增加声望BuffType:AddCampReputation-->
+  <BuffConfig>
+    <ID>200000</ID>
+    <Name>Empty</Name>
+    <!--Enum, BuffType:AddCampReputation-->
+    <Type>323</Type>
+    <!--数量-->
+    <Num>1000000</Num>
+  </BuffConfig>
+
+  <!--测试：一键充值-->
+  <BuffConfig>
+    <ID>300000</ID>
+    <Name>Empty</Name>
+    <Type>35</Type>
+    <Num>10000</Num>
+  </BuffConfig>
+  
+  
+</ArrayOfBuffConfig>

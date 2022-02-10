@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<ArrayOfLifeActionConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <!--   日常动作配置说明：  Description of Daily Action Configuration:
+  字段        所属类型      描述       
+  ID          int            具体查看下方枚举（日常枚举）  See the enumeration below for details (Daily Enumeration)
+  Action        int            对应的动作ID （CitizenAction表中）  Corresponding Action ID (in the CitizenAction table)
+     枚举：  Enumeration:
+  LifeTrigger_Eat     = 1;      //   食用  Eat
+    LifeTrigger_Drink     = 2;      //   饮水  Drinking water
+    LifeTrigger_Warm    = 3;      //   保暖  Warm keeping
+    LifeTrigger_Rest    = 4;      //   休息  Rest
+    LifeTrigger_Clothes   = 5;      //   衣服  Clothes
+    LifeTrigger_Tool    = 6;      //   工具  Tools
+    //LifeTrigger_Bath    = 7;      //   清洁  Cleaning
+    //LifeTrigger_Heal    = 8;      //   治疗  Treatment
+    LifeTrigger_PlagueHeal  = 9;      //   瘟疫治疗  Plague Treatment
+    LifeTrigger_BagTool   = 10;     //   需要背包  Need Backpack
+    LifeTrigger_HappyPlace  = 11;     //   场所幸福度  Site Happiness
+    LifeTrigger_Health    = 12;     //   健康度  Health Level
+    LifeTrigger_Shoe    = 13;     //   鞋子  Shoes
+
+   
+   -->
+
+
+ <LifeActionConfig>
+  <!--食用-->
+    <ID>1</ID>
+    <Action>7</Action>
+  </LifeActionConfig>
+  <LifeActionConfig>
+  <!--饮水-->
+    <ID>2</ID>
+    <Action>8</Action>
+  </LifeActionConfig>
+  <LifeActionConfig>
+  <!--取暖-->
+    <ID>3</ID>
+    <Action>6</Action>
+  </LifeActionConfig>
+  <LifeActionConfig>
+  <!--休息-->
+    <ID>4</ID>
+    <Action>11</Action>
+  </LifeActionConfig>
+  <LifeActionConfig>
+  <!--取衣服-->
+    <ID>5</ID>
+    <Action>12</Action>
+  </LifeActionConfig>
+  <LifeActionConfig>
+  <!--取工具-->
+    <ID>6</ID>
+    <Action>13</Action>
+  </LifeActionConfig>
+  <LifeActionConfig>
+  <!--清洁-->
+    <ID>7</ID>
+    <Action>28</Action>
+  </LifeActionConfig>
+  <LifeActionConfig>
+  <!--疾病治疗-->
+    <ID>8</ID>
+    <Action>1</Action>
+  </LifeActionConfig>
+  <LifeActionConfig>
+  <!--瘟疫治疗-->
+    <ID>9</ID>
+    <Action>1</Action>
+  </LifeActionConfig>
+  <LifeActionConfig>
+  <!--背包-->
+    <ID>10</ID>
+    <Action>12</Action>
+  </LifeActionConfig>
+  <LifeActionConfig>
+  <!--场所幸福度-->
+    <ID>11</ID>
+    <Action>1</Action>
+  </LifeActionConfig>
+    <LifeActionConfig>
+  <!--场所幸福度-->
+    <ID>12</ID>
+    <Action>1</Action>
+  </LifeActionConfig>
+    <LifeActionConfig>
+  <!--场所幸福度-->
+    <ID>13</ID>
+    <Action>1</Action>
+  </LifeActionConfig>
+</ArrayOfLifeActionConfig>

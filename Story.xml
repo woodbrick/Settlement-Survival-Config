@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<ArrayOfStoryConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <!--  模式配置说明
+Description of Mode Configuration
+ID  int  ID不重复
+No Duplicates for IDs
+Name string 模式的名字（显示在主界面上的）
+Mode Name (On the main interface)
+TitleDes string 新游戏中对应模式的标题描述
+Title description of corresponding mode in new game
+Des string 新游戏中对应模式的内容描述
+Content description of corresponding mode in new game
+IsOpen bool 是否开放该模式
+Whether to enable this mode
+UIEarthPoint string 地球点的名字（地球上的预制上对应的点名字）
+Name of Earth point (Corresponding point on earth prefabrication)
+BtnIcon_On string 开启该模式显示的图标（文件路径）
+The icon displayed when the mode is on (File path)
+BtnIcon string 关闭时的图标（文件路径）
+The icon displayed when the mode is off (File Path)
+BtnTips string 关闭时的按钮提示
+Button Prompt On Close
+BaseMode bool 是否是标准模式（标准模式不会启动剧本任务）
+Is it the standard mode (No script task in standard mode)
+Shahe bool 是否沙盒模式（默认为false）
+Is it in Sandbox mode (Default is false)
+UnLock int 该模式的解锁条件（1.为解锁所有科技）
+Requirements for Unlocking This Mode (1.To unlock all technology)
+HardId string 该模式对应的难度ID（|分隔）
+The Difficulty of the Mode (separated by |)
+  非标准模式的开局配置（以下配置配置过后游戏中对应的选项就不能更改）
+Start-up configuration for non-standard mode (Under the following configuration, the corresponding options in the game cannot be changed)
+TownName string 填了之后会固定的小镇名字，不填默认为新的小镇，可以更改
+The name of the town will be fixed after filling in. The town defaults to be new without filling in, and the name can be changed
+MapSeed int 地图种子的ID，（显示用）配置后不可随机
+The ID of the map seed (for display) cannot be random after configuration
+MapSize int 地图尺寸，配置后不可选择地图大小
+The map size cannot be selected after configuration
+Condition int 开局难度，对应的hardmode中的ID
+The corresponding ID when the initial difficulty is hardmode
+Disaster bool 是否开启灾难
+Whether to enable the disaster
+Special bool 是否开启特殊建筑
+Whether to enable the special buildings
+Plot bool 默认是否开启剧情，（这个配置决定是否是标准模式）
+Is the story on or off by default (This configuration determines whether it is the standard mode)
+StoryModeIdPlotTrue int 开启剧情对应storymode中的ID
+The corresponding ID in the storymode when the story is on
+StoryModeIdPlotFalse int 关闭剧情对应的storymode中的ID
+The corresponding ID in the storymode when the story is off
+ArchivePlotTrue int 不配置则不读存档(开启剧情对应的存档名字) Config/preview   填主文件名 如 p4， 副文件前方加 B 如 Bp4
+No archive reading without configuration (The corresponding archive when the story is on) Config/preview Please fill in the main file name, such as p4. Add B before the secondary file name, such as Bp4
+ArchivePlotFalse int 不配置则不读存档(关闭剧情对应的存档名字)
+No archive reading without configuration (The corresponding archive when the story is off)
+StoryManSkin string 该模式下用的人物模型男
+The male character model in this mode
+StoryWoManSkin string 该模式下用的人物模型女
+The female character model in this mode
+
+
+	
+	
+	
+	
+	备注：
+	int			整型，只能填整数
+    string		字符串类型，字母或者文字
+	bool		布尔类型，true或者false
+	此配置表中所有string类型的需要对应多语言中的ID
+ -->
+
+
+
+ <!--标准模式-->
+  <StoryConfig>
+    <ID>6</ID>
+    <Name>FreeScene_Mode1</Name>
+    <TitleDes>FreeScene_FindLiveTitle</TitleDes>
+    <!--剧本详细描述-->
+    <Des>FreeScene_FindLivePosInfo</Des>
+    <!--本剧本是否开启-->
+    <IsOpen>true</IsOpen>
+	<!--按钮1-->
+    <BtnIcon_On>cj_btn_biaozhun_1</BtnIcon_On>
+	<!--按钮2-->
+    <BtnIcon>cj_btn_biaozhun_2</BtnIcon>
+	<!--是否禁止剧情任务-->
+	<BaseMode>true</BaseMode>
+	<!--灾难设置-->
+    <Disaster>true</Disaster>
+	<!--该模式对应的难度ID-->
+    <HardId>1|2|3|4</HardId>
+	<!--该难度下儿童男模型列表，|分隔开-->
+    <StoryBoyManSkin>ChildMan_Skin</StoryBoyManSkin>
+	<!--该难度下儿童女模型列表，|分隔开-->
+    <StoryGirlWoManSkin>ChildWoman_Skin</StoryGirlWoManSkin>
+	<!--该难度下男模型列表，|分隔开-->
+    <StoryManSkin>ManSkin</StoryManSkin>
+	<!--该难度下女模型列表，|分隔开-->
+    <StoryWoManSkin>WomanSkin</StoryWoManSkin>
+	<!--该难度下老人男模型列表，|分隔开-->
+    <StoryOldManSkin>ManSkin</StoryOldManSkin>
+	<!--该难度下老人女模型列表，|分隔开-->
+    <StoryOldWoManSkin>WomanSkin</StoryOldWoManSkin>
+  </StoryConfig>
+  
+  <!--沙盒模式-->
+   <StoryConfig>
+    <ID>5</ID>
+	<!--模式名称-->
+	<Name>FreeScene_Mode6</Name>
+    <!--剧本标题描述-->
+    <TitleDes>FreeScene_Mode6</TitleDes>
+    <!--剧本详细描述-->
+    <Des>Story_Des_4</Des>
+    <!--本剧本是否开启-->
+    <IsOpen>true</IsOpen>
+	<!--按钮1-->
+    <BtnIcon_On>cj_btn_shahe_1</BtnIcon_On>
+	<!--按钮2-->
+    <BtnIcon>cj_btn_shahe_2</BtnIcon>
+	<!--按钮tips-->
+    <BtnTips>BtnTips_sandbox</BtnTips>
+	<!--是否开启沙盒-->
+    <Shahe>true</Shahe>
+	<!--是否禁止剧情任务-->
+	<BaseMode>true</BaseMode>
+	<!--该模式对应的难度ID-->
+    <HardId>5|6|7|8</HardId>
+	<!--该难度下儿童男模型列表，|分隔开-->
+    <StoryBoyManSkin>ChildMan_Skin</StoryBoyManSkin>
+	<!--该难度下儿童女模型列表，|分隔开-->
+    <StoryGirlWoManSkin>ChildWoman_Skin</StoryGirlWoManSkin>
+	<!--该难度下男模型列表，|分隔开-->
+    <StoryManSkin>ManSkin</StoryManSkin>
+	<!--该难度下女模型列表，|分隔开-->
+    <StoryWoManSkin>WomanSkin</StoryWoManSkin>
+	<!--该难度下老人男模型列表，|分隔开-->
+    <StoryOldManSkin>ManSkin</StoryOldManSkin>
+	<!--该难度下老人女模型列表，|分隔开-->
+    <StoryOldWoManSkin>WomanSkin</StoryOldWoManSkin>
+  </StoryConfig>
+  
+
+
+  <!--复活节岛-->
+ <StoryConfig>
+    <ID>1</ID>
+    <Name>FreeScene_Mode4</Name>
+	<!--小镇名字有这个不能改名-->
+	<TownName>FreeScene_Mode4</TownName>	
+    <!--剧本标题描述-->
+    <TitleDes>Story_TitleDes_1</TitleDes>
+    <!--剧本详细描述-->
+    <Des>Story_Des_1</Des>
+    <!--本剧本是否开启-->
+    <IsOpen>true</IsOpen>
+	<!--开局界面配置-->
+	<!--地球点-->
+    <UIEarthPoint>Moai</UIEarthPoint>
+	<!--按钮1-->
+    <BtnIcon_On>cj_btn_fuhuo_1</BtnIcon_On>
+	<!--按钮2-->
+    <BtnIcon>cj_btn_fuhuo_2</BtnIcon>
+	<!--按钮tips-->
+    <BtnTips>Menu_Waiting</BtnTips>
+	<!--地图种子-->
+    <MapSeed>270910927</MapSeed>
+	<!--地图尺寸-->
+    <MapSize>1</MapSize>
+	<!--开局条件-->
+    <Condition>2</Condition>
+	<!--灾难设置-->
+    <Disaster>true</Disaster>
+	<!--特殊建筑开关-->
+    <Special>false</Special>
+	<!--剧情设置-->
+    <Plot>true</Plot>
+	<!--开剧情对应的storyID-->
+    <StoryModeIdPlotTrue>101</StoryModeIdPlotTrue>
+	<!--关剧情对应的storyID-->
+    <StoryModeIdPlotFalse>102</StoryModeIdPlotFalse>
+	<!--开剧情对应的存档IDzipConfig/preview   填主文件名-->		
+    <ArchivePlotTrue>story_101</ArchivePlotTrue>
+	<!--关剧情对应的存档zipConfig/preview   填主文件名
+    <ArchivePlotFalse>story_102</ArchivePlotFalse>-->
+	<!--该模式对应的难度ID-->
+    <HardId>101|102</HardId>
+	<!--该难度下儿童男模型列表，|分隔开-->
+    <StoryBoyManSkin>StoryMan_Skin</StoryBoyManSkin>
+	<!--该难度下儿童女模型列表，|分隔开-->
+    <StoryGirlWoManSkin>StroyWoman_Skin</StoryGirlWoManSkin>
+	<!--该难度下男模型列表，|分隔开-->
+    <StoryManSkin>StoryMan_Skin</StoryManSkin>
+	<!--该难度下女模型列表，|分隔开-->
+    <StoryWoManSkin>StroyWoman_Skin</StoryWoManSkin>
+	<!--该难度下老人男模型列表，|分隔开-->
+    <StoryOldManSkin>StoryMan_Skin</StoryOldManSkin>
+	<!--该难度下老人女模型列表，|分隔开-->
+    <StoryOldWoManSkin>StroyWoman_Skin</StoryOldWoManSkin>
+  </StoryConfig>
+   
+
+<!--漫漫长夜-->
+  <StoryConfig>
+    <ID>2</ID>
+    <Name>FreeScene_Mode2</Name>
+    <!--剧本标题描述-->
+    <TitleDes>Story_TitleDes_2</TitleDes>
+    <!--剧本详细描述-->
+    <Des>Story_Des_2</Des>
+    <!--本剧本是否开启-->
+    <IsOpen>false</IsOpen>
+    <!--剧本难度StoryModeID-->
+    <StoryIDList>
+      <StoryID>1</StoryID>
+    </StoryIDList>
+	<!--按钮1-->
+    <BtnIcon_On>cj_btn_changye_1</BtnIcon_On>
+	<!--按钮2-->
+    <BtnIcon>cj_btn_changye_2</BtnIcon>
+	<!--按钮tips-->
+    <BtnTips>Menu_Waiting</BtnTips>
+  </StoryConfig>
+
+
+<!--暮光小镇-->
+  <StoryConfig>
+    <ID>3</ID>
+    <Name>FreeScene_Mode3</Name>
+    <!--剧本标题描述-->
+    <TitleDes>Story_TitleDes_3</TitleDes>
+    <!--剧本详细描述-->
+    <Des>Story_Des_3</Des>
+    <!--本剧本是否开启-->
+    <IsOpen>false</IsOpen>
+    <!--剧本难度StoryModeID-->
+    <StoryIDList>
+      <StoryID>1</StoryID>
+    </StoryIDList>
+	<!--按钮1-->
+    <BtnIcon_On>cj_btn_changye_1</BtnIcon_On>
+	<!--按钮2-->
+    <BtnIcon>cj_btn_changye_2</BtnIcon>
+	<!--按钮tips-->
+    <BtnTips>Menu_Waiting</BtnTips>
+  </StoryConfig>
+  
+  
+  <!--维京人-->
+  <StoryConfig>
+    <ID>4</ID>
+    <Name>FreeScene_Mode5</Name>
+    <!--剧本标题描述-->
+    <TitleDes>Story_TitleDes_3</TitleDes>
+    <!--剧本详细描述-->
+    <Des>Story_Des_3</Des>
+    <!--本剧本是否开启-->
+    <IsOpen>false</IsOpen>
+    <!--剧本难度StoryModeID-->
+    <StoryIDList>
+      <StoryID>1</StoryID>
+    </StoryIDList>
+	<!--按钮1-->
+    <BtnIcon_On>cj_btn_changye_1</BtnIcon_On>
+	<!--按钮2-->
+    <BtnIcon>cj_btn_changye_2</BtnIcon>
+	<!--按钮tips-->
+    <BtnTips>Menu_Waiting</BtnTips>
+  </StoryConfig>
+  
+
+  
+
+
+  
+  
+  
+  
+</ArrayOfStoryConfig>

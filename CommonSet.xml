@@ -1,0 +1,1137 @@
+<?xml version="1.0"?>
+<CommonSetConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--   游戏全局设置：  Global settings:
+     具体作用查看下方各个配置说明 See the following configuration instructions for specific roles-->
+
+  
+  <mode>true</mode>
+  <!--策划更新版本：贸易订购更新-->
+  <Resversion>0.84</Resversion>
+  <!--数值相关调整-->
+  <!--一天多少秒，一倍速下-->
+  <oneDaySecs>10</oneDaySecs>
+  <!--一年多少天-->
+  <oneYearDays>360</oneYearDays>
+  <!--一个月多少天-->
+  <oneMonthDays>30</oneMonthDays>
+
+  <!--玩家游戏设置选项-->
+  <PlayerSetParam>
+    <!--分辨率设置-->
+    <WindowSize>
+	<Resolution>
+        <Upper>3840</Upper>
+        <Lower>2160</Lower>
+      </Resolution>
+	  <Resolution>
+        <Upper>2550</Upper>
+        <Lower>1440</Lower>
+      </Resolution>
+	  <Resolution>
+        <Upper>1920</Upper>
+        <Lower>1200</Lower>
+      </Resolution>
+      <Resolution>
+        <Upper>1920</Upper>
+        <Lower>1080</Lower>
+      </Resolution>
+	  <Resolution>
+        <Upper>1680</Upper>
+        <Lower>1050</Lower>
+      </Resolution>
+	  <Resolution>
+        <Upper>1600</Upper>
+        <Lower>900</Lower>
+      </Resolution>
+      <Resolution>
+        <Upper>1024</Upper>
+        <Lower>720</Lower>
+      </Resolution>
+      <Resolution>
+        <Upper>800</Upper>
+        <Lower>600</Lower>
+      </Resolution>
+      <Resolution>
+        <Upper>640</Upper>
+        <Lower>420</Lower>
+      </Resolution>
+    </WindowSize>
+	<!--帧数设置-->
+    <FPSSet>
+	  <Num>25</Num>
+      <Num>30</Num>
+      <Num>40</Num>
+	  <Num>45</Num>
+	  <Num>50</Num>
+      <Num>60</Num>
+	  <Num>90</Num>
+      <Num>120</Num> 
+      <Num>144</Num>
+    </FPSSet>
+	<!--后台帧率设置-->
+    <FPSSetBackground>
+	  <Num>5</Num>
+      <Num>15</Num>
+      <Num>20</Num>
+      <Num>30</Num>
+      <Num>60</Num>
+    </FPSSetBackground>
+  </PlayerSetParam>
+
+
+  <BuildStageClearMat>2</BuildStageClearMat>
+  <BuildStagePrepairMat>2</BuildStagePrepairMat>
+  <BuildStageClear>30</BuildStageClear>;  <!--<建筑阶段1  准备玩材料 放置模型1>-->
+  <BuildStagePrepair>40</BuildStagePrepair>;  <!--// 模型2-->
+  <BuildStageBuild>70</BuildStageBuild>;  <!--// 模型2-->
+  <buildSoundMinTime>3</buildSoundMinTime>
+  <buildSoundMaxTime>5</buildSoundMaxTime>
+
+  <!--预览场景旋转速度-->
+  <camPreviewRotate>0.5</camPreviewRotate>
+  <!--按键缩放镜头速度-->
+  <camKeyScrollWheel>0.2</camKeyScrollWheel>
+  <!--起始摄像机角度-->
+
+
+  <!--镜头旋转速度-->
+  <camRotateSpeed>-120</camRotateSpeed>
+  <!--鼠标中键镜头旋转速度-->
+  <camMouseRotateSpeedMax>1</camMouseRotateSpeedMax> 
+  
+  <!--镜头监听声音范围-->
+  <camListenRange>80</camListenRange>
+
+  <FoodTag>1</FoodTag>    <!--//一级食物tag-->
+  <WaterTag>11</WaterTag>  <!--//一级水tag-->
+  <FuelTag>301</FuelTag>     <!--//一级燃料tag-->
+  <ItemGlod>110001</ItemGlod>     <!--//金币id-->
+  <Itemsliver>110002</Itemsliver>     <!--//银币id-->
+
+  
+  <UnlockAnimalLoad>4406</UnlockAnimalLoad>     <!--//畜力解锁科技ID-->
+  <UnlockTechWorkingGetTechPoint>3105</UnlockTechWorkingGetTechPoint>     <!--//技术工人解锁科技ID-->
+  <!--解锁市集配送科技ID-->
+  <UnlockHelpHomeTransport>4505</UnlockHelpHomeTransport>
+
+  
+  <!--<GenerTree>1</GenerTree>    --><!--//初始 是否生成树木  1/0--><!--
+	<GenerHuman>1</GenerHuman>  --><!--//初始 是否生成人物  1/0-->
+  <OreSideTree>2</OreSideTree><!--//矿产周围N格不能有树-->
+
+  <!--//地形高度定义 地形地面标准高度为23-->
+  <StartLand>22.6</StartLand> <!--//地面起始-->
+  <StartUpLand>24</StartUpLand> <!--//丘陵起始-->
+  <StartMountain>29</StartMountain> <!--//山起始-->
+  <WaterHeight>21</WaterHeight> <!--//水面高度-->
+ 
+
+  <WaterEff_BridSome>
+	<min>15</min>
+    <max>30</max>
+  </WaterEff_BridSome><!--//一群鸟出现间隔--> 
+  
+   <WaterEff_Brid1>
+	<min>3</min>
+    <max>7</max>
+  </WaterEff_Brid1><!--// 一只鸟出现间隔-->  
+  
+  <WaterEff_Fish>
+	<min>5</min>
+    <max>10</max>
+  </WaterEff_Fish> <!--//一条鱼出现间隔-->
+  
+  
+   <!--水灾的效果配置-->
+   <!--水灾的触发速度-->
+   <WaterDisComeSpeed>6</WaterDisComeSpeed>
+   <!--水灾的回退速度-->
+   <WaterDisBackSpeed>4</WaterDisBackSpeed>
+   <!--水灾的高度-->
+   <WaterDisHeight>1.8</WaterDisHeight>
+   <!--水灾摧毁的物件类型entitytype-->
+   <WaterDisDestoryType>
+	 <int>13</int>
+	 <int>4</int>
+   </WaterDisDestoryType>
+  
+  
+   <LandGridRangeColor>#FFFFFF</LandGridRangeColor> <!--//地格颜色-->
+   <LandGridColor>#FFFFFF</LandGridColor> <!--//网格颜色-->
+
+
+  <!--建筑提示延迟时间-->
+  <BuildStateDelay>0</BuildStateDelay>
+  <!--建筑头顶延迟展示时间-->
+  <BuildStateIconDelay>0</BuildStateIconDelay>
+
+
+  <camStartHeight>50</camStartHeight>
+  <camStartAngle>40</camStartAngle>
+  <!--镜头起始向后偏移-->
+  <camStartOffsetBack>15</camStartOffsetBack>
+  <!--镜头旋转速度-->
+  <camRotateSpeed>-120</camRotateSpeed>
+  <!--镜头平移速度-->
+  <camMoveSpeed>1.5</camMoveSpeed>
+  <!--镜头随高度平移的曲线-->
+  <camMoveHPower>1.1</camMoveHPower>
+  <!--镜头缩放速度-->
+  <camZoomSpeed>0.5</camZoomSpeed>
+  <!--镜头缩放曲线-->
+  <camZoomHPower>1.1</camZoomHPower>
+  <!--镜头最低高度-->
+  <camMinHeight>48</camMinHeight>
+  <!--镜头最高高度-->
+  <camMaxHeight>180</camMaxHeight>
+  <!--鼠标移动的最大速度-->
+  <camMouseMoveSpeedMax>2</camMouseMoveSpeedMax>
+  <!--镜头角度-->
+  <camZoomOffsetCenter>
+    <x>0</x>
+    <y>12</y>
+    <z>-20</z>
+  </camZoomOffsetCenter>
+  <!--镜头结束效果-->
+  <camZoomOffsetEnd>
+    <x>0</x>
+    <y>200</y>
+    <z>-40</z>
+  </camZoomOffsetEnd>
+
+
+  <!--//行走速度-->
+  <DefaultSpped>3</DefaultSpped>
+  <AnimalSpeed>1</AnimalSpeed>
+  <!--道路数量-->
+  <RoadCount>7</RoadCount>
+
+  <!--种植相关配置-->
+  <!--种植起始日（每年）-->
+  <StartPlantDay>1</StartPlantDay>
+  <!--种植结束日（每年）-->
+  <EndPlantDay>90</EndPlantDay>
+  <!--休田起始日（每年）-->
+  <StartBanPlantDay>271</StartBanPlantDay>
+  <!--休田结束日（每年）-->
+  <EndBanPlantDay>460</EndBanPlantDay>
+
+  <!--墓碑相关参数-->
+  <!--墓碑关联的物件ID-->
+  <Tombstone>4001</Tombstone>
+  <!--人物动作和移动速度比例-->
+  <AnimSpeed>0.75</AnimSpeed>
+  <!--小孩相对于成人的移速系数-->
+  <ChildSpeedPercent>1.2</ChildSpeedPercent>
+
+  <StayDistance>20</StayDistance> <!--//判定停留的距离-->
+  <BoatSpeed>2</BoatSpeed> <!--//船移动速度-->
+
+  <AnimalMinActivePer>10</AnimalMinActivePer>; <!--//野生动物最少活动区域个数比例  0-100-->
+  <AnimalMoveRadiu>5</AnimalMoveRadiu>; <!--//动物活动半径， 以生成点为中心-->
+  <AnimalMigrateRange>
+    <Lower>30</Lower>
+    <Upper>40</Upper>
+  </AnimalMigrateRange> <!--//动物迁徙频率-->
+  <AnimalMoveRange>
+    <Lower>5</Lower>
+    <Upper>10</Upper>
+  </AnimalMoveRange>       <!--//动物活动频率-->
+  <AnimalsNumLimit>10</AnimalsNumLimit>; <!--//动物单个群体数量上限-->
+  <AnimalAddInterval>180</AnimalAddInterval>; <!--//动物增值间隔（单位：天）-->
+  <AnimalGroupAddInterval>1</AnimalGroupAddInterval>; <!--//动物群体增值间隔（单位：年）-->
+   <!--<SuperAnimalIdList>
+    <AnimalId>1009</AnimalId>
+  </SuperAnimalIdList>      //超级稀有特殊动物-->
+
+  <!--黑夜持续时间-->
+  <NightToDaySwitchDays>400</NightToDaySwitchDays>
+  <!--白昼持续时间-->
+  <DayToNightSwitchDays>1500</DayToNightSwitchDays>
+  <!--间隔随机浮动范围-->
+  <DayNightSwitchDaysRandom>90</DayNightSwitchDaysRandom>
+  <!--进入雪天气候时间 秒-->
+  <SnowTime>180</SnowTime>
+  <!--主界面科技完成提示时间 秒-->
+  <MainUITechAppearTime>5</MainUITechAppearTime>
+  <!--科技界面滑动时间 秒-->
+  <TechInfoScroll>1</TechInfoScroll>
+
+  <!--灾难延迟出现的月份，最少月份为界面上的事件条（20）-->
+  <DelayDisasterInMonth>24</DelayDisasterInMonth>
+
+  <!--火灾建筑-->
+  <FireBuildingLevelList>
+    <FireBuildingLevel>
+      <Int1>1</Int1>
+      <Int2>1</Int2>
+    </FireBuildingLevel>
+  </FireBuildingLevelList>
+ <!--救火的建筑列表--> 
+  <FireDisasterBuildingList>
+	<FireDisasterBuilding>2035</FireDisasterBuilding>
+	<FireDisasterBuilding>2001</FireDisasterBuilding>
+  </FireDisasterBuildingList>
+
+  <!--救火的建筑-->
+  <WellID>2035</WellID>
+  
+  
+  
+  <!--疾病相关-->
+  <!--城市健康度高于2星时，出发瘟疫概率-->
+  <PlagueHealth>
+    <!--触发年限-->
+    <Int1>10</Int1>
+    <!--触发人口-->
+    <Int2>100</Int2>
+  </PlagueHealth>
+  <!--城市健康度低于2星时，出发瘟疫概率-->
+  <PlagueNoHealth>
+    <!--触发年限-->
+    <Int1>2</Int1>
+    <!--触发人口-->
+    <Int2>100</Int2>
+  </PlagueNoHealth>
+  <!--接收流民后-->
+  <PlagueRefugees>
+    <!--触发年限-->
+    <Int1>1</Int1>
+    <!--触发人口-->
+    <Int2>0</Int2>
+  </PlagueRefugees>
+  
+  
+ 
+  <!--瘟疫 疾病持续时间-->
+  <PlagueLastRange>
+    <Lower>1000</Lower>
+    <Upper>2500</Upper>
+  </PlagueLastRange>
+  <!--瘟疫 疾病免疫时间-->
+  <PlagueImmuneRange>
+    <Lower>50</Lower>
+    <Upper>200</Upper>
+  </PlagueImmuneRange>
+  <!--瘟疫治愈次数-->
+  <TreatTimes>10</TreatTimes>
+  
+   <!--瘟疫人数-->
+  <TriggerPlagueList>
+    <TriggerPlague>
+		<!--触发人数的上下限-->
+		<MinNum>0</MinNum>
+		<MaxNum>50</MaxNum>
+		<!--可以触发疾病的列表-->
+		<CanPlagueList>
+			<CanPlague>7</CanPlague>	
+			<CanPlague>8</CanPlague>	
+		</CanPlagueList>
+	</TriggerPlague>
+	 <TriggerPlague>
+		<MinNum>51</MinNum>
+		<MaxNum>400</MaxNum>
+		<CanPlagueList>
+			<CanPlague>7</CanPlague>	
+			<CanPlague>8</CanPlague>
+			<CanPlague>10</CanPlague>
+			<CanPlague>11</CanPlague>
+		</CanPlagueList>
+	</TriggerPlague>
+	 <TriggerPlague>
+		<MinNum>401</MinNum>
+		<MaxNum>800</MaxNum>
+		<CanPlagueList>
+			<CanPlague>7</CanPlague>	
+			<CanPlague>8</CanPlague>
+			<CanPlague>10</CanPlague>
+			<CanPlague>11</CanPlague>	
+			<CanPlague>12</CanPlague>
+		</CanPlagueList>
+	</TriggerPlague>
+	 <TriggerPlague>
+		<MinNum>801</MinNum>
+		<MaxNum>100000</MaxNum>
+		<CanPlagueList>
+			<CanPlague>7</CanPlague>	
+			<CanPlague>8</CanPlague>
+			<CanPlague>10</CanPlague>
+			<CanPlague>11</CanPlague>	
+			<CanPlague>12</CanPlague>
+			<CanPlague>13</CanPlague>
+		</CanPlagueList>
+	</TriggerPlague>
+  </TriggerPlagueList>
+  
+  <!--有分类页签的建筑类型-->
+ <WareChooseFunc>2|26</WareChooseFunc>
+ 
+ 
+  <!--主界面展示物品类型ID(弃用配置)-->
+  <MainItemTypeList>
+    <Id>1</Id>
+    <Id>11</Id>
+    <Id>300</Id>
+    <Id>32</Id>
+    <Id>42</Id>
+    <Id>501</Id>
+    <Id>511</Id>
+    <Id>21</Id>
+    <Id>801</Id>
+    <Id>1101</Id>
+  </MainItemTypeList>
+
+
+  <HerbFirstTag>21</HerbFirstTag>
+  <ChangeWorkerDays>180</ChangeWorkerDays>
+  <!--建筑耐久度降低间隔天数-->
+  <BuildingDurabilityUpdateInDays>90</BuildingDurabilityUpdateInDays>
+    <!--建筑耐久度降低区间-->
+  <BuildingDurabilityUpdateNum>
+    <Lower>-5</Lower>
+    <Upper>-15</Upper>
+  </BuildingDurabilityUpdateNum>
+  <CoinID>110002</CoinID>
+  <!--科技点ID-->
+  <DevelopmentPointID>110201</DevelopmentPointID>
+  <!--初始语言-->
+  <DefaultLang>English</DefaultLang>
+  <!--语言种类，LangType语言表中自定义 LangType ，LangValue语言表id -->
+  <LangList>
+    <Lang>
+        <LangType>Chinese</LangType>
+	    <SteamLangType>schinese</SteamLangType>
+        <LangValue>Menu_Chinese</LangValue>
+    </Lang>
+    <Lang>
+        <LangType>English</LangType>
+		<SteamLangType>english</SteamLangType>		
+		<LangValue>Menu_English</LangValue>
+    </Lang>
+    <Lang>
+        <LangType>Russian</LangType>
+		<SteamLangType>russian</SteamLangType>		
+		<LangValue>Menu_Russian</LangValue>
+    </Lang>
+    <Lang>
+        <LangType>French</LangType>
+		<SteamLangType>french</SteamLangType>		
+		<LangValue>Menu_French</LangValue>
+    </Lang>
+    <Lang>
+        <LangType>Spanish</LangType>
+		<SteamLangType>spanish</SteamLangType>		
+		<LangValue>Menu_Spanish</LangValue>
+    </Lang>
+    <Lang>
+        <LangType>German</LangType>
+		<SteamLangType>german</SteamLangType>		
+		<LangValue>Menu_German</LangValue>
+    </Lang>
+    <Lang>
+        <LangType>Japanese</LangType>
+		<SteamLangType>japanese</SteamLangType>		
+		<LangValue>Menu_Japanese</LangValue>
+    </Lang>
+    <Lang>
+        <LangType>Italian</LangType>
+		<SteamLangType>italian</SteamLangType>		
+		<LangValue>Menu_Italian</LangValue>
+    </Lang>
+    <Lang>
+        <LangType>Polish</LangType>
+		<SteamLangType>polish</SteamLangType>		
+		<LangValue>Menu_Polish</LangValue>
+    </Lang>
+    <Lang>
+        <LangType>Brazillian_Portuguese</LangType>
+		<SteamLangType>brazilian</SteamLangType>		
+		<LangValue>Menu_Brazillian_Portuguese</LangValue>
+    </Lang>
+    <Lang>
+        <LangType>Turkish</LangType>
+		<SteamLangType>turkish</SteamLangType>		
+		<LangValue>Menu_Turkish</LangValue>
+    </Lang>
+  </LangList>
+
+  <!--帧率  多少帧切换一次-->
+  <LoadingContentSwitchTime>40</LoadingContentSwitchTime>
+  <!--对应语言表的文字信息-->
+  <LoadingContentList>
+    <LoadingContentItem>LoadingContent_1</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_2</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_3</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_4</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_5</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_6</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_7</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_8</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_9</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_10</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_11</LoadingContentItem>
+    <LoadingContentItem>LoadingContent_12</LoadingContentItem>
+  </LoadingContentList>
+
+
+  <!--物品限制最大数量-->
+  <ItemTypeLimitMax>999999</ItemTypeLimitMax>
+  <!--生产加工物品默认加减按钮单次点击数量-->
+  <ItemBtnControlNum>100</ItemBtnControlNum>
+  
+
+
+  <!--奖励教程配置区域，以下教程有奖励-->
+  <GuildAwardList>
+    <CourseId>18</CourseId>
+    <CourseId>19</CourseId>
+    <CourseId>27</CourseId>
+    <CourseId>24</CourseId>
+    <CourseId>20</CourseId>
+    <CourseId>21</CourseId>
+    <CourseId>22</CourseId>
+    <CourseId>23</CourseId>
+    <CourseId>25</CourseId>
+    <CourseId>26</CourseId>
+    <CourseId>28</CourseId>
+    <CourseId>29</CourseId>
+    <CourseId>30</CourseId>
+  </GuildAwardList>
+
+  <!--Email-->
+  <Email>SettlementSurvival@hotmail.com</Email>
+
+  <!--秋收时间-->
+  <HarvestTime>
+    <Int1>240</Int1>
+    <Int2>270</Int2>
+  </HarvestTime>
+   <!--晚春时间（播种时间）--> 
+    <DeepspringTime>
+    <Int1>65</Int1>
+    <Int2>140</Int2>
+  </DeepspringTime>
+
+  <!--流民-->
+  <ImmigrationData>
+    <!--流民出现人数（当前人数百分比）-->
+    <NumRate>
+      <Lower>10</Lower>
+      <Upper>20</Upper>
+    </NumRate>
+    <!--流民年龄层以及比例-->
+    <BanishSexAndAgeList>
+      <BanishSexAndAge>
+        <Int1>1</Int1>
+        <Int2>50</Int2>
+      </BanishSexAndAge>
+      <BanishSexAndAge>
+        <Int1>2</Int1>
+        <Int2>50</Int2>
+      </BanishSexAndAge>
+    </BanishSexAndAgeList>
+    <!--流民成年年龄范围-->
+    <AdultAge>
+      <Lower>1260</Lower>
+      <Upper>5000</Upper>
+    </AdultAge>
+    <!--流民儿童年龄范围-->
+    <ChildAge>
+      <Lower>1</Lower>
+      <Upper>1260</Upper>
+    </ChildAge>
+    <!--流民教育初始化-->
+    <IsEducated>true</IsEducated>
+    <!--流民出现条件-->
+    <!--最小市民数量-->
+    <RequiredCitizen>1</RequiredCitizen>
+    <!--拥有建筑-->
+    <RequiredBuildingList>
+
+    </RequiredBuildingList>
+    <!--出现间隔-->
+    <IntervalMonths>
+      <Lower>24</Lower>
+      <Upper>48</Upper>
+    </IntervalMonths>
+    <!--停留天数-->
+    <StayDays>90</StayDays>
+    <!--瘟疫概率-->
+    <PlagueRate>10</PlagueRate>
+    <!--医院类型-->
+    <HospitalType>12</HospitalType>
+  </ImmigrationData>
+
+  <IconRecruit>timeEvent_Recruit</IconRecruit>
+  <DesRecruit>timeEvent_Recruit_Des</DesRecruit>
+  <IconBoat>timeEvent_Boat</IconBoat>
+  <DesBoat>timeEvent_Boat_Des</DesBoat>
+  
+  <!--订购物品的运费重量-->
+  <OrderFreight>2</OrderFreight>
+
+  <!--订购使用的船的模型-->
+  <TradeBoatBuyId>3</TradeBoatBuyId>
+
+  <!--订购常用列表-->
+  <CommonuseList>
+    <CommonuseId>1001</CommonuseId>
+	<CommonuseId>2001</CommonuseId>
+	<CommonuseId>3001</CommonuseId>
+	<CommonuseId>3002</CommonuseId>
+	<CommonuseId>4001</CommonuseId>
+	<CommonuseId>4002</CommonuseId>
+	<CommonuseId>5001</CommonuseId>
+	<CommonuseId>51001</CommonuseId>
+	<CommonuseId>51002</CommonuseId>
+	<CommonuseId>50001</CommonuseId>
+	<CommonuseId>50002</CommonuseId>
+	<CommonuseId>80001</CommonuseId>
+  </CommonuseList>
+
+  <!--唯一建筑类型-->
+  <UniqueBuildList>
+	<UniqueBuildType>18</UniqueBuildType>
+    <UniqueBuildType>19</UniqueBuildType>
+    <UniqueBuildType>32</UniqueBuildType>
+	<UniqueBuildType>33</UniqueBuildType>
+	<UniqueBuildType>37</UniqueBuildType>
+	<UniqueBuildType>38</UniqueBuildType>
+	<UniqueBuildType>43</UniqueBuildType>
+	<UniqueBuildType>44</UniqueBuildType>
+	<UniqueBuildType>101</UniqueBuildType>
+	<UniqueBuildType>103</UniqueBuildType>
+  </UniqueBuildList>
+  <Trade>
+    <!--贸易站规模-->
+    <TradeScaleList>
+      <TradeScale>
+		<!--市民数量-->
+        <CitizenNumRange>
+          <Lower>0</Lower>
+          <Upper>30</Upper>
+        </CitizenNumRange>
+		<!--船抵达的间隔-->
+        <IntervalMonth>
+          <Lower>20</Lower>
+          <Upper>20</Upper>
+        </IntervalMonth>
+        <NumLevel>1</NumLevel>
+      </TradeScale>
+      <TradeScale>
+        <CitizenNumRange>
+          <Lower>31</Lower>
+          <Upper>60</Upper>
+        </CitizenNumRange>
+        <IntervalMonth>
+          <Lower>20</Lower>
+          <Upper>20</Upper>
+        </IntervalMonth>
+        <NumLevel>1</NumLevel>
+      </TradeScale>
+      <TradeScale>
+        <CitizenNumRange>
+          <Lower>61</Lower>
+          <Upper>90</Upper>
+        </CitizenNumRange>
+        <IntervalMonth>
+          <Lower>20</Lower>
+          <Upper>20</Upper>
+        </IntervalMonth>
+        <NumLevel>1</NumLevel>
+      </TradeScale>
+      <TradeScale>
+        <CitizenNumRange>
+          <Lower>91</Lower>
+          <Upper>120</Upper>
+        </CitizenNumRange>
+        <IntervalMonth>
+          <Lower>20</Lower>
+          <Upper>20</Upper>
+        </IntervalMonth>
+        <NumLevel>1</NumLevel>
+      </TradeScale>
+      <TradeScale>
+        <CitizenNumRange>
+          <Lower>121</Lower>
+          <Upper>150</Upper>
+        </CitizenNumRange>
+        <IntervalMonth>
+          <Lower>20</Lower>
+          <Upper>20</Upper>
+        </IntervalMonth>
+        <NumLevel>1</NumLevel>
+      </TradeScale>
+      <TradeScale>
+        <CitizenNumRange>
+          <Lower>151</Lower>
+          <Upper>9999</Upper>
+        </CitizenNumRange>
+        <IntervalMonth>
+          <Lower>20</Lower>
+          <Upper>20</Upper>
+        </IntervalMonth>
+        <NumLevel>1</NumLevel>
+      </TradeScale>
+    </TradeScaleList>
+    <!--停靠天数-->
+    <StayDays>60</StayDays>
+  </Trade>
+  <!--市长-->
+  <!--市长延迟退休时间，在此时间内的，市长仍可以在任，也可以切换-->
+  <MayorDelayRetire>360</MayorDelayRetire>
+  <!--市长等级列表-->
+  <SelectMayorConfigDataList>
+    <SelectMayorConfigData>
+      <Level>1</Level>
+      <!--触发市长人口-->
+      <ReachNum>50</ReachNum>
+      <!--随机卡片数量-->
+      <CanSelectNum>2</CanSelectNum>
+      <!--随机市长列表-->
+      <SelectMayors>1001|1002|1003|1004|1005|1006|1007|1008|1009|1010|1011|1012|1013|1014|1015|1016|1017|1018|1019|1020|1021|1022|1023|1024|1025|1026|1027|1028|1029|1030|1032|1033|1034|1035|1036|1037|1038|1039|1040</SelectMayors>
+      <!--市长称号-->
+      <Name>Major_Name_1</Name>
+      <!--解锁条件描述-->
+      <Condition>Major_Conditioni_1</Condition>
+    </SelectMayorConfigData>
+    <SelectMayorConfigData>
+      <Level>2</Level>
+      <!--触发市长人口-->
+      <ReachNum>150</ReachNum>
+      <!--随机卡片数量-->
+      <CanSelectNum>2</CanSelectNum>
+      <!--随机市长列表-->
+      <SelectMayors>1001|1002|1003|1004|1005|1006|1007|1008|1009|1010|1011|1012|1013|1014|1015|1016|1017|1018|1019|1020|1021|1022|1023|1024|1025|1026|1027|1028|1029|1030|1032|1033|1034|1035|1036|1037|1038|1039|1040</SelectMayors>
+      <!--市长称号-->
+      <Name>Major_Name_2</Name>
+      <!--解锁条件描述-->
+      <Condition>Major_Conditioni_2</Condition>
+    </SelectMayorConfigData>
+    <SelectMayorConfigData>
+      <Level>3</Level>
+      <!--触发市长人口-->
+      <ReachNum>250</ReachNum>
+      <!--随机卡片数量-->
+      <CanSelectNum>2</CanSelectNum>
+      <!--随机市长列表-->
+      <SelectMayors>1001|1002|1003|1004|1005|1006|1007|1008|1009|1010|1011|1012|1013|1014|1015|1016|1017|1018|1019|1020|1021|1022|1023|1024|1025|1026|1027|1028|1029|1030|1032|1033|1034|1035|1036|1037|1038|1039|1040</SelectMayors>
+      <!--市长称号-->
+      <Name>Major_Name_3</Name>
+      <!--解锁条件描述-->
+      <Condition>Major_Conditioni_3</Condition>
+    </SelectMayorConfigData>
+    <SelectMayorConfigData>
+      <Level>4</Level>
+      <!--触发市长人口-->
+      <ReachNum>350</ReachNum>
+      <!--随机卡片数量-->
+      <CanSelectNum>2</CanSelectNum>
+      <!--随机市长列表-->
+      <SelectMayors>1001|1002|1003|1004|1005|1006|1007|1008|1009|1010|1011|1012|1013|1014|1015|1016|1017|1018|1019|1020|1021|1022|1023|1024|1025|1026|1027|1028|1029|1030|1032|1033|1034|1035|1036|1037|1038|1039|1040</SelectMayors>
+      <!--市长称号-->
+      <Name>Major_Name_4</Name>
+      <!--解锁条件描述-->
+      <Condition>Major_Conditioni_4</Condition>
+    </SelectMayorConfigData>
+    <SelectMayorConfigData>
+      <Level>5</Level>
+      <!--触发市长人口-->
+      <ReachNum>450</ReachNum>
+      <!--随机卡片数量-->
+      <CanSelectNum>2</CanSelectNum>
+      <!--随机市长列表-->
+      <SelectMayors>1001|1002|1003|1004|1005|1006|1007|1008|1009|1010|1011|1012|1013|1014|1015|1016|1017|1018|1019|1020|1021|1022|1023|1024|1025|1026|1027|1028|1029|1030|1032|1033|1034|1035|1036|1037|1038|1039|1040</SelectMayors>
+      <!--市长称号-->
+      <Name>Major_Name_5</Name>
+      <!--解锁条件描述-->
+      <Condition>Major_Conditioni_5</Condition>
+    </SelectMayorConfigData>
+	<SelectMayorConfigData>
+      <Level>6</Level>
+      <!--触发市长人口-->
+      <ReachNum>550</ReachNum>
+      <!--随机卡片数量-->
+      <CanSelectNum>2</CanSelectNum>
+      <!--随机市长列表-->
+      <SelectMayors>1001|1002|1003|1004|1005|1006|1007|1008|1009|1010|1011|1012|1013|1014|1015|1016|1017|1018|1019|1020|1021|1022|1023|1024|1025|1026|1027|1028|1029|1030|1032|1033|1034|1035|1036|1037|1038|1039|1040</SelectMayors>
+      <!--市长称号-->
+      <Name>Major_Name_6</Name>
+      <!--解锁条件描述-->
+      <Condition>Major_Conditioni_6</Condition>
+    </SelectMayorConfigData>
+	<SelectMayorConfigData>
+      <Level>7</Level>
+      <!--触发市长人口-->
+      <ReachNum>650</ReachNum>
+      <!--随机卡片数量-->
+      <CanSelectNum>2</CanSelectNum>
+      <!--随机市长列表-->
+      <SelectMayors>1001|1002|1003|1004|1005|1006|1007|1008|1009|1010|1011|1012|1013|1014|1015|1016|1017|1018|1019|1020|1021|1022|1023|1024|1025|1026|1027|1028|1029|1030|1032|1033|1034|1035|1036|1037|1038|1039|1040</SelectMayors>
+      <!--市长称号-->
+      <Name>Major_Name_7</Name>
+      <!--解锁条件描述-->
+      <Condition>Major_Conditioni_7</Condition>
+    </SelectMayorConfigData>
+	<SelectMayorConfigData>
+      <Level>8</Level>
+      <!--触发市长人口-->
+      <ReachNum>750</ReachNum>
+      <!--随机卡片数量-->
+      <CanSelectNum>2</CanSelectNum>
+      <!--随机市长列表-->
+      <SelectMayors>1001|1002|1003|1004|1005|1006|1007|1008|1009|1010|1011|1012|1013|1014|1015|1016|1017|1018|1019|1020|1021|1022|1023|1024|1025|1026|1027|1028|1029|1030|1032|1033|1034|1035|1036|1037|1038|1039|1040</SelectMayors>
+      <!--市长称号-->
+      <Name>Major_Name_8</Name>
+      <!--解锁条件描述-->
+      <Condition>Major_Conditioni_8</Condition>
+    </SelectMayorConfigData>
+	<SelectMayorConfigData>
+      <Level>9</Level>
+      <!--触发市长人口-->
+      <ReachNum>850</ReachNum>
+      <!--随机卡片数量-->
+      <CanSelectNum>2</CanSelectNum>
+      <!--随机市长列表-->
+      <SelectMayors>1001|1002|1003|1004|1005|1006|1007|1008|1009|1010|1011|1012|1013|1014|1015|1016|1017|1018|1019|1020|1021|1022|1023|1024|1025|1026|1027|1028|1029|1030|1032|1033|1034|1035|1036|1037|1038|1039|1040</SelectMayors>
+      <!--市长称号-->
+      <Name>Major_Name_9</Name>
+      <!--解锁条件描述-->
+      <Condition>Major_Conditioni_9</Condition>
+    </SelectMayorConfigData>
+	<SelectMayorConfigData>
+      <Level>10</Level>
+      <!--触发市长人口-->
+      <ReachNum>1000</ReachNum>
+      <!--随机卡片数量-->
+      <CanSelectNum>2</CanSelectNum>
+      <!--随机市长列表-->
+      <SelectMayors>1001|1002|1003|1004|1005|1006|1007|1008|1009|1010|1011|1012|1013|1014|1015|1016|1017|1018|1019|1020|1021|1022|1023|1024|1025|1026|1027|1028|1029|1030|1032|1033|1034|1035|1036|1037|1038|1039|1040</SelectMayors>
+      <!--市长称号-->
+      <Name>Major_Name_10</Name>
+      <!--解锁条件描述-->
+      <Condition>Major_Conditioni_10</Condition>
+    </SelectMayorConfigData>
+	
+  </SelectMayorConfigDataList>
+
+  <!--日志建筑分类-->
+  <LogBuildingList>
+    <LogBuilding>
+      <Name>KeyDes_Alpha1</Name>
+      <Icon>icon_creat_1</Icon>
+      <BuildingID>4|2|3|7|8|10|4025</BuildingID>
+    </LogBuilding>
+    <LogBuilding>
+      <Name>KeyDes_Alpha2</Name>
+      <Icon>icon_creat_2</Icon>
+      <BuildingID>2021|2022|2002|2014|2003|2015|2018|2009|2026|3031|2004|2020|2025|3032|2016|2019|2030|2042|2043|2045</BuildingID>
+    </LogBuilding>
+    <LogBuilding>
+      <Name>KeyDes_Alpha3</Name>
+      <Icon>icon_creat_3</Icon>
+      <BuildingID>2007|2006|3002|2008|2001|2035|2036|3007|2027|2028|2029|2010|2031|2032|2034|2012|2013|2011|2037|2038|2039|2040|2041|2044</BuildingID>
+    </LogBuilding>
+    <LogBuilding>
+      <Name>KeyDes_Alpha4</Name>
+      <Icon>icon_creat_4</Icon>
+      <BuildingID>3016|3017|3021|3022|3037|3018|3043|3019|3023|3061|3044|3020|3034|3013|3009|3010|3046|3024|3005|3025|3058|3038|3048|3001|3011|3012|3039|3049|3060|3026|3028|3004|3027|3041|3040|3042|3051|3056|3057|3054|3015|3063|3033|3059|3045|3062|3053|3055|3065|3066|3067|3068|3069</BuildingID>
+    </LogBuilding>
+    <LogBuilding>
+      <Name>KeyDes_Alpha5</Name>
+      <Icon>icon_creat_5</Icon>
+      <BuildingID>1006|1009|1010|1004|1013|1014|1011|1007|1015|1016|1008|1012|4017|4010|4032|4034|4035|4036</BuildingID>
+    </LogBuilding>
+    <LogBuilding>
+      <Name>KeyDes_Alpha6</Name>
+      <Icon>icon_creat_6</Icon>
+      <BuildingID>4003|4004|4012|4007|4006|4021|4008|4002|4015|4019|4020|4022|3029|3047|3030|3052|4018|4026|4027|4028|4029|4030|4031|4033</BuildingID>
+    </LogBuilding>
+    <LogBuilding>
+      <Name>KeyDes_Alpha7</Name>
+      <Icon>icon_creat_7</Icon>
+      <BuildingID>5001|5012|5011|5006|5002|5003|5004|5008|5007|5009|5010</BuildingID>
+    </LogBuilding>
+  </LogBuildingList>
+
+  <!--日志物品分类-->
+  <LogItemList>
+    <LogItem>
+      <Name>KeyDes_Alpha10</Name>
+      <Icon>icon_creat_1</Icon>
+      <ItemID>1|2|3|4|5|101|102|103|105|106|107|108|110|111|112|201|202|203|204|205|206|207|208|209|200010|301|302|303|304|305|306|307|308|309|311|312|313|314|315|316|326|200007|401|511|403|404|405|501|200019|502|200003|8|9|10|317|318|319|320|321|322|325|327|402|512|11|12|13|14|15|109|210|211|212|323|324|328|329|330|200023|200024|1001|7007|7008|7009|200022</ItemID>
+    </LogItem>
+    <LogItem>
+      <Name>KeyDes_Alpha11</Name>
+      <Icon>icon_creat_2</Icon>
+       <ItemID>30001|30002|31001|80202|50001|50002|50003|80201|32007|32013|50004|50008|50005|50006|50007|51001|51002|51009|200021|200005|51010|200006|80002|80001|200011|80003|80004|80005|506|508|510</ItemID>
+    </LogItem>
+    <LogItem>
+      <Name>KeyDes_Alpha12</Name>
+      <Icon>icon_creat_3</Icon>
+      <ItemID>2001|200017|2002|2003|2004|2005|2006|51003|51011</ItemID>
+    </LogItem>
+    <LogItem>
+      <Name>KeyDes_Alpha13</Name>
+      <Icon>icon_creat_4</Icon>
+      <ItemID>3001|200002|200004|3002|33009|33013|33014|7002|7004|7005|33003|200018|6001|6002|6003|6004|6005|6006|6007|6008|6009|6010|6011|200013|6012|6013|33002|51007|51008|6|7|504|33010|33011|33012|51006|30003|30004|30005|33005|33006|33001|33004|4001|4002|4003|32001|32003|32004|32005|51012|51013|32009|51005|103001|5001|5002|200020|5003|33007|33008</ItemID>
+      </LogItem>
+    <LogItem>
+      <Name>KeyDes_Alpha14</Name>
+      <Icon>icon_creat_5</Icon>
+      <ItemID>3003|4004|5004|5005|7001|7003|7006|32010|32011|32012|32008|32014|32015|32016|32017|32018|32019|32020|80203|200012|200014|200015</ItemID>
+    </LogItem>
+  </LogItemList>
+
+  <!--多少天获得多少发展经验，自动增长的经验-->
+  <DevelopmentPointUpdate>
+      <Int1>2</Int1>
+      <Int2>10</Int2>
+  </DevelopmentPointUpdate>
+
+  <!--职业死亡没墓地-->
+  <RaceDeadDesList>
+    <Des>RaceDeadDesList_1</Des>
+	<Des>RaceDeadDesList_2</Des>
+	<Des>RaceDeadDesList_3</Des>
+	<Des>RaceDeadDesList_4</Des>
+	<Des>RaceDeadDesList_5</Des>
+  </RaceDeadDesList>
+
+  <!--职业死亡有墓地-->
+  <RaceDeadDesListTomb>
+	<Des>RaceDeadDesListTomb_1</Des>
+	<Des>RaceDeadDesListTomb_2</Des>
+	<Des>RaceDeadDesListTomb_3</Des>
+	<Des>RaceDeadDesListTomb_4</Des>
+	<Des>RaceDeadDesListTomb_5</Des>
+  </RaceDeadDesListTomb>
+  
+    <!--祭祀死亡-->
+  <SacrificeDeadDesList>
+    <Des>SacrificeDeadDes_1</Des>
+  </SacrificeDeadDesList>
+
+
+  <!--物品使用优先级-->
+  <ItemUseLevel>
+    <Lower>1</Lower>
+    <Upper>9</Upper>
+  </ItemUseLevel>
+
+  <!--统计 建筑概况的分类-->
+  <TonwBuildingList>
+    <TonwBuilding>
+      <Name>KeyDes_Alpha1</Name>
+      <BuildingID>1|2|3|4|5|6|7|8|9|10</BuildingID>
+    </TonwBuilding>
+    <TonwBuilding>
+      <Name>KeyDes_Alpha2</Name>
+      <BuildingID>2021|2022|2002|2014|2003|2015|2017|2018|2009|2026|2004|2020|2025|2005|2016|2019|2030|3031|3032</BuildingID>
+    </TonwBuilding>
+    <TonwBuilding>
+    <Name>KeyDes_Alpha3</Name>
+    <BuildingID>2007|2006|3003|3002|2008|2035|2036|3007|2027|2028|2029|2010|2031|2032|2034|2012|2013|2011</BuildingID>
+    </TonwBuilding>
+    <TonwBuilding>
+     <Name>KeyDes_Alpha4</Name>
+     <BuildingID>3016|3017|3021|3022|3037|3018|3043|3019|3023|3036|3061|3063|3044|3020|3059|3013|3009|3010|3046|3024|3005|3025|3058|3038|3001|3011|3012|3034|3039|3049|3060|3026|3028|3050|3004|3027|3041|3040|3042|3051|3056|3057|3054|3008|3015|3045|3062|3053|3055</BuildingID>
+    </TonwBuilding>
+    <TonwBuilding>
+    <Name>KeyDes_Alpha5</Name>
+      <BuildingID>1002|1009|1006|1010|1004|1013|1014|1001|1011|1007|1015|1003|1008|1012|4001|4017|4010|4013|4016</BuildingID>
+    </TonwBuilding>
+    <TonwBuilding>
+      <Name>KeyDes_Alpha6</Name>
+      <BuildingID>4003|4004|4012|4007|3033|4006|4021|4008|4002|4015|4019|4011|3029|3047|3030|3052|4005|4018|4014|4020|4021|4022|4023</BuildingID>
+    </TonwBuilding>
+    <TonwBuilding>
+      <Name>KeyDes_Alpha7</Name>
+      <BuildingID>5001|5006|5002|5003|5004|5008|5007|5009|5010</BuildingID>
+    </TonwBuilding>
+  </TonwBuildingList>
+  
+  <FishHero>呆姬|吉祥物－瑶瑶|狐蝶|洛雪儿|糟透|天空（琉璃糖）|小 墨迹|。|Look what look|神黎之芒|bronya|幽冥阎罗|hl|是香香姐啊|:)|冰妖精|_(:з」∠)_|ꪶäꪗღꪖꪸꪀ|暌九|570|*——*|Norton|小丑面具下的寂寞|信号旗or风向标|Twin Gun Blade|俊杰|空|小奶盖🍼|咕|♪繁雅_孤笺♬|瑞峰²º²² ™|克里斯马熊|我的样子平平无奇|枫华乱舞（小山）|MESSAH.|旧墙|翊行|失去是不曾拥有|零度冰点|INCH'IO.|天天|白色黑暗|Alice|梦游万古|黎明破晓后|伤寒LLer|苍语|馒头大婶|大虎山伯爵|变成一块芝士面包|ジョジョの奇妙な冒険|备，铭|断线de风筝oO|子虚丶丿乌有|泰玄|我恰🍋酸～le|儁奈|正月十六|鸠玖|第七节脊椎骨|Quirk|不甘堕落的兔子|Muma|灬梦繁星丶|請け戻す|灵魂|白风车|梅蒂欣·梅兰可莉|田舍翁|酷酷|斷橋╬→葬愛|T c |❀葵葵❀|九月。|我永远喜欢|暂无|月野兔|朕|别下雨了|送你一只强力怪兽|言|云遮雾蔽是九月|如果我变成回忆|Ashen one|涅尔斯诺夫|aya|咸蛋世界|(〃ω〃)|Ment|完全脑残了|Dreamヾ|心安|染蒂安媞欧妮|℡   -    赵鸢.|空白|( ﾟ∀ﾟ)o彡ﾟ|神荒|微笑的面具|0|♡ Unique|半步多丶|。|Milled|暴走吧|aLIKEa|0|蘑菇莉|開|呆毛|0花语0|前程四井|世纪的魔术师|丁丁|天天|这是一瓶雪碧啊|吟啸徐行客|二愣子|籽熊_|一念、执着|王兴|yyyyyyy!!|碎碎更|必兮相语|W君|机智的执法猫|暗影紫刃|Victory|彻|不专业摄影师|极主夫道|0.3℃|风雪谁知范叔寒|xRy|唯一|信小康|可爱的喵球|风之甬道|Reisen|咖啡|紫罗黑天|逝者如斯|fet|༺𝓓𝓮𝓐𝓡༻|阿尔乔可|磐石|滔滔|谭|落︶ㄣ葉|ScorPion|觅梦行|ཀ༻|云叁哥哥|ぃ℡儍噯^_^|范默然|莲莲莲啊|‬‬密探|富贵险中求.  ق|仰望天堂的恶魔|青青草原扛把子|昔忆若离|楽観病|贰货道士|zyokdiy←宇|▏北城以北深海未眠℡|                       .|ㅤ|　  　  　  　</FishHero>
+
+  <!--状态日志 概况-->
+  <LogStateList>
+    <LogState>
+      <Name>LogStateID_Name_1</Name>
+      <NameType>LogStateID_NameType_1</NameType>
+      <Icon>icon_creat_1</Icon>
+      <StateID>1|2|3|4|5|6|7|31|40</StateID>
+    </LogState>
+    <LogState>
+      <Name>LogStateID_Name_2</Name>
+      <NameType>LogStateID_NameType_2</NameType>
+      <Icon>icon_creat_2</Icon>
+      <StateID>10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25</StateID>
+    </LogState>
+    <LogState>
+      <Name>LogStateID_Name_3</Name>
+      <NameType>LogStateID_NameType_3</NameType>
+      <Icon>icon_creat_3</Icon>
+      <StateID>26|27|30|32|33|34|35|36|37</StateID>
+    </LogState>
+  </LogStateList>
+
+  <!--市民头像配置 小孩、成人、老年-->
+  <ChildBoyIcon>9|10</ChildBoyIcon>
+  <ChildGirlIcon>2|11</ChildGirlIcon>
+  <AdlutBoyIcon>1|3|27|40|52|53|55|56|57|58|59|60|61|62|63|64|65|67|69|70|71|72|73|74|75|76|78|79|81|83|85|87</AdlutBoyIcon>
+  <AdlutGirlIcon>4|5|7|13|14|15|16|17|19|20|21|22|23|26|27|28|29|31|32|33|34|36|37|38|42|43|50|51|54</AdlutGirlIcon>
+  <OldBoyIcon>80|82|84</OldBoyIcon>
+  <OldGirlIcon>30|35|39</OldGirlIcon>
+
+  <!--第一视角位置-->
+  <FirstViewPosition>
+    <x>0.2</x>
+    <y>3</y>
+    <z>-2.5</z>
+  </FirstViewPosition>
+   <!--第一视角角度-->
+  <FirstViewRotation>
+    <x>22</x>
+    <y>-5.4</y>
+    <z>-3.7</z>
+  </FirstViewRotation>
+  
+    <!--是否自动分配职业-->
+  <IsAutoCareer>true</IsAutoCareer>
+    <!--职业界面默认开启-->
+  <IsAutoOpenRace>true</IsAutoOpenRace>
+  
+  <!--仓库已满的仓库图标显示ID-->
+  <FullWareHourseId>
+	<Id>1002</Id>
+	<Id>1004</Id>
+	<Id>1005</Id>
+	<Id>1008</Id>
+	<Id>1009</Id>
+	<Id>1010</Id>
+	<Id>1011</Id>
+	<Id>1013</Id>
+	<Id>1014</Id>
+  </FullWareHourseId>
+  
+   <!--堆料已满的堆料图标显示ID（已弃用建筑）
+  <FullLiaoduiId>
+	<Id>1001</Id>
+  </FullLiaoduiId>-->
+  
+     <!--势力所需建筑ID
+  <CampWindowId>
+	<Id>4001</Id>
+	<Id>4013</Id>
+	<Id>4016</Id>
+	<Id>4032</Id>
+  </CampWindowId>-->
+  
+
+<!--动作相关配置-->
+    <!--小推车ID，人物拥有下面ID的物品后对应的动画效果-->
+    <ItemIDCar>50009</ItemIDCar>
+	<!--钓鱼小屋，钓鱼船的模型分离-->
+    <BuildIDFish>2016</BuildIDFish>
+	<!--修理厂，特殊处理不出现需要维修信息-->
+    <BuildIDFixer>4020</BuildIDFixer>	
+	<!--治安所，特殊畜力杀人的提示-->
+    <BuildIDSafe>4023</BuildIDSafe>
+	<!--捕捞港，捕捞船的模型分离-->
+    <BuildIDCatchFish>2030</BuildIDCatchFish>
+	<!--水车建筑iD-->
+    <WatercarId>
+	  <Id>2036</Id>
+	  <Id>3010</Id>
+	  <Id>3012</Id>
+	  <Id>3016</Id>
+	  <Id>3017</Id>
+	</WatercarId>
+	
+<!--成就相关的配置-->
+	   <!--//酒类的ID，成就使用-->
+   <wineTagList>
+		<wineTag>80001</wineTag>
+		<wineTag>80002</wineTag>
+		<wineTag>80003</wineTag>
+		<wineTag>80004</wineTag>
+		<wineTag>80005</wineTag>
+   </wineTagList> 
+   
+      <!--成就计算解锁所有科技的最大id-->
+  <TechMaxID>9999</TechMaxID>
+   <!--成就计算解锁蓝图的ID范围-->
+   <TechBlueIDMin>10000</TechBlueIDMin>
+   <TechBlueIDMax>100000</TechBlueIDMax>
+
+<!--摄像机平滑-->
+<camSmothValue>0.4</camSmothValue>
+<!--干旱水位变化持续时间-->
+<dronghtWaterDownSpeed>8</dronghtWaterDownSpeed>
+
+<!--界面缩放配置-->
+<LogInfoWinScale>0.4</LogInfoWinScale>  <!--日志窗口-->  
+<TownWinScale>0.4</TownWinScale> <!--城镇窗口--> 
+<ResourceScale>0.2</ResourceScale>  <!--资源窗口--> 
+<CitizeInfoScale>0.27</CitizeInfoScale>  <!--市民信息--> 
+<CitizeWinScale>0.2</CitizeWinScale> <!--市民窗口-->  
+<BuildWinScale>0.25</BuildWinScale> <!--建筑窗口-->  
+<WarnInfoScale>0.1</WarnInfoScale> <!--警示信息--> 
+<LogInfoScale>0.0</LogInfoScale> <!--日志信息-->
+<CreatBtnScale>0.3</CreatBtnScale> <!--创建按钮-->
+
+
+
+<!--万圣节相关功能-->
+<PumpkinToggle>0</PumpkinToggle>
+<ItemIDPumpkin>120001</ItemIDPumpkin>
+<ItemIDSweets>506|508|510|120002</ItemIDSweets>
+<PumpkinManSkin>PumpkinMan_Skin</PumpkinManSkin>
+<PumpkinWoManSkin>PumpkinWoman_Skin</PumpkinWoManSkin>
+
+
+<!--圣诞节相关功能-->
+<ChristmasToggle>0</ChristmasToggle>
+<ItemIDChristmas>130001</ItemIDChristmas>
+<ChristmasManSkin>ChristmasManSkin</ChristmasManSkin>
+<ChristmasWoManSkin>ChristmasWoManSkin</ChristmasWoManSkin>
+<ChristmasBoySkin>ChristmasBoySkin</ChristmasBoySkin>
+<ChristmasGirlSkin>ChristmasGirlSkin</ChristmasGirlSkin>
+
+
+<!--新春礼物-->
+<SpringFestivalList>
+  <Item>
+    <Int1>130008</Int1>
+    <Int2>100</Int2>
+  </Item>
+  <Item>
+    <Int1>130004</Int1>
+    <Int2>100</Int2>
+  </Item>
+  <Item>
+    <Int1>130005</Int1>
+    <Int2>100</Int2>
+  </Item>
+  <Item>
+    <Int1>130006</Int1>
+    <Int2>100</Int2>
+  </Item>
+  <Item>
+    <Int1>130007</Int1>
+    <Int2>100</Int2>
+  </Item>
+</SpringFestivalList>
+
+
+<!--沙盒模式解锁的科技序号-->
+  <SandBox>
+	<FreeTechRange>
+		<Lower>1</Lower>
+		<Upper>9999</Upper>
+	</FreeTechRange> 
+  </SandBox> 
+
+
+
+</CommonSetConfig>

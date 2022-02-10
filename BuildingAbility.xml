@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<ArrayOfBuildingAbilityConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <!--   建筑能力配置说明：  Description of Building Capacity Configuration:
+  ID          int          唯一ID  Unique ID
+  Type        int          建筑能力的枚举，查看下方枚举  Enumeration of building capability. See the enumeration below
+  Name        string         建筑能力名字，（备注使用,不对应多语言)  Name of Building Capacity, (For remarks. Non-corresponding multi-language)
+  Des         string         建筑能力描述,需要对应多语言  The description of building capacity. Corresponding multiple languages are required
+  Icon        string         对应的图标路径（不对应多语言）  Path of Corresponding Icons (Non-corresponding to multiple languages)
+  Num         int          加成的数量  Quantity of Bonus
+  Percent       int          加成的百分比  Percentage of Bonus
+  P1          int          自定义参数1查看枚举中对应  Custom Parameter 1 See correspondence in the enumeration
+  P2          int          自定义参数2查看枚举中对应  Custom Parameter 2 See correspondence in the enumeration
+     建筑能力枚举：  Enumeration of Building Capacity:
+  BuildingAbility_Unknow          = 0; //   未知  Unknown
+  BuildingAbility_MaxDurability     = 1;  //    设置耐久度  Set Durability
+  BuildingAbility_AddBagLimit       = 2;  //    增加背包容量  Increase Backpack Capacity
+  BuildingAbility_AddRange        = 3;  //    增加建筑范围  Increase the scope of the building
+  BuildingAbility_AddHealthLower      = 4;  //    增加建筑属性 健康度下限  Increase building attributes and lower health limit
+  BuildingAbility_AddProduce        = 5;  //    增加产量  Increase yield
+  BuildingAbility_AddWorkTime       = 6;  //    增加工作时间  Increase working hours
+  BuildingAbility_AddFireTime       = 7;  //    增加篝火燃烧时间  Increase the time of fire burning
+  BuildingAbility_AddLivingNum      = 8;  //    增加居住人数 和家庭人数  Increase the number of residents and families
+  BuildingAbility_AddBuildingPressure   = 10; //    住房压力  Housing pressure
+  BuildingAbility_AddWorker       = 11; //    工作岗位  Position
+  BuildingAbility_AddConsumeMaterial    = 12; //    减少原材料比例  Reduce the ratio of raw materials
+  BuildingAbility_AddServerNum      = 13; //    增加服务人数 学生数量等  Increase the number of service staff, students, etc.
+  BuildingAbility_AddHuntRate       = 14; //    增加狩猎概率  Increase Hunting Probability
+
+     实例：  Instance:
+     见下方  See below
+-->   
+
+ 
+ 
+ <!--修改建筑耐久度-->
+ <BuildingAbilityConfig>
+    <ID>1001</ID>
+    <Type>1</Type>
+    <Name>建筑耐久度</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>-1</Num>
+  </BuildingAbilityConfig>
+  
+  <!--增加建筑背包容量-->
+ <BuildingAbilityConfig>
+    <ID>1002</ID>
+    <Type>2</Type>
+    <Name>仓库增加容量</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>2000</Num>
+  </BuildingAbilityConfig>
+  
+    <!--增加建筑背包容量-->
+ <BuildingAbilityConfig>
+    <ID>1003</ID>
+    <Type>2</Type>
+    <Name>市集/贸易增加容量</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Percent>100</Percent>
+  </BuildingAbilityConfig>
+  
+  <!--增加教堂范围-->
+ <BuildingAbilityConfig>
+    <ID>1004</ID>
+    <Type>3</Type>
+    <Name>增加教堂范围</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Percent>20</Percent>
+  </BuildingAbilityConfig>
+  
+  <!--增加健康度下限-->
+ <BuildingAbilityConfig>
+    <ID>1005</ID>
+    <Type>4</Type>
+    <Name>增加住房健康度下限</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>200</Num>
+  </BuildingAbilityConfig>
+  
+  <!--产量增加-->
+ <BuildingAbilityConfig>
+    <ID>1006</ID>
+    <Type>5</Type>
+    <Name>增加产量</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Percent>50</Percent>
+  </BuildingAbilityConfig>
+  
+  <!--工作时间（每个动作的时间）-->
+ <BuildingAbilityConfig>
+    <ID>1007</ID>
+    <Type>6</Type>
+    <Name>调整工作时间</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Percent>-10</Percent>
+  </BuildingAbilityConfig>
+  
+   <!--增加燃烧时间-->
+ <BuildingAbilityConfig>
+    <ID>1008</ID>
+    <Type>7</Type>
+    <Name>增加燃烧时间</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Percent>-30</Percent>
+  </BuildingAbilityConfig>
+  
+  <!--增加居住人数+1-->
+ <BuildingAbilityConfig>
+    <ID>1009</ID>
+    <Type>8</Type>
+    <Name>居住人数+1</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>1</Num>
+  </BuildingAbilityConfig>
+   
+   <!--增加居住人数+2-->
+ <BuildingAbilityConfig>
+    <ID>1010</ID>
+    <Type>8</Type>
+    <Name>居住人数+2</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>2</Num>
+  </BuildingAbilityConfig>
+  
+  <!--增加居住人数+2-->
+ <BuildingAbilityConfig>
+    <ID>1011</ID>
+    <Type>4</Type>
+    <Name>药皂/ 药用酒精提升健康度</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>100</Num>
+  </BuildingAbilityConfig>
+  
+  <!--增加幸福度+10-->
+ <BuildingAbilityConfig>
+    <ID>1012</ID>
+    <Type>9</Type>
+    <Name>家具幸福度</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>100</Num>
+  </BuildingAbilityConfig>
+  
+  <!--增加幸福度+20-->
+ <BuildingAbilityConfig>
+    <ID>1013</ID>
+    <Type>9</Type>
+    <Name>豪华家具幸福度</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>200</Num>
+  </BuildingAbilityConfig>
+  
+   <!--降低压力-->
+ <BuildingAbilityConfig>
+    <ID>1014</ID>
+    <Type>10</Type>
+    <Name>降低压力</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>20</Num>
+  </BuildingAbilityConfig>
+  
+  <!--工作人数+1-->
+ <BuildingAbilityConfig>
+    <ID>1015</ID>
+    <Type>11</Type>
+    <Name>增加工作岗位</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>1</Num>
+  </BuildingAbilityConfig>
+  
+   <!--材料较少20%-->
+ <BuildingAbilityConfig>
+    <ID>1016</ID>
+    <Type>12</Type>
+    <Name>材料较少20</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Percent>-20</Percent>
+  </BuildingAbilityConfig>
+  
+    <!--增加服务人数-->
+ <BuildingAbilityConfig>
+    <ID>1017</ID>
+    <Type>13</Type>
+    <Name>增加服务人数</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>10</Num>
+  </BuildingAbilityConfig>
+
+  <!--增加狩猎概率-->
+ <BuildingAbilityConfig>
+    <ID>1018</ID>
+    <Type>14</Type>
+    <Name>增加狩猎概率</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Percent>100</Percent>
+  </BuildingAbilityConfig>
+  
+  <!--增加商队的数量-->
+  <BuildingAbilityConfig>
+    <ID>1019</ID>
+    <Type>15</Type>
+    <Name>增加商队的数量</Name>
+    <Icon>Icon_building_911</Icon>
+    <Des>false</Des>
+    <Num>1</Num>
+  </BuildingAbilityConfig>
+  
+  
+  
+</ArrayOfBuildingAbilityConfig>

@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<ArrayOfLogStateConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--   帮助日志中的状态配置说明  Description of the Status Configuration in Help Log
+  字段        所属类型      描述       
+  ID          int            ID不重复  No Duplicates for IDs
+  Type        string           状态的类型（人物状态）  Type of Status (Character’s Status)
+  Enum        int            具体枚举值（对应人物状态的枚举）  Specific Enumeration (Enumeration Corresponding to Character Status)
+  Name        string          状态的名字  Name of Status
+  InfoDes       string           信息解读  Information Interpretation
+  SolveDes      string           解决方法  Solution
+
+	
+  备注：  Remarks:
+  int        整型，只能填整数  Integer. Only integers can be filled in
+  string       字符串类型，字母或者文字  String type, letter or text
+-->
+
+
+  <LogStateConfig>
+    <ID>1</ID>
+    <Type>CitizenState</Type>
+    <Enum>0</Enum>
+    <Name>LogState_Name_1</Name>
+    <InfoDes>LogState_InfoDes_1</InfoDes>
+    <SolveDes>LogState_SolveDes_1</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>2</ID>
+    <Type>CitizenState</Type>
+    <Enum>1</Enum>
+    <Name>LogState_Name_2</Name>
+    <InfoDes>LogState_InfoDes_2</InfoDes>
+    <SolveDes>LogState_SolveDes_2</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>3</ID>
+    <Type>CitizenState</Type>
+    <Enum>2</Enum>
+    <Name>LogState_Name_3</Name>
+    <InfoDes>LogState_InfoDes_3</InfoDes>
+    <SolveDes>LogState_SolveDes_3</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>4</ID>
+    <Type>CitizenState</Type>
+    <Enum>4</Enum>
+    <Name>LogState_Name_4</Name>
+    <InfoDes>LogState_InfoDes_4</InfoDes>
+    <SolveDes>LogState_SolveDes_4</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>5</ID>
+    <Type>CitizenState</Type>
+    <Enum>5</Enum>
+    <Name>LogState_Name_5</Name>
+    <InfoDes>LogState_InfoDes_5</InfoDes>
+    <SolveDes>LogState_SolveDes_5</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>6</ID>
+    <Type>CitizenState</Type>
+    <Enum>6</Enum>
+    <Name>LogState_Name_6</Name>
+    <InfoDes>LogState_InfoDes_6</InfoDes>
+    <SolveDes>LogState_SolveDes_6</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>7</ID>
+    <Type>CitizenState</Type>
+    <Enum>7</Enum>
+    <Name>LogState_Name_7</Name>
+    <InfoDes>LogState_InfoDes_7</InfoDes>
+    <SolveDes>LogState_SolveDes_7</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>8</ID>
+    <Type>BuildState</Type>
+    <Enum>1</Enum>
+    <Name>LogState_Name_8</Name>
+    <InfoDes>LogState_InfoDes_8</InfoDes>
+    <SolveDes>LogState_SolveDes_8</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>9</ID>
+    <Type>BuildState</Type>
+    <Enum>2</Enum>
+    <Name>LogState_Name_9</Name>
+    <InfoDes>LogState_InfoDes_9</InfoDes>
+    <SolveDes>LogState_SolveDes_9</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>10</ID>
+    <Type>BuildState</Type>
+    <Enum>3</Enum>
+    <Name>LogState_Name_10</Name>
+    <InfoDes>LogState_InfoDes_10</InfoDes>
+    <SolveDes>LogState_SolveDes_10</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>11</ID>
+    <Type>BuildState</Type>
+    <Enum>4</Enum>
+    <Name>LogState_Name_11</Name>
+    <InfoDes>LogState_InfoDes_11</InfoDes>
+    <SolveDes>LogState_SolveDes_11</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>12</ID>
+    <Type>BuildState</Type>
+    <Enum>5</Enum>
+    <Name>LogState_Name_12</Name>
+    <InfoDes>LogState_InfoDes_12</InfoDes>
+    <SolveDes>LogState_SolveDes_12</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>13</ID>
+    <Type>BuildState</Type>
+    <Enum>6</Enum>
+    <Name>LogState_Name_13</Name>
+    <InfoDes>LogState_InfoDes_13</InfoDes>
+    <SolveDes>LogState_SolveDes_13</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>14</ID>
+    <Type>BuildState</Type>
+    <Enum>7</Enum>
+    <Name>LogState_Name_14</Name>
+    <InfoDes>LogState_InfoDes_14</InfoDes>
+    <SolveDes>LogState_SolveDes_14</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>15</ID>
+    <Type>BuildState</Type>
+    <Enum>8</Enum>
+    <Name>LogState_Name_15</Name>
+    <InfoDes>LogState_InfoDes_15</InfoDes>
+    <SolveDes>LogState_SolveDes_15</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>16</ID>
+    <Type>BuildState</Type>
+    <Enum>9</Enum>
+    <Name>LogState_Name_16</Name>
+    <InfoDes>LogState_InfoDes_16</InfoDes>
+    <SolveDes>LogState_SolveDes_16</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>17</ID>
+    <Type>BuildState</Type>
+    <Enum>10</Enum>
+    <Name>LogState_Name_17</Name>
+    <InfoDes>LogState_InfoDes_17</InfoDes>
+    <SolveDes>LogState_SolveDes_17</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>18</ID>
+    <Type>BuildState</Type>
+    <Enum>12</Enum>
+    <Name>LogState_Name_18</Name>
+    <InfoDes>LogState_InfoDes_18</InfoDes>
+    <SolveDes>LogState_SolveDes_18</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>19</ID>
+    <Type>BuildState</Type>
+    <Enum>13</Enum>
+    <Name>LogState_Name_19</Name>
+    <InfoDes>LogState_InfoDes_19</InfoDes>
+    <SolveDes>LogState_SolveDes_19</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>20</ID>
+    <Type>BuildState</Type>
+    <Enum>14</Enum>
+    <Name>LogState_Name_20</Name>
+    <InfoDes>LogState_InfoDes_20</InfoDes>
+    <SolveDes>LogState_SolveDes_20</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>21</ID>
+    <Type>BuildState</Type>
+    <Enum>15</Enum>
+    <Name>LogState_Name_21</Name>
+    <InfoDes>LogState_InfoDes_21</InfoDes>
+    <SolveDes>LogState_SolveDes_21</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>22</ID>
+    <Type>BuildState</Type>
+    <Enum>16</Enum>
+    <Name>LogState_Name_22</Name>
+    <InfoDes>LogState_InfoDes_22</InfoDes>
+    <SolveDes>LogState_SolveDes_22</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>23</ID>
+    <Type>BuildState</Type>
+    <Enum>18</Enum>
+    <Name>LogState_Name_23</Name>
+    <InfoDes>LogState_InfoDes_23</InfoDes>
+    <SolveDes>LogState_SolveDes_23</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>24</ID>
+    <Type>BuildState</Type>
+    <Enum>20</Enum>
+    <Name>LogState_Name_24</Name>
+    <InfoDes>LogState_InfoDes_24</InfoDes>
+    <SolveDes>LogState_SolveDes_24</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>25</ID>
+    <Type>BuildState</Type>
+    <Enum>21</Enum>
+    <Name>LogState_Name_25</Name>
+    <InfoDes>LogState_InfoDes_25</InfoDes>
+    <SolveDes>LogState_SolveDes_25</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>26</ID>
+    <Type>CitizenState</Type>
+    <Enum>8</Enum>
+    <Name>LogState_Name_26</Name>
+    <InfoDes>LogState_InfoDes_26</InfoDes>
+    <SolveDes>LogState_SolveDes_26</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>27</ID>
+    <Type>CitizenState</Type>
+    <Enum>17</Enum>
+    <Name>LogState_Name_27</Name>
+    <InfoDes>LogState_InfoDes_27</InfoDes>
+    <SolveDes>LogState_SolveDes_27</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>28</ID>
+    <Type>CitizenState</Type>
+    <Enum>18</Enum>
+    <Name>LogState_Name_28</Name>
+    <InfoDes>LogState_InfoDes_28</InfoDes>
+    <SolveDes>LogState_SolveDes_28</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>29</ID>
+    <Type>CitizenState</Type>
+    <Enum>19</Enum>
+    <Name>LogState_Name_29</Name>
+    <InfoDes>LogState_InfoDes_29</InfoDes>
+    <SolveDes>LogState_SolveDes_29</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>30</ID>
+    <Type>CitizenState</Type>
+    <Enum>20</Enum>
+    <Name>LogState_Name_30</Name>
+    <InfoDes>LogState_InfoDes_30</InfoDes>
+    <SolveDes>LogState_SolveDes_30</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>31</ID>
+    <Type>CitizenState</Type>
+    <Enum>21</Enum>
+    <Name>LogState_Name_31</Name>
+    <InfoDes>LogState_InfoDes_31</InfoDes>
+    <SolveDes>LogState_SolveDes_31</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>32</ID>
+    <Type>CitizenState</Type>
+    <Enum>9</Enum>
+    <Name>LogState_Name_32</Name>
+    <InfoDes>LogState_InfoDes_32</InfoDes>
+    <SolveDes>LogState_SolveDes_32</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>33</ID>
+    <Type>CitizenState</Type>
+    <Enum>10</Enum>
+    <Name>LogState_Name_33</Name>
+    <InfoDes>LogState_InfoDes_33</InfoDes>
+    <SolveDes>LogState_SolveDes_33</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>34</ID>
+    <Type>CitizenState</Type>
+    <Enum>11</Enum>
+    <Name>LogState_Name_34</Name>
+    <InfoDes>LogState_InfoDes_34</InfoDes>
+    <SolveDes>LogState_SolveDes_34</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>35</ID>
+    <Type>CitizenState</Type>
+    <Enum>12</Enum>
+    <Name>LogState_Name_35</Name>
+    <InfoDes>LogState_InfoDes_35</InfoDes>
+    <SolveDes>LogState_SolveDes_35</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>36</ID>
+    <Type>CitizenState</Type>
+    <Enum>13</Enum>
+    <Name>LogState_Name_36</Name>
+    <InfoDes>LogState_InfoDes_36</InfoDes>
+    <SolveDes>LogState_SolveDes_36</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>37</ID>
+    <Type>CitizenState</Type>
+    <Enum>14</Enum>
+    <Name>LogState_Name_37</Name>
+    <InfoDes>LogState_InfoDes_37</InfoDes>
+    <SolveDes>LogState_SolveDes_37</SolveDes>
+  </LogStateConfig>
+
+  <LogStateConfig>
+    <ID>38</ID>
+    <Type>CitizenState</Type>
+    <Enum>16</Enum>
+    <Name>LogState_Name_38</Name>
+    <InfoDes>LogState_InfoDes_38</InfoDes>
+    <SolveDes>LogState_SolveDes_38</SolveDes>
+  </LogStateConfig>
+
+   <!-- <LogStateConfig>
+    <ID>39</ID>
+    <Type>CitizenState</Type>
+    <Enum>27</Enum>
+    <Name>LogState_Name_39</Name>
+    <InfoDes>LogState_InfoDes_39</InfoDes>
+    <SolveDes>LogState_SolveDes_39</SolveDes>
+  </LogStateConfig>-->
+
+    <LogStateConfig>
+    <ID>40</ID>
+    <Type>CitizenState</Type>
+    <Enum>22</Enum>
+    <Name>LogState_Name_40</Name>
+    <InfoDes>LogState_InfoDes_40</InfoDes>
+    <SolveDes>LogState_SolveDes_40</SolveDes>
+  </LogStateConfig>
+
+</ArrayOfLogStateConfig>

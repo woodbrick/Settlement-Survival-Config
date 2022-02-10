@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<ArrayOfWeatherConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <!--天气配置说明
+Description of Weather Configuration
+ID  int 对应天气ID（不重复）
+Corresponding Weather ID (no duplicates)
+Name string 对应天气的名字（对应多语言中的ID）
+Name of the Corresponding Weather (corresponding to ID in multiple languages)
+Time int 天气持续时间
+Duration of Weather
+InTime int 天气进入时间（变化周期）
+Occurrence Time (Change Cycle)
+OutTime int 天气结束时间（变化周期）
+End Time (Change Cycle)
+FogEffect  float 雾的效果（0~1之间，0可见度越高，1可见度越低）
+Effect of Fog (0~1. 0 indicates the most visible and 1 indicates the least)
+  所有时间对应游戏中一倍速状态下的时间秒
+All time refers to the time at 1x-speed status in the game
+  天气枚举
+Weather Enumeration
+Shine = 0,  晴天
+Sunny
+Rain = 1,    雨天
+Rainy
+Snow = 2,       雪天
+Snowy
+Fog = 3,       雾天
+Foggish
+Cloud = 4,   云天
+Cloudy
+
+
+ 
+	实例：
+	见下方配置--> 
+   
+  <WeatherConfig>
+    <ID>1</ID>
+    <!--天气枚举-->
+	<!--Weather enumeration-->
+    <WeatherType>0</WeatherType>
+    <Name>Weather_Name_1</Name>
+    <Time>1200</Time>
+    <InTime>30</InTime>
+    <OutTime>30</OutTime>
+    <FogEffect>0</FogEffect>
+  </WeatherConfig>
+  
+  <WeatherConfig>
+    <ID>2</ID>
+    <!--天气枚举-->
+    <WeatherType>1</WeatherType>
+    <Name>Weather_Name_2</Name>
+    <Time>300</Time>
+    <InTime>2</InTime>
+    <OutTime>2</OutTime>
+    <FogEffect>0.75</FogEffect>
+  </WeatherConfig>
+  
+  <WeatherConfig>
+    <ID>3</ID>
+    <!--天气枚举-->
+    <WeatherType>3</WeatherType>
+    <Name>Weather_Name_3</Name>
+    <Time>100</Time>
+    <InTime>10</InTime>
+    <OutTime>10</OutTime>
+    <FogEffect>0.9</FogEffect>
+  </WeatherConfig>
+  
+  <WeatherConfig>
+    <ID>4</ID>
+    <!--天气枚举-->
+    <WeatherType>4</WeatherType>
+    <Name>Weather_Name_4</Name>
+    <Time>100</Time>
+    <InTime>10</InTime>
+    <OutTime>10</OutTime>
+    <FogEffect>0.5</FogEffect>
+  </WeatherConfig>
+  
+</ArrayOfWeatherConfig>

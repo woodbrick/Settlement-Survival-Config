@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+<ArrayOfBuildTypeFuncConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--   建筑对应的界面配置说明：  Description of Interface Configuration Corresponding to the Building:
+  ID            int           对应建筑的functype  Type of the corresponding building
+  FuncList                     该建筑对应的界面组建列表  List of Interface Establishment Corresponding to the Building
+    Func          int            对应的界面组建枚举（查看下方）  Establishment enumeration of corresponding interface (see below)
+  SubComList                     补充页签的枚举列表（仅用于func为6的补充）  Enumeration List on the Supplementary Tag (only for supplement with func as 6)
+    SubCom          int           查看下方的补充页签枚举       View the list in the Supplemental Tab below   
+  Func			int			配置贸易界面物资添加按钮响应的界面*（目前仅有36）  BuildUIFunc
+     建筑类型枚举：  Enumeration of building type:
+  BuildingType_Unknow     = 0;      //   未定义  Undefined
+    BuildingType_Home       = 1;      //   居住  Residence
+    BuildingType_Warehouse    = 2;      //   仓库  Warehouse
+    BuildingType_Produce    = 3;      //   生产  Production
+    BuildingType_Process    = 4;      //   加工  Processing
+    BuildingType_RangeCollect   = 5;      //   范围采集类型  Range Collection Type
+    BuildingType_Farm       = 6;      //   农田  Farmland
+    BuildingType_Garden     = 7;      //   果园  Orchard
+    BuildingType_Pasture    = 8;      //   牧场  Pasture
+    BuildingType_HerbHouse    = 9;      //   药草屋  Potion house
+    BuildingType_School     = 11;     //   学校  School
+    BuildingType_Hospital     = 12;     //   医院  Hospital
+    BuildingType_Church     = 13;     //   教堂  Church
+    BuildingType_Tomb       = 14;     //   墓地  Cemetery
+    BuildingType_HuntHouse    = 15;     //   狩猎小屋  Hunting house
+    BuildingType_Market     = 16;     //   市场  Market
+    BuildingType_ForestCabin  = 17;     //   护林小屋  Forest hut
+    BuildingType_Guildhall    = 18;     //   市政厅  City hall
+    BuildingType_Trade      = 19;     //   贸易站  Trade station
+    BuildingType_Laboratory   = 20;     //   科技实验室  Science and technology laboratory
+    BuildingType_RecyleBin    = 22;     //   回收店  Recycling shop
+    BuildingType_WarmHouse    = 23;     //   篝火  Bonfire
+    BuildingType_BeeHouse   = 24;     //   蜂房  Honey house
+  //BuildingType_ResearchCarbin = 25;     //   研究小屋  Study house
+    BuildingType_TransferStation= 26;     //   中转站  Transit station
+    BuildingType_Packet     = 27;     //   打包厂  Packaging plant
+    BuildingType_ProcessTransfer= 28;     //   货物中转站 供应加工建筑  Goods transit station Supplying building
+  //BuildingType_Science    = 29;     //   科技实验室 研究所  Science and technology laboratory Research institute
+    BuildingType_BathHouse    = 30;     //    澡堂  Bathhouse
+    BuildingType_LandTradePost  = 31;     //    陆地贸易站  Land trade station
+    BuildingType_MagicBoX   = 32;     //    魔方magicbox  Magicbox
+    BuildingType_RandomBuffBox  = 33;     //    随机事件random event  Random event
+    BuildingType_RepairFactory  = 34;     //    修理厂  Repair shop
+    BuildingType_Boiler     = 35;     //    锅炉房  Boiler room
+    BuildingType_PoliceStation  = 36;     //    警局   Police station 
+    BuildingType_Shelter    = 37;     //    避难所   Shelter 
+    //    娱乐建筑  Entertainment building
+    BuildingType_Pub      = 40;     //    酒馆  Restaurant
+    BuildingType_StandWorking = 41;     //    站立工作类型  Type of standing work
+  //    路  Road
+    BuildingType_Road     = 50;     //    路  Road
+    //    装饰建筑  Decorative buildings
+    BuildingType_NoFunction   = 100;      //   装饰建筑   Decorative buildings 
+
+
+     建筑界面组件的枚举  Enumeration of building interface components
+    Home = 1,                               //   居住界面  Living screen
+    Warehourse = 2,                        //   仓库界面  Warehouse interface
+    Produce = 3,                      //   生产界面  Production interface
+    NumCompare = 5,                    //   数量对比页签  Quantity Comparison tab
+    Gather = 6,                       //   纯工作页签  跟随组件最下方枚举（补充页签的枚举） Pure Work Tab With Component
+    ProtectForest = 7,                 //   护林小屋  Forest hut
+    Farm = 8,                         //   农场  Farm
+    Pasture = 10,                    //   牧场  Pasture
+    Tomb = 11,                  //   墓地  Cemetery
+    School = 12,                       //   学校  School
+
+    //BuildUp = 19,                  // 建筑升级  // 页签不能配置 ， 在建筑表Upgrade          //
+    TradeStorage = 20,                  // 贸易站存储界面1            贸易站仓库              //贸易站库存界面   配置贸易界面物资添加按钮响应的界面
+    TradeTransaction = 21,                  // 贸易站交易界面1        贸易站交易              //贸易站交易顶部页签
+    TradeBuy = 22,                  // 贸易站自动购买界面1           贸易站购买订单           //贸易站购订顶部页签
+    //TradeOrder = 23,                  // 贸易站订购界面                                     //
+    TradeNumPare = 24,                  // 杂货铺去年今年收益对比界面1       贸易站收益对比   //
+    //ConsumeMat = 25,                  // 材料消耗页签                                       //
+    WarehourseChoose = 26,                  // 仓库选择页签                                   //
+    Townhall_Town = 27,                  // 市政厅信息页签                                    //
+    Townhall_Storage = 28,                  // 市政厅物资信息页签                             //
+    Townhall_Depot = 29,                  // 市政厅库存页签                                   //
+    Townhall_Chart = 30,                  // 市政厅图表页签                                   //
+    Townhall_Recruit = 31,                  // 市政厅流民页签                                 //
+    Townhall_Seed = 32,                  // 市政厅种子                                        //                                                                                          //
+    CitizenBag = 33,                  // 人物背包                                             //
+    BuildUp = 34,                  // 建筑升级                                                //
+    ProducePitch = 35,                  // 生产选择                                           //
+    TradeSetLimit = 36,                  //                             贸易站下限设置界面    //贸易站库存下限设置界面顶部页签   配置贸易界面物资添加按钮响应的界面
+    Townhall_Mayor = 37,             //   市政厅  City hall
+    Laboratory = 45,                //   研究院新  Research Institute New
+    MagicCube = 46,            //   魔方  Magicbox
+    CatchFish = 47,               //   摸鱼  Fishing
+    49                            //   陆地贸易站、河流贸易站  Land trade station, River trade station
+    RepairFactory = 50,                                                                       //   修理工安排页签  Tab of mechanic arrangement
+    BuildRemould = 51,                                                                       //   建筑改造  Building reconstruction
+    BuildDisaster = 52,                                                                       //   避难所  Shelter
+    Pumpkin = 53,                                                                            //南瓜灯  单按钮的活动页面
+    PastureChoose = 54,                                                                       //牧场选择
+    Townhall_StorageNew = 55,         // 市政厅物资信息页签                             //
+    Christmas = 56,            //                                                        //圣诞节  和南瓜灯共用  单按钮的活动页面
+    TradeCaravan = 57,            //                                                  //贸易站购商队页签
+    TradeLand = 58,            //                                                  //陆地贸易站
+    TradeCaravanBuySell = 59,            //                                                  //商队采购出售
+
+	（通用页签使用）
+     补充页签的枚举  Enumerations on the supplemental tab
+    Depot = 1,                 //   库存  Inventory
+    NumCompare = 2 ,           //     产量统计  Production statistics
+    AttendanceFill = 3,           //     服务建筑人口进度条  Progress Bar of the Population Servicing in Construction
+
+-->
+  <!--住宅的建筑页签-->
+  <BuildTypeFuncConfig>
+    <!--建筑类型（对应建筑表中的建筑类型）-->
+    <ID>1</ID>
+    <!--页签枚举-->
+    <FuncList>
+      <Func>1</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <!--仓库的建筑页签-->
+  <BuildTypeFuncConfig>
+    <!--建筑类型（对应建筑表中的建筑类型）-->
+    <ID>2</ID>
+    <FuncList>
+      <!--功能id-->
+      <Func>2</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <!--生产的建筑页签-->
+  <BuildTypeFuncConfig>
+    <!--建筑类型（对应建筑表中的建筑类型）-->
+    <ID>3</ID>
+    <FuncList>
+      <!--功能id-->
+      <Func>3</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <!--加工的建筑页签-->
+  <BuildTypeFuncConfig>
+    <!--建筑类型（对应建筑表中的建筑类型）-->
+    <ID>4</ID>
+    <FuncList>
+      <!--功能id-->
+      <Func>3</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（采集型建筑）-->
+    <ID>5</ID>
+    <FuncList>
+      <!--页签id-->
+      <Func>6</Func>
+    </FuncList>
+    <!--组合枚举（仅用于功能为6的补充）-->
+    <SubComList>
+      <SubCom>2</SubCom>
+    </SubComList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（农田）（对应建筑表中的建筑类型）-->
+    <ID>6</ID>
+    <FuncList>
+      <!--功能id-->
+      <Func>8</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（果园）（对应建筑表中的建筑类型）-->
+    <ID>7</ID>
+    <FuncList>
+      <!--功能id-->
+      <Func>14</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（牧场）（对应建筑表中的建筑类型）-->
+    <ID>8</ID>
+    <FuncList>
+      <!--功能id（牧场、产量）-->
+      <Func>10</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（采药小屋（采药小屋删除，用做建筑工和维修工的界面））（对应建筑表中的建筑类型）-->
+    <ID>9</ID>
+    <FuncList>
+      <!--功能id（药草屋、产量）-->
+      <Func>6</Func>
+    </FuncList>
+    <!--组合枚举-->
+    <SubComList>
+    </SubComList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（学校）（对应建筑表中的建筑类型）-->
+    <ID>11</ID>
+    <FuncList>
+      <!--页签id（学校）-->
+      <Func>12</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（医院）（对应建筑表中的建筑类型）-->
+    <ID>12</ID>
+    <FuncList>
+      <!--功能id（医院）-->
+      <Func>6</Func>
+    </FuncList>
+	<!--组合枚举-->
+    <SubComList>
+      <SubCom>1</SubCom>
+      <SubCom>4</SubCom>
+    </SubComList>
+	<!--服务建筑人口进度条描述-->
+    <FillName>BuildTypeFuncConfig_12</FillName>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（教堂）（对应建筑表中的建筑类型）-->
+    <ID>13</ID>
+    <FuncList>
+      <!--功能id（教堂）-->
+      <Func>6</Func>
+    </FuncList>
+    <FillName>BuildTypeFuncConfig_13</FillName>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（墓地）（对应建筑表中的建筑类型）-->
+    <ID>14</ID>
+    <FuncList>
+      <!--功能id（墓地）-->
+      <Func>11</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（狩猎小屋）（对应建筑表中的建筑类型）-->
+    <ID>15</ID>
+    <FuncList>
+      <!--功能id（狩猎小屋、产量）-->
+      <Func>6</Func>
+    </FuncList>
+    <!--组合枚举-->
+    <SubComList>
+      <SubCom>2</SubCom>
+    </SubComList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（市场）（对应建筑表中的建筑类型）-->
+    <ID>16</ID>
+    <FuncList>
+      <!--功能id（市场）-->
+      <Func>6</Func>
+    </FuncList>
+    <!--组合枚举-->
+    <SubComList>
+      <SubCom>1</SubCom>
+    </SubComList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（护林小屋）（对应建筑表中的建筑类型）-->
+    <ID>17</ID>
+    <FuncList>
+      <!--功能id（护林小屋）-->
+      <Func>7</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（市政厅）（对应建筑表中的建筑类型）-->
+    <ID>18</ID>
+    <FuncList>
+      <!--功能id（市政厅）-->
+      <Func>37</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（渡口）（对应建筑表中的建筑类型）-->
+    <ID>19</ID>
+	<FuncList>
+      <!--功能id（渡口）-->
+      <Func>49</Func>
+      <Func>36</Func>
+      <Func>21</Func>
+      <Func>22</Func>
+    </FuncList>
+	<Func>36</Func>
+    <SubComList>
+      <SubCom>1</SubCom>
+    </SubComList>
+
+	 
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（科技实验室（研究院））（对应建筑表中的建筑类型）-->
+    <ID>20</ID>
+    <FuncList>
+      <!--功能id（研究院）-->
+      <Func>45</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（杂货店）（对应建筑表中的建筑类型）-->
+    <ID>22</ID>
+    <FuncList>
+      <!--功能id（杂货店）-->
+      <Func>49</Func>
+    </FuncList>
+    <Func>36</Func>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（篝火）（未使用）-->
+    <ID>23</ID>
+    <FuncList>
+      <!--功能id（篝火）-->
+      <Func>6</Func>
+    </FuncList>
+    <!--组合枚举-->
+    <SubComList>
+      <SubCom>1</SubCom>
+    </SubComList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（蜂房）（对应建筑表中的建筑类型）-->
+    <ID>24</ID>
+    <FuncList>
+      <!--功能id（蜂房）-->
+      <Func>6</Func>
+    </FuncList>
+    <!--组合枚举-->
+    <SubComList>
+      <SubCom>2</SubCom>
+    </SubComList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（研究院）（暂时未使用）-->
+    <ID>25</ID>
+    <FuncList>
+      <!--功能id（研究院）-->
+      <Func>6</Func>
+    </FuncList>
+    <!--组合枚举-->
+    <SubComList>
+      <SubCom>1</SubCom>
+    </SubComList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（中转站）（对应建筑表中的建筑类型）-->
+    <ID>26</ID>
+    <FuncList>
+      <!--功能id（中转站）-->
+      <Func>6</Func>
+    </FuncList>
+    <SubComList>
+      <SubCom>1</SubCom>
+    </SubComList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（打包厂）（暂时未使用）-->
+    <ID>27</ID>
+    <FuncList>
+      <!--功能id（研究院）-->
+      <Func>6</Func>
+    </FuncList>
+    <!--组合枚举-->
+    <SubComList>
+      <SubCom>1</SubCom>
+    </SubComList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（供应站）（对应建筑表中的建筑类型）-->
+    <ID>28</ID>
+    <FuncList>
+      <!--功能id（供应站）-->
+      <Func>49</Func>
+    </FuncList>
+	<Func>20</Func>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（澡堂）（对应建筑表中的建筑类型）-->
+    <ID>30</ID>
+    <FuncList>
+      <!--功能id（澡堂）-->
+      <Func>6</Func>
+    </FuncList>
+    <FillName>BuildTypeFuncConfig_30</FillName>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（陆地贸易站）（对应建筑表中的建筑类型）-->
+    <ID>31</ID>
+    <FuncList>
+      <!--功能id（陆地贸易站）-->
+      <Func>49</Func>
+    </FuncList>
+	 <Func>36</Func>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（魔方）（对应建筑表中的建筑类型）-->
+    <ID>32</ID>
+    <FuncList>
+      <!--功能id（魔方）-->
+      <Func>46</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（摸鱼勇者）（对应建筑表中的建筑类型）-->
+    <ID>33</ID>
+    <FuncList>
+      <!--功能id（摸鱼勇者）-->
+      <Func>47</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+  
+    <BuildTypeFuncConfig>
+    <!--建筑类型（修理厂）（对应建筑表中的建筑类型）-->
+    <ID>34</ID>
+    <FuncList>
+      <!--页签id-->
+      <Func>50</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+  
+  <BuildTypeFuncConfig>
+    <!--建筑类型（锅炉房）（对应建筑表中的建筑类型）-->
+    <ID>35</ID>
+    <FuncList>
+      <!--组合式页签-->
+      <Func>6</Func>
+    </FuncList>
+	<!--组合枚举-->
+    <SubComList>
+      <SubCom>1</SubCom>
+    </SubComList>
+  </BuildTypeFuncConfig>
+   
+   <BuildTypeFuncConfig>
+    <!--建筑类型（治安所））（对应建筑表中的建筑类型）-->
+    <ID>36</ID>
+    <FuncList>
+      <!--功能id（药草屋、产量）-->
+      <Func>6</Func>
+    </FuncList>
+    <!--组合枚举-->
+    <SubComList>
+    </SubComList>
+  </BuildTypeFuncConfig>
+  
+  <BuildTypeFuncConfig>
+    <!--建筑类型（避难所）（对应建筑表中的建筑类型）-->
+    <ID>37</ID>
+    <FuncList>
+      <!--功能id（避难所）-->
+      <Func>52</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+    
+  <BuildTypeFuncConfig>
+    <!--建筑类型（聚集型建筑）（对应建筑表中的建筑类型）-->
+    <ID>38</ID>
+    <FuncList>
+      <!--功能id（聚集型建筑）-->
+      <Func>53</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+  
+   <BuildTypeFuncConfig>
+    <!--建筑类型（聚集型建筑）（对应建筑表中的建筑类型）-->
+    <ID>39</ID>
+    <!--页签枚举-->
+    <FuncList>
+      <Func>1</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（酒馆）（对应建筑表中的建筑类型）-->
+    <ID>40</ID>
+    <FuncList>
+      <!--功能id（酒馆）-->
+      <Func>6</Func>
+    </FuncList>
+    <FillName>BuildTypeFuncConfig_40</FillName>
+  </BuildTypeFuncConfig>
+   
+  <BuildTypeFuncConfig>
+    <!--建筑类型（贸易站）（对应建筑表中的建筑类型）-->
+    <ID>42</ID>
+    <FuncList>
+	 <!--功能id（银行）仅配置主界面即可，若主界面有多个，则需要顶部的页签-->
+      <Func>58</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+  
+    <BuildTypeFuncConfig>
+    <!--建筑类型（无限墓地）（对应建筑表中的建筑类型）-->
+    <ID>43</ID>
+    <FuncList>
+      <!--功能id（墓地）-->
+      <Func>11</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+  
+   <BuildTypeFuncConfig>
+    <!--建筑类型（桑科雷大学）（对应建筑表中的建筑类型）-->
+    <ID>44</ID>
+	<FuncList>
+      <!--功能id（市场）-->
+      <Func>6</Func>
+    </FuncList>
+    <!--组合枚举-->
+    <SubComList>
+    </SubComList>
+  </BuildTypeFuncConfig>
+  
+  <BuildTypeFuncConfig>
+    <!--建筑类型（银行）（对应建筑表中的建筑类型）-->
+    <ID>45</ID>
+	<FuncList>
+      <!--功能id（银行）仅配置主界面即可，若主界面有多个，则需要顶部的页签-->
+      <Func>60</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（道路类建筑）（对应建筑表中的建筑类型）-->
+    <ID>50</ID>
+    <FuncList>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+  <BuildTypeFuncConfig>
+    <!--建筑类型（装饰类建筑）（对应建筑表中的建筑类型）-->
+    <ID>100</ID>
+    <FuncList>
+    </FuncList>
+  </BuildTypeFuncConfig>
+  
+   <BuildTypeFuncConfig>
+    <!--建筑类型（巨大圣诞树）（对应建筑表中的建筑类型）-->
+    <ID>101</ID>
+    <!--页签枚举-->
+    <FuncList>
+      <Func>56</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+  
+   <BuildTypeFuncConfig>
+    <!--建筑类型（烟花）（对应建筑表中的建筑类型）-->
+    <ID>102</ID>
+    <!--页签枚举-->
+    <FuncList>
+      <Func>62</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+  
+   <BuildTypeFuncConfig>
+    <!--建筑类型（瑞兽广场）（对应建筑表中的建筑类型）-->
+    <ID>103</ID>
+    <!--页签枚举-->
+    <FuncList>
+      <Func>63</Func>
+    </FuncList>
+  </BuildTypeFuncConfig>
+
+</ArrayOfBuildTypeFuncConfig>
+

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<CitizenPopUp xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--   此文件已弃用  This file is deprecated
+-->
+ <UserID>0</UserID>
+</CitizenPopUp>

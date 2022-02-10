@@ -1,0 +1,1342 @@
+<?xml version="1.0"?>
+<ArrayOfPassiveEventConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+    <PassiveEventConfig>
+    <ID>7777</ID><!--测试111111111111-->
+    <Weight>300</Weight>
+    <RewardID>7777</RewardID>
+  </PassiveEventConfig>
+  
+  <PassiveEventConfig>
+    <ID>1001</ID><!--夏季水井事件-->
+    <Weight>1000</Weight>
+    <RewardID>1001</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>1</ID>
+        <P1>2035</P1>
+        <Num>2</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1004</ID><!--松鼠事件-->
+    <Weight>300</Weight>
+    <RewardID>1004</RewardID>
+  </PassiveEventConfig>
+
+    <PassiveEventConfig>
+    <ID>1009</ID><!--春季蜂巢事件-->
+    <Weight>1000</Weight>
+    <RewardID>1009</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1012</ID><!--春季古树事件-->
+    <Weight>1000</Weight>
+    <RewardID>1012</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>1</ID>
+        <P1>6036</P1>
+        <Num>1</Num>
+      </Conditions>
+      <Conditions>
+        <ID>1</ID>
+        <P1>4008</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1014</ID><!--秋季龙虾事件-->
+    <Weight>1000</Weight>
+    <RewardID>1014</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>1</ID>
+        <P1>2030</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  
+  <PassiveEventConfig>
+    <ID>1017</ID><!--春季装饰树事件-->
+    <Weight>1000</Weight>
+    <RewardID>1017</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1018</ID><!--春季温度事件-->
+    <Weight>1000</Weight>
+    <RewardID>1018</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1021</ID><!--污水排放事件-->
+    <Weight>300</Weight>
+    <RewardID>1021</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>1</ID>
+        <P1>3013</P1>
+        <Num>1</Num>
+      </Conditions>
+      <Conditions>
+        <ID>1</ID>
+        <P1>3060</P1>
+        <Num>1</Num>
+      </Conditions>
+      <Conditions>
+        <ID>1</ID>
+        <P1>3026</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+    <PassiveEventConfig>
+    <ID>1023</ID><!--偷吃咸鱼事件-->
+    <Weight>1000</Weight>
+    <RewardID>1023</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>1</ID>
+        <P1>3023</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1026</ID><!--矿井挖掘事件1-->
+    <Weight>100</Weight>
+    <RewardID>1026</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>3</ID>
+        <P1>11</P1>
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+
+  <PassiveEventConfig>
+    <ID>1028</ID><!--矿井挖掘事件2-->
+    <Weight>300</Weight>
+    <RewardID>1028</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>3</ID>
+        <P1>11</P1>
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1030</ID><!--大城堡事件-->
+    <Weight>300</Weight>
+    <RewardID>1030</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>1</ID>
+        <P1>6012</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  
+  <PassiveEventConfig>
+    <ID>1033</ID><!--游泳事件1-->
+    <Weight>200</Weight>
+    <RewardID>1033</RewardID>
+  </PassiveEventConfig>
+  
+  <PassiveEventConfig>
+    <ID>1036</ID><!--游泳事件2-->
+    <Weight>800</Weight>
+    <RewardID>1036</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1039</ID><!--浓雾事件-->
+    <Weight>1000</Weight>
+    <RewardID>1039</RewardID>
+  </PassiveEventConfig>
+
+  
+  <PassiveEventConfig>
+    <ID>1042</ID><!--寒冬事件-->
+    <Weight>1000</Weight>
+    <RewardID>1042</RewardID>
+  </PassiveEventConfig>
+
+   
+  <PassiveEventConfig>
+    <ID>1044</ID><!--爆破事件-->
+    <Weight>300</Weight>
+    <RewardID>1044</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>3</ID>
+        <P1>11</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+   
+  <PassiveEventConfig>
+    <ID>1047</ID><!--缩小事件-->
+    <Weight>300</Weight>
+    <RewardID>1047</RewardID>
+  </PassiveEventConfig>
+
+     
+  <PassiveEventConfig>
+    <ID>1050</ID><!--饥饿事件-->
+    <Weight>300</Weight>
+    <RewardID>1050</RewardID>
+  </PassiveEventConfig>
+
+     
+  <PassiveEventConfig>
+    <ID>1053</ID><!--商人事件2-->
+    <Weight>300</Weight>
+    <RewardID>1053</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1055</ID><!--蘑菇事件2-->
+    <Weight>100</Weight>
+    <RewardID>1055</RewardID>
+  </PassiveEventConfig>
+
+    
+  <PassiveEventConfig>
+    <ID>1100</ID><!--秋季郊游-->
+    <Weight>1000</Weight>
+    <RewardID>1100</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1103</ID><!--冻僵的路人-->
+    <Weight>1000</Weight>
+    <RewardID>1103</RewardID>
+  </PassiveEventConfig>
+  
+    <PassiveEventConfig>
+    <ID>1106</ID><!--草丛中的呜咽-->
+    <Weight>1000</Weight>
+    <RewardID>1106</RewardID>
+  </PassiveEventConfig>
+  
+    <PassiveEventConfig>
+    <ID>1109</ID><!--是什么咬钩了？-->
+    <Weight>300</Weight>
+    <RewardID>1109</RewardID>
+	  <ConditionsList>
+      <Conditions>
+        <ID>1</ID>
+        <P1>2016</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  
+    <PassiveEventConfig>
+    <ID>1111</ID><!--小心野生蘑菇-->
+    <Weight>300</Weight>
+    <RewardID>1111</RewardID>
+  </PassiveEventConfig>
+  
+    <PassiveEventConfig>
+    <ID>1114</ID><!--流星-->
+    <Weight>300</Weight>
+    <RewardID>1114</RewardID>
+  </PassiveEventConfig>
+  
+    <PassiveEventConfig>
+    <ID>1117</ID><!--酒-->
+    <Weight>300</Weight>
+    <RewardID>1117</RewardID>
+  </PassiveEventConfig>
+  
+    <PassiveEventConfig>
+    <ID>1119</ID><!--意外的礼物-->
+    <Weight>300</Weight>
+    <RewardID>1119</RewardID>
+	  <ConditionsList>
+      <Conditions>
+        <ID>1</ID>
+        <P1>7</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  
+    <PassiveEventConfig>
+    <ID>1121</ID><!--神秘的商人-->
+    <Weight>300</Weight>
+    <RewardID>1121</RewardID>
+  </PassiveEventConfig>
+  
+   <PassiveEventConfig>
+    <ID>1123</ID><!--新的配方-->
+    <Weight>300</Weight>
+    <RewardID>1123</RewardID>
+	<ConditionsList>
+      <Conditions>
+        <ID>1</ID>
+        <P1>3034</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  
+   <PassiveEventConfig>
+    <ID>1057</ID><!--巨大羊驼-->
+    <Weight>1000</Weight>
+    <RewardID>1057</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1060</ID><!--修整田地-->
+    <Weight>300</Weight>
+    <RewardID>1060</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>3</ID>
+        <P1>3</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1061</ID><!--防治蚊虫-->
+    <Weight>1000</Weight>
+    <RewardID>1061</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1063</ID><!--酒鬼-->
+    <Weight>1000</Weight>
+    <RewardID>1063</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1066</ID><!--流浪的农民-->
+    <Weight>1000</Weight>
+    <RewardID>1066</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>1</ID>
+        <P1>4008</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1068</ID><!--森林火灾-->
+    <Weight>1000</Weight>
+    <RewardID>1068</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1071</ID><!--新的一年-->
+    <Weight>1000</Weight>
+    <RewardID>1071</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1072</ID><!--雪地里的坑洞-->
+    <Weight>1000</Weight>
+    <RewardID>1072</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1075</ID><!--美食家的馈赠-->
+    <Weight>250</Weight>
+    <RewardID>1075</RewardID>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1076</ID><!--猎人的野餐-->
+    <Weight>250</Weight>
+    <RewardID>1076</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>3</ID>
+        <P1>7</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1126</ID>
+    <!--品酒师光临-->
+    <Weight>250</Weight>
+    <RewardID>1126</RewardID>
+    <!--在ENUM里PASSIVE找。 某类资源过去一年消耗超过 -->
+    <ConditionsList>
+      <Conditions>
+        <ID>9</ID>
+        <P1>801</P1>  <!--最高级酒零食 801  -->
+        <Num>200</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1127</ID>
+    <!--高材生加入-->
+    <Weight>250</Weight>
+    <RewardID>1127</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>5</ID>
+        <!--纸张消耗超过数目  -->
+        <P1>33009</P1>
+        <Num>1000</Num>
+      </Conditions>
+      <Conditions>
+        <ID>12</ID>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1128</ID>
+    <!--服装秀-->
+    <Weight>250</Weight>
+    <RewardID>1128</RewardID>
+    <ConditionsList>
+      <!--消耗物品ID超过数目  -->
+      <Conditions>
+        <ID>5</ID>
+        <P1>50003</P1>
+        <Num>200</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  
+  <PassiveEventConfig>  
+    <ID>1129</ID>
+    <!--乡愁-->
+    <Weight>250</Weight>
+    <RewardID>1129</RewardID>
+    <ConditionsList>
+      <!--人口超过  -->
+      <Conditions>
+        <ID>8</ID>
+        <P1>500</P1>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1130</ID>
+    <!--接纳难民-->
+    <Weight>250</Weight>
+    <RewardID>1130</RewardID>
+    <ConditionsList>
+      <!--食物超过  -->
+      <Conditions>
+        <ID>10</ID>
+        <P1>1</P1>
+        <Num>1500</Num>
+      </Conditions>
+      <Conditions>
+        <ID>12</ID>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1131</ID>
+    <!-- 切磋技艺-->
+    <Weight>250</Weight>
+    <RewardID>1131</RewardID>
+    <ConditionsList>
+      <!--钢工具51009超过 -->
+      <Conditions>
+        <ID>51009</ID>
+        <P1>200</P1>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <PassiveEventConfig>
+    <ID>1132</ID>
+    <!-- 美食探访之旅-->
+    <Weight>250</Weight>
+    <RewardID>1132</RewardID>
+    <ConditionsList>
+      <!--高级食物4消耗 -->
+      <Conditions>
+        <ID>9</ID>
+        <P1>4</P1>
+        <Num>400</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <!-- 测试-->
+  <PassiveEventConfig>
+    <ID>1133</ID>
+    <Weight>250</Weight>
+    <RewardID>1133</RewardID>
+    <ConditionsList>
+      <!--高级食物4消耗 -->
+      <Conditions>
+        <ID>9</ID>
+        <P1>4</P1>
+        <Num>400</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  
+  <!-- 贴福字-->
+  <PassiveEventConfig>
+    <ID>2042</ID>
+    <Weight>250</Weight>
+    <RewardID>2042</RewardID>
+    <ConditionsList>
+    </ConditionsList>
+  </PassiveEventConfig>
+  
+  <!-- 测试减物品库存-->
+  <PassiveEventConfig>
+    <ID>1135</ID>
+    <Weight>250</Weight>
+    <RewardID>1135</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>9</ID>
+        <P1>4</P1>
+        <Num>60</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <!-- 李妙的物资援助申请 木材 2000-->
+  <PassiveEventConfig>
+    <ID>2000</ID>
+    <Weight>250</Weight>
+    <RewardID>2000</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <Num>1</Num>
+        <P1>1</P1>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--李妙的物资援助申请 稻米 2001-->
+  <PassiveEventConfig>
+    <ID>2001</ID>
+    <Weight>250</Weight>
+    <RewardID>2001</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <Num>2</Num>
+        <P1>1</P1>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--李妙的建材援助申请：木板 2002-->
+  <PassiveEventConfig>
+    <ID>2002</ID>
+    <Weight>250</Weight>
+    <RewardID>2002</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <Num>3</Num>
+        <P1>1</P1>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--李妙的物资援助申请 砌石 2002b-->
+  <PassiveEventConfig>
+    <ID>20022</ID>
+    <Weight>250</Weight>
+    <RewardID>20022</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <Num>3</Num>
+        <P1>1</P1>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--李妙的建材援助申请：建筑套件 2003-->
+  <PassiveEventConfig>
+    <ID>2003</ID>
+    <Weight>250</Weight>
+    <RewardID>2003</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <Num>4</Num>
+        <P1>1</P1>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--李妙的建材援助申请：砖块 20032-->
+  <PassiveEventConfig>
+    <ID>20032</ID>
+    <Weight>250</Weight>
+    <RewardID>20032</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <P1>1</P1>
+        <Num>4</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--李妙的异域特产交易请求：牡蛎2004-->
+  <PassiveEventConfig>
+    <ID>20041</ID>
+    <Weight>250</Weight>
+    <RewardID>20041</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <P1>1</P1>
+        <Num>5</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--李妙的异域特产交易请求：波斯挂毯 2004-->
+  <PassiveEventConfig>
+    <ID>20042</ID>
+    <Weight>250</Weight>
+    <RewardID>20042</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <P1>1</P1>
+        <Num>5</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>  
+  <!--李妙的异域特产交易请求：辣可可茶 2004-->
+  <PassiveEventConfig>
+    <ID>20043</ID>
+    <Weight>250</Weight>
+    <RewardID>20043</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <P1>1</P1>
+        <Num>5</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+
+  <!--洛伦佐的赌场邀请 2008-->
+  <PassiveEventConfig>
+    <ID>2008</ID>
+    <Weight>250</Weight>
+    <RewardID>2008</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <P1>2</P1>
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--洛伦佐的物资援助申请 生活燃料 2009-->
+  <PassiveEventConfig>
+    <ID>2009</ID>
+    <Weight>250</Weight>
+    <RewardID>2009</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <P1>2</P1>
+        <Num>2</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--洛伦佐的移民申请,带走 2010-->
+  <PassiveEventConfig>
+    <ID>2010</ID>
+    <Weight>250</Weight>
+    <RewardID>2010</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>2</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--洛伦佐的移民申请 进入 2011-->
+  <PassiveEventConfig>
+    <ID>2011</ID>
+    <Weight>250</Weight>
+    <RewardID>2011</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>2</P1>
+        <!--声望等级 -->
+        <Num>4</Num>
+      </Conditions>
+      <Conditions>
+        <!--有cityhall -->
+        <ID>12</ID>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--畜牧业交流2012-->
+  <PassiveEventConfig>
+    <ID>2012</ID>
+    <Weight>250</Weight>
+    <RewardID>2012</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>2</P1>
+        <!--声望等级 -->
+        <Num>5</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <!--卡洛斯的移民申请 2016-->
+  <PassiveEventConfig>
+    <ID>2016</ID>
+    <Weight>250</Weight>
+    <RewardID>2016</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>3</P1>
+
+        <Num>1</Num>
+      </Conditions>
+      <Conditions>
+        <!--有cityhall -->
+        <ID>12</ID>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--卡洛斯的物资援助申请 餐具 2017 -->
+  <PassiveEventConfig>
+    <ID>2017</ID>
+    <Weight>250</Weight>
+    <RewardID>2017</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>3</P1>
+        <!--声望等级 -->
+        <Num>2</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--有卡洛斯的来访（增加老年人）2018-->
+  <PassiveEventConfig>
+    <ID>2018</ID>
+    <Weight>250</Weight>
+    <RewardID>2018</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>3</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--卡洛斯提出了物资援助申请：皮包2019-->
+  <PassiveEventConfig>
+    <ID>2019</ID>
+    <Weight>250</Weight>
+    <RewardID>2019</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>3</P1>
+        <!--声望等级 -->
+        <Num>4</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--卡洛斯的移民申请2020-->
+  <PassiveEventConfig>
+    <ID>2020</ID>
+    <Weight>250</Weight>
+    <RewardID>2020</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>3</P1>
+        <!--声望等级 -->
+        <Num>5</Num>
+      </Conditions>
+      <Conditions>
+        <!--有cityhall -->
+        <ID>12</ID>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <!--拉尼娅提出了物资援助申请：水 2024-->
+  <PassiveEventConfig>
+    <ID>2024</ID>
+    <Weight>250</Weight>
+    <RewardID>2024</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>4</P1>
+        <!--声望等级 -->
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--拉尼娅提出了物资援助申请：棉花 2025-->
+  <PassiveEventConfig>
+    <ID>2025</ID>
+    <Weight>250</Weight>
+    <RewardID>2025</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>4</P1>
+        <!--声望等级 -->
+        <Num>2</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--拉尼娅提出了物资援助申请：2025b 亚麻-->
+  <PassiveEventConfig>
+    <ID>20252</ID>
+    <Weight>250</Weight>
+    <RewardID>20252</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>4</P1>
+        <!--声望等级 -->
+        <Num>2</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--拉尼娅提出了物资援助申请：绳子2026-->
+  <PassiveEventConfig>
+    <ID>2026</ID>
+    <Weight>250</Weight>
+    <RewardID>2026</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>4</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--拉尼娅提出了物资援助申请：2026b玻璃-->
+  <PassiveEventConfig>
+    <ID>20262</ID>
+    <Weight>250</Weight>
+    <RewardID>20262</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>4</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--拉尼娅提出了物资援助申请：耐用皮鞋2027-->
+  <PassiveEventConfig>
+    <ID>2027</ID>
+    <Weight>250</Weight>
+    <RewardID>2027</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>4</P1>
+        <!--声望等级 -->
+        <Num>4</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--拉尼娅提出了优惠的服饰交易2028-->
+  <PassiveEventConfig>
+    <ID>2028</ID>
+    <Weight>250</Weight>
+    <RewardID>2028</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>4</P1>
+        <!--声望等级 -->
+        <Num>5</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  
+  <!--商队见闻2005 获得丝绸-->
+  <PassiveEventConfig>
+    <ID>2005</ID>
+    <Weight>250</Weight>
+    <RewardID>2005</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>1</P1>
+        <!--声望等级 -->
+        <Num>0</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--商队见闻 获得收入2006-->
+  <PassiveEventConfig>
+    <ID>2006</ID>
+    <Weight>250</Weight>
+    <RewardID>2006</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>1</P1>
+        <!--声望等级 -->
+        <Num>0</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--商队见闻 增加声望2007-->
+  <PassiveEventConfig>
+    <ID>2007</ID>
+    <Weight>250</Weight>
+    <RewardID>2007</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>1</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+    
+  <!--商队见闻 获得收入2013-->
+  <PassiveEventConfig>
+    <ID>2013</ID>
+    <Weight>250</Weight>
+    <RewardID>2013</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>2</P1>
+        <!--声望等级 -->
+        <Num>0</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--商队见闻2014 获得牧场制品-->
+  <PassiveEventConfig>
+    <ID>2014</ID>
+    <Weight>250</Weight>
+    <RewardID>2014</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>2</P1>
+        <!--声望等级 -->
+        <Num>0</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>  
+  <!--商队见闻2015 获得海产品 -->
+  <PassiveEventConfig>
+    <ID>2015</ID>
+    <Weight>250</Weight>
+    <RewardID>2015</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>2</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <!--商队见闻 获得食物 2021-->
+  <PassiveEventConfig>
+    <ID>2021</ID>
+    <Weight>250</Weight>
+    <RewardID>2021</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>3</P1>
+        <!--声望等级 -->
+        <Num>0</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>  
+  <!--商队见闻 获得龙舌兰2022-->
+  <PassiveEventConfig>
+    <ID>2022</ID>
+    <Weight>250</Weight>
+    <RewardID>2022</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>3</P1>
+        <!--声望等级 -->
+        <Num>0</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--商队见闻2023 遇险概率降低2023 需测试-->
+  <PassiveEventConfig>
+    <ID>2023</ID>
+    <Weight>250</Weight>
+    <RewardID>2023</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>3</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <!--商队见闻 2029 获得特色酒和食物，全体幸福度+20%-->
+  <PassiveEventConfig>
+    <ID>2029</ID>
+    <Weight>250</Weight>
+    <RewardID>2029</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>4</P1>
+        <!--声望等级 -->
+        <Num>0</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>  
+  <!--商队见闻2030 随机获得其他势力特产-->
+  <PassiveEventConfig>
+    <ID>2030</ID>
+    <Weight>250</Weight>
+    <RewardID>2030</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>4</P1>
+        <!--声望等级 -->
+        <Num>0</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--商队见闻2031 获得稀有矿石 -->
+  <PassiveEventConfig>
+    <ID>2031</ID>
+    <Weight>250</Weight>
+    <RewardID>2031</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>4</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+
+  <!--商队见闻 2035 获得钱-->
+  <PassiveEventConfig>
+    <ID>2035</ID>
+    <Weight>250</Weight>
+    <RewardID>2035</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>0</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--商队见闻2036 获得钱-->
+  <PassiveEventConfig>
+    <ID>2036</ID>
+    <Weight>250</Weight>
+    <RewardID>2036</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>0</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--商队见闻2037 获得木材石头 -->
+  <PassiveEventConfig>
+    <ID>2037</ID>
+    <Weight>250</Weight>
+    <RewardID>2037</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  
+  <!--安东尼奥紧急订单竹子2032a-->
+  <PassiveEventConfig>
+    <ID>2032</ID>
+    <Weight>250</Weight>
+    <RewardID>2032</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--安东尼奥紧急订单 硬木 2032b-->
+  <PassiveEventConfig>
+    <ID>20322</ID>
+    <Weight>250</Weight>
+    <RewardID>20322</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--安东尼奥紧急订单 椰枣 2032c-->
+  <PassiveEventConfig>
+    <ID>20323</ID>
+    <Weight>250</Weight>
+    <RewardID>20323</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--安东尼奥紧急订单 仙人掌 2032d-->
+  <PassiveEventConfig>
+    <ID>20324</ID>
+    <Weight>250</Weight>
+    <RewardID>20324</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>1</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+    
+  <!--安东尼奥紧急订单 豆腐 2033-->
+  <PassiveEventConfig>
+    <ID>2033</ID>
+    <Weight>250</Weight>
+    <RewardID>2033</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--安东尼奥紧急订单 硬木工具 2033b-->
+  <PassiveEventConfig>
+    <ID>20332</ID>
+    <Weight>250</Weight>
+    <RewardID>20332</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--安东尼奥紧急订单 印染布 2033c-->
+  <PassiveEventConfig>
+    <ID>20333</ID>
+    <Weight>250</Weight>
+    <RewardID>20333</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--安东尼奥紧急订单 黑曜石工具 2033d-->
+  <PassiveEventConfig>
+    <ID>20334</ID>
+    <Weight>250</Weight>
+    <RewardID>20334</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>2</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+    
+  <!--安东尼奥紧急订单 大量豆腐 2034-->
+  <PassiveEventConfig>
+    <ID>2034</ID>
+    <Weight>250</Weight>
+    <RewardID>2034</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>3</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--安东尼奥紧急订单 大量牡蛎 2034b-->
+  <PassiveEventConfig>
+    <ID>20342</ID>
+    <Weight>250</Weight>
+    <RewardID>20342</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>5</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--安东尼奥紧急订单 精致刀剑 2034c-->
+  <PassiveEventConfig>
+    <ID>20343</ID>
+    <Weight>250</Weight>
+    <RewardID>20343</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>5</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  <!--安东尼奥紧急订单 大量玉米卷饼 2034d-->
+  <PassiveEventConfig>
+    <ID>20344</ID>
+    <Weight>250</Weight>
+    <RewardID>20344</RewardID>
+    <ConditionsList>
+      <Conditions>
+        <ID>13</ID>
+        <!--势力 -->
+        <P1>5</P1>
+        <!--声望等级 -->
+        <Num>5</Num>
+      </Conditions>
+    </ConditionsList>
+  </PassiveEventConfig>
+  
+  <!--  事件-安东尼奥推销保险2040 暂无条件 -->
+
+  <!--  事件-安东尼奥推销保险2041 -->
+  
+  <!--  事件-回到故乡 -->
+
+  <!--  事件-老富翁回到故乡2039 -->
+  <PassiveEventConfig>
+    <ID>2039</ID>
+    <Weight>1000</Weight>
+    <RewardID>2039</RewardID>
+  </PassiveEventConfig>
+
+</ArrayOfPassiveEventConfig>

@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<ArrayOfProfessionalLevelConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--  熟练度等级配置说明
+Description of Proficiency Level Configuration
+ID int 唯一ID不重复即可
+No Duplicates for IDs
+Professional int 对应发展类型（查看下方枚举）
+Corresponding Development Type (View the enumeration below)
+LevelDataList  等级列表
+Level List
+LevelData  
+
+Level int 等级
+Level
+Exp int 该等级需要经验值
+Experience Required for This Level
+BuffsList  达到该等级获得的buff列表
+List of Buffs Obtained after Reaching This Level
+Buffs int buffID
+Buff ID
+
+	
+	
+	备注：
+   int			整型，只能填整数
+   string		字符串类型，字母或者文字
+   float		浮点数类型，小数
+   
+   
+   枚举：
+   	IndustryType_Trade			=  1;	// 贸易
+	IndustryType_Education		=  2;	// 教育
+	IndustryType_Mine			=  3;	// 矿物
+	IndustryType_Build			=  4;	// 建造
+	IndustryType_Farming		=  5;	// 农业
+	IndustryType_Processing		=  6;	// 加工业
+	IndustryType_Express		=  7;	// 物流
+	IndustryType_Home			=  8;	// 家居
+   
+	
+	实例：
+	见下方
+	
+	
+-->
+  
+  
+  
+  <ProfessionalLevelConfig>
+    <ID>1</ID>
+    <!-- 贸易-->
+    <Professional>1</Professional>
+    <LevelDataList>
+      <LevelData>
+        <Level>1</Level>
+        <Exp>100000</Exp>
+        <BuffsList>
+          <Buffs>101001</Buffs>
+          <Buffs>101002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>2</Level>
+        <Exp>300000</Exp>
+        <BuffsList>
+          <Buffs>102001</Buffs>
+          <Buffs>102002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>3</Level>
+        <Exp>900000</Exp>
+        <BuffsList>
+          <Buffs>103001</Buffs>
+          <Buffs>103002</Buffs>
+        </BuffsList>
+      </LevelData>
+    </LevelDataList>
+  </ProfessionalLevelConfig>
+  
+  <ProfessionalLevelConfig>
+    <ID>2</ID>
+     <!-- 教育-->
+    <Professional>2</Professional>
+    <LevelDataList>
+      <LevelData>
+        <Level>1</Level>
+        <Exp>100000</Exp>
+        <BuffsList>
+          <Buffs>201001</Buffs>
+          <Buffs>201002</Buffs>
+		  <Buffs>201003</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>2</Level>
+        <Exp>300000</Exp>
+        <BuffsList>
+          <Buffs>202001</Buffs>
+          <Buffs>202002</Buffs>
+		  <Buffs>202003</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>3</Level>
+        <Exp>900000</Exp>
+        <BuffsList>
+          <Buffs>203001</Buffs>
+          <Buffs>203002</Buffs>
+		  <Buffs>203003</Buffs>
+        </BuffsList>
+      </LevelData>
+    </LevelDataList>
+  </ProfessionalLevelConfig>
+  
+  <ProfessionalLevelConfig>
+    <ID>3</ID>
+     <!-- 矿业-->
+    <Professional>3</Professional>
+    <LevelDataList>
+      <LevelData>
+        <Level>1</Level>
+        <Exp>100000</Exp>
+        <BuffsList>
+          <Buffs>301001</Buffs>
+		  <Buffs>301002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>2</Level>
+        <Exp>300000</Exp>
+        <BuffsList>
+          <Buffs>302001</Buffs>
+		  <Buffs>302002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>3</Level>
+        <Exp>900000</Exp>
+        <BuffsList>
+          <Buffs>303001</Buffs>
+		  <Buffs>303002</Buffs>
+        </BuffsList>
+      </LevelData>
+    </LevelDataList>
+  </ProfessionalLevelConfig>
+  
+  <ProfessionalLevelConfig>
+    <ID>4</ID>
+     <!-- 建造-->
+    <Professional>4</Professional>
+    <LevelDataList>
+      <LevelData>
+        <Level>1</Level>
+        <Exp>100000</Exp>
+        <BuffsList>
+          <Buffs>401001</Buffs>
+          <Buffs>401002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>2</Level>
+        <Exp>300000</Exp>
+        <BuffsList>
+          <Buffs>402001</Buffs>
+          <Buffs>402002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>3</Level>
+        <Exp>900000</Exp>
+        <BuffsList>
+          <Buffs>403001</Buffs>
+          <Buffs>403002</Buffs>
+        </BuffsList>
+      </LevelData>
+    </LevelDataList>
+  </ProfessionalLevelConfig>
+  
+  <ProfessionalLevelConfig>
+    <ID>5</ID>
+     <!-- 农业-->
+    <Professional>5</Professional>
+    <LevelDataList>
+      <LevelData>
+        <Level>1</Level>
+        <Exp>100000</Exp>
+        <BuffsList>
+          <Buffs>501001</Buffs>
+          <Buffs>501002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>2</Level>
+        <Exp>300000</Exp>
+        <BuffsList>
+          <Buffs>502001</Buffs>
+          <Buffs>502002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>3</Level>
+        <Exp>900000</Exp>
+        <BuffsList>
+          <Buffs>503001</Buffs>
+          <Buffs>503002</Buffs>
+        </BuffsList>
+      </LevelData>
+    </LevelDataList>
+  </ProfessionalLevelConfig>
+  
+  <ProfessionalLevelConfig>
+    <ID>6</ID>
+     <!-- 加工-->
+    <Professional>6</Professional>
+    <LevelDataList>
+      <LevelData>
+        <Level>1</Level>
+        <Exp>100000</Exp>
+        <BuffsList>
+          <Buffs>601001</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>2</Level>
+        <Exp>300000</Exp>
+        <BuffsList>
+          <Buffs>602001</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>3</Level>
+        <Exp>900000</Exp>
+        <BuffsList>
+          <Buffs>603001</Buffs>
+        </BuffsList>
+      </LevelData>
+    </LevelDataList>
+  </ProfessionalLevelConfig>
+  
+  <ProfessionalLevelConfig>
+    <ID>7</ID>
+     <!-- 物流-->
+    <Professional>7</Professional>
+    <LevelDataList>
+      <LevelData>
+        <Level>1</Level>
+        <Exp>100000</Exp>
+        <BuffsList>
+          <Buffs>701001</Buffs>
+          <Buffs>701002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>2</Level>
+        <Exp>300000</Exp>
+        <BuffsList>
+          <Buffs>702001</Buffs>
+          <Buffs>702002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>3</Level>
+        <Exp>900000</Exp>
+        <BuffsList>
+          <Buffs>703001</Buffs>
+          <Buffs>703002</Buffs>
+        </BuffsList>
+      </LevelData>
+    </LevelDataList>
+  </ProfessionalLevelConfig>
+  
+  <ProfessionalLevelConfig>
+    <ID>8</ID>
+     <!-- 宜居-->
+    <Professional>8</Professional>
+    <LevelDataList>
+      <LevelData>
+        <Level>1</Level>
+        <Exp>100000</Exp>
+        <BuffsList>
+          <Buffs>801001</Buffs>
+          <Buffs>801002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>2</Level>
+        <Exp>300000</Exp>
+        <BuffsList>
+          <Buffs>802001</Buffs>
+          <Buffs>802002</Buffs>
+        </BuffsList>
+      </LevelData>
+      <LevelData>
+        <Level>3</Level>
+        <Exp>900000</Exp>
+        <BuffsList>
+          <Buffs>803001</Buffs>
+          <Buffs>803002</Buffs>
+        </BuffsList>
+      </LevelData>
+    </LevelDataList>
+  </ProfessionalLevelConfig>
+</ArrayOfProfessionalLevelConfig>

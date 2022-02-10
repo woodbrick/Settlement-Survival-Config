@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<CitizenInitConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!--   市民基础属性值配置说明：（这里指市民出生时给予的初始值）  Description of the Configuration of Citizens’ Basic Attribute Value: (This refers to the initial value given at birth)
+    Life                int                    市民生命值  Citizen HP
+    Food                ConfigLowerUpper       市民的饱食度范围（Lower对应最小值 Upper对应最大值  The range of citizens’ satiety (Lower is the minimum value and upper is the maximum
+    Drink               ConfigLowerUpper       市民的口渴度范围（Lower对应最小值 Upper对应最大值  The range of citizens’ thirst (Lower is the minimum value and upper is the maximum
+    Warm                ConfigLowerUpper       市民的温暖度范围（Lower对应最小值 Upper对应最大值  The range of citizens’ warming (Lower is the minimum value and upper is the maximum
+    Load                int                    市民基础负重  Citizens’ basic weight-bearing
+    Energy              int                    市民体力值  Citizens’ Strength
+    Education           int                    是否受教育>=1则为有效  Whether to receive education >=1 is effective
+    Career              int                    市民默认职业  Citizens' Default Occupation
+    AdultCareer         int                    成人默认职业  Adult’s Default Occupation
+    Clothes             int                    市民默认衣服（弃用）  Citizens' Default Clothing (Deprecated)
+    Tool                int                    市民默认工具（弃用）  Citizens’ Default Tool (Deprecated)
+    Happy               int                    市民初始幸福度  Citizens’ Initial Happiness
+    Health              int                    市民初始健康度  Citizens’ Initial Health
+
+	
+
+	
+  备注：  Remarks:
+  int        整型，只能填整数  Integer. Only integers can be filled in
+  string       字符串类型，字母或者文字  String type, letter or text
+  bool         布尔类型，true或者false  Boolean type, true or false
+  Param2Int    自定义双整数类型（Int1间隔天数， Int2对应每次扣减的值）  Customize the double integer type (Int1 is for interval of days and Int2 for each deduction value)
+  Config2Int     自定义双整数类型（Int1对应物品类型 Int2对应随机权重）  Custom double integer type (Int1 is for item type and Int2 is for random weight)
+  ConfigLowerUpper    自定义双整数类型（Lower对应最小值 Upper对应最大值）  Custom double integer type (Lower is the minimum value and Upper is the maximum)
+
+     实例：  Instance:
+     见下方  See below
+-->   
+	
+	
+	<!--市民基础属性值-->
+  <Life>150</Life>
+	<!--饱食度（区间值）-->
+	<Food>
+    <Lower>120</Lower>
+    <Upper>150</Upper>
+  </Food>
+  <!--饥渴度区间-->
+	<Drink>
+    <Lower>120</Lower>
+    <Upper>150</Upper>
+  </Drink>
+  <!--温暖值区间-->
+	<Warm>
+    <Lower>100</Lower>
+    <Upper>150</Upper>
+  </Warm>
+  <!--市民背包上限-->
+	<Load>70</Load>   <!--市民背包上限-->
+	<Energy>100</Energy>
+
+	<Education>1</Education>
+	<Career>1</Career>
+	<AdultCareer>100</AdultCareer>
+	<Clothes>100</Clothes>
+	<Tool>100</Tool>
+  <!--幸福度-->
+  <Happy>1000</Happy>
+  <!--健康度-->
+  <Health>1000</Health>
+</CitizenInitConfig>

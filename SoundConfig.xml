@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<SoundConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <!--  音效配置说明
+Description of Sound Configuration
+MenuWindowList  SoundRes 主界面背景音乐列表
+List of Background Music in the Main Interface
+OpenWindow  SoundRes 界面点开的音效
+The sound effect when the interface is opened
+ButtonClick SoundRes 按钮点击音效
+Clicking Sound
+ButtonClickClose SoundRes 取消按钮音效
+Canceling Sound
+Scoll SoundRes 滑动条音效
+Scrolling Sound
+ScienceUnlock SoundRes 解锁音效
+Unlocking Sound
+FreeBGIn int 背景音乐切换进入时间
+Fade-in time for background music switching
+FreeBGOut int 背景音乐切换淡出时间
+Fade-out time for background music switching
+FreeBGInterval int 背景音乐切换中间的真空时间
+The interval when the background music is switched
+FreeBGList SoundRes 游戏中背景音乐的列表
+List of Background Music in the Game
+StoryBGList SoundRes 剧本的背景音乐
+Background Music of the Story
+Rain SoundRes 下雨的音效
+Sound Effect of Raining
+snow SoundRes 下雪音效
+Sound Effect of Snowing
+Snowstorm SoundRes 暴风雪音效
+Sound Effect of Blizzard
+RiverSmall SoundRes 小河流音效
+Sound Effect of Small River
+RiverBig SoundRes 大河流音效
+Sound Effect of Large River
+RiverMaxCellDistance int 河流音效的最大范围（米）
+Maximum Range (m) of Sound Effects of River
+TreeDead SoundRes 树木倒下的音效
+Sound Effect of Tree Falling
+TreeMaxCellDistance float 树木倒下的音效最大范围（米）
+Maximum Range (m) of Sound Effects of Trees Falling
+Tornado SoundRes 龙卷风的音效
+Sound Effect of Tornado
+FishJump SoundRes 鱼钻入水中的音效
+Sound Effect of Fish Diving into the Water
+FireDisaster SoundRes 火灾音效
+Sound Effect of Fire
+PutDown SoundRes 放下建筑的音效
+Sound Effect of Placing the Building
+Building SoundRes 建造中和拆除中的音效
+Sound Effect of Constructing and Dismantling
+BuildComplete SoundRes 建造完成的音效
+Sound Effect of the Building Completion
+RefugeUse SoundRes 避难所的音效
+Sound Effect of the Refuge
+WarningEvent SoundRes 人物死亡和警示信息音效
+Sound Effect of Character’s Death and Warning
+
+
+SoundRes  自定义类型（结构如下）
+Custom Type (The structure is as follows)
+Path  音频的路径（不需要对应语言表中的多语言）
+The Audio’s Path (Multiple languages in the corresponding language list are not required)
+Volumn  音频默认声音大小
+Default Volume
+
+	
+ 
+ 备注：
+	SoundRes	自定义类型（结构如下）
+		Path		string				音频的路径（不需要对应语言表中的多语言）
+		Volumn		float				音频默认声音大小
+		
+	int			整型，只能填整数
+    string		字符串类型，字母或者文字
+	float		浮点数类型，小数
+	
+	
+	实例：
+	参考下方
+	
+ -->
+
+
+
+
+ <!--//ui 界面-->
+  <MenuWindowList>
+    <SoundRes>
+      <Path>Sound/BGM/FreeBgm6</Path>
+      <Volumn>1</Volumn>
+    </SoundRes>
+	<SoundRes>
+      <Path>Sound/BGM/FreeBgm5</Path>
+      <Volumn>1</Volumn>
+    </SoundRes>
+  </MenuWindowList>
+  <OpenWindow>
+    <Path>Sound/UI/Button_Open</Path>
+    <Volumn>0.8</Volumn>
+  </OpenWindow>
+  <ButtonClick>
+    <Path>Sound/UI/Ui_Click_01</Path>
+    <Volumn>0.8</Volumn>
+  </ButtonClick>
+  <ButtonClickClose>
+    <Path>Sound/UI/Button_Close</Path>
+    <Volumn>1</Volumn>
+  </ButtonClickClose>
+  <Scoll>
+    <Path>Sound/UI/Button_Scoll</Path>
+    <Volumn>1</Volumn>
+  </Scoll>
+  <ScienceUnlock>
+    <Path>Sound/UI/Science_Unlock</Path>
+    <Volumn>1</Volumn>
+  </ScienceUnlock>
+
+  <!--//自由场景背景音乐-->
+   <!--淡入淡出时间-->
+  <FreeBGIn>3</FreeBGIn>
+  <FreeBGOut>3</FreeBGOut>
+   <!--间隔时间-->
+  <FreeBGInterval>5</FreeBGInterval>
+  <FreeBGList>
+    <SoundRes>
+      <Path>Sound/BGM/FreeBgm1</Path>
+      <Volumn>1</Volumn>
+    </SoundRes>
+	<SoundRes>
+      <Path>Sound/BGM/FreeBgm2</Path>
+      <Volumn>1</Volumn>
+    </SoundRes>
+	<SoundRes>
+      <Path>Sound/BGM/FreeBgm3</Path>
+      <Volumn>1</Volumn>
+    </SoundRes>
+	<SoundRes>
+      <Path>Sound/BGM/FreeBgm4</Path>
+      <Volumn>1</Volumn>
+    </SoundRes>
+	<SoundRes>
+      <Path>Sound/BGM/FreeBgm5</Path>
+      <Volumn>1</Volumn>
+    </SoundRes>
+	 <SoundRes>
+      <Path>Sound/BGM/FreeBgm6</Path>
+      <Volumn>1</Volumn>
+    </SoundRes>
+  </FreeBGList>
+
+  <!--//剧本背景-->
+  <StoryBGList>
+    <SoundRes>
+      <Path>Sound/BGM/FreeBgm5</Path>
+      <Volumn>1</Volumn>
+    </SoundRes>
+  </StoryBGList>
+  
+    <!--月份区间
+ <HolidayMounth>
+	<Config2Int>
+      <Int1>11</Int1>
+      <Int2>12</Int2>
+	</Config2Int> 
+  </HolidayMounth>-->
+      <!--节日音效-->
+  <HolidayBGList>
+    <SoundRes>
+      <Path>Sound/BGM/Spring</Path>
+      <Volumn>0.4</Volumn>
+    </SoundRes>
+  </HolidayBGList>
+  
+  
+  
+
+  <!--//天气  配置注意都是3d 短促音乐循环  不是长音乐-->
+  <Rain>
+    <Path>Sound/Weather/Weather_Rain</Path>
+    <Volumn>1</Volumn>
+  </Rain>
+  <Snow>
+    <Path>Sound/Weather/Weather_Snow</Path>
+    <Volumn>0.5</Volumn>
+  </Snow>
+  <!--洪涝-->
+   <WaterFlood>
+    <Path>Sound/Disasiter/flood</Path>
+    <Volumn>1</Volumn>
+  </WaterFlood>
+  <!--地震-->
+   <EarthQuake>
+    <Path>Sound/Disasiter/earthquake</Path>
+    <Volumn>1</Volumn>
+  </EarthQuake>
+
+  <!--//河流  3d循环播放     短促音乐循环  不是长音乐-->
+  <RiverSmall>
+    <Path>Sound/Weather/River_Small</Path>
+    <Volumn>2</Volumn>
+  </RiverSmall>
+  <RiverBig>
+    <Path>Sound/Weather/River_Big</Path>
+    <Volumn>2</Volumn>
+  </RiverBig>
+  <RiverMaxCellDistance>75</RiverMaxCellDistance>
+  <TreeDead>
+    <Path>Sound/Weather/Tree_Fall</Path>
+    <Volumn>1</Volumn>
+  </TreeDead>
+  <TreeMaxCellDistance>30</TreeMaxCellDistance>
+
+
+  <Tornado>
+    <Path>Sound/Disasiter/Tornado</Path>
+    <Volumn>1</Volumn>
+  </Tornado>
+
+  <SnowStorm>
+    <Path>Sound/Disasiter/SnowStorm</Path>
+    <Volumn>1</Volumn>
+  </SnowStorm>
+
+  <FishJump>
+    <Path>Sound/Animal/Fish_Water</Path>
+    <Volumn>0.25</Volumn>
+  </FishJump>
+
+  <!--//火灾3d   //在着火建筑中心-->
+  <FireDisaster>
+    <Path>Sound/Disasiter/Fire</Path>
+    <Volumn>1</Volumn>
+  </FireDisaster>
+  
+  <!--警告的音效-->
+  <WarningEvent>
+    <Path>Sound/Disasiter/Warning</Path>
+    <Volumn>1</Volumn>
+  </WarningEvent>
+  
+    <!--建筑放下-->
+  <PutDown>
+    <Path>Sound/UI/PlacedBuild</Path>
+    <Volumn>1</Volumn>
+  </PutDown>
+  
+  <!--建造中-->
+  <Building>
+    <Path>Sound/UI/building</Path>
+    <Volumn>1</Volumn>
+  </Building>
+  
+    <!--建造完成-->
+  <BuildComplete>
+    <Path>Sound/UI/BuildFinished</Path>
+    <Volumn>1</Volumn>
+  </BuildComplete>
+  
+  <!--避难所-->
+  <RefugeUse>
+    <Path>Sound/UI/shelter</Path>
+    <Volumn>0.6</Volumn>
+  </RefugeUse>
+  
+  
+  
+</SoundConfig>

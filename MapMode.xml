@@ -1,0 +1,1101 @@
+<?xml version="1.0"?>
+<ArrayOfMapModeConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <!--   地图配置的说明  Map Configuration Description
+   字段         类型      说明     
+  ID          int          地图模式ID，唯一ID  Map Mode ID, unique ID
+  Name        string         地图模式名称代号  Name Code of Map Mode
+  ResPath       string        ""  或者 空白为随机地图  ""  or is random map
+  Splat0        string       ""  或者 空白为随机地图  ""  or is random map
+  treeGroup                树木的类型列表  List of Tree Types
+    int         int        对应ResAttribute中的树木类型ID  Corresponds to tree type ID in ResAttribute
+  CustomLandHeight  FloatRange       特别设置，在对应的坐标地图凹陷（弃用）  Special setting, dented at the corresponding coordinate map (deprecated)
+  MapBornRadius   int          出生点半径，半径内不会有植物  Radius of birthplace range, within which there won’t be plants
+  CitizenBornOffset            市民相对于出生点的偏移位置  The citizens’ deviation from the birth point
+    x         int          偏移的x轴  Offset x-axis
+    z         int          偏移的z轴  Offset z-axis
+    Radius        int          偏移位置的半径   Radius of Offset Position 
+  AnimalBornOffset             动物相对于出生点的偏移位置  The animals’ deviation from the birth point
+    x         int          偏移的x轴  Offset x-axis
+    z         int          偏移的z轴  Offset z-axis
+    Radius        int          偏移位置的半径  Radius of Offset Position
+  FlightList                 航线ID列表  Route ID List
+    FlightID      int          航线ID（目前只有123）   Route ID (currently only 123) 
+  resSetList                 资源信息列表  List of Resource Information
+       目前每个ID对应资源的稠密不同  Currently, the density of resources corresponding to each ID is different
+    MapResParam                资源信息（各种设定，随机地图会在资源信息的所有ID中随机一个）  Resource information (For various settings. The random map will randomly select one from all the IDs in the resource information)
+      ID        int            ID不重复即可   No Duplicates for IDs
+      ResParam                   资源生成各项数据  Resources generate data for each item
+        WaterSidePlantNum       int          水边植物的数量  Number of Waterside Plants
+        WaterSidePlantID        int          水边植物的ID（对应ResAttribute中的物件类型ID）  ID of the Water Edge Plant (corresponding to the object type ID in the ResAttribute)
+        WaterSideWidth          int          水边网格判定（多少格内为水边）  Determination of Waterside Grid (Number of waterside grids)
+        WaterSidePlantInitAgeRange    ConfigLowerUpper     初始植物的年龄范围（lower对应最小值 upper对应最大值）  Age Range of Initial Plants (Lower is the minimum value and upper is the maximum)
+        treeDensity           float        生成的树木比例（ >0  <1 ）  Percentage of Trees Generated (>0 <1)
+        TreeInitNum           int          初始树木数量  Number of Initial Trees
+        TreeInitAgeRange        ConfigLowerUpper     初始树木的年龄范围（lower对应最小值 upper对应最大值）  Age Range of Initial Trees (Lower is the minimum value and upper is the maximum)
+        StoneDensity          float        生成的石头比例（ >0  <1 ）  Generated Stone Ratio (>0 <1)
+        StoneInitNum          int            初始石头数量  Number of Initial Stones
+        StoneGroupNumRange        ConfigLowerUpper     每个石头堆数量范围（lower对应最小值 upper对应最大值）  The Quantity Range of Each Stone Stack (Lower is the minimum value and upper is the maximum)
+        OreDensity            float        生成的铁矿比例（ >0  <1 ）  Ratio of Ore Generated (>0 <1)
+        OreInitNum            int          初始的铁矿数量  Initial Ore Quantity
+        OreGroupNumRange           ConfigLowerUpper  每个铁矿堆数量范围（lower对应最小值 upper对应最大值）  ConfigLowerUpper Quantity range of each iron ore stack (Lower is the minimum value and upper is the maximum)
+        PlantDensity          float        植物密度 树的这个比例有植物（ >0  <1 ）  Plant Density There are plants under the tree at this ratio (>0 <1)
+        PlantNum            ConfigLowerUpper     每棵树下有植物的密度范围（lower对应最小值 upper对应最大值）  Plant density at which there are plants under every tree (Lower is the minimum value and upper is the maximum)
+        WildPlant           int            初始树木数量  Number of Initial Trees
+        WildPlantInitAgeRange     ConfigLowerUpper     初始植物的年龄范围（lower对应最小值 upper对应最大值）  Age Range of Initial Plants (Lower is the minimum value and upper is the maximum)
+        WileHerb            int          草药的数量（弃用合并到植物中）  Number of Herbal Medicines (deprecated and merged into plants)
+        WileHerbInitAgeRange      ConfigLowerUpper     初始草药的年龄范围（弃用合并到植物中）  Age Range of Initial Herbal Medicines (deprecation and merged into plants)
+        AnimalData                         野生动物数据  Wildlife Data
+          AnimalIdList                       野生动物ID列表  Wildlife ID List
+            AnimalId          Param2Int          动物ID（Int1动物ID,Int2出现的概率/万分比，所有动物加起来的概率需要为10000）  Animal ID (Int1 animal ID, probability of Int2 occurrence/Ten Thousand Points, probability of all animals should be 10,000)
+          Coorder           s_Coorder2           野生动物群体区域大小长与宽（x和z两个属性）  Length and Width of Wild Animal Colony Area (x and z)
+          AnimalGroupNum        int              地图中需要有多少个群体  The Number of Groups Required in the Map
+          GroupActiveNum        int              群体活动区域的个数  Number of Group Activity Areas
+          GroupNum          int              区域内的群体个数  Number of Groups in the Region
+     以下字段随机地图不使用  Random maps for the following fields are not used
+  MapGridSize     int          地图的总网格数量  Total Number of Grids in Map
+  EdgeGridSize    int          地图的边界网格数量             Number of Boundary Grids of the Map           
+  WaterList     string         航线点最至少十二组点（逗号分隔为坐标的两个轴向，分号分隔为坐标）    There are at least twelve sets of points for the waypoints (the two axes are separated by a comma and the coordinates by a semicolon)  
+     航线点分为起始点和终点，每收尾两组点组合起来为一条航线。具体查看下方实例  Route points are divided into starting point and ending point. Every two points can form a route. View the instances below
+  MapBornPoint    FloatRange       默认初始点位置（x为横轴坐标，z为纵轴坐标）    Default Initial Position of the Point (x is the abscissa and z is the ordinate)  
+
+							
+							
+  备注：  Remarks:
+  int        整型，只能填整数  Integer. Only integers can be filled in
+  string       字符串类型，字母或者文字  String type, letter or text
+  bool         布尔类型，true或者false  Boolean type, true or false
+  Param2Int    自定义双整数类型（Int1间隔天数， Int2对应每次扣减的值）  Customize the double integer type (Int1 is for interval of days and Int2 for each deduction value)
+  Config2Int     自定义双整数类型（Int1对应物品类型 Int2对应随机权重）  Custom double integer type (Int1 is for item type and Int2 is for random weight)
+  ConfigLowerUpper    自定义双整数类型（Lower对应最小值 Upper对应最大值）  Custom double integer type (Lower is the minimum value and Upper is the maximum)
+
+     实例：  Instance:
+     见下方  See below
+-->   
+  
+  
+  
+  <!--随机地图-->
+  <MapModeConfig>
+    <ID>1</ID>
+    <Name>随机地图参数</Name>
+    <ResPath></ResPath>
+    <!--出生点范围-->
+    <MapBornRadius>8</MapBornRadius>
+    <!--市民出生点的相对坐标-->
+    <CitizenBornOffset>
+      <x>0</x>
+      <z>-2</z>
+      <!--市民分布半径-->
+      <Radius>2</Radius>
+    </CitizenBornOffset>
+    <!--动物出生点的相对坐标-->
+    <AnimalBornOffset>
+      <x>5</x>
+      <z>-5</z>
+      <!--动物分布半径-->
+      <Radius>10</Radius>
+    </AnimalBornOffset>
+	<!--树木类型-->
+    <treeGroup>
+      <int>3005</int>
+    </treeGroup>
+	
+
+
+
+    <!--初始资源-->
+    <resSetList>
+      <MapResParam>
+        <ID>1</ID>
+        <ResParam>
+          <!--初始树木分布密度，12表示大约占地图的12%，但只能在这个值周围微调（注：填写13不代表13%）-->
+          <treeDensity>0.3</treeDensity>
+          <!--初始树木年龄区间（单位：天）-->
+          <TreeInitAgeRange>
+            <Lower>720</Lower>
+            <Upper>1440</Upper>
+          </TreeInitAgeRange>
+          <!--初始石头数量-->
+          <StoneDensity>0.004</StoneDensity>
+          <!--石头堆中石头数量区间-->
+          <StoneGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>20</Upper>
+          </StoneGroupNumRange>
+          <!--初始铁矿密度-->
+          <OreDensity>0.004</OreDensity>
+          <!--铁矿堆铁矿数量区间-->
+          <OreGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>20</Upper>
+          </OreGroupNumRange>
+          <!--初始野生植物分布概率（与树木总量的比值，百分比）-->
+          <PlantDensity>0.25</PlantDensity>
+          <!--树下植物数量-->
+          <PlantNum>
+            <Lower>1</Lower>
+            <Upper>3</Upper>
+          </PlantNum>
+          <!--野生植物年龄区间-->
+          <WildPlantInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WildPlantInitAgeRange>
+          <!--初始草药密度（与树木总量的比值）-->
+          <HerbDensity>0.1</HerbDensity>
+          <!--树下草药数量-->
+          <HerbNum>
+            <Lower>0</Lower>
+            <Upper>1</Upper>
+          </HerbNum>
+          <!--药草年龄区间-->
+          <WileHerbInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WileHerbInitAgeRange>
+          <!--初始水边植物数量-->
+          <WaterSidePlantNum>500</WaterSidePlantNum>
+          <!--刷新植物ID-->
+          <WaterSidePlantID>3015</WaterSidePlantID>
+          <!--距离水边的范围-->
+          <WaterSideWidth>5</WaterSideWidth>
+          <!--植物的年龄-->
+          <WildPlantInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>10</Upper>
+          </WildPlantInitAgeRange>
+          <!--地图刷新参数在hardmode表配置-->
+
+          <!--初始野外动物数据-->
+          <AnimalData>
+            <!--动物Id-->
+            <AnimalIdList>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1004</Int1>
+                <Int2>1980</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1005</Int1>
+                <Int2>3960</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1006</Int1>
+                <Int2>6940</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1007</Int1>
+                <Int2>8920</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1008</Int1>
+                <Int2>9950</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1009</Int1>
+                <Int2>10000</Int2>
+              </AnimalId>
+            </AnimalIdList>
+            <!--野生动物群体区域大小长与宽-->
+            <Coorder>
+              <x>25</x>
+              <z>25</z>
+            </Coorder>
+            <!--野生动物群体区域的个数-->
+            <AnimalGroupNum>30</AnimalGroupNum>
+            <!--野生动物群体活动区域个数-->
+            <GroupActiveNum>20</GroupActiveNum>
+            <!--野生动物群体区域内野生群体个数-->
+            <GroupNum>1</GroupNum>
+          </AnimalData>
+        </ResParam>
+      </MapResParam>
+
+      <MapResParam>
+        <ID>2</ID>
+        <ResParam>
+          <!--初始树木分布占空地的密度-->
+          <treeDensity>0.4</treeDensity>
+          <!--初始树木年龄区间（单位：天）-->
+          <TreeInitAgeRange>
+            <Lower>720</Lower>
+            <Upper>1440</Upper>
+          </TreeInitAgeRange>
+          <!--初始石头数量-->
+          <StoneDensity>0.012</StoneDensity>
+          <!--石头堆中石头数量区间-->
+          <StoneGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>20</Upper>
+          </StoneGroupNumRange>
+          <!--初始铁矿密度-->
+          <OreDensity>0.012</OreDensity>
+          <!--铁矿堆铁矿数量区间-->
+          <OreGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>20</Upper>
+          </OreGroupNumRange>
+          <!--初始野生植物分布概率（与树木总量的比值，百分比）-->
+          <PlantDensity>0.25</PlantDensity>
+          <!--树下植物数量-->
+          <PlantNum>
+            <Lower>1</Lower>
+            <Upper>3</Upper>
+          </PlantNum>
+          <!--野生植物年龄区间-->
+          <WildPlantInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WildPlantInitAgeRange>
+          <!--初始草药密度（与树木总量的比值）-->
+          <HerbDensity>0.1</HerbDensity>
+          <!--树下草药数量-->
+          <HerbNum>
+            <Lower>0</Lower>
+            <Upper>1</Upper>
+          </HerbNum>
+          <!--药草年龄区间-->
+          <WileHerbInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WileHerbInitAgeRange>
+          <!--初始水边植物数量-->
+          <WaterSidePlantNum>500</WaterSidePlantNum>
+          <!--刷新植物ID-->
+          <WaterSidePlantID>3015</WaterSidePlantID>
+          <!--距离水边的范围-->
+          <WaterSideWidth>5</WaterSideWidth>
+          <!--植物的年龄-->
+          <WildPlantInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>10</Upper>
+          </WildPlantInitAgeRange>
+          <!--地图刷新参数-->
+
+
+          <!--初始野外动物数据-->
+          <AnimalData>
+            <!--动物Id-->
+            <AnimalIdList>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1004</Int1>
+                <Int2>1980</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1005</Int1>
+                <Int2>3960</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1006</Int1>
+                <Int2>6940</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1007</Int1>
+                <Int2>8920</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1008</Int1>
+                <Int2>9950</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1009</Int1>
+                <Int2>10000</Int2>
+              </AnimalId>
+            </AnimalIdList>
+            <!--野生动物群体区域大小长与宽-->
+            <Coorder>
+              <x>30</x>
+              <z>30</z>
+            </Coorder>
+            <!--野生动物群体区域的个数-->
+            <AnimalGroupNum>24</AnimalGroupNum>
+            <!--野生动物群体活动区域个数-->
+            <GroupActiveNum>16</GroupActiveNum>
+            <!--野生动物群体区域内野生群体个数-->
+            <GroupNum>1</GroupNum>
+          </AnimalData>
+        </ResParam>
+      </MapResParam>
+
+      <MapResParam>
+        <ID>3</ID>
+        <ResParam>
+          <!--初始树木分布密度，12表示大约占地图的12%，但只能在这个值周围微调（注：填写13不代表13%）-->
+          <treeDensity>0.6</treeDensity>
+          <!--初始树木年龄区间（单位：天）-->
+          <TreeInitAgeRange>
+            <Lower>720</Lower>
+            <Upper>1440</Upper>
+          </TreeInitAgeRange>
+          <!--初始石头数量-->
+          <StoneDensity>0.025</StoneDensity>
+          <!--石头堆中石头数量区间-->
+          <StoneGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>20</Upper>
+          </StoneGroupNumRange>
+          <!--初始铁矿密度-->
+          <OreDensity>0.025</OreDensity>
+          <!--铁矿堆铁矿数量区间-->
+          <OreGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>20</Upper>
+          </OreGroupNumRange>
+          <!--初始野生植物分布概率（与树木总量的比值，百分比）-->
+          <PlantDensity>0.25</PlantDensity>
+          <!--树下植物数量-->
+          <PlantNum>
+            <Lower>1</Lower>
+            <Upper>3</Upper>
+          </PlantNum>
+          <!--野生植物年龄区间-->
+          <WildPlantInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WildPlantInitAgeRange>
+          <!--初始草药密度（与树木总量的比值）-->
+          <HerbDensity>0.1</HerbDensity>
+          <!--树下草药数量-->
+          <HerbNum>
+            <Lower>0</Lower>
+            <Upper>1</Upper>
+          </HerbNum>
+          <!--药草年龄区间-->
+          <WileHerbInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WileHerbInitAgeRange>
+          <!--初始水边植物数量-->
+          <WaterSidePlantNum>500</WaterSidePlantNum>
+          <!--刷新植物ID-->
+          <WaterSidePlantID>3015</WaterSidePlantID>
+          <!--距离水边的范围-->
+          <WaterSideWidth>5</WaterSideWidth>
+          <!--植物的年龄-->
+          <WildPlantInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>10</Upper>
+          </WildPlantInitAgeRange>
+          <!--地图刷新参数-->
+
+          <!--初始野外动物数据-->
+          <AnimalData>
+            <!--动物Id-->
+            <AnimalIdList>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1004</Int1>
+                <Int2>1980</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1005</Int1>
+                <Int2>3960</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1006</Int1>
+                <Int2>6940</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1007</Int1>
+                <Int2>8920</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1008</Int1>
+                <Int2>9950</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1009</Int1>
+                <Int2>10000</Int2>
+              </AnimalId>
+            </AnimalIdList>
+            <!--野生动物群体区域大小长与宽-->
+            <Coorder>
+              <x>40</x>
+              <z>40</z>
+            </Coorder>
+            <!--野生动物群体区域的个数-->
+            <AnimalGroupNum>36</AnimalGroupNum>
+            <!--野生动物群体活动区域个数-->
+            <GroupActiveNum>16</GroupActiveNum>
+            <!--野生动物群体区域内野生群体个数-->
+            <GroupNum>1</GroupNum>
+          </AnimalData>
+        </ResParam>
+      </MapResParam>
+    </resSetList>
+
+    <!--随机地图废弃字段-->
+    <MapGridSize>400</MapGridSize>
+    <EdgeGridSize>74</EdgeGridSize>
+    <WaterList></WaterList>
+    <!--出生点-->
+    <MapBornPoint>
+      <x>100</x>
+      <z>114</z>
+    </MapBornPoint>
+    <!--航线-->
+    <FlightList>
+      <FlightID>1</FlightID>
+    </FlightList>
+    <!--随机地图废弃字段-->
+  </MapModeConfig>
+
+  <MapModeConfig>
+    <ID>2</ID>
+    <Name>map_002</Name>
+    <ResPath>Terrain3</ResPath>
+    <MapGridSize>200</MapGridSize>
+    <EdgeGridSize>9</EdgeGridSize>
+    <WaterList>
+      <string>0,109.04;142.7,190;207.4,179.9;280.9,236.3;298.5,300.4;282.5,376.6;350.3,405.5;426,401.6;426,501.8;504.8,499.1;504.8,-6;-4.5,-6;-4.5,103.8</string>
+      <string>0,109.04;138.3,152.2;218.7,152.2;283,189;330.2,278.4;311.8,353.8;426,382.5;426,501.8;-7.5,500.2;-3.88,117.9</string>
+    </WaterList>
+    <!--出生点-->
+    <MapBornPoint>
+      <x>100</x>
+      <z>114</z>
+    </MapBornPoint>
+    <MapBornRadius>42</MapBornRadius>
+    <!--市民出生点的相对坐标-->
+    <CitizenBornOffset>
+      <x>0</x>
+      <z>-5</z>
+      <!--市民分布半径-->
+      <Radius>5</Radius>
+    </CitizenBornOffset>
+	<!--树木类型-->
+    <treeGroup>
+      <int>3005</int>
+    </treeGroup>
+    <!--动物出生点的相对坐标-->
+    <AnimalBornOffset>
+      <x>5</x>
+      <z>-5</z>
+      <!--动物分布半径-->
+      <Radius>10</Radius>
+    </AnimalBornOffset>
+    <!--初始野外动物数据-->
+    <AnimalData>
+      <!--动物Id-->
+      <AnimalIdList>
+        <AnimalId>
+          <!--Int1动物ID  Int2几率-->
+          <Int1>4</Int1>
+          <Int2>10000</Int2>
+        </AnimalId>
+      </AnimalIdList>
+      <!--野生动物群体区域大小长与宽-->
+      <Coorder>
+        <x>30</x>
+        <z>30</z>
+      </Coorder>
+      <!--野生动物群体区域的个数-->
+      <AnimalGroupNum>150</AnimalGroupNum>
+      <!--野生动物群体活动区域个数-->
+      <GroupActiveNum>16</GroupActiveNum>
+      <!--野生动物群体区域内野生群体个数-->
+      <GroupNum>1</GroupNum>
+    </AnimalData>
+    <!--初始资源-->
+    <resSetList>
+      <MapResParam>
+        <ID>1</ID>
+        <ResParam>
+          <!--初始树木数量-->
+          <TreeInitNum>1200</TreeInitNum>
+          <!--初始树木年龄区间（单位：天）-->
+          <TreeInitAgeRange>
+            <Lower>150</Lower>
+            <Upper>400</Upper>
+          </TreeInitAgeRange>
+          <!--初始石头数量-->
+          <StoneInitNum>300</StoneInitNum>
+          <!--石头堆中石头数量区间-->
+          <StoneGroupNumRange>
+            <Lower>10</Lower>
+            <Upper>35</Upper>
+          </StoneGroupNumRange>
+          <!--初始铁矿数量-->
+          <OreInitNum>300</OreInitNum>
+          <!--铁矿堆铁矿数量区间-->
+          <OreGroupNumRange>
+            <Lower>12</Lower>
+            <Upper>35</Upper>
+          </OreGroupNumRange>
+          <!--初始野生植物数量-->
+          <WildPlant>200</WildPlant>
+          <WildPlantInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>10</Upper>
+          </WildPlantInitAgeRange>
+          <!--初始草药数量-->
+          <WileHerb>300</WileHerb>
+          <WileHerbInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>10</Upper>
+          </WileHerbInitAgeRange>
+          <!--地图刷新参数-->
+        </ResParam>
+      </MapResParam>
+    </resSetList>
+
+    <!--航线-->
+    <FlightList>
+      <FlightID>1</FlightID>
+    </FlightList>
+  </MapModeConfig>
+
+  <MapModeConfig>
+    <ID>3</ID>
+    <Name>map_001</Name>
+    <ResPath>t4</ResPath>
+
+    <MapGridSize>800</MapGridSize>
+    <EdgeGridSize>200</EdgeGridSize>
+    <WaterList>
+      <string>-2.8,1210.22;59.4,1258.4;116.6,1344.9;209.9,1284.6;267.7,1300.2;362.1,1197.4;418.2,1103.2;403.3,945.2;508.7,950.4;646.6,1033.3;772.7,1133.4;989.2,1174.8;1035.9,1065.2;1009.1,782.1;1036,647.2;1193.2,469.1;921.2,292.7;752,273.8;739.6,170.3;818.9,131.5;690.6,-2.5;-2.7,-2.5;-2.7,1207.3</string>
+      <string>-2.8,1210.22;59.4,1258.4;116.6,1344.9;209.9,1284.6;267.7,1300.2;362.1,1197.4;418.2,1103.2;403.3,945.2;508.7,950.4;646.6,1033.3;772.7,1133.4;989.2,1174.8;1120.7,1224.4;1246,1213;1455.6,1063.6;1534.6,1059.7;1544.7,1120.4;1625.2,1154.6;1716.8,1344;1809.8,1225;1922.6,1341.3;2000.93,1236.1;2000.93,2001.5;-1.69,2001.5;-1.69,1212.43</string>
+      <string>690.6,-2.5;818.9,131.5;739.6,170.3;752,273.8;921.2,292.7;1193.2,469.1;1036,647.2;1009.1,782.1;1035.9,1065.2;985.6,1172;1120.7,1224.4;1246,1213;1455.6,1063.6;1534.6,1059.7;1544.7,1120.4;1625.2,1154.6;1716.8,1344;1809.8,1225;1922.6,1341.3;2000.93,1236.1;2000.93,-0.86;694.8,-0.86</string>
+    </WaterList>
+    <!--出生点-->
+    <MapBornPoint>
+      <x>376</x>
+      <z>314</z>
+    </MapBornPoint>
+    <MapBornRadius>45</MapBornRadius>
+    <!--市民出生点的相对坐标-->
+    <CitizenBornOffset>
+      <x>0</x>
+      <z>-5</z>
+      <!--市民分布半径-->
+      <Radius>5</Radius>
+    </CitizenBornOffset>
+	<!--树木类型-->
+    <treeGroup>
+      <int>3005</int>
+    </treeGroup>
+    <!--动物出生点的相对坐标-->
+    <AnimalBornOffset>
+      <x>5</x>
+      <z>-5</z>
+      <!--动物分布半径-->
+      <Radius>10</Radius>
+    </AnimalBornOffset>
+    <!--初始野外动物数据-->
+    <AnimalData>
+      <!--动物Id-->
+      <AnimalIdList>
+        <AnimalId>
+          <!--Int1动物ID  Int2几率-->
+          <Int1>1004</Int1>
+          <Int2>2500</Int2>
+        </AnimalId>
+        <AnimalId>
+          <!--Int1动物ID  Int2几率-->
+          <Int1>1005</Int1>
+          <Int2>5000</Int2>
+        </AnimalId>
+        <AnimalId>
+          <!--Int1动物ID  Int2几率-->
+          <Int1>1007</Int1>
+          <Int2>7500</Int2>
+        </AnimalId>
+        <AnimalId>
+          <!--Int1动物ID  Int2几率-->
+          <Int1>1008</Int1>
+          <Int2>9950</Int2>
+        </AnimalId>
+        <AnimalId>
+          <!--Int1动物ID  Int2几率-->
+          <Int1>1009</Int1>
+          <Int2>10000</Int2>
+        </AnimalId>
+      </AnimalIdList>
+      <!--野生动物群体区域大小长与宽-->
+      <Coorder>
+        <x>60</x>
+        <z>60</z>
+      </Coorder>
+      <!--野生动物群体区域的个数-->
+      <AnimalGroupNum>32</AnimalGroupNum>
+      <!--野生动物群体活动区域个数-->
+      <GroupActiveNum>16</GroupActiveNum>
+      <!--野生动物群体区域内野生群体个数-->
+      <GroupNum>2</GroupNum>
+    </AnimalData>
+
+    <!--初始资源-->
+    <resSetList>
+      <MapResParam>
+        <ID>1</ID>
+        <ResParam>
+          <!--初始树木数量-->
+          <TreeInitNum>1200</TreeInitNum>
+          <!--初始树木年龄区间（单位：天）-->
+          <TreeInitAgeRange>
+            <Lower>150</Lower>
+            <Upper>400</Upper>
+          </TreeInitAgeRange>
+          <!--初始石头数量-->
+          <StoneInitNum>300</StoneInitNum>
+          <!--石头堆中石头数量区间-->
+          <StoneGroupNumRange>
+            <Lower>10</Lower>
+            <Upper>35</Upper>
+          </StoneGroupNumRange>
+          <!--初始铁矿数量-->
+          <OreInitNum>300</OreInitNum>
+          <!--铁矿堆铁矿数量区间-->
+          <OreGroupNumRange>
+            <Lower>12</Lower>
+            <Upper>35</Upper>
+          </OreGroupNumRange>
+          <!--初始野生植物数量-->
+          <WildPlant>200</WildPlant>
+          <WildPlantInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>10</Upper>
+          </WildPlantInitAgeRange>
+          <!--初始草药数量-->
+          <WileHerb>300</WileHerb>
+          <WileHerbInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>10</Upper>
+          </WileHerbInitAgeRange>
+          <!--地图刷新参数-->
+          <!--树木刷新速率-->
+          <TreeRefreshRate>
+            <Int1>10</Int1>
+            <Int2>8</Int2>
+          </TreeRefreshRate>
+          <!--野生植物刷新速率-->
+          <PlantRefreshRate>
+            <Int1>1</Int1>
+            <Int2>5</Int2>
+          </PlantRefreshRate>
+          <!--药草刷新速率-->
+          <HerbsRefreshRate>
+            <Int1>1</Int1>
+            <Int2>5</Int2>
+          </HerbsRefreshRate>
+        </ResParam>
+      </MapResParam>
+    </resSetList>
+
+    <!--航线-->
+    <FlightList>
+      <FlightID>2</FlightID>
+      <FlightID>3</FlightID>
+    </FlightList>
+  </MapModeConfig>
+
+  <!--剧本模式地图固定大小-->
+  <MapModeConfig>
+    <ID>4</ID>
+    <Name>map_004</Name>
+    <ResPath>s1</ResPath>
+	  <Splat0>Terrain_tudi_M</Splat0>
+    <!--地图尺寸-->
+    <MapGridSize>600</MapGridSize>
+    <!--边缘尺寸-->
+    <EdgeGridSize>100</EdgeGridSize>
+	<!--树木类型-->
+    <treeGroup>
+      <int>3020</int>
+    </treeGroup>
+    <!--水面导航网格-->
+    <WaterList>
+      <string>1000,0;999,0;998,0;997,0;996,0;995,0;0,1000;0,999;0,998;0,997;0,996;0,995</string>
+    </WaterList>
+	 <!--特别设置-->
+    <CustomLandHeight>
+      <min>23.9</min>
+      <max>24.1</max>
+    </CustomLandHeight>
+    <!--出生点-->
+    <MapBornPoint>
+      <x>238</x>
+      <z>352</z>
+    </MapBornPoint>
+    <!--出生范围-->
+    <MapBornRadius>10</MapBornRadius>
+    <!--市民出生点的相对坐标-->
+    <CitizenBornOffset>
+      <x>0</x>
+      <z>-5</z>
+      <!--市民分布半径-->
+      <Radius>5</Radius>
+    </CitizenBornOffset>
+    <!--动物出生点的相对坐标-->
+    <AnimalBornOffset>
+      <x>5</x>
+      <z>-5</z>
+      <!--动物分布半径-->
+      <Radius>10</Radius>
+    </AnimalBornOffset>
+
+
+    <!--剧本模式困难初始资源-->
+    <resSetList>
+      <MapResParam>
+        <ID>1</ID>
+        <ResParam>
+
+          <!--初始树木分布密度，12表示大约占地图的12%，但只能在这个值周围微调（注：填写13不代表13%）-->
+          <treeDensity>0.15</treeDensity>
+          <!--初始树木年龄区间（单位：天）-->
+          <TreeInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>1440</Upper>
+          </TreeInitAgeRange>
+          <!--初始石头数量-->
+          <StoneDensity>0.001</StoneDensity>
+          <!--石头堆中石头数量区间-->
+          <StoneGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>35</Upper>
+          </StoneGroupNumRange>
+          <!--初始铁矿密度-->
+          <OreDensity>0.001</OreDensity>
+          <!--铁矿堆铁矿数量区间-->
+          <OreGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>35</Upper>
+          </OreGroupNumRange>
+          <!--初始野生植物数量（与树木总量的比值）-->
+          <PlantDensity>0.4</PlantDensity>
+          <!--野生植物年龄区间-->
+          <WildPlantInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WildPlantInitAgeRange>
+          <!--初始草药密度（与树木总量的比值）-->
+          <HerbDensity>0.4</HerbDensity>
+          <!--药草年龄区间-->
+          <WileHerbInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WileHerbInitAgeRange>
+          <!--初始水边植物数量-->
+          <WaterSidePlantNum>300</WaterSidePlantNum>
+          <!--刷新植物ID-->
+          <WaterSidePlantID>3015</WaterSidePlantID>
+          <!--距离水边的范围-->
+          <WaterSideWidth>5</WaterSideWidth>
+          <!--植物的年龄-->
+          <WildPlantInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>10</Upper>
+          </WildPlantInitAgeRange>
+          <!--地图刷新参数-->
+          <!--树木刷新速率-->
+          <TreeRefreshRate>
+            <Int1>10</Int1>
+            <Int2>120</Int2>
+          </TreeRefreshRate>
+          <!--野生植物刷新速率-->
+          <PlantRefreshRate>
+            <Int1>10</Int1>
+            <Int2>80</Int2>
+          </PlantRefreshRate>
+          <!--药草刷新速率-->
+          <HerbsRefreshRate>
+            <Int1>10</Int1>
+            <Int2>60</Int2>
+          </HerbsRefreshRate>
+          <!--初始野外动物数据-->
+          <AnimalData>
+            <!--动物Id-->
+            <AnimalIdList>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1004</Int1>
+                <Int2>1980</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1005</Int1>
+                <Int2>3960</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1006</Int1>
+                <Int2>6940</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1007</Int1>
+                <Int2>8920</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1008</Int1>
+                <Int2>9950</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1009</Int1>
+                <Int2>10000</Int2>
+              </AnimalId>
+            </AnimalIdList>
+            <!--野生动物群体区域大小长与宽-->
+            <Coorder>
+              <x>25</x>
+              <z>25</z>
+            </Coorder>
+            <!--野生动物群体区域的个数-->
+            <AnimalGroupNum>15</AnimalGroupNum>
+            <!--野生动物群体活动区域个数-->
+            <GroupActiveNum>15</GroupActiveNum>
+            <!--野生动物群体区域内野生群体个数-->
+            <GroupNum>1</GroupNum>
+          </AnimalData>
+        </ResParam>
+      </MapResParam>
+
+      <!--剧本模式普通初始资源-->
+      <MapResParam>
+        <ID>2</ID>
+        <ResParam>
+          <!--初始树木分布密度，12表示大约占地图的12%，但只能在这个值周围微调（注：填写13不代表13%）-->
+          <treeDensity>0.4</treeDensity>
+          <!--初始树木年龄区间（单位：天）-->
+          <TreeInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>1440</Upper>
+          </TreeInitAgeRange>
+          <!--初始石头数量-->
+          <StoneDensity>0.001</StoneDensity>
+          <!--石头堆中石头数量区间-->
+          <StoneGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>35</Upper>
+          </StoneGroupNumRange>
+          <!--初始铁矿密度-->
+          <OreDensity>0.001</OreDensity>
+          <!--铁矿堆铁矿数量区间-->
+          <OreGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>35</Upper>
+          </OreGroupNumRange>
+          <!--初始野生植物数量（与树木总量的比值）-->
+          <PlantDensity>0.5</PlantDensity>
+          <!--野生植物年龄区间-->
+          <WildPlantInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WildPlantInitAgeRange>
+          <!--初始草药密度（与树木总量的比值）-->
+          <HerbDensity>0.5</HerbDensity>
+          <!--药草年龄区间-->
+          <WileHerbInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WileHerbInitAgeRange>
+          <!--初始水边植物数量-->
+          <WaterSidePlantNum>400</WaterSidePlantNum>
+          <!--刷新植物ID-->
+          <WaterSidePlantID>3015</WaterSidePlantID>
+          <!--距离水边的范围-->
+          <WaterSideWidth>5</WaterSideWidth>
+          <!--植物的年龄-->
+          <WildPlantInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>10</Upper>
+          </WildPlantInitAgeRange>
+          <!--地图刷新参数-->
+          <!--树木刷新速率-->
+          <TreeRefreshRate>
+            <Int1>10</Int1>
+            <Int2>120</Int2>
+          </TreeRefreshRate>
+          <!--野生植物刷新速率-->
+          <PlantRefreshRate>
+            <Int1>10</Int1>
+            <Int2>80</Int2>
+          </PlantRefreshRate>
+          <!--药草刷新速率-->
+          <HerbsRefreshRate>
+            <Int1>10</Int1>
+            <Int2>60</Int2>
+          </HerbsRefreshRate>
+          <!--初始野外动物数据-->
+          <AnimalData>
+            <!--动物Id-->
+            <AnimalIdList>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1004</Int1>
+                <Int2>2500</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1005</Int1>
+                <Int2>5000</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1007</Int1>
+                <Int2>7500</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1008</Int1>
+                <Int2>9950</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1009</Int1>
+                <Int2>10000</Int2>
+              </AnimalId>
+            </AnimalIdList>
+            <!--野生动物群体区域大小长与宽-->
+            <Coorder>
+              <x>20</x>
+              <z>20</z>
+            </Coorder>
+            <!--野生动物群体区域的个数-->
+            <AnimalGroupNum>25</AnimalGroupNum>
+            <!--野生动物群体活动区域个数-->
+            <GroupActiveNum>15</GroupActiveNum>
+            <!--野生动物群体区域内野生群体个数-->
+            <GroupNum>1</GroupNum>
+          </AnimalData>
+        </ResParam>
+      </MapResParam>
+
+      <!--剧本模式简单初始资源-->
+      <MapResParam>
+        <ID>3</ID>
+        <ResParam>
+          <!--初始树木分布密度，12表示大约占地图的12%，但只能在这个值周围微调（注：填写13不代表13%）-->
+          <treeDensity>0.3</treeDensity>
+          <!--初始树木年龄区间（单位：天）-->
+          <TreeInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>1440</Upper>
+          </TreeInitAgeRange>
+          <!--初始石头数量-->
+          <StoneDensity>0.001</StoneDensity>
+          <!--石头堆中石头数量区间-->
+          <StoneGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>35</Upper>
+          </StoneGroupNumRange>
+          <!--初始铁矿密度-->
+          <OreDensity>0.001</OreDensity>
+          <!--铁矿堆铁矿数量区间-->
+          <OreGroupNumRange>
+            <Lower>16</Lower>
+            <Upper>35</Upper>
+          </OreGroupNumRange>
+          <!--初始野生植物数量（与树木总量的比值）-->
+          <PlantDensity>0.6</PlantDensity>
+          <!--野生植物年龄区间-->
+          <WildPlantInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WildPlantInitAgeRange>
+          <!--初始草药密度（与树木总量的比值）-->
+          <HerbDensity>0.6</HerbDensity>
+          <!--药草年龄区间-->
+          <WileHerbInitAgeRange>
+            <Lower>100</Lower>
+            <Upper>200</Upper>
+          </WileHerbInitAgeRange>
+          <!--初始水边植物数量-->
+          <WaterSidePlantNum>500</WaterSidePlantNum>
+          <!--刷新植物ID-->
+          <WaterSidePlantID>3015</WaterSidePlantID>
+          <!--距离水边的范围-->
+          <WaterSideWidth>5</WaterSideWidth>
+          <!--植物的年龄-->
+          <WildPlantInitAgeRange>
+            <Lower>1</Lower>
+            <Upper>10</Upper>
+          </WildPlantInitAgeRange>
+          <!--地图刷新参数-->
+          <!--树木刷新速率-->
+          <TreeRefreshRate>
+            <Int1>10</Int1>
+            <Int2>80</Int2>
+          </TreeRefreshRate>
+          <!--野生植物刷新速率-->
+          <PlantRefreshRate>
+            <Int1>10</Int1>
+            <Int2>80</Int2>
+          </PlantRefreshRate>
+          <!--药草刷新速率-->
+          <HerbsRefreshRate>
+            <Int1>10</Int1>
+            <Int2>60</Int2>
+          </HerbsRefreshRate>
+          <!--初始野外动物数据-->
+          <AnimalData>
+            <!--动物Id-->
+            <AnimalIdList>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1004</Int1>
+                <Int2>2500</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1005</Int1>
+                <Int2>5000</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1007</Int1>
+                <Int2>7500</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1008</Int1>
+                <Int2>9950</Int2>
+              </AnimalId>
+              <AnimalId>
+                <!--Int1动物ID  Int2几率-->
+                <Int1>1009</Int1>
+                <Int2>10000</Int2>
+              </AnimalId>
+            </AnimalIdList>
+            <!--野生动物群体区域大小长与宽-->
+            <Coorder>
+              <x>20</x>
+              <z>20</z>
+            </Coorder>
+            <!--野生动物群体区域的个数-->
+            <AnimalGroupNum>30</AnimalGroupNum>
+            <!--野生动物群体活动区域个数-->
+            <GroupActiveNum>15</GroupActiveNum>
+            <!--野生动物群体区域内野生群体个数-->
+            <GroupNum>1</GroupNum>
+          </AnimalData>
+        </ResParam>
+      </MapResParam>
+    </resSetList>
+
+    <!--航线-->
+    <FlightList>
+      <FlightID>2</FlightID>
+      <FlightID>3</FlightID>
+    </FlightList>
+  </MapModeConfig>
+</ArrayOfMapModeConfig>

@@ -1,0 +1,4310 @@
+<?xml version="1.0"?>
+<ArrayOfTechnologyConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- 此文件已弃用
+This file is deprecated-->
+	
+	<!--模块1贸易-->
+<TechnologyConfig>
+    <ID>4601</ID>
+	<!--杂货店-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4601</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_219</Icon>
+    <!--科技模块-->
+    <TechModule>1</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_263</Name>
+        <Content>Technology_Content_151</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4010</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4603</ID>
+	<!--小型贸易站-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4603</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_47</Icon>
+    <!--科技模块-->
+    <TechModule>1</TechModule>
+    <!---->
+    <Position>
+      <Int1>1</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_265</Name>
+        <Content>Technology_Content_152</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4013</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4601</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+      <HintTech>2402</HintTech>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4605</ID>
+	<!--大型贸易站-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4605</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_80</Icon>
+    <!--科技模块-->
+    <TechModule>1</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_267</Name>
+        <Content>Technology_Content_153</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4603</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4016</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+      <HintTech>2402</HintTech>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4703</ID>
+	<!--海运-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4703</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_106</Icon>
+    <!--科技模块-->
+    <TechModule>1</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_275</Name>
+        <Icon>TechIcon/Icon_EffectTech_38</Icon>
+        <Content>Technology_Content_174</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_274</Name>
+        <Content>Technology_Content_157</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>1041</UnlockBuffs>
+</UnlockBuffsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4705</ID>
+	<!--码头-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4705</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_218</Icon>
+    <!--科技模块-->
+    <TechModule>1</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_276</Name>
+        <Content>Technology_Content_158</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4703</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4017</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2504</HintTech>
+      <HintTech>2503</HintTech>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4708</ID>
+	<!--商业奇才（订购减少CD）-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4708</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_115</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_278</Name>
+        <Icon>TechIcon/Icon_EffectTech_33</Icon>
+        <Content>Technology_Content_159</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_279</Name>
+        <Content>Technology_Content_160</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>1031</UnlockBuffs>
+</UnlockBuffsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4705</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2704</ID>
+	<!--陶器-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2704</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_57</Icon>
+    <!--科技模块-->
+    <TechModule>1</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_130</Name>
+        <Content>Technology_Content_73</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3041</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2703</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4608</ID>
+	<!--雕刻屋-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4608</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_1003</Icon>
+    <!--科技模块-->
+    <TechModule>1</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_272</Name>
+        <Content>Technology_Content_156</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>410000</NeedPoint>
+	    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3055</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2704</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2407</HintTech>
+      <HintTech>2402</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1607</ID>
+	<!--珠宝-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1607</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_546</Icon>
+    <!--科技模块-->
+    <TechModule>1</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_48</Name>
+        <Content>Technology_Content_27</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>275000</NeedPoint>
+	    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3053</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4608</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+	<!--模块2教育-->
+<TechnologyConfig>
+    <ID>3101</ID>
+	<!--学校扩容-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3101</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_7</Icon>
+    <!--科技模块-->
+    <TechModule>2</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_147</Name>
+        <Icon>TechIcon/Icon_EffectTech_5</Icon>
+        <Content>Technology_Content_83</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_148</Name>
+        <Content>Technology_Content_84</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>1800</NeedPoint>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>3011</UnlockBuffs>
+      <UnlockBuffs>3012</UnlockBuffs>
+</UnlockBuffsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3203</ID>
+	<!--教育效率-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3203</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_39</Icon>
+    <!--科技模块-->
+    <TechModule>2</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_155</Name>
+        <Icon>TechIcon/Icon_EffectTech_16</Icon>
+        <Content>Technology_Content_88</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_156</Name>
+        <Content>Technology_Content_89</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3101</PreTech>
+</PreTechList>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>3021</UnlockBuffs>
+</UnlockBuffsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>3303</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3205</ID>
+	<!--寄宿学校-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3205</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_610</Icon>
+    <!--科技模块-->
+    <TechModule>2</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_158</Name>
+        <Content>Technology_Content_90</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3203</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4015</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2503</HintTech>
+      <HintTech>2804</HintTech>
+      <HintTech>2404</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3207</ID>
+	<!--学院-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3207</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_615</Icon>
+    <!--科技模块-->
+    <TechModule>2</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_284</Name>
+        <Icon>TechIcon/Icon_EffectTech_34</Icon>
+        <Content>Technology_Content_164</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_160</Name>
+        <Content>Technology_Content_91</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>275000</NeedPoint>
+	    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4019</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>100001</UnlockBuffs>
+  </UnlockBuffsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3205</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+      <HintTech>2404</HintTech>
+      <HintTech>2407</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3105</ID>
+	<!--研究所-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3105</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_72</Icon>
+    <!--科技模块-->
+    <TechModule>2</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_153</Name>
+        <Content>Technology_Content_87</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3030</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3303</ID>
+	<!--纸张（研究小屋拆分出去）-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3303</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_40</Icon>
+    <!--科技模块-->
+    <TechModule>2</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_165</Name>
+        <Content>Technology_Content_94</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+ <!--前置科技-->
+    <PreTechList>
+      <PreTech>3105</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3029</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>3602</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3305</ID>
+	<!--书籍（印刷二级造纸厂和研究院）-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3305</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_74</Icon>
+    <!--科技模块-->
+    <TechModule>2</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_167</Name>
+        <Content>Technology_Content_95</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3303</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3047</UnlockBuildings>
+	  <UnlockBuildings>3052</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2504</HintTech>
+      <HintTech>2503</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>3307</ID>
+	<!--高级研究-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3307</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_112</Icon>
+    <!--科技模块-->
+    <TechModule>2</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_169</Name>
+        <Icon>TechIcon/Icon_EffectTech_18</Icon>
+        <Content>Technology_Content_96</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_171</Name>
+        <Content>Technology_Content_97</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>275000</NeedPoint>
+	    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>3022</UnlockBuffs>
+</UnlockBuffsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3305</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<!--模块3矿业-->
+<TechnologyConfig>
+    <ID>2501</ID>
+	<!--采矿-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2501</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_5</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_104</Name>
+        <Content>Technology_Content_59</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>1800</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3007</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2505</ID>
+	<!--勘探技术1-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2505</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_71</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_110</Name>
+        <Content>Technology_Content_62</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2501</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2027</UnlockBuildings>
+      <UnlockBuildings>2029</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>2041</UnlockBuffs>
+</UnlockBuffsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2503</HintTech>
+      <HintTech>2504</HintTech>
+      <HintTech>2407</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2507</ID>
+	<!--勘探技术2-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2507</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_407</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_113</Name>
+        <Content>Technology_Content_64</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>275000</NeedPoint>
+	    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2028</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2505</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+      <HintTech>2503</HintTech>
+      <HintTech>2407</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2606</ID>
+	<!--银矿-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2606</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_87</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_119</Name>
+        <Icon>TechIcon/Icon_EffectTech_29</Icon>
+        <Content>Technology_Content_67</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_120</Name>
+        <Content>Technology_Content_68</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2505</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2607</ID>
+	<!--铸币-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2607</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_540</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_122</Name>
+        <Content>Technology_Content_69</Content>
+      </TechDescribe>
+</TechDescribeList>
+	    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3051</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2606</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+      <HintTech>2402</HintTech>
+      <HintTech>2407</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2608</ID>
+	<!--淘金小屋-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2608</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_541</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_124</Name>
+        <Content>Technology_Content_70</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>410000</NeedPoint>
+	<!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3056</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2607</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2802</ID>
+	<!--采石坑-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2802</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_22</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_136</Name>
+        <Content>Technology_Content_77</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2010</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2806</ID>
+	<!--开采技术1-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2806</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_419</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>1</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_140</Name>
+        <Content>Technology_Content_79</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2802</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2031</UnlockBuildings>
+      <UnlockBuildings>2034</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>2051</UnlockBuffs>
+</UnlockBuffsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2504</HintTech>
+      <HintTech>2503</HintTech>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2807</ID>
+	<!--开采技术2-->	
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2807</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_22</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_143</Name>
+        <Content>Technology_Content_81</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>275000</NeedPoint>
+	    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2032</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2806</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+      <HintTech>2503</HintTech>
+      <HintTech>2407</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>2808</ID>
+	<!--玉石屋-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2808</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_542</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_145</Name>
+        <Content>Technology_Content_82</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>410000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3057</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2807</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2703</ID>
+	<!--采沙-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2703</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_37</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_128</Name>
+        <Content>Technology_Content_72</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2013</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2504</ID>
+	<!--烧窑-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2504</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_1008</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>1</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_314</Name>
+        <Content>Technology_Content_208</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2703</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3060</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2701</ID>
+	<!--填埋-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2701</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_96</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_ID_2701</Name>
+        <Icon>TechIcon/Icon_Tech_96</Icon>
+        <Content>Technology_Content_209</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_126</Name>
+        <Content>Technology_Content_71</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>1800</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2504</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+	<!--挖凿-->
+	<!--
+<TechnologyConfig>
+    <ID>2702</ID>
+    <Name>Technology_Name_ID_2702</Name>
+    <Icon>TechIcon/Icon_Tech_117</Icon>
+    <TechModule>3</TechModule>
+    <Position>
+      <Int1>5</Int1>
+      <Int2>3</Int2>
+</Position>
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_127</Name>
+        <Content>Technology_Content_179</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <NeedPoint>1800</NeedPoint>
+    <PreTechList>
+      <PreTech>2701</PreTech>
+</PreTechList>
+</TechnologyConfig>
+-->
+
+
+<TechnologyConfig>
+    <ID>2502</ID>
+	<!--炉料-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2502</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_20</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>4</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_106</Name>
+        <Content>Technology_Content_60</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3013</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2503</ID>
+	<!--熔炼-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2503</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_36</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>4</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_108</Name>
+        <Content>Technology_Content_61</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2502</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+	  <UnlockBuildings>3027</UnlockBuildings>
+	  <UnlockBuildings>3026</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2703</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2604</ID>
+	<!--锻造厂-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2604</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_56</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>4</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_117</Name>
+        <Content>Technology_Content_66</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2503</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3028</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2409</ID>
+	<!--齿轮-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2409</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_121</Icon>
+    <!--科技模块-->
+    <TechModule>3</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>4</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_297</Name>
+        <Icon>ItemIcon/Icon_item_51012</Icon>
+        <Content>Technology_Content_189</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_298</Name>
+        <Content>Technology_Content_190</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2604</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<!--模块4建造-->
+<TechnologyConfig>
+    <ID>2304</ID>
+	<!--材料回收-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2304</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_54</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_90</Name>
+        <Icon>TechIcon/Icon_EffectTech_20</Icon>
+        <Content>Technology_Content_50</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_92</Name>
+        <Content>Technology_Content_52</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>2033</UnlockBuffs>
+</UnlockBuffsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2306</ID>
+	<!--建造技艺-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2306</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_85</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_94</Name>
+        <Icon>TechIcon/Icon_EffectTech_28</Icon>
+        <Content>Technology_Content_53</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_95</Name>
+        <Content>Technology_Content_54</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2304</PreTech>
+</PreTechList>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>2032</UnlockBuffs>
+</UnlockBuffsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2307</ID>
+	<!--结构强化-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2307</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_111</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_289</Name>
+        <Icon>TechIcon/Icon_EffectTech_36</Icon>
+        <Content>Technology_Content_180</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_290</Name>
+        <Content>Technology_Content_181</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2306</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<!--一键重建-->
+<TechnologyConfig>
+    <ID>2308</ID>
+	<!--重建-->
+    <!--科技名字-->
+    <Name>Technology_Name_320</Name>
+    <!--图标-->
+    <Icon>AMainBtnIcon/Icon_building_912</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <Position>
+      <Int1>5</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_320</Name>
+        <Icon>AMainBtnIcon/Icon_building_912</Icon>
+        <Content>Technology_Content_216</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_320</Name>
+        <Content>Technology_Content_216</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>1800</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2307</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2402</ID>
+	<!--锯木厂-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2402</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_529</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_97</Name>
+        <Content>Technology_Content_55</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3012</UnlockBuildings>
+      <UnlockBuildings>3011</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2403</ID>
+	<!--厕所-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2403</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_123</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_291</Name>
+        <Icon>ItemIcon/Icon_item_32017</Icon>
+        <Content>Technology_Content_182</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_292</Name>
+        <Content>Technology_Content_183</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2402</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1804</ID>
+	<!--家纺厂-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1804</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_124</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <Position>
+      <Int1>3</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_293</Name>
+        <Icon>TechIcon/Icon_Tech_52</Icon>
+        <Content>Technology_Content_184</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_63</Name>
+        <Content>Technology_Content_35</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2403</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3048</UnlockBuildings>
+      <UnlockBuildings>3038</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2404</ID>
+	<!--家具-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2404</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_125</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_294</Name>
+        <Icon>TechIcon/Icon_Tech_55</Icon>
+        <Content>Technology_Content_185</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_99</Name>
+        <Content>Technology_Content_56</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1804</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3049</UnlockBuildings>
+      <UnlockBuildings>3039</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2804</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>2804</ID>
+	<!--砌石-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2804</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_58</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_138</Name>
+        <Content>Technology_Content_78</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>5008</UnlockBuildings>
+      <UnlockBuildings>3042</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4801</ID>
+	<!--造桥技术-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4801</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_28</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_281</Name>
+        <Content>Technology_Content_161</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>1800</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>5006</UnlockBuildings>
+      <UnlockBuildings>5012</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2804</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4804</ID>
+	<!--砖头路-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4804</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_64</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_285</Name>
+        <Content>Technology_Content_165</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4801</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>5007</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4805</ID>
+	<!--奢华大道-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4805</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_116</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_282</Name>
+        <Content>Technology_Content_166</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4804</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+	  <UnlockBuildings>5011</UnlockBuildings>
+      <UnlockBuildings>5009</UnlockBuildings>
+	  <UnlockBuildings>5010</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2608</HintTech>
+      <HintTech>2808</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>2407</ID>
+	<!--照明-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2407</Name>
+    <!--图标-->
+    <Icon>ItemIcon/Icon_item_32009</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_102</Name>
+        <Content>Technology_Content_186</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3040</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2408</ID>
+	<!--砖窑-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2408</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_122</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_295</Name>
+        <Icon>ItemIcon/Icon_item_32018</Icon>
+        <Content>Technology_Content_187</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_296</Name>
+        <Content>Technology_Content_188</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2407</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2410</ID>
+	<!--捕兽夹-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2410</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_120</Icon>
+    <!--科技模块-->
+    <TechModule>4</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_316</Name>
+        <Icon>ItemIcon/Icon_item_51013</Icon>
+        <Content>Technology_Content_212</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_317</Name>
+        <Content>Technology_Content_213</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2408</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<!--模块5农业-->
+<TechnologyConfig>
+    <ID>3602</ID>
+	<!--芦苇-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3602</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_EffectTech_3</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_200</Name>
+        <Content>Technology_Content_191</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2012</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2703</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3603</ID>
+	<!--渔网（一级钓鱼小屋解锁渔网捕鱼配方）-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3603</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_43</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_198</Name>
+        <Icon>TechIcon/Icon_EffectTech_17</Icon>
+        <Content>Technology_Content_113</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_199</Name>
+        <Content>Technology_Content_114</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3602</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>3504</ID>
+	<!--鱼塘-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3504</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_61</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_189</Name>
+        <Content>Technology_Content_108</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3603</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2019</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+      <HintTech>2804</HintTech>
+      <HintTech>2703</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>3605</ID>
+	<!--捕捞-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3605</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_75</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_201</Name>
+        <Content>Technology_Content_115</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3504</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2030</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2503</HintTech>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3402</ID>
+	<!--堆肥-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3402</Name>
+    <!--图标-->
+    <Icon>ItemIcon/Icon_item_30003</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_176</Name>
+        <Content>Technology_Content_101</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3031</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3403</ID>
+	<!--良田-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3403</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_304</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_178</Name>
+        <Content>Technology_Content_102</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3402</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2014</UnlockBuildings>
+      <UnlockBuildings>2022</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3401</ID>
+	<!--农作效率-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3401</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_101</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_287</Name>
+        <Icon>TechIcon/Icon_EffectTech_35</Icon>
+        <Content>Technology_Content_168</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_288</Name>
+        <Content>Technology_Content_169</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+   <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>3042</UnlockBuffs>
+</UnlockBuffsList>
+   <!--前置科技-->
+    <PreTechList>
+      <PreTech>3403</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3406</ID>
+	<!--种植园-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3406</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_90</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_182</Name>
+        <Content>Technology_Content_104</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3401</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2026</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>3041</UnlockBuffs>
+</UnlockBuffsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>3502</ID>
+	<!--饲料-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3502</Name>
+    <!--图标-->
+    <Icon>ItemIcon/Icon_item_30004</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_185</Name>
+        <Content>Technology_Content_106</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3032</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3503</ID>
+	<!--生态农场-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3503</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_315</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_187</Name>
+        <Content>Technology_Content_107</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3502</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2020</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1201</ID>
+	<!--屠宰（宰杀除肉类产出+100%）-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1201</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_1</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_6</Name>
+        <Icon>TechIcon/Icon_EffectTech_1</Icon>
+        <Content>Technology_Content_3</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_8</Name>
+        <Content>Technology_Content_5</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>1800</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3503</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3506</ID>
+	<!--畜栏-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3506</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_91</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_191</Name>
+        <Content>Technology_Content_109</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1201</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2025</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>3051</UnlockBuffs>
+      <UnlockBuffs>3052</UnlockBuffs>
+</UnlockBuffsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2504</HintTech>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1301</ID>
+	<!--蜂房-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1301</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_2</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_19</Name>
+        <Content>Technology_Content_11</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>1800</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2008</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2703</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3404</ID>
+	<!--果园-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3404</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_59</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>1</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_180</Name>
+        <Content>Technology_Content_103</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1301</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2015</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3801</ID>
+	<!--苗圃-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3801</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_309</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_211</Name>
+        <Content>Technology_Content_120</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>1800</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2009</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3404</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2703</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3802</ID>
+	<!--药草-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3802</Name>
+    <!--图标-->
+    <Icon>ItemIcon/Icon_item_2001</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>4</Int2>
+</Position>    
+<!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_315</Name>
+        <Icon>ItemIcon/Icon_item_2001</Icon>
+        <Content>Technology_Content_211</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_212</Name>
+        <Content>Technology_Content_210</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>1800</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3801</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3405</ID>
+	<!--林场-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3405</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_102</Icon>
+    <!--科技模块-->
+    <TechModule>5</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_181</Name>
+        <Content>Technology_Content_170</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3801</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+	  <UnlockBuildings>2018</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--解锁物品list-->
+    <ItemsList>
+  <Items>
+	   <!--物品ID-->
+	   <Int1>101801</Int1>
+	   <!--数量-->
+	   <Int2>1</Int2>
+	  </Items>
+</ItemsList>
+</TechnologyConfig>
+
+<!--模块6加工-->
+
+<TechnologyConfig>
+    <ID>1503</ID>
+	<!--制盐（合并熏肉）-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1503</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_32</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_33</Name>
+        <Content>Technology_Content_18</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3023</UnlockBuildings>
+      <UnlockBuildings>2011</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2703</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1303</ID>
+	<!--制糖-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1303</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_31</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_21</Name>
+        <Content>Technology_Content_12</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1503</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3022</UnlockBuildings>
+      <UnlockBuildings>3021</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1304</ID>
+	<!--罐头-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1304</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_50</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_23</Name>
+        <Content>Technology_Content_13</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1303</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+	  <UnlockBuildings>3037</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2503</HintTech>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>1203</ID>
+	<!--肉类加工-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1203</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_30</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_10</Name>
+        <Content>Technology_Content_171</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3019</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1504</ID>
+	<!--烧烤-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1504</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_1009</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_13</Name>
+        <Content>Technology_Content_192</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1203</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3061</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2503</HintTech>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1505</ID>
+	<!--美食店-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1505</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_66</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_35</Name>
+        <Content>Technology_Content_19</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1504</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+		<UnlockBuildings>3044</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+      <HintTech>2404</HintTech>
+      <HintTech>2704</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+ <TechnologyConfig>
+    <ID>1103</ID>
+	<!--磨坊-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1103</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_29</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_2</Name>
+        <Content>Technology_Content_1</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3017</UnlockBuildings>
+      <UnlockBuildings>3016</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2804</HintTech>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+ <TechnologyConfig>
+    <ID>1104</ID>
+	<!--面包坊-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1104</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_104</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_3</Name>
+        <Content>Technology_Content_172</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1103</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3020</UnlockBuildings>
+      <UnlockBuildings>3018</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1105</ID>
+	<!--烘焙-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1105</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_65</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_4</Name>
+        <Content>Technology_Content_2</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1104</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3043</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+      <HintTech>2504</HintTech>
+      <HintTech>2404</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1702</ID>
+	<!--织布-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1702</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_15</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_50</Name>
+        <Content>Technology_Content_28</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3025</UnlockBuildings>
+      <UnlockBuildings>3010</UnlockBuildings>
+      <UnlockBuildings>3009</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1805</ID>
+	<!--丝绸-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1805</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_EffectTech_25</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_65</Name>
+        <Content>Technology_Content_37</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1702</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3058</UnlockBuildings>
+      <UnlockBuildings>3046</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1807</ID>
+	<!--耐磨-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1807</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_114</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_299</Name>
+        <Icon>TechIcon/Icon_Tech_68</Icon>
+        <Content>Technology_Content_193</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_300</Name>
+        <Content>Technology_Content_194</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+   <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>4051</UnlockBuffs>
+</UnlockBuffsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1805</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>1603</ID>
+	<!--编织-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1603</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_33</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>4</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_44</Name>
+        <Content>Technology_Content_25</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3024</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>3602</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1606</ID>
+	<!--皮具-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1606</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_67</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>4</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_301</Name>
+        <Content>Technology_Content_195</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1603</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3045</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2804</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>1605</ID>
+	<!--精致皮革-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1605</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_113</Icon>
+    <!--科技模块-->
+    <TechModule>6</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>4</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_47</Name>
+        <Content>Technology_Content_26</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1606</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3062</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2504</HintTech>
+      <HintTech>2503</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+ <!--模块7物流-->
+
+
+
+
+<TechnologyConfig>
+    <ID>4304</ID>
+	<!--中转站-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4304</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_62</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>1</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_237</Name>
+        <Content>Technology_Content_135</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>1008</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+      <HintTech>2804</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4306</ID>
+	<!--供应站-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4306</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_93</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_239</Name>
+        <Content>Technology_Content_136</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4304</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+	   <UnlockBuildings>1012</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2503</HintTech>
+      <HintTech>2604</HintTech>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>4202</ID>
+	<!--仓库-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4202</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_203</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_227</Name>
+        <Content>Technology_Content_129</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>1006</UnlockBuildings>
+      <UnlockBuildings>1009</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+	<!--坚固堆放场-->
+<TechnologyConfig>
+    <ID>4205</ID>
+    <Name>Technology_Name_ID_4205</Name>
+    <Icon>TechIcon/Icon_Tech_78</Icon>
+    <TechModule>7</TechModule>
+    <Position>
+      <Int1>2</Int1>
+      <Int2>1</Int2>
+</Position>
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_232</Name>
+        <Content>Technology_Content_132</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4202</PreTech>
+</PreTechList>
+    <UnlockBuildingsList>
+      <UnlockBuildings>1011</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2804</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4105</ID>
+	<!--地窖-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4105</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_77</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_223</Name>
+        <Content>Technology_Content_127</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4205</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>1010</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2804</HintTech>
+      <HintTech>2402</HintTech>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4107</ID>
+	<!--库存-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4107</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_206</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_225</Name>
+        <Content>Technology_Content_128</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>275000</NeedPoint>
+	 <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>1013</UnlockBuildings>
+      <UnlockBuildings>1014</UnlockBuildings>
+</UnlockBuildingsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4105</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+      <HintTech>1603</HintTech>
+      <HintTech>2503</HintTech>
+      <HintTech>2407</HintTech>
+      <HintTech>2402</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+
+
+
+
+<TechnologyConfig>
+    <ID>4403</ID>
+	<!--提篮-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4403</Name>
+    <!--图标-->
+    <Icon>ItemIcon/Icon_item_50008</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_302</Name>
+        <Icon>ItemIcon/Icon_item_50008</Icon>
+        <Content>Technology_Content_196</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_303</Name>
+        <Content>Technology_Content_197</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>1603</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4401</ID>
+	<!--口袋扩容-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4401</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_119</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_318</Name>
+        <Icon>TechIcon/Icon_EffectTech_44</Icon>
+        <Content>Technology_Content_215</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_319</Name>
+        <Content>Technology_Content_214</Content>
+      </TechDescribe>
+</TechDescribeList>
+   <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>4062</UnlockBuffs>
+</UnlockBuffsList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4403</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4404</ID>
+	<!--背包-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4404</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_63</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_247</Name>
+        <Icon>TechIcon/Icon_EffectTech_23</Icon>
+        <Content>Technology_Content_141</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_248</Name>
+        <Content>Technology_Content_142</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4401</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4405</ID>
+	<!--手推车-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4405</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_EffectTech_14</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_304</Name>
+        <Icon>TechIcon/Icon_EffectTech_14</Icon>
+        <Content>Technology_Content_198</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_305</Name>
+        <Content>Technology_Content_199</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4404</PreTech>
+</PreTechList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>4503</ID>
+	<!--市集-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4503</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_224</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_255</Name>
+        <Content>Technology_Content_146</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+	  <UnlockBuildings>1015</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4505</ID>
+	<!--配送-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4505</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_79</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>1</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_257</Name>
+        <Icon>TechIcon/Icon_EffectTech_26</Icon>
+        <Content>Technology_Content_147</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_258</Name>
+        <Content>Technology_Content_148</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4503</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>4406</ID>
+	<!--畜力-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4406</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_94</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_250</Name>
+        <Icon>TechIcon/Icon_EffectTech_42</Icon>
+        <Content>Technology_Content_143</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_251</Name>
+        <Content>Technology_Content_144</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4505</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>4504</ID>
+	<!--集市扩张-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_4504</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_46</Icon>
+    <!--科技模块-->
+    <TechModule>7</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_306</Name>
+        <Icon>TechIcon/Icon_Tech_46</Icon>
+        <Content>Technology_Content_200</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_307</Name>
+        <Content>Technology_Content_201</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>1800</NeedPoint>
+   <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>4061</UnlockBuffs>
+</UnlockBuffsList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>4406</PreTech>
+</PreTechList>
+</TechnologyConfig>
+
+ <!--模块8宜居-->
+<TechnologyConfig>
+    <ID>3701</ID>
+	<!--肥皂-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3701</Name>
+    <!--图标-->
+    <Icon>ItemIcon/Icon_item_51003</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_308</Name>
+        <Content>Technology_Content_202</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3059</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3702</ID>
+	<!--澡堂-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3702</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_606</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>1</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_203</Name>
+        <Content>Technology_Content_116</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3701</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4006</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2804</HintTech>
+      <HintTech>1702</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3805</ID>
+	<!--医院-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3805</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_604</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <Position>
+      <Int1>3</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_216</Name>
+        <Content>Technology_Content_123</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3702</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4007</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2402</HintTech>
+      <HintTech>2503</HintTech>
+      <HintTech>1804</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3803</ID>
+	<!--制药-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3803</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_605</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>0</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_213</Name>
+        <Content>Technology_Content_121</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>6000</NeedPoint>
+   <!--前置科技-->
+    <PreTechList>
+      <PreTech>3805</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3033</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+      <HintTech>2804</HintTech>
+      <HintTech>2503</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3709</ID>
+	<!--教堂升级-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3709</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_602</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_309</Name>
+        <Icon>BuildIcon/Icon_building_602</Icon>
+        <Content>Technology_Content_203</Content>
+      </TechContent>
+</TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_310</Name>
+        <Content>Technology_Content_204</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+   <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>4071</UnlockBuffs>
+</UnlockBuffsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3706</ID>
+	<!--剧院-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3706</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_92</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_207</Name>
+        <Content>Technology_Content_118</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3709</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4018</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+      <HintTech>2804</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3707</ID>
+	<!--娱乐-市民压力（减负）-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3707</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_110</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>1</Int2>
+</Position>
+    <!--减压效果-->
+    <TechContentList>
+      <TechContent>
+        <Name>Technology_Name_236</Name>
+        <Icon>TechIcon/Icon_EffectTech_43</Icon>
+        <Content>Technology_Content_176</Content>
+      </TechContent>
+    </TechContentList>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_238</Name>
+        <Content>Technology_Content_177</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3706</PreTech>
+</PreTechList>
+    <!--解锁buff-->
+    <UnlockBuffsList>
+      <UnlockBuffs>101</UnlockBuffs>
+</UnlockBuffsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2201</ID>
+	<!--帐篷-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2201</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_101</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_77</Name>
+        <Content>Technology_Content_43</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>9000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4</UnlockBuildings>
+</UnlockBuildingsList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2205</ID>
+	 <!--奢华住宅-房屋结构2-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2205</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_70</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_81</Name>
+        <Content>Technology_Content_45</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>37000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2201</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>7</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+      <HintTech>2604</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2207</ID>
+	<!--花园别墅-房屋结构3-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2207</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_107</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_83</Name>
+        <Content>Technology_Content_47</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>275000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2205</PreTech>
+</PreTechList>
+	    <!--解锁建筑-->
+    <UnlockBuildingsList>
+	  <UnlockBuildings>10</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2604</HintTech>
+      <HintTech>2404</HintTech>
+      <HintTech>2704</HintTech>
+      <HintTech>1804</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2106</ID>
+	<!--公寓-公寓升级2-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2106</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_110</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>5</Int1>
+      <Int2>2</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_75</Name>
+        <Content>Technology_Content_42</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2207</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>8</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+      <HintTech>2604</HintTech>
+      <HintTech>2804</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2107</ID>
+	<!--净水-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2107</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_1011</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>1</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_312</Name>
+        <Content>Technology_Content_206</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>2036</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2703</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>2108</ID>
+	<!--供暖-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_2108</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_1012</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>3</Int1>
+      <Int2>3</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_313</Name>
+        <Content>Technology_Content_207</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>55000</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>2107</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4021</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2703</HintTech>
+      <HintTech>2503</HintTech>
+      <HintTech>2804</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+<TechnologyConfig>
+    <ID>1402</ID>
+	<!--酿酒-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_1402</Name>
+    <!--图标-->
+    <Icon>TechIcon/Icon_Tech_14</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>0</Int1>
+      <Int2>4</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_27</Name>
+        <Content>Technology_Content_15</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3015</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3705</ID>
+	<!--饮品店-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3705</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_530</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>2</Int1>
+      <Int2>4</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_206</Name>
+        <Content>Technology_Content_175</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>1402</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3034</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+      <HintTech>2804</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+<TechnologyConfig>
+    <ID>3703</ID>
+	<!--糖果工坊-->
+    <!--科技名字-->
+    <Name>Technology_Name_ID_3703</Name>
+    <!--图标-->
+    <Icon>BuildIcon/Icon_building_1010</Icon>
+    <!--科技模块-->
+    <TechModule>8</TechModule>
+    <!---->
+    <Position>
+      <Int1>4</Int1>
+      <Int2>4</Int2>
+</Position>
+    <!--科技描述-->
+    <TechDescribeList>
+      <TechDescribe>
+        <Name>Technology_Name_311</Name>
+        <Content>Technology_Content_205</Content>
+      </TechDescribe>
+</TechDescribeList>
+    <!--需要科技点数-->
+    <NeedPoint>2600</NeedPoint>
+    <!--前置科技-->
+    <PreTechList>
+      <PreTech>3705</PreTech>
+</PreTechList>
+    <!--解锁建筑-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>3063</UnlockBuildings>
+</UnlockBuildingsList>
+<!--前置提示科技-->
+    <HintTechList>
+      <HintTech>2504</HintTech>
+      <HintTech>2402</HintTech>
+</HintTechList>
+</TechnologyConfig>
+
+
+
+	<!--物品解锁科技（单局永久蓝图建筑）-->
+<TechnologyConfig>
+    <ID>10001</ID>
+    <!--科技名字-->
+    <Name>图腾柱的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑1-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6018</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10002</ID>
+    <!--科技名字-->
+    <Name>喷泉的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑2-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6023</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10003</ID>
+    <!--科技名字-->
+    <Name>狮子的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑3-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6030</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10004</ID>
+    <!--科技名字-->
+    <Name>雕像的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑4-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6027</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10005</ID>
+    <!--科技名字-->
+    <Name>小型中型石像的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑4-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6003</UnlockBuildings>
+	  <UnlockBuildings>6004</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10006</ID>
+    <!--科技名字-->
+    <Name>巨兽头骨的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑4-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6032</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10007</ID>
+    <!--科技名字-->
+    <Name>大号角的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑4-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6033</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10008</ID>
+    <!--科技名字-->
+    <Name>天使的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑4-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6039</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10009</ID>
+    <!--科技名字-->
+    <Name>骷髅的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑4-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6040</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10010</ID>
+    <!--科技名字-->
+    <Name>古树的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑4-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6036</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10011</ID>
+    <!--科技名字-->
+    <Name>成人学校的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑4-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>4011</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+<TechnologyConfig>
+    <ID>10012</ID>
+    <!--科技名字-->
+    <Name>湖中剑的蓝图</Name>
+    <!--是否永久科技-->
+    <Along>false</Along>
+	<!--蓝图建筑4-->
+    <UnlockBuildingsList>
+      <UnlockBuildings>6045</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>
+
+
+
+<!--物品解锁科技（永久蓝图建筑）
+<TechnologyConfig>
+    <ID>20001</ID>
+    <Name>Technology_Name_ID_20001</Name>
+    <Along>true</Along>
+    <UnlockBuildingsList>
+      <UnlockBuildings>6005</UnlockBuildings>
+	</UnlockBuildingsList>
+</TechnologyConfig>-->
+
+
+
+
+
+
+
+
+</ArrayOfTechnologyConfig>

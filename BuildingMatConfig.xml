@@ -1,0 +1,75 @@
+<?xml version ="1.0"?>
+<ArrayOfBuildingMatConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+<!-- //每种建筑材质一个id -->
+<!-- <ID>105</ID> -->
+<!-- //normal 的材质在snmat和normal之间填id  以对应解析id -->
+<!-- <normal>snmat105Normal</normal> -->
+		
+<!-- 部分模型 需要不同的值 才能正确表现下雪覆盖面  包含在BuildingMatConfig之内-->
+<!-- public class SnowParam -->
+<!-- { -->
+    <!-- public float fromEdge=0.75f;  //转变角度   越接近1 覆盖范围越小  越接近0 覆盖范围越大 -->
+    <!-- public float toEdge=0.39f; -->
+    <!-- public float fromWhite=0.3f;  //白的程度   越接近0 白色越浅  接近1白色亮些  -->
+    <!-- public float toWhite=1f; -->
+    <!-- public float ao=0.42f;  //环境遮蔽 -->
+<!-- } -->
+
+	<BuildingMatConfig>
+		<ID>0</ID>
+		<normal>snmat0Normal</normal>
+		<transPrepaire>snmat0Trans</transPrepaire>
+		<broken1>snmat0Bronken1</broken1>
+		<broken2>snmat0Bronken2</broken2>
+		<selBuild>selBuild0</selBuild>
+		<selType>selType0</selType>
+		<workBuild>workBuild0</workBuild>
+	</BuildingMatConfig>
+
+	<BuildingMatConfig>
+		<ID>1</ID>
+		<normal>snmat1Normal</normal>
+		<transPrepaire>snmat1Trans</transPrepaire>
+		<broken1>snmat1Bronken1</broken1>
+		<broken2>snmat1Bronken2</broken2>
+		<selBuild>selBuild1</selBuild>
+		<selType>selType1</selType>
+		<workBuild>workBuild1</workBuild>
+	</BuildingMatConfig>
+	
+	<BuildingMatConfig>
+		<ID>2</ID>
+		<normal>snmat2Normal</normal>
+		<transPrepaire>snmat2Trans</transPrepaire>
+		<broken1>snmat2Bronken1</broken1>
+		<broken2>snmat2Bronken2</broken2>
+		<selBuild>selBuild2</selBuild>
+		<selType>selType2</selType>
+		<workBuild>workBuild2</workBuild>
+	</BuildingMatConfig>
+	
+	<BuildingMatConfig>
+		<ID>3</ID>
+		<normal>snmat3Normal</normal>
+		<transPrepaire>snmat3Trans</transPrepaire>
+		<broken1>snmat3Bronken1</broken1>
+		<broken2>snmat3Bronken2</broken2>
+		<selBuild>selBuild3</selBuild>
+		<selType>selType3</selType>
+		<workBuild>workBuild3</workBuild>
+	</BuildingMatConfig>
+	
+	<BuildingMatConfig>
+		<ID>4</ID>
+		<normal>snmat4Normal</normal>
+		<transPrepaire>snmat4Trans</transPrepaire>
+		<broken1>snmat4Bronken1</broken1>
+		<broken2>snmat4Bronken2</broken2>
+		<selBuild>selBuild4</selBuild>
+		<selType>selType4</selType>
+		<workBuild>workBuild4</workBuild>
+	</BuildingMatConfig>
+
+</ArrayOfBuildingMatConfig>

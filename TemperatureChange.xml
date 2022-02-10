@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<ArrayOfTemperatureChangeConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <!--  温度变化配置说明
+Description of Temperature Change Configuration
+ID int ID不重复即可
+No Duplicates for IDs
+Name string 温度名字（对应多语言中的ID即可）
+Temperature Name (corresponding to the ID in multiple languages)
+TptBase int 基础温度
+Basic Temperature
+TptChangeRange int 温度变化区间
+Temperature Change Interval
+RandomChange int 温度随机浮动值
+Random Temperature Volatility
+UpTptDay int 升温节点（每年的天数）  最低温度的时间点
+Warming Node (Number of days per year) Time of the Minimum Temperature Occurs
+UpTptLastTime int 升温持续时间（天数）
+Duration of Warming (Number of days)
+DownTptDay int 降温节点（每年的天数） 最高温度的时间点
+Cooling Node (number of days per year) Time of the Maximum Temperature Occurs
+DownTptLastTime int 降温持续时间（天数）
+Duration of Cooling (Number of days)
+
+
+  温度的变化曲线说明：
+		在基础温度下，会根据温度的变化区间取上下限，上限值为每年的最高温度值，下限值为每年的最低温度值。
+		温度随机浮动，在温度上下限都会根据浮动值，上下浮动，每年重新随机浮动值。
+Description of Temperature Change Curve:
+		At the basic temperature, the upper and lower limits will be taken according to the change interval of the temperature. The upper limit is the maximum temperature per year and the lower is the minimum.
+		The temperature fluctuates randomly, and so do the upper and lower temperature limits accordingly. The random volatility is reset every year.
+  温度的配置值以华氏度为准
+The temperature is configured in Fahrenheit
+
+	
+	
+	实例：见下方ID1
+	
+	
+ -->	
+	
+	<TemperatureChangeConfig>
+		<ID>1</ID>
+    	<Name>TemperatureChange_Name_1</Name>
+		<!--基础温度-->
+		<TptBase>60</TptBase>
+		<!--温度区间-->
+		<TptChangeRange>25</TptChangeRange>
+		<!--温度波动值-->
+		<RandomChange>3</RandomChange>
+		<!--升温节点-->
+		<UpTptDay>330</UpTptDay>
+		<!--升温持续时间-->
+		<UpTptLastTime>180</UpTptLastTime>
+		<!--降温节点-->
+		<DownTptDay>150</DownTptDay>
+		<!--降温持续时间-->
+		<DownTptLastTime>180</DownTptLastTime>
+	</TemperatureChangeConfig>
+	<TemperatureChangeConfig>
+		<ID>2</ID>
+    	<Name>TemperatureChange_Name_2</Name>
+		<!--基础温度-->
+		<TptBase>50</TptBase>
+		<!--温度区间-->
+		<TptChangeRange>35</TptChangeRange>
+		<!--温度波动值-->
+		<RandomChange>5</RandomChange>
+		<!--升温节点-->
+		<UpTptDay>330</UpTptDay>
+		<!--升温持续时间-->
+		<UpTptLastTime>180</UpTptLastTime>
+		<!--降温节点-->
+		<DownTptDay>150</DownTptDay>
+		<!--降温持续时间-->
+		<DownTptLastTime>180</DownTptLastTime>
+	</TemperatureChangeConfig>
+	<TemperatureChangeConfig>
+		<ID>3</ID>
+    	<Name>TemperatureChange_Name_3</Name>
+		<!--基础温度-->
+		<TptBase>50</TptBase>
+		<!--温度区间-->
+		<TptChangeRange>45</TptChangeRange>
+		<!--温度波动值-->
+		<RandomChange>10</RandomChange>
+		<!--升温节点-->
+		<UpTptDay>330</UpTptDay>
+		<!--升温持续时间-->
+		<UpTptLastTime>180</UpTptLastTime>
+		<!--降温节点-->
+		<DownTptDay>150</DownTptDay>
+		<!--降温持续时间-->
+		<DownTptLastTime>180</DownTptLastTime>
+	</TemperatureChangeConfig>
+	<TemperatureChangeConfig>
+		<ID>4</ID>
+    	<Name>TemperatureChange_Name_4</Name>
+		<!--基础温度-->
+		<TptBase>50</TptBase>
+		<!--温度区间-->
+		<TptChangeRange>50</TptChangeRange>
+		<!--温度波动值-->
+		<RandomChange>20</RandomChange>
+		<!--升温节点-->
+		<UpTptDay>330</UpTptDay>
+		<!--升温持续时间-->
+		<UpTptLastTime>180</UpTptLastTime>
+		<!--降温节点-->
+		<DownTptDay>150</DownTptDay>
+		<!--降温持续时间-->
+		<DownTptLastTime>180</DownTptLastTime>
+	</TemperatureChangeConfig>
+	
+	<TemperatureChangeConfig>
+		<ID>101</ID>
+    	<Name>TemperatureChange_Name_1</Name>
+		<!--基础温度-->
+		<TptBase>60</TptBase>
+		<!--温度区间-->
+		<TptChangeRange>20</TptChangeRange>
+		<!--温度波动值-->
+		<RandomChange>3</RandomChange>
+		<!--升温节点-->
+		<UpTptDay>330</UpTptDay>
+		<!--升温持续时间-->
+		<UpTptLastTime>180</UpTptLastTime>
+		<!--降温节点-->
+		<DownTptDay>150</DownTptDay>
+		<!--降温持续时间-->
+		<DownTptLastTime>180</DownTptLastTime>
+	</TemperatureChangeConfig>
+	
+</ArrayOfTemperatureChangeConfig>

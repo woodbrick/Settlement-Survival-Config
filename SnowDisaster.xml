@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<SnowDisasterConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--暴风雪配置 此文件已弃用
+This file is deprecated-->
+
+
+ <ID>1</ID>
+  <Year>10</Year>
+  <Citizen>100</Citizen>
+  <StartMonth>11</StartMonth>
+  <!--持续时间（单位：秒）-->
+  <Time>600</Time>
+  <Temperature>-1</Temperature>
+  <BuildingHurt>-30</BuildingHurt>
+</SnowDisasterConfig>

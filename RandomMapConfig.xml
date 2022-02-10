@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<RandomMapConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--  随机地图的参数设置
+Parameter Settings of Random Map
+  （谨慎改动，会导致存档问题）
+(Please change carefully, or it will cause archive problems)
+mapSize  地图尺寸
+Map Size
+int int 小尺寸的地格边长
+Side Length of Small Grid
+int int 中尺寸的地格边长
+Side Length of Medium Grid
+int int 长尺寸的地格边长
+Side Length of Large Grid
+hillNum  山的生成说明size  越小 山越密集越小   scale越大山越大越多  scale大于0 起效
+Mountain generation instructions: The smaller the size, the denser the mountain; The bigger the scale, the bigger and more the mountains; Effective when scale is >0
+RandomMapHillParam  
+
+h1Size float 山的随机参数1
+Random Parameters of the Mountain 1
+h1Scale float 山的随机参数2
+Random Parameters of the Mountain 2
+h1Detail float 山的随机参数3
+Random Parameters of the Mountain 3
+h2Size float 小山峰的随机参数1
+Random Parameters 1 of the Small Peak
+h2Scale float 小山峰的随机参数2
+Random Parameters 2 of the Small Peak
+h3Size float 细节山的随机参数1
+Random Parameters of the Detailed mMountain 1
+h3Scale float 细节山的随机参数2
+Random Parameters of the Detailed mMountain 2
+HillSizeScale float 山的缩放// >1 < 4 起效
+The Zoom of the Mountain // Effective when scale is >1 and <4
+HillHScale float 标准高度  山的缩放高度
+Standard Height Scaling Height of the Mountain
+landH float 普通地面
+Ordinary Ground
+landH2 float 低的地面
+Low Ground
+waterNum  
+
+int int 河流的数量1
+Number of Rivers 1
+int int 河流的数量2
+Number of Rivers 2
+int int 河流的数量3
+Number of Rivers 3
+lakeSize  
+
+float float 湖泊的尺寸1
+Size of Lake 1
+float float 湖泊的尺寸2
+Size of Lake 2
+float float 湖泊的尺寸3
+Size of Lake 3
+otherSet 其他设置 
+
+OtherParam  
+
+waterWidth  float 越小 水越平滑连续
+The smaller the size, the smoother and more continuous the water
+waterCurveStrong float 水面弯曲程度 越大越弯曲 
+
+waterType  y 自定义配置，目前只支持y
+Custom Configuration. Currently only y is available
+waterScale  float 河流尺寸
+Size of River
+waterHScale  float 河流高度尺寸
+Height of River
+lakeBumpSizeScale float 湖面凹凸的平面缩放 
+
+lakeHScale   float 下陷的 高度
+The Height of the Subsidence
+lakeBumpOffset   float 边缘起始高度缩放 基数
+The scaling base of the starting height of the edge
+lakeSmothPower   float 边缘到  中心的过度曲线强度、
+Strength of the transition curve from edge to center,
+mapLakeCount   int 大于0时  使用高度图随机mapLakeCount个湖泊  =0使用圆形湖泊  <0不要湖泊
+When it is > 0, the height map is activated. Randomly mapLakeCount lakes; when =0, the circular lake is activated; when <0, no lake
+mapLakeSize 高度图尺寸 
+
+x int x轴长度
+X-axis length
+z int z轴长度
+Z-axis length
+mapLakeResPath   string 固定为lake001
+Fixed as lake001
+
+			
+	备注：
+   int			整型，只能填整数
+   string		字符串类型，字母或者文字
+   float		浮点数类型，小数
+	
+	
+	实例：
+	见下方		
+			
+		
+  -->
+  
+  <mapSize>
+    <int>600</int>
+    <int>796</int>
+    <int>1096</int>
+  </mapSize>
+  <hillNum>
+    <RandomMapHillParam>
+      <h1Size>15</h1Size>
+      <h1Scale>120</h1Scale>
+      <h1Detail>0.01</h1Detail>
+      <h2Size>60</h2Size>
+      <h2Scale>10</h2Scale>
+      <h3Size>100</h3Size>
+      <h3Scale>0</h3Scale>
+      <HillSizeScale>2</HillSizeScale>
+      <HillHScale>1</HillHScale>
+      <landH>90</landH>
+      <landH2>30</landH2>
+      <landH2Height>0</landH2Height>
+      <landShowH>23.3</landShowH>
+    </RandomMapHillParam>
+    <RandomMapHillParam>
+      <h1Size>12</h1Size>
+      <h1Scale>125</h1Scale>
+      <h1Detail>0.01</h1Detail>
+      <h2Size>50</h2Size>
+      <h2Scale>20</h2Scale>
+      <h3Size>100</h3Size>
+      <h3Scale>2.5</h3Scale>
+      <HillSizeScale>1.31</HillSizeScale>
+      <HillHScale>0.6</HillHScale>
+      <landH>90</landH>
+      <landH2>30</landH2>
+      <landH2Height>0</landH2Height>
+      <landShowH>23.3</landShowH>
+    </RandomMapHillParam>
+    <RandomMapHillParam>
+      <h1Size>9.5</h1Size>
+      <h1Scale>145</h1Scale>
+      <h1Detail>0</h1Detail>
+      <h2Size>70</h2Size>
+      <h2Scale>20</h2Scale>
+      <h3Size>98.03</h3Size>
+      <h3Scale>0</h3Scale>
+      <HillSizeScale>1.0</HillSizeScale>
+      <HillHScale>0.38</HillHScale>
+      <landH>90</landH>
+      <landH2>30</landH2>
+      <landH2Height>0</landH2Height>
+      <landShowH>23.3</landShowH>
+    </RandomMapHillParam>
+  </hillNum>
+  <waterNum>
+    <int>0</int>
+    <int>1</int>
+    <int>2</int>
+  </waterNum>
+  <lakeSize>
+    <float>0.03</float>
+    <float>0.07</float>
+    <float>0.07</float>
+  </lakeSize>
+  <otherSet>
+    <OtherParam>
+      <waterWidth>15</waterWidth>
+      <waterCurveStrong>0.3</waterCurveStrong>
+      <waterType>x</waterType>
+      <waterScale>50</waterScale>
+      <waterHScale>1</waterHScale>
+      <lakeBumpSizeScale>15.44</lakeBumpSizeScale>
+      <lakeHScale>393</lakeHScale>
+      <lakeBumpOffset>1.35</lakeBumpOffset>
+      <lakeSmothPower>1.8</lakeSmothPower>
+      <mapLakeCount>1</mapLakeCount>
+      <mapLakeSize>
+        <x>15</x>
+        <z>15</z>
+      </mapLakeSize>
+      <mapLakeResPath>lake001</mapLakeResPath>
+    </OtherParam>
+    <OtherParam>
+      <waterWidth>25</waterWidth>
+      <waterCurveStrong>0.3</waterCurveStrong>
+      <waterType>y</waterType>
+      <waterScale>0.01</waterScale>
+      <waterHScale>4</waterHScale>
+      <lakeBumpSizeScale>15.44</lakeBumpSizeScale>
+      <lakeHScale>393</lakeHScale>
+      <lakeBumpOffset>1.35</lakeBumpOffset>
+      <lakeSmothPower>1.8</lakeSmothPower>
+      <mapLakeCount>1</mapLakeCount>
+      <mapLakeSize>
+        <x>20</x>
+        <z>20</z>
+      </mapLakeSize>
+      <mapLakeResPath>lake001</mapLakeResPath>
+    </OtherParam>
+    <OtherParam>
+      <waterWidth>25</waterWidth>
+      <waterCurveStrong>0.3</waterCurveStrong>
+      <waterType>y</waterType>
+      <waterScale>50</waterScale>
+      <waterHScale>1</waterHScale>
+      <lakeBumpSizeScale>15.44</lakeBumpSizeScale>
+      <lakeHScale>393</lakeHScale>
+      <lakeBumpOffset>1.35</lakeBumpOffset>
+      <lakeSmothPower>1.8</lakeSmothPower>
+      <mapLakeCount>1</mapLakeCount>
+      <mapLakeSize>
+        <x>25</x>
+        <z>25</z>
+      </mapLakeSize>
+      <mapLakeResPath>lake001</mapLakeResPath>
+    </OtherParam>
+  </otherSet>
+</RandomMapConfig>

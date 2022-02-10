@@ -1,0 +1,1339 @@
+<?xml version="1.0"?>
+<ArrayOfCitizenActionConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--   市民行为的配置说明：  Description of the Citizen Acts Configuration:
+  字段        类型        说明  
+  Field        Type       Description
+  Name        string         行为名称  Behavior
+  Des         string         行为描述  Behavior Description
+  ChildDes      string         该行为儿童的描述  Description of this Behavioral Child
+  Time        int          行为持续的时间  Duration of behavior
+  TiredTime     int          疲劳状态下行为时间  Duration under fatigue
+  Energy        int          该行为消耗的体力  The physical strength consumed by the behavior
+  SickEnergy      int          非健康状态下消耗体力  Consumed physical strength in an unhealthy state
+  ActionID      int          对应的动作ID（具体查看枚举）  Corresponding action ID (See the enumeration for details)
+  WalkActionID    int          工作行走的动作  Work and Walking
+  WalkTool      string         工作行走工具  Work and walking tools
+  ToolDurability    int          消耗工具耐久度  The durability of consumed tools
+  GetTechPointRate  int          获得科技点概率  Probability of obtaining technology points
+  GetTechPoint    int          获得科技点数  Technology points obtained
+  GetSkillPoint   Config2Int       获得熟练度点数（Int1获取概率 Int2数量）  Proficiency points obtained (Int1 is for probability and Int2 for the number)
+  IndustryType    int          该动作所属的熟练度类型（工业类型枚举）   Type of proficiency for this action (industrial type enumeration) 
+  IllnessRate     int          工作获得病的概率（万分比）  Probability of getting sick at work (ten-thousandths)
+   工业类型枚举：  Industrial Type Enumeration:
+  IndustryType_Unknow     =  0;     
+  IndustryType_Trade      =  1; //    贸易   Trade
+  IndustryType_Education    =  2; //    教育  Education
+  IndustryType_Mine     =  3; //    矿物  Minerals
+  IndustryType_Build      =  4; //    建造  Construction
+  IndustryType_Farming    =  5; //    农业  Agriculture
+  IndustryType_Processing   =  6; //    加工业  Processing Industry
+  IndustryType_Express    =  7; //    物流  Logistics
+  IndustryType_Home     =  8; //    家居  Home Furnishing
+     动作枚举：  Action enumeration:
+    idle = 1,     
+    walk = 2,     
+    walk_single = 3,     
+    walk_back = 4,     
+    walk_carry = 5,     
+    stand = 6,     
+    gather = 7,     
+    cutting = 8,     
+    dig = 9,     
+    lift = 10,     
+    lay = 11,     
+    build = 12,     
+    fishing = 13,     
+    plow = 14,     
+    chop = 15,     
+    pushcar = 16,     
+    well = 17,     
+    walk_hold = 18,       //   举火把行走  Walk with the firebrand
+    idle_hold = 19,       //   举火把呆滞  Sluggish with the firebrand
+    stand_hold = 20,      //   举火把战力  Might with firebrand
+    hunt = 21,            //   狩猎  Hunting
+
+	
+	
+	
+	
+	--> 
+  
+  
+  <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>0</ID>
+        <!--动作名称-->
+        <Name>未知</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_1</Des>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>6</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>1</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>1</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>0</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>0</SickEnergy>
+      
+  </CitizenActionConfig>
+    
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>1</ID>
+        <!--动作名称-->
+        <Name>闲置</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_1</Des>
+	    <ChildDes>CitizenAction_Des_1001</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>5</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>5</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>0</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>0</SickEnergy>
+      
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>2</ID>
+        <!--动作名称-->
+        <Name>移动</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_2</Des>
+		<ChildDes>CitizenAction_Des_2</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>2</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>1</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>1</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>0</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>0</SickEnergy>
+      
+  </CitizenActionConfig>
+    
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>3</ID>
+        <!--动作名称-->
+        <Name>钓鱼</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_3</Des>
+		<ChildDes>CitizenAction_Des_3</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>13</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>20</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>48</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+        <!--行走动作-->
+        <WalkActionID>4</WalkActionID>
+        <!--行走携带的工具-->
+        <WalkTool>Props/Box/Bdiaoyu001</WalkTool>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      	<!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+     	<!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+		<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+		<!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+    
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>4</ID>
+        <!--动作名称-->
+        <Name>建造</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_4</Des>
+		<ChildDes>CitizenAction_Des_4</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>12</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>2</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>1</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+        <!--行走动作-->
+        <WalkActionID>3</WalkActionID>
+        <!--行走携带的工具-->
+        <WalkTool>Props/Box/Bjianzao001</WalkTool>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      	<!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+		<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>2500</Int1>
+			<Int2>40</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>4</IndustryType>
+		<!--工作得病概率万分比-->
+       <IllnessRate>1</IllnessRate>	  
+  </CitizenActionConfig>
+    
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>5</ID>
+        <!--动作名称-->
+        <Name>砍树</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_5</Des>
+		<ChildDes>CitizenAction_Des_5</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>8</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+        <!--行走动作-->
+        <WalkActionID>3</WalkActionID>
+        <!--行走携带的工具-->
+        <WalkTool>Props/Box/Bfamu001</WalkTool>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+		<!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>6</ID>
+        <!--动作名称-->
+        <Name>取暖</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_6</Des>
+		<ChildDes>CitizenAction_Des_6</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>6</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>2</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>2</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>0</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>0</SickEnergy>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>7</ID>
+        <!--动作名称-->
+        <Name>取食</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_7</Des>
+		<ChildDes>CitizenAction_Des_7</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>6</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>2</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>2</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>0</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>0</SickEnergy>
+      
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>8</ID>
+        <!--动作名称-->
+        <Name>饮水</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_8</Des>
+		<ChildDes>CitizenAction_Des_8</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>6</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>2</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>2</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>0</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>0</SickEnergy>
+      
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>9</ID>
+        <!--动作名称-->
+        <Name>拾取</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_9</Des>
+		<ChildDes>CitizenAction_Des_1002</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>10</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>1</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>1</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>1</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>2</SickEnergy>
+        <!--行走动作-->
+        <WalkActionID>5</WalkActionID>
+      <!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>20</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>7</IndustryType>
+  </CitizenActionConfig>
+    
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>11</ID>
+        <!--动作名称-->
+        <Name>休息</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_11</Des>
+		<ChildDes>CitizenAction_Des_1002</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>6</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>5</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>5</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>0</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>0</SickEnergy>
+      
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>12</ID>
+        <!--动作名称-->
+        <Name>取衣服</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_12</Des>
+		<ChildDes>CitizenAction_Des_1002</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>6</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>5</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>5</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>0</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>0</SickEnergy>
+      
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>13</ID>
+        <!--动作名称-->
+        <Name>取工具</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_13</Des>
+		<ChildDes>CitizenAction_Des_1002</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>6</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>5</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>5</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>0</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>0</SickEnergy>
+      
+  </CitizenActionConfig>
+    
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>14</ID>
+        <!--动作名称-->
+        <Name>挖矿</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_14</Des>
+		<ChildDes>CitizenAction_Des_14</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>9</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+        <!--行走动作-->
+        <WalkActionID>3</WalkActionID>
+        <!--行走携带的工具-->
+        <WalkTool>Props/Box/Bwankuang001</WalkTool>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>50</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>3</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>15</ID>
+        <!--动作名称-->
+        <Name>制造工具</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_15</Des>
+		<ChildDes>CitizenAction_Des_15</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>17</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>20</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>6</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>16</ID>
+        <!--动作名称-->
+        <Name>采集</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_16</Des>
+		<ChildDes>CitizenAction_Des_16</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>17</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>17</ID>
+        <!--动作名称-->
+        <Name>教学</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_17</Des>
+		<ChildDes>CitizenAction_Des_17</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>20</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>24</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>100</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>2</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>18</ID>
+        <!--动作名称-->
+        <Name>学习</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_18</Des>
+		<ChildDes>CitizenAction_Des_18</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>20</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>24</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>10</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>12</SickEnergy>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+      <!--工作得病概率万分比-->
+       <IllnessRate>1</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>19</ID>
+        <!--动作名称-->
+        <Name>药草采集</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_19</Des>
+		<ChildDes>CitizenAction_Des_19</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>17</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>20</ID>
+        <!--动作名称-->
+        <Name>播种</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_20</Des>
+		<ChildDes>CitizenAction_Des_20</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>14</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>5</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>7</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>1</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>21</ID>
+        <!--动作名称-->
+        <Name>耕田</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_21</Des>
+		<ChildDes>CitizenAction_Des_21</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>14</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>5</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>7</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>1</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>22</ID>
+        <!--动作名称-->
+        <Name>收获</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_22</Des>
+		<ChildDes>CitizenAction_Des_22</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>17</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>5</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>6</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>1</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>23</ID>
+        <!--动作名称-->
+        <Name>牧场日常工作</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_23</Des>
+		<ChildDes>CitizenAction_Des_23</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>14</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>1</IllnessRate>
+  </CitizenActionConfig>
+
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>24</ID>
+        <!--动作名称-->
+        <Name>牧场宰杀</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_24</Des>
+		<ChildDes>CitizenAction_Des_24</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>21</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>1</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>1</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>25</ID>
+        <!--动作名称-->
+        <Name>狩猎日常动作</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_25</Des>
+		<ChildDes>CitizenAction_Des_25</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>17</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>26</ID>
+        <!--动作名称-->
+        <Name>狩猎宰杀</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_26</Des>
+		<ChildDes>CitizenAction_Des_26</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>21</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>6</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>27</ID>
+        <!--动作名称-->
+        <Name>护林日常工作</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_27</Des>
+		<ChildDes>CitizenAction_Des_27</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>14</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>30</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>28</ID>
+        <!--动作名称-->
+        <Name>市民清洁</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_28</Des>
+		<ChildDes>CitizenAction_Des_28</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>5</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>5</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>0</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>0</SickEnergy>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+    
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>29</ID>
+        <!--动作名称-->
+        <Name>搓澡工日常</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_29</Des>
+		<ChildDes>CitizenAction_Des_29</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>100</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>8</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>30</ID>
+        <!--动作名称-->
+        <Name>神父日常</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_30</Des>
+		<ChildDes>CitizenAction_Des_30</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>100</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>8</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>31</ID>
+        <!--动作名称-->
+        <Name>取水</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_31</Des>
+		<ChildDes>CitizenAction_Des_31</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>17</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>5</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>32</ID>
+        <!--动作名称-->
+        <Name>酿酒师酿酒</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_32</Des>
+		<ChildDes>CitizenAction_Des_32</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>20</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>6</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+    <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>33</ID>
+        <!--动作名称-->
+        <Name>酒保日常工作</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_33</Des>
+		<ChildDes>CitizenAction_Des_33</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>100</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>8</IndustryType>
+	  <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+  
+  <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>34</ID>
+        <!--动作名称-->
+        <Name>劈柴</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_34</Des>
+		<ChildDes>CitizenAction_Des_34</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>15</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>20</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>6</IndustryType>
+	<!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+ <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>35</ID>
+        <!--动作名称-->
+        <Name>维修</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_35</Des>
+		<ChildDes>CitizenAction_Des_35</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>12</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+        <!--行走动作-->
+        <WalkActionID>3</WalkActionID>
+        <!--行走携带的工具-->
+        <WalkTool>Props/Box/Bjianzao001</WalkTool>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      	<!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint> 
+<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>100</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>8</IndustryType>	 
+	<!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate> 
+  </CitizenActionConfig>
+  
+      <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>38</ID>
+        <!--动作名称-->
+        <Name>野外休息</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_38</Des>
+		<ChildDes>CitizenAction_Des_38</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>5</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>5</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>-10</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>-2</SickEnergy>
+      
+  </CitizenActionConfig>
+  
+     <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>39</ID>
+        <!--动作名称-->
+        <Name>贸易工作</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_39</Des>
+		<ChildDes>CitizenAction_Des_39</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>10</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>1</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>1</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>1</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>2</SickEnergy>
+        <!--行走动作-->
+        <WalkActionID>16</WalkActionID>
+      <!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>100</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>1</IndustryType>
+	<!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+  
+   <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>40</ID>
+        <!--动作名称-->
+        <Name>研究人员</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_40</Des>
+		<ChildDes>CitizenAction_Des_40</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>20</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>24</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>100</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>2</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+ <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>41</ID>
+        <!--动作名称-->
+        <Name>治安官工作</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_41</Des>
+		<ChildDes>CitizenAction_Des_30</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>100</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>8</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+   <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>42</ID>
+        <!--动作名称-->
+        <Name>剧院演员工作</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_42</Des>
+		<ChildDes>CitizenAction_Des_30</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>1</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      <!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+       <!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+	<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>100</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>8</IndustryType>
+      <!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+      <CitizenActionConfig>
+        <!--动作枚举-->
+        <ID>43</ID>
+        <!--动作名称-->
+        <Name>采砂</Name>
+        <!--动作描述-->
+        <Des>CitizenAction_Des_3</Des>
+		<ChildDes>CitizenAction_Des_3</ChildDes>
+        <!--动作ID（见角色预设规范）-->
+        <ActionID>17</ActionID>
+        <!--动作持续时间（单位：秒）-->
+        <Time>10</Time>
+        <!--疲劳状态下的持续时间-->
+        <TiredTime>12</TiredTime>
+        <!--动作消耗体力-->
+        <Energy>5</Energy>
+        <!--非健康状态下消耗体力-->
+        <SickEnergy>6</SickEnergy>
+		<!--工作消耗耐久-->
+        <ToolDurability>-1</ToolDurability>
+      	<!--获得科技点概率-->
+        <GetTechPointRate>100</GetTechPointRate>
+     	<!--获得科技点数-->
+        <GetTechPoint>1</GetTechPoint>
+		<!--获得熟练度 1概率 2数量-->
+        <GetSkillPoint>
+			<Int1>1000</Int1>
+			<Int2>10</Int2>
+		</GetSkillPoint>
+		<!--工业类型-->
+        <IndustryType>3</IndustryType>
+		<!--工作得病概率万分比-->
+       <IllnessRate>10</IllnessRate>
+  </CitizenActionConfig>
+
+</ArrayOfCitizenActionConfig>

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<ArrayOfCourseModeConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--   教程模式配置：  Tutorial Mode Configuration:
+   （教程进去需要选择的三个模块）  (Three modules required to enter the tutorial)
+  字段        类型        说明     
+  ID          int            唯一ID  Unique ID
+  Icon        string          图标路径（不对应多语言表）  Icon Path (non-corresponding to multi-language table)
+  Title       string           标题说明  Description of Title
+  Des         string           该模式的描述  Description of the Mode
+  Seed        int            对应的地图种子  Corresponding map seeds
+  Name        string           小镇名字  Town Name
+  NextCourseId    int            进阶教程（后续对应的教程ID）  Advanced tutorial (follow-up corresponding tutorial ID)
+  HardModeId      int            对应hardmode中的难度ID  Corresponding to the Difficulty ID in the hardmode
+  BasicOperationList               教程流程  Tutorial Process
+    CourseId      int            对应Course表中的ID（按照配置前后顺序触发）  Corresponds to the ID in the Course list (Trigger according to the configuration time sequence)
+
+   
+   
+   
+
+  备注：  Remarks:
+  int        整型，只能填整数  Integer. Only integers can be filled in
+  string       字符串类型，字母或者文字  String type, letter or text
+  bool         布尔类型，true或者false  Boolean type, true or false
+  Param2Int    自定义双整数类型（Int1间隔天数， Int2对应每次扣减的值）  Customize the double integer type (Int1 is for interval of days and Int2 for each deduction value)
+  Config2Int     自定义双整数类型（Int1对应物品类型 Int2对应随机权重）  Custom double integer type (Int1 is for item type and Int2 is for random weight)
+  ConfigLowerUpper    自定义双整数类型（Lower对应最小值 Upper对应最大值）  Custom double integer type (Lower is the minimum value and Upper is the maximum)
+
+     实例：  Instance:
+     见下方  See below
+-->   
+
+  
+  <CourseModeConfig>
+    <ID>1</ID>
+    <Icon>Course_1</Icon>
+    <Title>Course_Title_1</Title>
+    <Des>Course_Des_1</Des>
+    <Seed>222</Seed>
+    <Name>Course_TownName_1</Name>
+    <NextCourseId>2</NextCourseId>
+    <HardModeId>10001</HardModeId>
+    <BasicOperationList>
+    <CourseId>1</CourseId><!--教程1开始-->
+    <CourseId>2</CourseId><!--esc-->
+    <CourseId>3</CourseId><!--wasd-->
+    <CourseId>4</CourseId><!--qe-->
+    <CourseId>5</CourseId><!--资源-->
+    <CourseId>6</CourseId><!--左侧提示-->
+    <CourseId>7</CourseId><!--滚轮-->
+    <CourseId>8</CourseId><!--住房1-->
+   <!-- <CourseId>9</CourseId>住房4（5-->
+    <CourseId>10</CourseId><!--砍树-->
+    <CourseId>11</CourseId><!--x10-->
+    <CourseId>12</CourseId><!--关闭市集-->
+    <CourseId>36</CourseId><!--打开市集-->
+   <!-- <CourseId>13</CourseId>定位住房-->
+    <CourseId>14</CourseId><!--坚固堆放场分类-->
+    <CourseId>15</CourseId><!--桥-->
+    <!--<CourseId>16</CourseId>隧道-->
+    <CourseId>17</CourseId><!--i城市详情-->
+    <!--<CourseId>31</CourseId>-->
+    <CourseId>32</CourseId><!--20月-->
+    <CourseId>33</CourseId><!--市政厅-->
+    <CourseId>34</CourseId><!--帮助日志-->
+    <CourseId>35</CourseId><!--教程1结束-->
+    </BasicOperationList>
+  </CourseModeConfig>
+
+  <CourseModeConfig>
+    <ID>2</ID>
+    <Icon>Course_2</Icon>
+    <Title>Course_Title_2</Title>
+    <Des>Course_Des_2</Des>
+    <Seed>54627</Seed><!--22222-->
+    <Name>Course_TownName_2</Name>
+    <NextCourseId>3</NextCourseId>
+    <HardModeId>10002</HardModeId>
+    <BasicOperationList>
+    <CourseId>37</CourseId>
+    <CourseId>38</CourseId>
+    <CourseId>39</CourseId>
+    <CourseId>40</CourseId>
+    <CourseId>41</CourseId>
+    <CourseId>42</CourseId>
+    <CourseId>43</CourseId>
+    <CourseId>44</CourseId>
+   <!-- <CourseId>45</CourseId>-->
+    <CourseId>46</CourseId>
+    <CourseId>47</CourseId>
+    <CourseId>49</CourseId><!--武器库-->
+    <CourseId>48</CourseId><!--裁缝铺-->
+    <CourseId>50</CourseId>
+    <CourseId>51</CourseId>
+    <CourseId>52</CourseId>
+    <CourseId>53</CourseId>
+   <!-- <CourseId>67</CourseId> -->
+    </BasicOperationList>
+  </CourseModeConfig>
+
+  <CourseModeConfig>
+    <ID>3</ID>
+    <Icon>Course_3</Icon>
+    <Title>Course_Title_3</Title>
+    <Des>Course_Des_3</Des>
+    <Seed>498481198</Seed>
+    <Name>Course_TownName_3</Name>
+    <HardModeId>10003</HardModeId>
+    <BasicOperationList>
+    <CourseId>54</CourseId>
+    <CourseId>55</CourseId>
+    <CourseId>56</CourseId>
+    <CourseId>57</CourseId>
+    <CourseId>58</CourseId>
+    <CourseId>59</CourseId>
+    <!--  <CourseId>60</CourseId>-->
+     <!-- <CourseId>61</CourseId>
+    <CourseId>64</CourseId>-->
+   <!--  <CourseId>62</CourseId>
+    <CourseId>63</CourseId>
+    <CourseId>65</CourseId>-->
+    <CourseId>71</CourseId>
+    <CourseId>68</CourseId>
+    <CourseId>69</CourseId>
+    <CourseId>70</CourseId>
+    <CourseId>66</CourseId>
+    </BasicOperationList>
+  </CourseModeConfig>
+</ArrayOfCourseModeConfig>

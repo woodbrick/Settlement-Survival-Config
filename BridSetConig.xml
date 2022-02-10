@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<BridSetConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!--   野外表现动物的说明：  Description of Wild-field Animals:
+  flySpeed      int          飞行速度  Flight Speed
+  group                  飞行动物群组说明  Description of groups of flying animals
+  string        string         飞行动物队形配置  Configuration of the formation of flying animals
+
+		
+
+  备注：  Remarks:
+  int        整型，只能填整数  Integer. Only integers can be filled in
+  string       字符串类型，字母或者文字  String type, letter or text
+  bool         布尔类型，true或者false  Boolean type, true or false
+  Param2Int    自定义双整数类型（Int1间隔天数， Int2对应每次扣减的值）  Customize the double integer type (Int1 is for interval of days and Int2 for each deduction value)
+  Config2Int     自定义双整数类型（Int1对应物品类型 Int2对应随机权重）  Custom double integer type (Int1 is for item type and Int2 is for random weight)
+  ConfigLowerUpper    自定义双整数类型（Lower对应最小值 Upper对应最大值）  Custom double integer type (Lower is the minimum value and Upper is the maximum)
+
+     实例：  Instance:
+     见下方  See below
+-->   
+
+
+
+	
+	-->
+  
+  
+  
+  
+  <flySpeed>1</flySpeed>
+  <group>
+    <string>
+      0,0,0,0,0,0,0,1,0,0,0,0,0,0
+      0,0,0,0,0,0,1,0,1,0,0,0,0,0
+      0,0,0,0,0,1,0,0,0,1,0,0,0,0
+      0,0,0,0,1,0,0,0,0,0,1,0,0,0
+      0,0,0,1,0,0,0,0,0,0,0,1,0,0
+      0,0,1,0,0,0,0,0,0,0,0,0,1,0
+      0,1,0,0,0,0,0,0,0,0,0,0,0,1
+    </string>
+  </group>
+</BridSetConfig>

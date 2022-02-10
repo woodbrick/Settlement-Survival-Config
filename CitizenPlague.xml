@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+<ArrayOfPlagueConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--   市民的瘟疫配置说明：  Description of the Citizens’ Plague Configuration:
+  字段        类型      说明     
+  ID          int          唯一ID  Unique ID
+  Name        string        瘟疫的名字  Name of plague
+  Icon        string         默认图标的路径，科技使用（不对应多语言）  Path of default icon, for technology (not in multiple languages)
+  IconOn        string         解锁科技后对应的图标  Unlocked technology icon
+  TipsUnLockTech    string         图标对应的tips  Tips of the icon
+  UnLockTech      int          受科技ID控制  Controlled by Technology ID
+  CitizenState    int          触发的人物状态（信息枚举ID,具体查看下方枚举）  Character status triggered (information enumerated ID, see the enumerated below for details)
+  SpreadDays      ConfigLowerUpper     传播的间隔天数（Lower对应最小值 Upper对应最大值）  The interval of days of spreading (Lower is the minimum value and upper is the maximum)
+  SpreadRate      int          传播成功的概率（百分比）  Probability of successful spreading (percentage)
+  SpreadRadis     int          传播半径（格子数）  Spreading Radius (number of slots)
+  Weight        int          该疾病获得的权重  Weighting of the disease
+  HealthReduce    Param2Int      生命值减少  （Int1间隔天数， Int2对应每次扣减的生命值）  Decreased HP (Int1 interval of days, Int2 corresponds to the HP deducted each time)
+  DeadLog       string         死亡的提示（死亡后有墓地的描述）  Hint of Death (description of cemetery after death)
+  TombDeadLog     string         死亡的提示（死亡后没有墓地的描述）  Hint of Death (no description of cemetery after death)
+  Type        int·         疾病类型（具体查看下方枚举）  Type of disease (see the list below for details)
+  AddAbilityList               该疾病对应的人物能力列表  List of People’s Competencies Corresponding to the Disease
+    AddAbility      int          触发该疾病后触发的效果ID（CitizenAbility表中的ID）  Effect ID after the disease is triggered (ID in the CitizenAbility table)
+  TreatTimes      int          该疾病需要治疗次数  Number of treatments required for the disease
+  TechTreatAddTimes Config2Int       研发科技治疗瘟疫的效果提升（Int1科技ID， Int2解锁该科技后增加治疗次数）  Increase the effect of R&D technology in the treatment of plague (Int1 technology ID, Int2 increased treatments after unlocking this technology)
+  CanSpread     bool        是否可传播  Is it transmittable
+      疾病类型枚举：    Disease Type Enumeration:  
+  IllnessType_Weak  = 1;  //    疾病小病   Minor disease 
+  IllnessType_Strong  = 2;  //    疾病大病   Major disease 
+  IllnessType_Plague  = 3;  //    疾病瘟疫  Plague
+
+
+  备注：  Remarks:
+  int        整型，只能填整数  Integer. Only integers can be filled in
+  string       字符串类型，字母或者文字  String type, letter or text
+  bool         布尔类型，true或者false  Boolean type, true or false
+  Param2Int    自定义双整数类型（Int1间隔天数， Int2对应每次扣减的值）  Customize the double integer type (Int1 is for interval of days and Int2 for each deduction value)
+  Config2Int     自定义双整数类型（Int1对应物品类型 Int2对应随机权重）  Custom double integer type (Int1 is for item type and Int2 is for random weight)
+  ConfigLowerUpper    自定义双整数类型（Lower对应最小值 Upper对应最大值）  Custom double integer type (Lower is the minimum value and Upper is the maximum)
+
+     实例：  Instance:
+     见下方  See below
+-->   
+ 
+ 
+    <!--瘟疫的配置-->
+ <PlagueConfig>
+    <ID>1</ID>
+	<!--瘟疫-->
+	<Type>3</Type>
+	<!--疾病状态显示-->
+	<CitizenState>33</CitizenState>
+    <Name>CitizenPlague_Name_1</Name>
+    <Icon></Icon>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>30</Lower>
+      <Upper>30</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>90</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>6</SpreadRadis>
+    <!--获病权重-->
+    <Weight>4</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>1</Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>50</TreatTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_1</DeadLog>
+    <TombDeadLog>CitizenPlague_TombDeadLog_1</TombDeadLog>
+  </PlagueConfig>
+  <PlagueConfig>
+    <ID>2</ID>
+	<!--瘟疫，白喉-->
+	<Type>3</Type>
+	<!--疾病状态显示-->
+	<CitizenState>33</CitizenState>
+    <Name>CitizenPlague_Name_2</Name>
+    <Icon></Icon>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>30</Lower>
+      <Upper>30</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>55</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>4</SpreadRadis>
+    <!--获病权重-->
+    <Weight>80</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>5</Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>50</TreatTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_2</DeadLog>
+	<TombDeadLog>CitizenPlague_TombDeadLog_2</TombDeadLog>
+  </PlagueConfig>
+  <PlagueConfig>
+    <ID>3</ID>
+	<!--瘟疫-->
+	<Type>3</Type>
+	<!--疾病状态显示-->
+	<CitizenState>33</CitizenState>
+    <Name>CitizenPlague_Name_3</Name>
+    <Icon></Icon>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>30</Lower>
+      <Upper>30</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>60</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>4</SpreadRadis>
+    <!--获病权重-->
+    <Weight>100</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>5</Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>50</TreatTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_3</DeadLog>
+	<TombDeadLog>CitizenPlague_TombDeadLog_3</TombDeadLog>
+  </PlagueConfig>
+  <PlagueConfig>
+    <ID>4</ID>
+	<!--瘟疫-->
+	<Type>3</Type>
+	<!--疾病状态显示-->
+	<CitizenState>33</CitizenState>
+    <Name>CitizenPlague_Name_4</Name>
+    <Icon></Icon>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>30</Lower>
+      <Upper>30</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>60</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>4</SpreadRadis>
+    <!--获病权重-->
+    <Weight>100</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>5</Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>50</TreatTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_4</DeadLog>
+	<TombDeadLog>CitizenPlague_TombDeadLog_4</TombDeadLog>
+  </PlagueConfig>
+  <PlagueConfig>
+    <ID>5</ID>
+	<!--瘟疫-->
+	<Type>3</Type>
+	<!--疾病状态显示-->
+	<CitizenState>33</CitizenState>
+    <Name>CitizenPlague_Name_5</Name>
+    <Icon></Icon>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>30</Lower>
+      <Upper>30</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>75</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>4</SpreadRadis>
+    <!--获病权重-->
+    <Weight>100</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>2 </Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>50</TreatTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_5</DeadLog>
+	<TombDeadLog>CitizenPlague_TombDeadLog_5</TombDeadLog>
+  </PlagueConfig>
+
+  <PlagueConfig>
+    <ID>6</ID>
+	<!--瘟疫-->
+	<Type>3</Type>
+	<!--疾病状态显示-->
+	<CitizenState>33</CitizenState>
+    <Name>CitizenPlague_Name_6</Name>
+    <Icon></Icon>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>30</Lower>
+      <Upper>30</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>50</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>4</SpreadRadis>
+    <!--获病权重-->
+    <Weight>90</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>3</Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>50</TreatTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_6</DeadLog>
+  </PlagueConfig>
+  
+   <!--日常疾病的配置-->
+    <PlagueConfig>
+    <ID>7</ID>
+	<!--小病-->
+	<Type>1</Type>
+	<!--疾病状态显示-->
+	<CitizenState>25</CitizenState>
+    <Name>CitizenPlague_Name_7</Name>
+    <Icon></Icon>
+    <!--获病权重（同一类型下得该病的权重）-->
+    <Weight>70</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>30</Int1>
+      <!--伤害值-->
+      <Int2>1</Int2>
+    </HealthReduce>
+    <!--得病之后获得能力（一次性触发）-->
+    <AddAbilityList>
+      <AddAbility>2</AddAbility>
+    </AddAbilityList>
+    <!--需要治疗的总次数-->
+	<TreatTimes>100</TreatTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_6</DeadLog>
+  </PlagueConfig>
+  
+    
+   <!--日常疾病的配置-->
+    <PlagueConfig>
+    <ID>8</ID>
+	<!--大病-->
+	<Type>1</Type>
+	<!--疾病状态显示-->
+	<CitizenState>26</CitizenState>
+    <Name>CitizenPlague_Name_8</Name>
+    <Icon></Icon>
+    <!--获病权重（同一类型下得该病的权重）-->
+    <Weight>30</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔--> 
+      <Int1>30</Int1>
+      <!--伤害值-->
+      <Int2>1</Int2>
+    </HealthReduce>
+    <!--得病之后获得能力（一次性触发）-->
+    <AddAbilityList>
+      <AddAbility>1</AddAbility>
+      <AddAbility>2</AddAbility>
+    </AddAbilityList>
+    <!--需要治疗的总次数-->
+	<TreatTimes>300</TreatTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_6</DeadLog>
+  </PlagueConfig>
+  
+    <PlagueConfig>
+    <ID>9</ID>
+	<!--瘟疫（天花复活节岛专用）-->
+	<Type>3</Type>
+	<!--疾病状态显示-->
+	<CitizenState>33</CitizenState>
+    <Name>CitizenPlague_Name_9</Name>
+    <Icon></Icon>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>2</Lower>
+      <Upper>2</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>100</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>5</SpreadRadis>
+    <!--获病权重-->
+    <Weight>100</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>1</Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>100</TreatTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_9</DeadLog>
+  </PlagueConfig>
+ 
+   
+    <PlagueConfig>
+    <ID>10</ID>
+	<!--水源传播 霍乱-->
+	<Type>3</Type>
+	<!--疾病状态显示-->
+	<CitizenState>32</CitizenState>
+    <Name>CitizenPlague_Name_10</Name>
+    <Icon>Plague_10</Icon>
+    <IconOn>Plague_10on</IconOn>
+    <Tips>PlagueTips_10</Tips>
+    <TipsUnLockTech>PlagueTips_10on</TipsUnLockTech>
+    <UnLockTech>3106</UnLockTech>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>10</Lower>
+      <Upper>10</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>70</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>2</SpreadRadis>
+    <!--获病权重-->
+    <Weight>90</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>3</Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>1000</TreatTimes>
+  <TechTreatAddTimes>
+      <!--科技id-->
+      <Int1>3106</Int1>
+      <!--增加治疗次数-->
+      <Int2>200</Int2>
+  </TechTreatAddTimes>
+    <!--死亡提示-->    
+    <DeadLog>CitizenPlague_DeadLog_10</DeadLog>
+  <TombDeadLog>CitizenPlague_TombDeadLog_10</TombDeadLog>
+  </PlagueConfig> 
+   
+    <PlagueConfig>
+    <ID>11</ID>
+	<!--皮肤传播 麻疹-->
+	<Type>2</Type>
+	<!--疾病状态显示-->
+	<CitizenState>33</CitizenState>
+    <Name>CitizenPlague_Name_11</Name>
+    <Icon>Plague_11</Icon>
+    <IconOn>Plague_11on</IconOn>
+    <Tips>PlagueTips_11</Tips>
+    <TipsUnLockTech>PlagueTips_11on</TipsUnLockTech>
+    <UnLockTech>3107</UnLockTech>
+    <Icon></Icon>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>10</Lower>
+      <Upper>10</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>70</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>2</SpreadRadis>
+    <!--获病权重-->
+    <Weight>90</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>3</Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>1500</TreatTimes>
+  <TechTreatAddTimes>
+      <!--科技id-->
+      <Int1>3107</Int1>
+      <!--增加治疗次数-->
+      <Int2>200</Int2>
+  </TechTreatAddTimes>
+    <!--死亡提示-->
+       <DeadLog>CitizenPlague_DeadLog_11</DeadLog>
+  <TombDeadLog>CitizenPlague_TombDeadLog_11</TombDeadLog>
+  </PlagueConfig> 
+   
+    <PlagueConfig>
+    <ID>12</ID>
+	<!--唾液传播 肺结核-->
+	<Type>3</Type>
+	<!--疾病状态显示-->
+	<CitizenState>34</CitizenState>
+    <Name>CitizenPlague_Name_12</Name>
+    <Icon>Plague_12</Icon>
+    <IconOn>Plague_12on</IconOn>
+    <Tips>PlagueTips_12</Tips>
+    <TipsUnLockTech>PlagueTips_12on</TipsUnLockTech>
+    <UnLockTech>3805</UnLockTech>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>15</Lower>
+      <Upper>15</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>100</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>2</SpreadRadis>
+    <!--获病权重-->
+    <Weight>90</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>8</Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>2000</TreatTimes>
+  <TechTreatAddTimes>
+      <!--科技id-->
+      <Int1>3805</Int1>
+      <!--增加治疗次数-->
+      <Int2>200</Int2>
+  </TechTreatAddTimes>
+    <!--死亡提示-->
+      <DeadLog>CitizenPlague_DeadLog_12</DeadLog>
+  <TombDeadLog>CitizenPlague_TombDeadLog_12</TombDeadLog>
+  </PlagueConfig> 
+   
+    <PlagueConfig>
+    <ID>13</ID>
+	<!--空气传播 大流感-->
+	<Type>3</Type>
+	<!--疾病状态显示-->
+	<CitizenState>35</CitizenState>
+    <Name>CitizenPlague_Name_13</Name>
+    <Icon>Plague_13</Icon>
+    <IconOn>Plague_13on</IconOn>
+    <Tips>PlagueTips_13</Tips>
+    <TipsUnLockTech>PlagueTips_13on</TipsUnLockTech>
+    <UnLockTech>3803</UnLockTech>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>5</Lower>
+      <Upper>5</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>80</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>2</SpreadRadis>
+    <!--获病权重-->
+    <Weight>90</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>3</Int2>
+    </HealthReduce>
+	<!--需要治疗的总次数-->
+	<TreatTimes>2500</TreatTimes>
+  <TechTreatAddTimes>
+      <!--科技id-->
+      <Int1>3803</Int1>
+      <!--增加治疗次数-->
+      <Int2>200</Int2>
+  </TechTreatAddTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_13</DeadLog>
+  <TombDeadLog>CitizenPlague_TombDeadLog_13</TombDeadLog>
+  </PlagueConfig>
+
+  <PlagueConfig>
+    <ID>14</ID>
+    <!--鼠疫-->
+    <Type>3</Type>
+    <!--疾病状态显示-->
+    <CitizenState>36</CitizenState>
+    <Name>CitizenPlague_Name_13</Name>
+    <Icon>Plague_13</Icon>
+    <IconOn>Plague_13on</IconOn>
+    <Tips>PlagueTips_13</Tips>
+    <TipsUnLockTech>PlagueTips_13on</TipsUnLockTech>
+    <UnLockTech>3803</UnLockTech>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>5</Lower>
+      <Upper>5</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>80</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>2</SpreadRadis>
+    <!--获病权重-->
+    <Weight>90</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>3</Int2>
+    </HealthReduce>
+    <!--需要治疗的总次数-->
+    <TreatTimes>2500</TreatTimes>
+    <TechTreatAddTimes>
+      <!--科技id-->
+      <Int1>3803</Int1>
+      <!--增加治疗次数-->
+      <Int2>200</Int2>
+    </TechTreatAddTimes>
+    <!--死亡提示-->
+        <DeadLog>CitizenPlague_DeadLog_13</DeadLog>
+      <TombDeadLog>CitizenPlague_TombDeadLog_13</TombDeadLog>
+  </PlagueConfig>
+
+
+  <PlagueConfig>
+    <ID>15</ID>
+    <!--鼠疫（配置和复活节岛一样，用于洛伦佐移民申请）-->
+    <Type>3</Type>
+    <!--疾病状态显示-->
+    <CitizenState>33</CitizenState>
+    <Name>CitizenPlague_Name_9</Name>
+    <Icon></Icon>
+    <!--传播间隔时间-->
+    <SpreadDays>
+      <Lower>2</Lower>
+      <Upper>2</Upper>
+    </SpreadDays>
+    <!--传播概率-->
+    <SpreadRate>100</SpreadRate>
+    <!--传播半径-->
+    <SpreadRadis>5</SpreadRadis>
+    <!--获病权重-->
+    <Weight>100</Weight>
+    <!--生命消耗-->
+    <HealthReduce>
+      <!--消耗间隔-->
+      <Int1>1</Int1>
+      <!--伤害值-->
+      <Int2>1</Int2>
+    </HealthReduce>
+    <!--需要治疗的总次数-->
+    <TreatTimes>100</TreatTimes>
+    <!--死亡提示-->
+    <DeadLog>CitizenPlague_DeadLog_9</DeadLog>
+  </PlagueConfig>
+
+</ArrayOfPlagueConfig>

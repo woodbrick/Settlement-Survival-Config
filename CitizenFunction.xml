@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+<CitizenFunctionConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--   市民属性配置说明：  Description of Configuration of Citizens’ Attributes:
+       人口压力配置  Population Pressure Allocation
+     计算方式：人口压力值=市民/N-K-其他  Calculation method: Population pressure value = citizens / N-K-Other
+  PressureAllCitizen    int          人口压力系数 被全体市民人数除以（N）  Population pressure coefficient Divide the number of citizens by (N)
+  PressureReduceValue   int          人口压力基础值（K）  Basic value of population pressure (K)
+  PressureHappy     int          幸福度对应的压力值系数（当前幸福度/配置值）  Pressure coefficient corresponding to happiness (current happiness/configuration value)
+  PressureHealth      int          健康度对应的压力值系数（当前幸福度/配置值）  Pressure coefficient corresponding to health (current happiness/configuration value)
+  PressureNoHome      int          没有房子增加的压力值  Increased pressure without a house
+       市民日常配置  Daily configuration of citizens
+  HealthRecover     int          每天回复的生命值（没有异常状态下才会回复）  Daily HP recovered (only without abnormal status)
+  FoodConsume       int          每天降低的饱食度  Reduced daily satiety
+  GetFoodTrigger      int          触发取食行为的饱食度  The satiety triggering the eating behavior
+  HungryTrigger     int          触发饥饿图标的饱食度  The satiety triggering the starvation icon
+  GetWarmTrigger      int          触发取暖的保暖值  The warmth triggering warm keeping
+  ReduceWarmTmcTrigger  int          触发降低保暖度的温度（华氏度，在此温度以上不会降低保暖值）  Temperature triggering lowering of the warmth (Fahrenheit. No warmth reducing above this temperature) 
+  CoolTrigger       int          触发寒冷图标的保暖值  The warmth triggering the cold icon
+  WarmConsume       int          保暖度的基础消耗值  Basic Consumption of warmth
+  AffectWarmTmcParameter  float        影响保暖度的温度参数  Temperature parameters that affect the warmth
+  【   保暖值扣除计算方式：温度差值 = 减少保暖度的温度（0度） - 当前温度  How to deduct warmth: Temperature difference = Temperature reducing warmth (0 degree) - current temperature
+   保暖都基础消耗* （1+温度差值 * 影响保暖度的温度参数） / （1 + 当前衣服系数）】  The base consumption of warmth* (1+ temperature difference * temperature parameter affecting the warmth) / (1+ current clothing coefficient)]
+  RecoverWarm       int          取暖恢复的保暖度  The warmth recovered through heating
+  RestTrigger       int          触发休息的体力值  The strength triggering rest
+  TiredEnergy       int          触发疲劳的体力值  The strength triggering fatigue
+  GetDrinkTrigger     int          触发饮水的干渴值  The thirst triggering water
+  DrinkConsume      int          干渴值每日消耗的值  The daily consumption of thirst
+  ThirstyTrigger      int          触发干渴图标的干渴值  The thirst triggering the thirst icon
+  ToolComsume       int          工具每日消耗的耐久度  Durability daily consumed by the tool
+  HomeTransportLoad   int          市民搬家时临时增加的负重  The temporarily increased weight-bearing when the citizens is moving
+  TradeTransportLoad    int          贸易者临时增加的负重  The temporarily increased weight-bearing for traders
+  MarketTransportLoad   int          小贩临时增加的负重  The temporarily increased weight-bearing for pedlar
+  ImmuneLenght      int          市民患病后的免疫周期（月份）  Immunization cycle for citizens after illness (months)
+  PregnancyRate     int          生育概率（百分比）  Probability of giving birth (%)
+  StudentStudyTimes   int          学生受教育转变成成人的次数  The number of times of students’ transition into adults through education
+  IdlerStudyTimes     int          成人转变成受教育成人的次数  The number of times of adults’ transition into adults educated adults
+  StandRestToWork     int         通过站立或者闲逛 恢复大于一定的体力值才能再次工作  Characters can only work again after restoring the strength to a certain level by standing or wandering
+  FixerOneTimeAddDurability int        维修工每次维修增加的建筑耐久度  The durability of the building added by workers’ each maintenance
+  FixerNeedByBuildingNum  int          一个建筑工可以维修多少个房子  The number of houses a builder can repair
+  BuildingNeedRepair    int          触发建筑修复的最小建筑耐久度  Minimum building durability triggering building repair
+  BuildingBroken      int          触发建筑破损状态的建筑耐久度 减少收益  The durability of the building triggering damage, reducing the income
+  EquipUpdateInMonths   int          衣服消耗周期（月）  Clothing consumption cycle (months)
+  ClothesComsume      int          衣服每个月消耗的耐久度  The durability that clothes consume every month
+  EquipBagUpdateInMonths  Config2Int       背包消耗周期 （Int1月份，Int2消耗的值）   Backpack consumption cycle (Int1 is for months and Int2 for consumption value) 
+  EquipShoeUpdateInMonths Config2Int       鞋子消耗周期 （Int1月份，Int2消耗的值）  Shoe consumption cycle (Int1 is for months and Int2 for consumption value)
+     幸福健康相关配置  Happiness and health-related configuration
+  CleanWarning      int          清洁宽容警告值  Cleaning tolerance warning value
+  SickWarning       int          疾病宽容警告值  Disease tolerance Warning Value
+  NoHealthValue     int          亚健康值  Sub-health value
+  HappyUpdateInMonths   int          幸福度刷新周期（月）  Refresh cycle of happiness (months)
+  HappyTrigger      int          触发补充幸福度下限  Trigger supplementing the lower limit of happiness
+  HappyDailyReduce    ConfigLowerUpper   幸福度日常扣减范围（日常扣减的上下限）  Daily deduction range of happiness (upper and lower limits of daily deduction)
+     幸福度健康度根据人口每个月额外扣减值=（当前人数-ReduceBaseCitizen）/Division  Happiness and health is additionally deducted per month according to the population = (current number of people - ReduceBaseCitizen)/Division
+     健康度同上  Health is the same as above
+  Division        int          人口相关系数  除法  Demographic correlation coefficient Division method
+  ReduceBaseCitizen   int          人口相关系数  减法    Demographic correlation coefficient Subtraction method  
+  HappyMaxReduce      int          人口系数扣减幸福度的最大值 填写负数   Population coefficient minus the maximum value of happiness. Fill in a negative number 
+  HealthMaxReduce     int          人口系数扣减健康度的最大值 填写负数   Population coefficient minus the maximum value of health. Fill in a negative number 
+  HappyDeadFamilyReduce int          家庭成员死亡没有墓地扣减  No cemetery deduction for death of family members
+  HappyAddNewBirth    int          家庭出生新生儿增加幸福度  The newborns increase the happiness
+  CrimeTrriger      int          触发犯罪的幸福度  Happiness level triggered by crimes
+  CrimeUpdateInDays   int          触发犯罪周期（月）  Cycle of triggering crimes (months)
+  CrimeMinNum       int          触发犯罪的最少人数  Minimum number of people triggering crimes
+  CrimeRate       int          触发犯罪的概率（百分比）  Probability of triggering crimes (%)
+  HappyAccident     Config2Int       幸福特殊事件（Int1年限，Int2下降数值 负数 ）  Special happiness events (Int1 is for year and Int2 for drop value, negative number)
+  WorkEffectList                 工作效率受幸福影响列表  List of Work Efficiency Impacted by Happiness
+    WorkEffect       
+      Range       ConfigLowerUpper     幸福度区间（Lower对应最小值包含等于， Upper对应最大值）  Happiness range (Lower is the minimum value and upper is the maximum)
+      AddPerTimes     float          工作效率增加（工作时间减少） 百分比  Increased productivity (decreased working hours) %
+  HealthUpdateInMonths  int          健康的刷新你周期（月）  Health refresh cycle (months)
+  HealthTrigger     int          触发补充健康度下限  Trigger supplementing the lower limit of health
+  HealthDailyReduce   ConfigLowerUpper   健康度日常扣减范围  Daily deduction range of health level
+  HealthNoClothes     int          没有衣服扣减的健康值  Deducted health without clothes
+  HealthHungry      int          触发饥饿状态扣减的健康值  Deducted health triggering hungers
+  HealthNoHome      int          没有房子扣减的健康值    Deducted health without a house  
+  HealthNoEnoughFood    int          没有足够种类的食物扣减的健康值  Deducted health without enough food types
+  HealthCreatePlague    int          低于该值触发瘟疫  Plague is triggered when the value is lower than this one
+  HealthLowAddPlague    Config2Int       低健康获得瘟疫（Int1时间，Int2概率 ）  Low health access to plague (Int1 time, Int2 probability)
+  HealthReduceSpeed   int          低于该值降低移动速度  When the value is lower than this one, the movement speed is reduced
+  HealthWorkAndReduce   ConfigLowerUpper   工作概率扣减健康度（Int1概率，Int2扣减数字 负数 ）  Work probability minus health level (Int1 probability, int2 deduction, negative number)
+  HealthWorkEffectList             作时长受健康影响列表  List of Work Duration Impacted by Health
+    HealthWorkEffect       
+      Range       ConfigLowerUpper     健康的区间（Lower对应最小值包含等于， Upper对应最大值）  Health range (Lower is the minimum value and upper is the maximum)
+      AddPerTimes     float          工作时间增加（体力值增加） 百分比  Increased in working time (Increasing Strength) %
+     年龄相关的配置（此处的配置优先级低于hardmode中的配置）  Age related configuration (the configuration here has priority lower than that in hardmode)
+  AdultDays       int          成年天数  Number of days of adulthood
+  FindHomeDays      int          寻找新家天数  Number of days to find a new home
+  AgeEffect       int         一岁的天数  Number of days of age 1
+  SchoolRange       ConfigLowerUpper    上学的天数范围（Lower对应最小值 Upper对应最大值）  The range of the number of schooling days (Lower is the minimum value and upper is the maximum)
+  DeathDaysRange      ConfigLowerUpper    死亡的天数范围（Lower对应最小值 Upper对应最大值）  The range of the number of death days (Lower is the minimum value and upper is the maximum)
+  PregnancyRange      ConfigLowerUpper    生育的天数范围（Lower对应最小值 Upper对应最大值）  The range of the number of childbirth days (Lower is the minimum value and upper is the maximum)
+  PregnancyInterval   ConfigLowerUpper    生育天数间隔（Lower对应最小值 Upper对应最大值）    Interval of days of childbirth (Lower is the minimum value and upper is the maximum)  
+     弃用配置汇总：  Deprecated Configuration Summary:
+  HealthCleanReduce   int          市民清洁健康度度（弃用配置）  Health degree of citizen’s cleanliness (deprecated configuration)
+  HealthSickReduce    int          市民草药健康度（弃用配置）  Health degree of citizen’s herbal medicines (deprecated configuration)
+  CitizenAverageNoHealth  int          市民平均疾病健康度（弃用配置）  Average health degree of citizen’s disease (deprecated configuration)
+  RecoverEnergyByRest   int          休息回复的体力值（弃用配置）  Strength value for recovery from rest (deprecated configuration)
+  RecoverEnergy     int          休息回复的体力值（弃用配置）  Strength value for recovery from rest (deprecated configuration)
+  WarmTrigger       int          触发取暖行为的保暖值（弃用配置）  The warmth triggering heating behavior (deprecated configuration)
+  FoodGetTypeNum      int          进食种类的数量（弃用配置）  Number of types of food intake (deprecated configuration)
+  FoodTypeRickFoodHealth  int          进食种类不够时扣减的值（弃用配置）  Deduction when the food types are not enough (deprecated configuration)
+
+				
+
+  备注：  Remarks:
+  int        整型，只能填整数  Integer. Only integers can be filled in
+  string       字符串类型，字母或者文字  String type, letter or text
+  bool         布尔类型，true或者false  Boolean type, true or false
+  Param2Int    自定义双整数类型（Int1间隔天数， Int2对应每次扣减的值）  Customize the double integer type (Int1 is for interval of days and Int2 for each deduction value)
+  Config2Int     自定义双整数类型（Int1对应物品类型 Int2对应随机权重）  Custom double integer type (Int1 is for item type and Int2 is for random weight)
+  ConfigLowerUpper    自定义双整数类型（Lower对应最小值 Upper对应最大值）  Custom double integer type (Lower is the minimum value and Upper is the maximum)
+
+     实例：  Instance:
+     见下方  See below
+-->   
+
+
+ <!--健康度比重-->
+  <!--食物-->
+	<FoodHealthWeight>35</FoodHealthWeight>
+	<!--清洁-->
+  <CleanHealthWeight>30</CleanHealthWeight>
+	<!--疾病-->
+  <SickHealthWeight>35</SickHealthWeight>
+	<!--幸福度比重-->
+  <!--食物-->
+  <FoodHappinessWeight>30</FoodHappinessWeight>
+  <!--住房-->
+  <HomeHappinessWeight>30</HomeHappinessWeight>
+  <!--场所娱乐-->
+  <PlaceHappinessWeight>40</PlaceHappinessWeight>
+  
+  <!--人口压力值=市民/N-K-其他-->
+  <!--人口压力系数1 被全体市民人数除以  Float N-->
+  <PressureAllCitizen>12</PressureAllCitizen>	
+  <!--人口压力Int K -->
+  <PressureReduceValue>-5</PressureReduceValue>
+  <!--幸福度系数Float X-->
+  <PressureHappy>15</PressureHappy>
+  <!--健康度系数Float Y-->
+  <PressureHealth>15</PressureHealth>
+  <!--人口压力 没有房子系数Int Z-->
+  <PressureNoHome>-10</PressureNoHome>
+  
+
+    <!--衣服鞋子背包-->
+    <!--衣物耐久度消耗根据刷新月份减少-->
+  <ClothesComsume>-30</ClothesComsume>
+    <!--衣服扣减耐久刷新月份-->
+  <EquipUpdateInMonths>1</EquipUpdateInMonths>
+    <!--背包消耗周期-->
+  <EquipBagUpdateInMonths>
+    <Int1>1</Int1>
+    <Int2>-30</Int2>
+  </EquipBagUpdateInMonths>
+      <!--鞋子消耗周期-->
+  <EquipShoeUpdateInMonths>
+    <Int1>1</Int1>
+    <Int2>-30</Int2>
+  </EquipShoeUpdateInMonths>
+  
+
+  <!--成年的天数-->
+  <AdultDays>900</AdultDays>
+  <!--寻找住所年纪（目前与生育年纪下限相同）-->
+  <FindHomeAge>900</FindHomeAge>
+  <!--每一岁的天数-->
+  <AgeEffect>90</AgeEffect>
+  <!--上学的天数范围-->
+  <SchoolRange>
+        <Lower>720</Lower>
+        <Upper>900</Upper>
+  </SchoolRange>
+  <!--小贩的负重-->
+  <DealerLoad>100</DealerLoad>
+  <!--市民搬运家居物资临时增加的负重-->
+  <HomeTransportLoad>100</HomeTransportLoad>
+  <!--贸易站工人搬运物资临时增加的负重-->
+  <TradeTransportLoad>100</TradeTransportLoad>
+  <!--市场工人搬运物资临时增加的负重-->
+  <MarketTransportLoad>100</MarketTransportLoad>        
+  <!--市民免疫时常 月份-->
+  <ImmuneLenght>12</ImmuneLenght>
+  <!--每天的生命恢复回复-->
+  <HealthRecover>1</HealthRecover>
+  <!--每天的饱食度消耗-->
+  <FoodConsume>-1</FoodConsume>
+  <!--取食的饱食度-->
+  <GetFoodTrigger>30</GetFoodTrigger>
+  <!--饥饿状态的饱食度-->
+  <HungryTrigger>0</HungryTrigger>
+  <!--每天的干渴度消耗-->
+  <DrinkConsume>-1</DrinkConsume>
+  <!--取水的干渴度-->
+  <GetDrinkTrigger>20</GetDrinkTrigger>
+  <!--干渴状态的干渴度-->
+  <ThirstyTrigger>0</ThirstyTrigger>
+  <!--取暖的保暖度-->
+  <GetWarmTrigger>35</GetWarmTrigger>
+  <!--开始消耗保暖度的温度（华氏）-->
+  <ReduceWarmTmcTrigger>50</ReduceWarmTmcTrigger>
+  <!--取暖的保暖度-->
+  <WarmTrigger>20</WarmTrigger>
+  <!--寒冷的保暖度-->
+  <CoolTrigger>0</CoolTrigger>
+  <!--保暖度消耗基础值-->
+  <WarmConsume>-2</WarmConsume>
+  <!--温度对保暖度的影响参数-->
+  <AffectWarmTmcParameter>0.2</AffectWarmTmcParameter>
+  <!--每次保暖恢复点数-->
+  <RecoverWarm>150</RecoverWarm>
+  <!--工具耐久度消耗-->
+  <ToolComsume>-1</ToolComsume>
+  <!--触发休息时的体力值-->
+  <RestTrigger>10</RestTrigger>
+  <!--通过休息恢复的体力值-->
+  <RecoverEnergyByRest>200</RecoverEnergyByRest>
+  <!--疲劳的体力值-->
+  <TiredEnergy>0</TiredEnergy>
+  <!--食物丰富种类-->
+  <FoodGetTypeNum>3</FoodGetTypeNum>
+  <!--食物丰富的健康度-->
+  <FoodTypeRickFoodHealth>20</FoodTypeRickFoodHealth>
+  <!--清洁宽容警告值-->
+  <CleanWarning>40</CleanWarning>
+  <!--疾病宽容警告值-->
+  <SickWarning>40</SickWarning>
+  <!--亚健康值-->
+  <NohealthValue>40</NohealthValue>
+  <!--生育幸福度-->
+  <PregnancyHappiness>40</PregnancyHappiness>
+  <!--生育概率-->
+  <PregnancyRate>100</PregnancyRate>
+  <!--每次休息体力恢复值-->
+  <RecoverEnergy>100</RecoverEnergy>
+  <!--学生受教育次数-->
+  <StudentStudyTimes>300</StudentStudyTimes>
+  <!--成人受教育次数-->
+  <IdlerStudyTimes>300</IdlerStudyTimes>
+  <!--房屋维修阈限值-->
+  <BuildingNeedRepair>50</BuildingNeedRepair>
+  <!--房屋破损阈限值-->
+  <BuildingBroken>20</BuildingBroken>
+
+
+
+  
+   <!--根据刷新周期清洁健康度降低值-->
+  <HealthCleanReduce>-3</HealthCleanReduce>
+  <!--根据刷新周期疾病健康度降低值-->
+  <HealthSickReduce>-15</HealthSickReduce>
+  <CitizenAverageNoHealth>40</CitizenAverageNoHealth>
+  <!--维修工一次维修增加耐久-->
+  <FixerOneTimeAddDurability>60</FixerOneTimeAddDurability>
+  <!--多少个维修房子需要一个建筑工-->
+  <FixerNeedByBuildingNum>8</FixerNeedByBuildingNum>
+  <!--通过站立或者闲逛恢复大于一定的体力值才能再次工作-->
+  <StandRestToWork>80</StandRestToWork>
+  <!--总市民幸福度刷新周期-->
+  <AllCitizenHappniessUpdateInMonths>1</AllCitizenHappniessUpdateInMonths>
+  <!--总市民健康度刷新周期-->
+  <AllCitizenHealthUpdateInMonths>1</AllCitizenHealthUpdateInMonths>
+  
+  <!--幸福度配置-->
+  <!--幸福度刷新周期-->
+  <HappyUpdateInMonths>1</HappyUpdateInMonths>
+  <!--触发补充幸福度下限-->
+  <HappyTrigger>400</HappyTrigger>
+  <!--日常扣减-->
+  <HappyDailyReduce>
+    <Lower>-60</Lower>
+    <Upper>-90</Upper>
+  </HappyDailyReduce>
+  
+   <!--幸福度与健康度相同算法-->
+    <!--人口相关系数 除以-->
+  <Division>80</Division>
+    <!--人口相关系数 减法-->
+  <ReduceBaseCitizen>10</ReduceBaseCitizen> 
+  
+  <!--扣减最大数值 负数-->
+  <HappyMaxReduce>-60</HappyMaxReduce>
+  <!--家庭死亡人-->
+  <HappyDeadFamilyReduce>-50</HappyDeadFamilyReduce>
+  <!--新生儿同增加幸福度-->
+  <HappyAddNewBirth>50</HappyAddNewBirth>
+  <!--犯罪-->
+  <CrimeTrriger>200</CrimeTrriger>
+  <!--触发犯罪最少人数-->
+  <CrimeMinNum>50</CrimeMinNum>
+  <!--犯罪概率-->
+  <CrimeRate>2000</CrimeRate>
+  <!--不能生育-->
+  <CannotNewBirth>200</CannotNewBirth>
+  <!--幸福度工作效率-->
+  <WorkEffectList>
+    <WorkEffect>
+      <Range>
+	    <!--最小值取小于等于-->
+        <Lower>0</Lower>
+		<!--最大值取小于-->
+        <Upper>600</Upper>
+      </Range>
+      <AddPerTimes>0.15</AddPerTimes>
+    </WorkEffect>
+    <WorkEffect>
+      <Range>
+        <Lower>800</Lower>
+        <Upper>1000</Upper>
+      </Range>
+      <AddPerTimes>-0.1</AddPerTimes>
+    </WorkEffect>
+    <WorkEffect>
+      <Range>
+        <Lower>1000</Lower>
+        <Upper>1250</Upper>
+      </Range>
+      <AddPerTimes>-0.2</AddPerTimes>
+    </WorkEffect>
+    <WorkEffect>
+      <Range>
+        <Lower>1250</Lower>
+        <Upper>1500</Upper>
+      </Range>
+      <AddPerTimes>-0.3</AddPerTimes>
+    </WorkEffect>
+    <WorkEffect>
+      <Range>
+        <Lower>1500</Lower>
+        <Upper>1750</Upper>
+      </Range>
+      <AddPerTimes>-0.4</AddPerTimes>
+    </WorkEffect>
+    <WorkEffect>
+      <Range>
+        <Lower>1750</Lower>
+        <Upper>2001</Upper>
+      </Range>
+      <AddPerTimes>-0.5</AddPerTimes>
+    </WorkEffect>
+  </WorkEffectList>
+  <!--幸福度随机事件-->
+  <HappyAccident>
+    <Int1>5</Int1>
+    <Int2>-50</Int2>
+  </HappyAccident>
+  <!--触发犯罪周期-->
+  <CrimeUpdateInDays>180</CrimeUpdateInDays>
+  
+  
+  
+  <!--健康度配置-->
+  <!--健康度刷新周期-->
+  <HealthUpdateInMonths>1</HealthUpdateInMonths>
+  <!--触发补充健康度下限-->
+  <HealthTrigger>400</HealthTrigger>
+  <!--日常扣减-->
+  <HealthDailyReduce>
+    <Lower>-3</Lower>
+    <Upper>-7</Upper>
+  </HealthDailyReduce>
+  <!--扣减最大数值 负数-->
+  <HealthMaxReduce>-70</HealthMaxReduce>
+  <!--没有衣服扣减-->
+  <HealthNoClothes>-50</HealthNoClothes>
+  <!--处于饥饿状态扣减-->
+  <HealthHungry>-50</HealthHungry>
+   <!--没有房子扣减-->
+  <HealthNoHome>-50</HealthNoHome> 
+   <!--没有足够种类的食物扣减-->
+  <HealthNoEnoughFood>-200</HealthNoEnoughFood>   
+  <!--工作有概率扣减-->
+  <HealthWorkAndReduce>
+  <!--百分比-->
+    <Int1>10</Int1>
+    <Int2>-15</Int2>
+  </HealthWorkAndReduce>
+    <!--触发瘟疫的健康值-->
+  <HealthCreatePlague>200</HealthCreatePlague>
+    <!--降低移动速度健康值-->
+  <HealthReduceSpeed>400</HealthReduceSpeed>   
+   <!--低健康获得瘟疫-->
+  <HealthLowAddPlague>
+    <Int1>30</Int1>
+    <Int2>10</Int2>
+  </HealthLowAddPlague>
+  <!--健康度工作效率-->
+  <HealthWorkEffectList>
+    <HealthWorkEffect>
+      <Range>
+        <Lower>0</Lower>
+        <Upper>600</Upper>
+      </Range>
+      <AddPerTimes>0.2</AddPerTimes>
+    </HealthWorkEffect>
+    <HealthWorkEffect>
+      <Range>
+        <Lower>800</Lower>
+        <Upper>1000</Upper>
+      </Range>
+      <AddPerTimes>-0.1</AddPerTimes>
+    </HealthWorkEffect>
+    <HealthWorkEffect>
+      <Range>
+        <Lower>1001</Lower>
+        <Upper>1250</Upper>
+      </Range>
+      <AddPerTimes>-0.2</AddPerTimes>
+    </HealthWorkEffect>
+    <HealthWorkEffect>
+      <Range>
+        <Lower>1250</Lower>
+        <Upper>1500</Upper>
+      </Range>
+      <AddPerTimes>-0.3</AddPerTimes>
+    </HealthWorkEffect>
+    <HealthWorkEffect>
+      <Range>
+        <Lower>1500</Lower>
+        <Upper>1750</Upper>
+      </Range>
+      <AddPerTimes>-0.4</AddPerTimes>
+    </HealthWorkEffect>
+    <HealthWorkEffect>
+      <Range>
+        <Lower>1750</Lower>
+        <Upper>2001</Upper>
+      </Range>
+      <AddPerTimes>-0.5</AddPerTimes>
+    </HealthWorkEffect>
+  </HealthWorkEffectList>
+  <HealthCreatePlague>200</HealthCreatePlague>
+  <!--最大拾取物品最大距离2.5一格-->
+  <MaxPickItemDistance>200</MaxPickItemDistance>
+  <!--挨饿天数-->
+  <StandStarveDays>30</StandStarveDays>
+   <!--忽略杀人的职业-->
+	<IgnoreKillOtherCareerList>
+		<IgnoreKillOtherCareer>17</IgnoreKillOtherCareer>
+		<IgnoreKillOtherCareer>99</IgnoreKillOtherCareer>
+		<IgnoreKillOtherCareer>100</IgnoreKillOtherCareer>
+	</IgnoreKillOtherCareerList>
+   <!--忽略被杀的职业-->
+	<IgnoreBeKillCareerList>
+		<IgnoreBeKillCareer>17</IgnoreBeKillCareer>
+		<IgnoreBeKillCareer>99</IgnoreBeKillCareer>
+		<IgnoreBeKillCareer>100</IgnoreBeKillCareer>
+	</IgnoreBeKillCareerList>
+</CitizenFunctionConfig>

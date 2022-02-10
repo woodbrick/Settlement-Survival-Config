@@ -1,0 +1,932 @@
+<?xml version="1.0"?>
+<ArrayOfCourseConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--   教程的配置说明：  Tutorial Configuration Instructions:
+  字段        类型    说明     
+  ID          int         唯一ID  Unique ID
+  DesTop        string       上部分描述  Description of the first half
+  DesBottom     string       下半部分描述  Description of the second half
+  DesAward      string       奖励描述  Reward Description
+  Icon        string       中间的图标（路径不对应多语言）  Icon in the middle (Path does not correspond to multiple languages)
+  IconGif       string       中间的图标（路径不对应多语言）UIIcons/GifIcon  Icon in the middle (Path does not correspond to multiple languages) UIIcons/GifIcon
+  TriggerType     int        是否有事件类型开放继续按钮（查看下方枚举）// 有就填事件id,无就不填  Is there a continue button for event types (check the enumeration below)// Please fill in if yes and don’t if no
+  BtnGray       bool       继续按钮是否置灰  Whether the Continue button is gray
+  Param1        int        事件类型参数1  参数类型  Event Type Parameter 1 Parameter Type
+  Param2        int        事件类型参数2  参数数量  Event Type Parameter 2 Quantity of Parameters
+  Param3        string       事件类型参数3  复杂组合参数  Event Type Parameter 3 Complex Combined Parameters
+  ArrowFlag     int        箭头提示（对应箭头枚举）  Arrow prompt (corresponding to arrow enumeration)
+  ArrowParam      int        箭头提示参数  Arrow prompt parameters
+     教程类型枚举：  Enumeration of Tutorial Types:
+  OpenMenuWindow = 1,    //    打开菜单界面   Open Menu Interface 
+    ClickMainBtn = 2,      //    点击建筑按钮          需要参数1 按钮id  Click Building button          Parameter 1 is required Button IDs
+    RacePeopleNum = 3,     //    职业人数判断          需要参数1 参数2  职业  数量  Quantity determination of occupational people          Parameter 1 and Parameters 2 are required Occupation Number
+    BuildingNum = 4,      //    建筑数量判断           需要参数1 参数2  id  数量  Quantity determination of buildings          Parameter 1 and Parameters 2 are required ID Number
+    BuildingPrepareNum = 5, //    准备建筑数量判断(包含已建成的)      需要参数1 参数2  id  数量  Quantity determination of buildings in preparation (including completed)      Parameter 1 and Parameters 2 are required ID Number
+    BuildingByOne = 6,      //    建筑判断 建成其中之一即可           需要参数3 id( 1|2|3| 多建筑用分隔符 | )  Building determination One is at least needed           Parameter 3 is required ID (1|2|3| Separate them by | if there are multiple)
+    CloseBuilding = 7,     //    关闭建筑                             需要参数1 id    Close building                             Parameter 1 is required ID 
+    OpenBuilding = 8,     //    打开建筑                              需要参数1 id   Open building                              Parameter 1 is required ID 
+    TenSpeed = 9,        //              加速到十倍                     Accelerate to ten times                   
+    PositionBuildBtn = 10,   //   建筑界面 定位建筑按钮               需要参数1 id                 Building interface Positioning building button              Parameter 1 is required ID               
+    WareChooseBtn = 11,     //       建筑界面 仓库分类按钮                           Building interface Warehouse category button                         
+    OpenTownWindow = 12,     //                      打开城市详情信息             Open city details           
+    OpenPersonInfo = 13,     //                   打开市民详情信息                Open citizens details              
+    OpenLogWindow = 14,     //    打开日志                               Open Log                             
+    ChangeResShow = 15,     //        改变资源列表                       List of Changed Resource                     
+    GetTechPoint = 16,     //    获得一个科技点                           Get a Tech Point                         
+    UnLockTech = 17,       //    解锁科技                              需要参数1 id  To unlock technology                             Parameter 1 is required ID
+    SellItem = 18,         //    出售物品  Selling
+    TranslateItem = 19,     //    交易物品  Transaction
+    OpenCitizenWindow = 20,   //    打开市民信息界面   Open the public information
+     箭头提示：  Arrow Tip:
+  Arrow1 = 1,    //    主界面左上角  Top left corner of the main interface
+    Arrow2 = 2,     //    左侧警示信息       Left warning message     
+    Arrow3 = 3,    //    主界面建筑按钮           需要参数1  按钮id  The building button on the main interface           Parameter 1 is required ID
+    Arrow4 = 4,     //    主界面二级建筑按钮      需要参数1  按钮id  The secondary building button on the main interface        Parameter 1 is required ID
+    Arrow5 = 5,     //    职业人数                需要参数1   职业  Number of occupational people                 Parameter 1 is required Occupation
+    Arrow6 = 6,     //    建筑界面开关按钮        需要参数1   建筑id  Switch on the building interface         Parameter 1 is required ID
+    Arrow7 = 7,     //    建筑界面存放选择按钮    需要参数1   建筑id  Storage selection button on the building interface     Parameter 1 is required ID
+    Arrow8 = 8,     //    建筑界面职业人数组件        需要参数1   建筑id  Number Component of occupational people on the building interface        Parameter 1 is required ID
+    Arrow9 = 9,     //    建筑界面出售物资组件        需要参数1   建筑id  Selling components on the building interface         Parameter 1 is required ID
+    Arrow10 = 10,     //    建筑界面定位按钮        需要参数1   建筑id  Positioning button on the building interface         Parameter 1 is required ID
+    Arrow11 = 11,     //    科技界面指定科技        需要参数1   科技id  Specified technology on the technology interface         Parameter 1 is required ID
+    Arrow12 = 12,     //    建筑界面交易按钮        需要参数1   建筑id  Transaction button on the building interface        Parameter 1 is required ID
+
+	
+	
+-->
+  
+  
+  
+  <CourseConfig>
+    <ID>1</ID>
+    <DesTop>Course_DesTop_1</DesTop>
+    <DesBottom>Course_DesBottom_1</DesBottom>
+    <BtnGray>false</BtnGray>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>2</ID>
+    <DesTop>Course_DesTop_2</DesTop>
+    <DesBottom>Course_DesBottom_2</DesBottom>
+    <Icon>1</Icon>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）5准备建筑数量判断（参数1 参数2）-->
+    <TriggerType>1</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+  </CourseConfig>
+   <CourseConfig>
+    <ID>3</ID>
+    <DesTop>Course_DesTop_3</DesTop>
+    <DesBottom>Course_DesBottom_3</DesBottom>
+    <Icon>2</Icon>
+    <BtnGray>false</BtnGray>
+  </CourseConfig>
+  <CourseConfig>
+    <ID>4</ID>
+    <DesTop>Course_DesTop_4</DesTop>
+    <DesBottom>Course_DesBottom_4</DesBottom>
+    <Icon>4</Icon>
+    <BtnGray>false</BtnGray>
+  </CourseConfig>
+  <CourseConfig>
+    <ID>5</ID><!--资源列表-->
+    <DesTop>Course_DesTop_5</DesTop>
+    <IconGif>Course_5</IconGif>
+    <DesBottom>Course_DesBottom_5</DesBottom>
+    <TriggerType>15</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+  </CourseConfig>
+  <CourseConfig>
+    <ID>6</ID><!--左侧提示 打开人物菜单-->
+    <DesTop>Course_DesTop_6</DesTop>
+    <DesBottom>Course_DesBottom_6</DesBottom>
+    <TriggerType>20</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <Icon>6</Icon>
+     <!--箭头提示-->
+    <ArrowFlag>2</ArrowFlag>
+  </CourseConfig>
+   <CourseConfig>
+    <ID>7</ID><!--滚轮-->
+    <DesTop>Course_DesTop_7</DesTop>
+    <DesBottom>Course_DesBottom_7</DesBottom>
+    <Icon>3</Icon>
+    <BtnGray>false</BtnGray>
+  </CourseConfig>
+  <CourseConfig>
+    <ID>8</ID><!--住房1-->
+    <DesTop>Course_DesTop_8</DesTop>
+    <DesBottom>Course_DesBottom_8</DesBottom>
+    <Icon>7</Icon>
+    <!--是否有事件类型开放继续按钮：  2点击建筑按钮（参数1）-->
+    <TriggerType>5</TriggerType>
+    <Param1>2</Param1>
+    <Param2>2</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>4</ArrowFlag>
+    <ArrowParam>2</ArrowParam>
+  </CourseConfig>
+
+<!--住房4
+  <CourseConfig>
+    <ID>9</ID>
+    <DesTop>Course_DesTop_9</DesTop>
+    <DesBottom>Course_DesBottom_9</DesBottom>
+    <Icon>7</Icon>
+    <TriggerType>5</TriggerType>
+    <Param1>2</Param1>
+    <Param2>5</Param2>
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>4</ArrowFlag>
+    <ArrowParam>2</ArrowParam>
+  </CourseConfig>-->
+  
+  <CourseConfig>
+    <ID>10</ID><!--砍树-->
+    <DesTop>Course_DesTop_10</DesTop>
+    <DesBottom>Course_DesBottom_10</DesBottom>
+    <IconGif>Course_1_10</IconGif>
+    <!--是否有事件类型开放继续按钮：  2点击建筑按钮（参数1）-->
+    <TriggerType>2</TriggerType>
+    <Param1>9003</Param1>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>9003</ArrowParam>
+  </CourseConfig>
+  <CourseConfig>
+    <ID>11</ID><!--10倍速-->
+    <DesTop>Course_DesTop_11</DesTop>
+    <DesBottom>Course_DesBottom_11</DesBottom>
+    <Icon>10</Icon>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>9</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+  </CourseConfig>
+  <CourseConfig>
+    <ID>12</ID> <!--关闭市集-->
+    <DesTop>Course_DesTop_12</DesTop>
+    <DesBottom>Course_DesBottom_12</DesBottom>
+    <Icon>58</Icon>
+    <TriggerType>7</TriggerType>
+    <Param1>1007</Param1>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>6</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>1007</ArrowParam>
+  </CourseConfig>
+
+<!--切换定位住宅
+  <CourseConfig>
+    <ID>13</ID> 
+    <DesTop>Course_DesTop_13</DesTop>
+    <DesBottom>Course_DesBottom_13</DesBottom>
+    <Icon>59</Icon>
+    <TriggerType>10</TriggerType>
+    <Param1>2</Param1>
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>10</ArrowFlag>
+    <ArrowParam>2</ArrowParam>
+  </CourseConfig>-->
+
+  <CourseConfig>
+    <ID>14</ID><!--坚固堆放场分类-->
+    <DesTop>Course_DesTop_14</DesTop>
+    <DesBottom>Course_DesBottom_14</DesBottom>
+    <IconGif>Course_14</IconGif>
+    <TriggerType>11</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>7</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>1011</ArrowParam>
+  </CourseConfig>
+  <CourseConfig>
+    <ID>15</ID><!--桥-->
+    <DesTop>Course_DesTop_15</DesTop>
+    <DesBottom>Course_DesBottom_15</DesBottom>
+    <IconGif>Course_15</IconGif>
+    <TriggerType>5</TriggerType>
+    <Param1>5001</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>5001</ArrowParam>
+  </CourseConfig>
+  <CourseConfig>
+    <ID>16</ID><!--隧道-->
+    <DesTop>Course_DesTop_16</DesTop>
+    <DesBottom>Course_DesBottom_16</DesBottom>
+    <IconGif>Course_16</IconGif>
+    <TriggerType>5</TriggerType>
+    <Param1>5002</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>5002</ArrowParam>
+  </CourseConfig>
+  <CourseConfig>
+    <ID>17</ID><!--城市详情-->
+    <DesTop>Course_DesTop_17</DesTop>
+    <DesBottom>Course_DesBottom_17</DesBottom>
+    <TriggerType>12</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+  </CourseConfig>
+<!--奖励任务-->
+  <CourseConfig>
+    <ID>18</ID><!--住宅-->
+    <DesTop>Course_DesTop_18</DesTop>
+    <DesBottom>Course_DesBottom_18</DesBottom>
+    <DesAward>Course_DesAward_18</DesAward>
+    <Buff>801</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>2</Param1>
+    <Param2>1</Param2>
+  </CourseConfig>
+    <CourseConfig>
+    <ID>19</ID><!--农田-->
+    <DesTop>Course_DesTop_19</DesTop>
+    <DesBottom>Course_DesBottom_19</DesBottom>
+    <DesAward>Course_DesAward_19</DesAward>
+    <Buff>802</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>2021</Param1>
+    <Param2>2</Param2>
+  </CourseConfig>
+
+    <CourseConfig>
+    <ID>20</ID><!--伐木场-->
+    <DesTop>Course_DesTop_20</DesTop>
+    <DesBottom>Course_DesBottom_20</DesBottom>
+    <DesAward>Course_DesAward_20</DesAward>
+    <Buff>801</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>3002</Param1>
+    <Param2>1</Param2>
+  </CourseConfig>
+
+
+    <CourseConfig>
+    <ID>21</ID><!--采集站-->
+    <DesTop>Course_DesTop_21</DesTop>
+    <DesBottom>Course_DesBottom_21</DesBottom>
+    <DesAward>Course_DesAward_21</DesAward>
+    <Buff>801</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>2007</Param1>
+    <Param2>1</Param2>
+  </CourseConfig>
+
+
+    <CourseConfig>
+    <ID>22</ID><!--猎人休息站-->
+    <DesTop>Course_DesTop_22</DesTop>
+    <DesBottom>Course_DesBottom_22</DesBottom>
+    <DesAward>Course_DesAward_22</DesAward>
+    <Buff>801</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>2006</Param1>
+    <Param2>1</Param2>
+  </CourseConfig>
+
+<!--锯木厂-->
+    <CourseConfig>
+    <ID>23</ID>
+    <DesTop>Course_DesTop_23</DesTop>
+    <DesBottom>Course_DesBottom_23</DesBottom>
+    <DesAward>Course_DesAward_23</DesAward>
+    <Buff>801</Buff>
+    <TriggerType>6</TriggerType>
+    <Param2>1</Param2>
+    <Param3>3001|3011|3012</Param3>
+  </CourseConfig>
+
+
+    <CourseConfig>
+    <ID>24</ID><!--大水井-->
+    <DesTop>Course_DesTop_24</DesTop>
+    <DesBottom>Course_DesBottom_24</DesBottom>
+    <DesAward>Course_DesAward_24</DesAward>
+    <Buff>801</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>2035</Param1>
+    <Param2>1</Param2>
+  </CourseConfig>
+
+
+    <CourseConfig>
+    <ID>25</ID><!--住宅*6-->
+    <DesTop>Course_DesTop_25</DesTop>
+    <DesBottom>Course_DesBottom_25</DesBottom>
+    <DesAward>Course_DesAward_25</DesAward>
+    <Buff>803</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>2</Param1>
+    <Param2>7</Param2>
+  </CourseConfig>
+
+      <CourseConfig>
+    <ID>26</ID><!--修理厂-->
+    <DesTop>Course_DesTop_26</DesTop>
+    <DesBottom>Course_DesBottom_26</DesBottom>
+    <DesAward>Course_DesAward_26</DesAward>
+    <Buff>801</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>4020</Param1>
+    <Param2>1</Param2>
+  </CourseConfig>
+
+  <CourseConfig>
+    <ID>27</ID><!--关农田-->
+    <DesTop>Course_DesTop_27</DesTop>
+    <DesBottom>Course_DesBottom_27</DesBottom>
+    <DesAward>Course_DesAward_27</DesAward>
+    <Buff>801</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>7</TriggerType>
+    <Param1>2021</Param1>
+  </CourseConfig>
+
+        <CourseConfig>
+    <ID>28</ID><!--教堂-->
+    <DesTop>Course_DesTop_28</DesTop>
+    <DesBottom>Course_DesBottom_28</DesBottom>
+    <DesAward>Course_DesAward_28</DesAward>
+    <Buff>801</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>4004</Param1>
+    <Param2>1</Param2>
+  </CourseConfig>
+
+    <CourseConfig>
+    <ID>29</ID><!--诊所-->
+    <DesTop>Course_DesTop_29</DesTop>
+    <DesBottom>Course_DesBottom_29</DesBottom>
+    <DesAward>Course_DesAward_29</DesAward>
+    <Buff>801</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>4012</Param1>
+    <Param2>1</Param2>
+  </CourseConfig>
+
+    <CourseConfig>
+    <ID>30</ID><!--酿酒作坊-->
+    <DesTop>Course_DesTop_30</DesTop>
+    <DesBottom>Course_DesBottom_30</DesBottom>
+    <DesAward>Course_DesAward_30</DesAward>
+    <Buff>801</Buff>
+    <!--是否有事件类型开放继续按钮：有则填ID，没有不填1打开菜单界面 2点击建筑按钮（参数1） 3职业人数判断（参数1参数2） 4建筑数量判断（参数1 参数2）-->
+    <TriggerType>4</TriggerType>
+    <Param1>3054</Param1>
+    <Param2>1</Param2>
+  </CourseConfig>
+
+<!--新教程新增任务，ID31开始-->
+
+  <!-- <CourseConfig>
+    <ID>31</ID>
+    <DesTop>Course_DesTop_31</DesTop>
+    <DesBottom>Course_DesBottom_31</DesBottom>
+    <TriggerType>13</TriggerType>
+    <BtnGray>true</BtnGray>
+  </CourseConfig>-->
+  
+  <CourseConfig>
+    <ID>32</ID><!--时间轴-->
+    <DesTop>Course_DesTop_32</DesTop>
+    <DesBottom>Course_DesBottom_32</DesBottom>
+    <Icon>22</Icon>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>33</ID><!--市政厅-->
+    <DesTop>Course_DesTop_33</DesTop>
+    <DesBottom>Course_DesBottom_33</DesBottom>
+    <Icon>62</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>4008</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>4008</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>34</ID><!--帮助日志-->
+    <DesTop>Course_DesTop_34</DesTop>
+    <DesBottom>Course_DesBottom_34</DesBottom>
+    <TriggerType>14</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>35</ID><!--教程1结束-->
+    <DesBottom>Course_DesBottom_35</DesBottom>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>36</ID><!--打开市集-->
+    <DesTop>Course_DesTop_36</DesTop>
+    <DesBottom>Course_DesBottom_36</DesBottom>
+    <TriggerType>8</TriggerType>
+    <Param1>1007</Param1>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>6</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>1007</ArrowParam>
+  </CourseConfig>
+
+   <!--生存要点部分，37~-->
+  <CourseConfig>
+    <ID>37</ID> <!--@概述-->
+    <DesTop>Course_DesTop_37</DesTop>
+    <DesBottom>Course_DesBottom_37</DesBottom>
+  </CourseConfig>
+
+  <CourseConfig>
+    <ID>38</ID><!--@住房-->
+    <DesTop>Course_DesTop_38</DesTop>
+    <DesBottom>Course_DesBottom_38</DesBottom>
+    <Icon>7</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>2</Param1>
+    <Param2>10</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>2</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>39</ID><!--@水井-->
+    <DesTop>Course_DesTop_39</DesTop>
+    <DesBottom>Course_DesBottom_39</DesBottom>
+    <Icon>63</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>2035</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>2035</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>40</ID><!--@修理厂-->
+    <DesTop>Course_DesTop_40</DesTop>
+    <DesBottom>Course_DesBottom_40</DesBottom>
+    <Icon>64</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>4020</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>4020</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>41</ID><!--@建筑工-->
+    <DesTop>Course_DesTop_41</DesTop>
+    <IconGif>Course_41</IconGif>
+    <DesBottom>Course_DesBottom_41</DesBottom>
+    <TriggerType>3</TriggerType>
+    <Param1>2</Param1>
+    <Param2>4</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>   
+    <ArrowFlag>8</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>4022</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>42</ID> <!--@采集站-->
+    <DesTop>Course_DesTop_42</DesTop>
+    <DesBottom>Course_DesBottom_42</DesBottom>
+    <Icon>65</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>2007</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>2007</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>43</ID> <!--@猎人休息站-->
+    <DesTop>Course_DesTop_43</DesTop>
+    <DesBottom>Course_DesBottom_43</DesBottom>
+    <Icon>66</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>2006</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>2006</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>44</ID> <!--@农田-->
+    <DesBottom>Course_DesBottom_44</DesBottom>    
+    <Icon>32</Icon>
+    <TriggerType>6</TriggerType>
+    <Param2>1</Param2>
+    <Param3>2021|2002</Param3>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>2002</ArrowParam>
+  </CourseConfig>
+
+  <!--@果林
+  <CourseConfig>
+    <ID>45</ID> 
+    <DesTop>Course_DesTop_45</DesTop>
+    <DesBottom>Course_DesBottom_45</DesBottom>
+    <TriggerType>4</TriggerType>
+    <Param1>2003</Param1>
+    <Param2>1</Param2>
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>4</ArrowFlag>
+    <ArrowParam>2003</ArrowParam>
+  </CourseConfig>-->
+  
+  <CourseConfig>
+    <ID>46</ID> <!--@伐木场-->
+    <DesTop>Course_DesTop_46</DesTop>
+    <DesBottom>Course_DesBottom_46</DesBottom>
+    <Icon>67</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>3002</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>3002</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>47</ID> <!--@锯木工坊-->
+    <DesTop>Course_DesTop_47</DesTop>
+    <DesBottom>Course_DesBottom_47</DesBottom>
+    <Icon>68</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>3001</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>3001</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>48</ID> <!--@裁缝铺-->
+    <DesTop>Course_DesTop_48</DesTop>
+    <DesBottom>Course_DesBottom_48</DesBottom>
+    <Icon>69</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>3005</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>3005</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>49</ID> <!--@铁匠铺-->
+    <DesTop>Course_DesTop_49</DesTop>
+    <DesBottom>Course_DesBottom_49</DesBottom>
+    <Icon>70</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>3004</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>3004</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>50</ID> <!--@教堂-->
+    <DesTop>Course_DesTop_50</DesTop>
+    <DesBottom>Course_DesBottom_50</DesBottom>
+    <Icon>71</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>4004</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>4004</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>51</ID> <!--@酿酒作坊-->
+    <DesTop>Course_DesTop_51</DesTop>
+    <DesBottom>Course_DesBottom_51</DesBottom>
+    <Icon>61</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>3054</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>3054</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>52</ID> <!--@诊所-->
+    <DesTop>Course_DesTop_52</DesTop>
+    <DesBottom>Course_DesBottom_52</DesBottom>
+    <Icon>72</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>4012</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>4012</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>53</ID><!--@结束-->
+    <DesBottom>Course_DesBottom_53</DesBottom>
+  </CourseConfig>
+
+<!--科技贸易54-->
+
+  <CourseConfig>
+    <ID>54</ID> 
+    <DesTop>Course_DesTop_54</DesTop>
+    <DesBottom>Course_DesBottom_54</DesBottom>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>55</ID> 
+    <DesTop>Course_DesTop_55</DesTop><!--钓鱼码头-->
+    <DesBottom>Course_DesBottom_55</DesBottom>
+    <!--是否有事件类型开放继续按钮：  2点击建筑按钮（参数1）-->
+    <Icon>73</Icon>
+    <TriggerType>5</TriggerType>
+    <Param1>2016</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>2016</ArrowParam>
+  </CourseConfig>
+
+  <CourseConfig>
+    <ID>56</ID> <!--锯木厂科技-->
+    <DesTop>Course_DesTop_56</DesTop>
+    <DesBottom>Course_DesBottom_56</DesBottom>
+    <TriggerType>17</TriggerType>
+    <Param1>2402</Param1>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    
+    <ArrowFlag>11</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>2402</ArrowParam>
+  </CourseConfig>
+
+  <CourseConfig>
+    <ID>57</ID> <!--建造锯木厂等钓鱼码头完成-->
+    <DesTop>Course_DesTop_57</DesTop>
+    <DesBottom>Course_DesBottom_57</DesBottom>
+    <Icon>27</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>2016</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>3011</ArrowParam>
+  </CourseConfig>
+
+  <CourseConfig>
+    <ID>58</ID> <!--研究所*3-->
+    <DesTop>Course_DesTop_58</DesTop>
+    <DesBottom>Course_DesBottom_58</DesBottom>
+    <TriggerType>4</TriggerType>
+    <Param1>3030</Param1>
+    <Param2>3</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>11</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>3105</ArrowParam>
+  </CourseConfig>
+
+  <CourseConfig>
+    <ID>59</ID> <!--一个科技点-->
+    <DesTop>Course_DesTop_59</DesTop>
+    <IconGif>Course_59</IconGif>
+    <DesBottom>Course_DesBottom_59</DesBottom>
+    <TriggerType>16</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+  </CourseConfig>
+
+<!--银矿科技
+  <CourseConfig>
+    <ID>60</ID> 
+    <DesTop>Course_DesTop_60</DesTop>
+    <DesBottom>Course_DesBottom_60</DesBottom>
+    <TriggerType>17</TriggerType>
+    <Param1>2606</Param1>
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>11</ArrowFlag>
+    <ArrowParam>2606</ArrowParam>
+  </CourseConfig>-->
+
+<!--建造矿坑
+  <CourseConfig>
+    <ID>61</ID> 
+    <DesTop>Course_DesTop_61</DesTop>
+    <DesBottom>Course_DesBottom_61</DesBottom>
+    <TriggerType>6</TriggerType>
+    <Param2>1</Param2>
+    <Param3>3007|2027|2028|2029</Param3>
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>4</ArrowFlag>
+    <ArrowParam>3007</ArrowParam>
+  </CourseConfig>-->
+
+  <CourseConfig>
+    <ID>62</ID> <!--杂货店科技-->
+    <DesTop>Course_DesTop_62</DesTop>
+    <DesBottom>Course_DesBottom_62</DesBottom>
+    <TriggerType>4</TriggerType>
+    <Param1>4010</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>11</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>4601</ArrowParam>
+  </CourseConfig>
+
+  <CourseConfig>
+    <ID>63</ID>  <!--出售物品-->
+    <DesTop>Course_DesTop_63</DesTop>
+    <DesBottom>Course_DesBottom_63</DesBottom>
+    <TriggerType>18</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>9</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>4010</ArrowParam>
+  </CourseConfig>
+
+  <CourseConfig>
+    <ID>64</ID> <!--渡口-->
+    <DesTop>Course_DesTop_64</DesTop>
+    <DesBottom>Course_DesBottom_64</DesBottom>
+    <TriggerType>6</TriggerType>
+    <Param2>1</Param2>
+    <Param3>4001|4017</Param3>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <!--箭头提示类型-->
+    <ArrowFlag>4</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>4001</ArrowParam>
+  </CourseConfig>
+
+  <CourseConfig>
+    <ID>65</ID>   <!--进行交易-->
+    <DesTop>Course_DesTop_65</DesTop>
+    <DesBottom>Course_DesBottom_65</DesBottom>
+    <TriggerType>19</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>12</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>4001</ArrowParam>
+  </CourseConfig>
+
+  <CourseConfig>
+    <ID>66</ID> 
+    <DesTop>Course_DesTop_66</DesTop>
+    <DesBottom>Course_DesBottom_66</DesBottom>
+  </CourseConfig>
+
+<!--肥皂工坊
+  <CourseConfig>
+    <ID>67</ID> 
+    <DesTop>Course_DesTop_67</DesTop>
+    <DesBottom>Course_DesBottom_67</DesBottom>
+    <TriggerType>4</TriggerType>
+    <Param1>3059</Param1>
+    <Param2>1</Param2>
+    <BtnGray>true</BtnGray>
+    <ArrowFlag>11</ArrowFlag>
+    <ArrowParam>3701</ArrowParam>
+  </CourseConfig>-->
+
+  <CourseConfig>
+    <ID>71</ID> 
+    <DesTop>Course_DesTop_71</DesTop>
+    <DesBottom>Course_DesBottom_71</DesBottom>
+    <Icon>74</Icon>
+    <TriggerType>4</TriggerType>
+    <Param1>4035</Param1>
+    <Param2>1</Param2>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+
+    <ArrowFlag>11</ArrowFlag>
+    <!--箭头提示参数-->
+    <ArrowParam>4035</ArrowParam>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>68</ID> 
+    <DesTop>Course_DesTop_68</DesTop>
+    <DesBottom>Course_DesBottom_68</DesBottom>
+    <TriggerType>22</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>69</ID> 
+    <DesTop>Course_DesTop_69</DesTop>
+    <DesBottom>Course_DesBottom_69</DesBottom>
+    <TriggerType>21</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+  </CourseConfig>
+  
+  <CourseConfig>
+    <ID>70</ID> 
+    <DesTop>Course_DesTop_70</DesTop>
+    <DesBottom>Course_DesBottom_70</DesBottom>
+    <TriggerType>23</TriggerType>
+    <!--继续按钮是否置灰-->
+    <BtnGray>true</BtnGray>
+  </CourseConfig>
+
+
+
+</ArrayOfCourseConfig>
+
+

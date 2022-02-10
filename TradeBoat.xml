@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<ArrayOfTradeBoatConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <!--  商船配置说明
+Description of the Merchant Ship Configuration
+ID int  唯一ID
+ Unique ID
+Model string  船的模型（文件的路径Model/Props/Vehicle/vehicle_boat01）
+ Ship Model (Path: Model/Props/Vehicle/VM_boot01)
+MaxBringWeight int  商船的最大承重重量
+ The maximum load weight of a merchant ship
+ForbitSellItemsList  不可售卖的物品类型列表（仅针对类型）
+List of Non-Sale Items (Only for Types)
+ForbitSellItems int 物品类型ID
+Item Type ID
+ForbitBuyItemsList  商船不携带的物品列表（针对物品ID）
+List of Unacceptable Items on Merchant Ships (For item ID)
+ForbitBuyItems int 物品ID
+Item ID
+BringItemTypeList  携带物品类型以及权重
+Type and Weight of Items Carried
+BringItemType Config2Int （Int1对应物品类型 Int2对应随机权重）
+(Int1 is for the item type and Int2 for random weight)
+AllRandomTypeNum ConfigLowerUpper 商船携带多少种类型物品（Lower对应最小值 Upper对应最大值）
+Number of types of items carried by merchant ships (Lower is for the minimum and Upper for the maximum)
+AllRandomItemNum ConfigLowerUpper 每种类型中携带多少种物品（Lower对应最小值 Upper对应最大值）
+Number of Items of Each Type (Lower is for the minimum and Upper for the maximum)
+
+	
+	
+ 备注：
+   int			整型，只能填整数
+   string		字符串类型，字母或者文字
+   float		浮点数类型，小数
+   Config2Int 	自定义双整数类型（Int1对应物品类型 Int2对应随机权重）
+   ConfigLowerUpper 自定义双整数类型（Lower对应最小值 Upper对应最大值）
+   
+   
+ 实例：见下方ID1普通船-->
+
+
+
+
+
+  <TradeBoatConfig>
+    <!--普通船-->
+    <ID>1</ID>
+    <Name>TradeBoat_Name_1</Name>
+    <Icon>timeEvent_Boat</Icon>
+    <Des>timeEvent_Boat</Des>
+    <!--船的模型-->
+    <Model>Model/Props/Vehicle/vehicle_boat01</Model>
+    <ItemsTypeList>
+      <ItemsType>1101</ItemsType>
+      <ItemsType>1</ItemsType>
+      <ItemsType>11</ItemsType>
+    </ItemsTypeList>
+    <Num>8</Num>
+	<!--商船不携带物品ID-->
+    <ForbitBuyItemsList>
+      <ForbitBuyItems>1001</ForbitBuyItems>
+      <ForbitBuyItems>102014</ForbitBuyItems>
+      <ForbitBuyItems>102007</ForbitBuyItems>
+      <ForbitBuyItems>102006</ForbitBuyItems>
+      <ForbitBuyItems>102005</ForbitBuyItems> 
+	  <ForbitBuyItems>102013</ForbitBuyItems>  
+	  <ForbitBuyItems>200001</ForbitBuyItems> 
+	  <ForbitBuyItems>200002</ForbitBuyItems> 
+	  <ForbitBuyItems>200003</ForbitBuyItems> 
+	  <ForbitBuyItems>200004</ForbitBuyItems> 
+	  <ForbitBuyItems>200005</ForbitBuyItems> 
+	  <ForbitBuyItems>200006</ForbitBuyItems> 
+	  <ForbitBuyItems>200007</ForbitBuyItems> 
+	  <ForbitBuyItems>200008</ForbitBuyItems> 
+	  <ForbitBuyItems>200009</ForbitBuyItems> 
+	  <ForbitBuyItems>200010</ForbitBuyItems> 
+	  <ForbitBuyItems>200011</ForbitBuyItems> 
+	  <ForbitBuyItems>200012</ForbitBuyItems> 
+	  <ForbitBuyItems>200013</ForbitBuyItems> 
+	  <ForbitBuyItems>200014</ForbitBuyItems> 
+	  <ForbitBuyItems>200015</ForbitBuyItems> 
+	  <ForbitBuyItems>200016</ForbitBuyItems> 
+	  <ForbitBuyItems>200017</ForbitBuyItems> 
+	  <ForbitBuyItems>200018</ForbitBuyItems> 
+	  <ForbitBuyItems>200019</ForbitBuyItems> 
+	  <ForbitBuyItems>200020</ForbitBuyItems> 
+	  <ForbitBuyItems>200021</ForbitBuyItems> 
+	  <ForbitBuyItems>200022</ForbitBuyItems> 
+	  <ForbitBuyItems>200023</ForbitBuyItems> 
+	  <ForbitBuyItems>200024</ForbitBuyItems> 	  	
+      <ForbitBuyItems>130002</ForbitBuyItems>
+    </ForbitBuyItemsList>
+	
+	<!--交易时无效的IDlist-->
+    <ForbitSellItemsList>
+      <ForbitSellItems>1001</ForbitSellItems>
+    </ForbitSellItemsList>
+	
+	
+	<!--船的承受重量-->
+    <MaxBringWeight>10000</MaxBringWeight>
+	<!--携带物品类型以及权重-->
+    <BringItemTypeList>
+      <BringItemType>
+        <Int1>1</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>21</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>31</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>41</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>51</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>61</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>71</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>301</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>511</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>801</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>1001</Int1>
+        <Int2>1</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>1002</Int1>
+        <Int2>1</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>1103</Int1>
+        <Int2>1</Int2>
+      </BringItemType>
+    </BringItemTypeList>
+	<!--携带物品类型数量区间-->
+    <AllRandomTypeNum>
+      <Lower>3</Lower>
+      <Upper>4</Upper>
+    </AllRandomTypeNum>
+	<!--每个类型随机的数量区间-->
+    <AllRandomItemNum>
+      <Lower>2</Lower>
+      <Upper>3</Upper>
+    </AllRandomItemNum>
+  </TradeBoatConfig>
+  
+  <TradeBoatConfig>
+    <!--大船-->
+    <ID>2</ID>
+    <Name>TradeBoat_Name_1</Name>
+    <Icon>timeEvent_Boat</Icon>
+    <Des>timeEvent_Boat</Des>
+    <!--船的模型-->
+    <Model>Model/Props/Vehicle/vehicle_boat02</Model>
+    <ItemsTypeList>
+      <ItemsType>1101</ItemsType>
+      <ItemsType>1</ItemsType>
+      <ItemsType>11</ItemsType>
+    </ItemsTypeList>
+    <Num>8</Num>
+	<!--商船不携带物品ID-->
+    <ForbitBuyItemsList>
+      <ForbitBuyItems>1001</ForbitBuyItems>
+      <ForbitBuyItems>102014</ForbitBuyItems>
+      <ForbitBuyItems>102007</ForbitBuyItems>
+      <ForbitBuyItems>102006</ForbitBuyItems>
+      <ForbitBuyItems>102005</ForbitBuyItems>  
+	  <ForbitBuyItems>102013</ForbitBuyItems>  
+	  <ForbitBuyItems>200001</ForbitBuyItems> 
+	  <ForbitBuyItems>200002</ForbitBuyItems> 
+	  <ForbitBuyItems>200003</ForbitBuyItems> 
+	  <ForbitBuyItems>200004</ForbitBuyItems> 
+	  <ForbitBuyItems>200005</ForbitBuyItems> 
+	  <ForbitBuyItems>200006</ForbitBuyItems> 
+	  <ForbitBuyItems>200007</ForbitBuyItems> 
+	  <ForbitBuyItems>200008</ForbitBuyItems> 
+	  <ForbitBuyItems>200009</ForbitBuyItems> 
+	  <ForbitBuyItems>200010</ForbitBuyItems> 
+	  <ForbitBuyItems>200011</ForbitBuyItems> 
+	  <ForbitBuyItems>200012</ForbitBuyItems> 
+	  <ForbitBuyItems>200013</ForbitBuyItems> 
+	  <ForbitBuyItems>200014</ForbitBuyItems> 
+	  <ForbitBuyItems>200015</ForbitBuyItems> 
+	  <ForbitBuyItems>200016</ForbitBuyItems> 
+	  <ForbitBuyItems>200017</ForbitBuyItems> 
+	  <ForbitBuyItems>200018</ForbitBuyItems> 
+	  <ForbitBuyItems>200019</ForbitBuyItems> 
+	  <ForbitBuyItems>200020</ForbitBuyItems> 
+	  <ForbitBuyItems>200021</ForbitBuyItems> 
+	  <ForbitBuyItems>200022</ForbitBuyItems> 
+	  <ForbitBuyItems>200023</ForbitBuyItems> 
+	  <ForbitBuyItems>200024</ForbitBuyItems> 	
+    <ForbitBuyItems>130002</ForbitBuyItems>		  
+    </ForbitBuyItemsList>
+	
+	<!--不可售卖物品ID-->
+    <ForbitSellItemsList>
+      <ForbitSellItems>1001</ForbitSellItems>
+    </ForbitSellItemsList>
+	
+	
+	<!--船的承受重量-->
+    <MaxBringWeight>500000</MaxBringWeight>
+	<!--携带物品类型以及权重-->
+<BringItemTypeList>
+      <BringItemType>
+        <Int1>1</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>21</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>31</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>41</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>51</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>61</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>71</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>301</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>511</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>801</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>1001</Int1>
+        <Int2>1</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>1002</Int1>
+        <Int2>1</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>1103</Int1>
+        <Int2>1</Int2>
+      </BringItemType>
+    </BringItemTypeList>
+	<!--携带物品类型数量区间-->
+    <AllRandomTypeNum>
+      <Lower>4</Lower>
+      <Upper>5</Upper>
+    </AllRandomTypeNum>
+	<!--每个类型随机的数量区间-->
+    <AllRandomItemNum>
+      <Lower>2</Lower>
+      <Upper>4</Upper>
+    </AllRandomItemNum>
+  </TradeBoatConfig>
+
+<TradeBoatConfig>
+    <!--订购船-->
+    <ID>3</ID>
+    <Name>TradeBoat_Name_1</Name>
+    <Icon>timeEvent_Boat</Icon>
+    <Des>timeEvent_Boat</Des>
+    <!--船的模型-->
+    <Model>Model/Props/Vehicle/vehicle_boat03</Model>
+  </TradeBoatConfig>
+  
+  <TradeBoatConfig>
+    <!--码头大船-->
+    <ID>4</ID>
+    <Name>TradeBoat_Name_1</Name>
+    <Icon>timeEvent_Boat</Icon>
+    <Des>timeEvent_Boat</Des>
+    <!--船的模型-->
+    <Model>Model/Props/Vehicle/vehicle_boat01</Model>
+    <ItemsTypeList>
+      <ItemsType>1101</ItemsType>
+      <ItemsType>1</ItemsType>
+      <ItemsType>11</ItemsType>
+    </ItemsTypeList>
+    <Num>8</Num>
+	<!--商船不携带物品ID-->
+    <ForbitBuyItemsList>
+      <ForbitBuyItems>1001</ForbitBuyItems>
+      <ForbitBuyItems>102014</ForbitBuyItems>
+      <ForbitBuyItems>102007</ForbitBuyItems>
+      <ForbitBuyItems>102006</ForbitBuyItems>
+      <ForbitBuyItems>102005</ForbitBuyItems>    
+	  <ForbitBuyItems>102013</ForbitBuyItems>  
+	  <ForbitBuyItems>200001</ForbitBuyItems> 
+	  <ForbitBuyItems>200002</ForbitBuyItems> 
+	  <ForbitBuyItems>200003</ForbitBuyItems> 
+	  <ForbitBuyItems>200004</ForbitBuyItems> 
+	  <ForbitBuyItems>200005</ForbitBuyItems> 
+	  <ForbitBuyItems>200006</ForbitBuyItems> 
+	  <ForbitBuyItems>200007</ForbitBuyItems> 
+	  <ForbitBuyItems>200008</ForbitBuyItems> 
+	  <ForbitBuyItems>200009</ForbitBuyItems> 
+	  <ForbitBuyItems>200010</ForbitBuyItems> 
+	  <ForbitBuyItems>200011</ForbitBuyItems> 
+	  <ForbitBuyItems>200012</ForbitBuyItems> 
+	  <ForbitBuyItems>200013</ForbitBuyItems> 
+	  <ForbitBuyItems>200014</ForbitBuyItems> 
+	  <ForbitBuyItems>200015</ForbitBuyItems> 
+	  <ForbitBuyItems>200016</ForbitBuyItems> 
+	  <ForbitBuyItems>200017</ForbitBuyItems> 
+	  <ForbitBuyItems>200018</ForbitBuyItems> 
+	  <ForbitBuyItems>200019</ForbitBuyItems> 
+	  <ForbitBuyItems>200020</ForbitBuyItems> 
+	  <ForbitBuyItems>200021</ForbitBuyItems> 
+	  <ForbitBuyItems>200022</ForbitBuyItems> 
+	  <ForbitBuyItems>200023</ForbitBuyItems> 
+	  <ForbitBuyItems>200024</ForbitBuyItems> 	
+    <ForbitBuyItems>130002</ForbitBuyItems>
+    </ForbitBuyItemsList>
+	
+	<!--不可售卖物品ID-->
+    <ForbitSellItemsList>
+      <ForbitSellItems>1001</ForbitSellItems>
+    </ForbitSellItemsList>
+	
+	
+	<!--船的承受重量-->
+    <MaxBringWeight>20000</MaxBringWeight>
+	<!--携带物品类型以及权重-->
+	<BringItemTypeList>
+      <BringItemType>
+        <Int1>1</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>21</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>31</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>41</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>51</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>61</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>71</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>301</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>511</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+      <BringItemType>
+        <Int1>801</Int1>
+        <Int2>10</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>1001</Int1>
+        <Int2>1</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>1002</Int1>
+        <Int2>1</Int2>
+      </BringItemType>
+	  <BringItemType>
+        <Int1>1103</Int1>
+        <Int2>1</Int2>
+      </BringItemType>
+    </BringItemTypeList>
+	<!--携带物品类型数量区间-->
+    <AllRandomTypeNum>
+      <Lower>3</Lower>
+      <Upper>4</Upper>
+    </AllRandomTypeNum>
+	<!--每个类型随机的数量区间-->
+    <AllRandomItemNum>
+      <Lower>2</Lower>
+      <Upper>3</Upper>
+    </AllRandomItemNum>
+  </TradeBoatConfig>
+  
+  <TradeBoatConfig>
+    <!--商队的表现船只-->
+    <ID>5</ID>
+    <Name>TradeBoat_Name_1</Name>
+    <Icon>timeEvent_Boat</Icon>
+    <Des>timeEvent_Boat</Des>
+    <!--船的模型-->
+    <Model>Model/Props/Vehicle/vehicle_boat01</Model>
+  </TradeBoatConfig>
+
+
+</ArrayOfTradeBoatConfig>

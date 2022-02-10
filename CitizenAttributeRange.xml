@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<CitizenAttributeRangeConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!--   市民属性的上下限范围：（定义的市民属性值上下限，无法通过其他方式超过这个上下限）  Upper and lower limits of citizen attributes: (The upper and lower limits of the defined citizen attribute value, which cannot be exceeded in any way)
+    LifeRange           ConfigLowerUpper           生命值上下限  Upper and lower limits of HP
+    FoodRange           ConfigLowerUpper           饱食度上下限  Upper and lower limits of satiety
+    DrinkRange          ConfigLowerUpper           口渴度上下限  Upper and lower limits of thirst
+    WarmRange           ConfigLowerUpper           温暖度上下限  Upper and lower limits of warmth
+    LoadRange           ConfigLowerUpper           负重值上下限  Upper and lower limits of load-bearing
+    EnergyRange         ConfigLowerUpper           体力值上下限  Upper and lower limits of strength
+    FoodHealthRange     ConfigLowerUpper           寿命上下限  Upper and lower limits of lifespans
+    PregnancyRange      ConfigLowerUpper           生育年纪上下限  Upper and lower limits of fertility age
+    PregnancyInterval   ConfigLowerUpper           生育周期上下限  Upper and lower limit of fertility cycle
+    HealthRange         ConfigLowerUpper           健康度上下限  Upper and lower limits of health
+    HappyRange          ConfigLowerUpper          幸福度上下限  Upper and lower limits of happiness
+       弃用配置：     Deprecated Configuration:   
+    FoodHealthRange;        ConfigLowerUpper       食物健康度上下限  Upper and lower limits of food benefit
+    CleanHealthRange;       ConfigLowerUpper       清洁健康度上下限  Upper and lower limits of cleanliness benefit
+    CleanValueRange;        ConfigLowerUpper       清洁值上下限  Upper and lower limits of cleanliness
+    SickHealthRange;        ConfigLowerUpper       疾病健康值上下限  Upper and lower limits of health value of disease
+    SickValueRange;         ConfigLowerUpper       疾病值上下限  Upper and lower limits of disease value
+    FoodHappinessRange;     ConfigLowerUpper       奢侈品幸福度上下限  Upper and lower limits of happiness from luxury goods
+    ClothesHappinessRange;  ConfigLowerUpper       衣物幸福度上下限  Upper and lower limits of apparel happiness
+    HourseHappinessRange;   ConfigLowerUpper       房屋幸福度上下限  Upper and lower limits of housing happiness
+    ClubHappinessRange;     ConfigLowerUpper       酒馆幸福度上下限  Upper and lower limits of restaurant happiness
+    ChurchHappinessRange;   ConfigLowerUpper       教堂幸福度上下限  Upper and lower limits of happiness from church
+    MournHappinessRange;    ConfigLowerUpper       悼念幸福度上下限  Upper and lower limits of memorial happiness
+    DramaHappinessRange;    ConfigLowerUpper       剧院幸福度上下限      Upper and lower limits of happiness from theater    
+ 				
+	
+	
+  备注：  Remarks:
+  int        整型，只能填整数  Integer. Only integers can be filled in
+  string       字符串类型，字母或者文字  String type, letter or text
+  bool         布尔类型，true或者false  Boolean type, true or false
+  Param2Int    自定义双整数类型（Int1间隔天数， Int2对应每次扣减的值）  Customize the double integer type (Int1 is for interval of days and Int2 for each deduction value)
+  Config2Int     自定义双整数类型（Int1对应物品类型 Int2对应随机权重）  Custom double integer type (Int1 is for item type and Int2 is for random weight)
+  ConfigLowerUpper    自定义双整数类型（Lower对应最小值 Upper对应最大值）  Custom double integer type (Lower is the minimum value and Upper is the maximum)
+
+     实例：  Instance:
+     见下方  See below
+-->   
+
+	<!--市民属性的范围，上下限-->
+  <LifeRange>
+		<Lower>0</Lower>
+		<Upper>150</Upper>
+	</LifeRange>
+	<FoodRange>
+		<Lower>0</Lower>
+		<Upper>150</Upper>
+	</FoodRange>
+	<DrinkRange>
+		<Lower>0</Lower>
+		<Upper>150</Upper>
+	</DrinkRange>
+	<WarmRange>
+		<Lower>0</Lower>
+		<Upper>150</Upper>
+	</WarmRange>
+	<!--负重上限，根据值决定当前负重值-->
+  <LoadRange>
+		<Lower>0</Lower>
+		<Upper>1000</Upper>
+	</LoadRange>
+	<EnergyRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</EnergyRange>
+	<FoodHealthRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</FoodHealthRange>
+  <CleanValueRange>
+    <Lower>0</Lower>
+    <Upper>100</Upper>
+  </CleanValueRange>
+	<CleanHealthRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</CleanHealthRange>
+	<SickHealthRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</SickHealthRange>
+  <SickValueRange>
+    <Lower>0</Lower>
+    <Upper>100</Upper>
+  </SickValueRange>
+	<FoodHappinessRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</FoodHappinessRange>
+	<ClothesHappinessRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</ClothesHappinessRange>
+	<HourseHappinessRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</HourseHappinessRange>
+	<ClubHappinessRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</ClubHappinessRange>
+	<ChurchHappinessRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</ChurchHappinessRange>
+	<MournHappinessRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</MournHappinessRange>
+	<DramaHappinessRange>
+		<Lower>0</Lower>
+		<Upper>100</Upper>
+	</DramaHappinessRange>
+  <!--市民寿命区间-->
+  <DeathDaysRange>
+    <Lower>4950</Lower>
+    <Upper>8100</Upper>
+  </DeathDaysRange>
+  <!--市民生育年龄-->
+  <PregnancyRange>
+    <Lower>1260</Lower>
+    <Upper>4950</Upper>    
+  </PregnancyRange>
+  <!--生育周期-->
+  <PregnancyInterval>
+    <Lower>300</Lower>
+    <Upper>390</Upper>
+  </PregnancyInterval>
+  <!--健康度-->
+  <HealthRange>
+    <Lower>0</Lower>
+    <Upper>2000</Upper>
+  </HealthRange>
+  <!--幸福度-->
+  <HappyRange>
+    <Lower>0</Lower>
+    <Upper>2000</Upper>
+  </HappyRange>
+</CitizenAttributeRangeConfig>

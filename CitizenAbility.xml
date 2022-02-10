@@ -1,0 +1,756 @@
+<?xml version="1.0"?>
+<ArrayOfCitizenAbilityConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <!--   市民能力配置说明：  Description of Capacity Configuration for Citizens:
+     字段        类型        说明  
+    Field        Type       Description
+  ID          int         唯一ID  Unique ID
+  Type        int          市民能力的枚举，查看下方枚举  For the enumeration of citizen capacity, see the enumerated below
+  Name        string         能力名字，备注使用不对应多语言  Competency name. Remarks are in non-corresponding multiple languages
+  Num         int          加成的数量  Quantity of Bonus
+  Percent       int          加成的百分比  Percentage of Bonus
+  P1          int          自定义参数1查看枚举中对应  Custom Parameter 1 See correspondence in the enumeration
+  P2          int          自定义参数2查看枚举中对应  Custom Parameter 2 See correspondence in the enumeration
+  LastTime      int          持续时间（时间 -1 无限）    Duration (time -1 infinite)  
+  CanCover      int          是否同类型覆盖（取最高值）  Whether to cover the same type (Max Value)
+     市民能力的枚举：  Enumeration of capacity of citizens:
+  CitizenAbility_Unknow       = 0;//   未知  Unknown
+  CitizenAbility_AddWorkingTime   = 1;    //    减少工作时间  Reduce working hours
+  CitizenAbility_AddSpeed       = 2;    //    增加移动速度  Increase Movement Speed
+  CitizenAbility_AddStudy       = 3;    //    增加学习次数  Increase the frequency of learning
+  CitizenAbility_AddProduce     = 4;    //   增加产品数量  Increase the number of products
+  CitizenAbility_AddManure      = 5;    //    增加农场施肥进度  Increase the progress of farm fertilization
+  CitizenAbility_HealPlague     = 6;    //    立即治疗瘟疫  Treat the plague immediately
+  CitizenAbility_HealPlagueForever  = 7;    //    永久治疗瘟疫  Permanently treat plague
+  CitizenAbility_AddEnergy      = 8;    //    增加体力值  Increase physical strength
+  CitizenAbility_AddTreatTimes    = 9;    //    增加瘟疫治疗次数  Increase the number of Plague treatments
+  CitizenAbility_AddTechPoint     = 10;   //    增加产出科技点  Increase production technology points
+  CitizenAbility_AddPressure      = 11;   //    压力值  Pressure
+  CitizenAbility_AddLife        = 12;   //    生命值  HP
+  CitizenAbility_AddAttr        = 13;   //    增加属性 p1为枚举  Increase attribute p1 as enumeration
+
+     实例：  Instance:
+     见下方  See below
+-->   
+  
+  <!--大小病buff-->
+  <CitizenAbilityConfig>
+    <ID>1</ID>
+	<!--Buff类型-->
+    <Type>12</Type>
+    <Name>降低生命</Name>
+    <Num>-145</Num>
+  </CitizenAbilityConfig>
+  
+    <CitizenAbilityConfig>
+    <ID>2</ID>
+	<!--Buff类型-->
+    <Type>2</Type>
+    <Name>减速</Name>
+    <Percent>-50</Percent>
+  </CitizenAbilityConfig>
+  
+   <!--鞋子降低工作疾病风险-->
+  <CitizenAbilityConfig>
+    <ID>3</ID>
+	<!--Buff类型-->
+    <Type>14</Type>
+    <Name>降低工作疾病风险</Name>
+    <Percent>-15</Percent>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>4</ID>
+	<!--Buff类型-->
+    <Type>14</Type>
+    <Name>降低工作疾病风险</Name>
+    <Percent>-30</Percent>
+  </CitizenAbilityConfig>
+  
+    <CitizenAbilityConfig>
+    <ID>5</ID>
+	<!--Buff类型-->
+    <Type>14</Type>
+    <Name>降低工作疾病风险</Name>
+    <Percent>-50</Percent>
+  </CitizenAbilityConfig>
+	
+	<!--物品对应人口压力的buff-->
+   <CitizenAbilityConfig>
+    <ID>1001</ID>
+	<!--Buff类型-->
+    <Type>11</Type>
+    <Name>酒类/糖果减少压力</Name>
+    <Num>15</Num>
+	<!--持续时间-->
+	<LastTime>120</LastTime>
+	<!--同类型是否覆盖-->
+	<CanCover>true</CanCover>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>1002</ID>
+	<!--Buff类型-->
+    <Type>11</Type>
+    <Name>药类减少压力</Name>
+    <Num>15</Num>
+	<!--持续时间-->
+	<LastTime>360</LastTime>
+	<!--同类型是否覆盖-->
+	<CanCover>true</CanCover>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>1003</ID>
+	<!--Buff类型-->
+    <Type>11</Type>
+    <Name>佳肴/野餐减少压力</Name>
+    <Num>20</Num>
+	<!--持续时间-->
+	<LastTime>120</LastTime>
+	<!--同类型是否覆盖-->
+	<CanCover>true</CanCover>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>1004</ID>
+	<!--Buff类型-->
+    <Type>11</Type>
+    <Name>水果蛋糕水果派减少压力</Name>
+    <Num>20</Num>
+	<!--持续时间-->
+	<LastTime>120</LastTime>
+	<!--同类型是否覆盖-->
+	<CanCover>true</CanCover>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>1005</ID>
+	<!--Buff类型-->
+    <Type>11</Type>
+    <Name>饮料减少压力</Name>
+    <Num>15</Num>
+	<!--持续时间-->
+	<LastTime>360</LastTime>
+	<!--同类型是否覆盖-->
+	<CanCover>true</CanCover>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>1006</ID>
+	<!--Buff类型-->
+    <Type>11</Type>
+    <Name>大餐减少压力</Name>
+    <Num>50</Num>
+	<!--持续时间-->
+	<LastTime>120</LastTime>
+	<!--同类型是否覆盖-->
+	<CanCover>true</CanCover>
+  </CitizenAbilityConfig>
+  
+  
+  <CitizenAbilityConfig>
+    <ID>2001</ID>
+    <!--Buff类型-->
+    <Type>112</Type>
+    <Name>饮品增加的幸福度值</Name>
+    <Num>100</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>2002</ID>
+    <!--Buff类型-->
+    <Type>112</Type>
+    <Name>野餐增加的幸福度值</Name>
+    <Num>100</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>2003</ID>
+    <!--Buff类型-->
+    <Type>112</Type>
+    <Name>佳肴增加的幸福度值</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>2004</ID>
+    <!--Buff类型-->
+    <Type>112</Type>
+    <Name>大餐增加的幸福度值</Name>
+    <Num>400</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>3001</ID>
+    <!--Buff类型-->
+    <Type>102</Type>
+    <Name>佳肴增加的健康度值</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig>
+
+    <CitizenAbilityConfig>
+    <ID>3002</ID>
+    <!--Buff类型-->
+    <Type>102</Type>
+    <Name>老鼠肉减健康</Name>
+    <Num>-1000</Num>
+  </CitizenAbilityConfig>
+  
+  
+   <!--正式buff-->
+   <CitizenAbilityConfig>
+    <ID>200101</ID>
+	<!--Buff类型-->
+    <Type>5</Type>
+    <Name>肥料技术</Name>
+    <Num>1</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>200301</ID>
+	<!--Buff类型-->
+    <Type>5</Type>
+    <Name>饲料技术</Name>
+    <Num>1</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>200501</ID>
+	<!--Buff类型-->
+    <Type>4</Type>
+    <Name>捕鱼技术</Name>
+    <Num>5</Num>
+  </CitizenAbilityConfig>
+    
+   <CitizenAbilityConfig>
+    <ID>400201</ID>
+    <Type>3</Type>
+    <Name>教育效率</Name>
+	<!--教育增加次数-->
+    <Num>1</Num>
+  </CitizenAbilityConfig>
+
+  <CitizenAbilityConfig>
+    <ID>400202</ID>
+    <Type>10</Type>
+    <Name>科技产出</Name>
+    <Percent>100</Percent>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>400203</ID>
+    <Type>10</Type>
+    <Name>研究院纸张科技产出</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>400204</ID>
+    <Type>10</Type>
+    <Name>研究院书籍科技产出</Name>
+    <Num>900</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>400205</ID>
+    <Type>10</Type>
+    <Name>科技产出</Name>
+    <Percent>100</Percent>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>400206</ID>
+    <Type>10</Type>
+    <Name>研究所纸张科技产出</Name>
+    <Num>120</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>400207</ID>
+    <Type>10</Type>
+    <Name>研究所绳子科技产出</Name>
+    <Num>220</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>400208</ID>
+    <Type>10</Type>
+    <Name>研究院绳子科技产出</Name>
+    <Num>300</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>400501</ID>
+    <Type>2</Type>
+    <Name>增加市民移动速度</Name>
+    <Percent>20</Percent>
+	<LastTime>180</LastTime>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>400502</ID>
+    <Type>102</Type>
+    <Name>降低市民健康度</Name>
+	<!--改变的数值-->
+    <Num>-10</Num>
+</CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>400503</ID>
+    <Type>102</Type>
+    <Name>增加市民健康度</Name>
+	<!--改变的数值-->
+    <Num>200</Num>
+</CitizenAbilityConfig>
+
+   <CitizenAbilityConfig>
+    <ID>400504</ID>
+    <Type>13</Type>
+    <Name>酒类恢复口渴度</Name>
+	<!--改变的数值-->
+    <P1>3</P1>
+    <Num>150</Num>
+</CitizenAbilityConfig>
+
+   <CitizenAbilityConfig>
+    <ID>400505</ID>
+    <Type>102</Type>
+    <Name>药酒增加市民健康度</Name>
+	<!--改变的数值-->
+    <Num>400</Num>
+</CitizenAbilityConfig>
+     
+  <CitizenAbilityConfig>
+    <ID>400601</ID>
+    <Type>102</Type>
+    <Name>增加清洁健康度</Name>
+    <Num>20</Num>
+	<!--清洁健康度枚举-->
+	<P1>32</P1>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>400602</ID>
+    <Type>1</Type>
+    <Name>减少工作时间</Name>
+    <Num>-2</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>400603</ID>
+    <Type>101</Type>
+    <Name>增加幸福度下限</Name>
+	<Num>10</Num>
+	<!--场所幸福度枚举-->
+    <p1>32</p1>
+  </CitizenAbilityConfig>
+  
+    <CitizenAbilityConfig>
+    <ID>400701</ID>
+	<!--Buff类型-->
+    <Type>6</Type>
+    <Name>立即治疗瘟疫</Name>
+    <Num>1</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>400702</ID>
+	<!--Buff类型-->
+    <Type>7</Type>
+    <Name>永久治疗瘟疫</Name>
+    <Num>1</Num>
+  </CitizenAbilityConfig>
+    
+  <CitizenAbilityConfig>
+    <ID>400703</ID>
+	<!--Buff类型-->
+    <Type>2</Type>
+    <Name>烈酒减移速</Name>
+    <Percent>-5</Percent>
+	<LastTime>180</LastTime>
+  </CitizenAbilityConfig>
+
+  <CitizenAbilityConfig>
+    <ID>400704</ID>
+	<!--Buff类型-->
+    <Type>13</Type>
+    <Name>烈酒加温暖</Name>
+	<!--改变的数值-->
+    <P1>13</P1>
+    <Num>10</Num>
+</CitizenAbilityConfig>
+  
+      <!--健康幸福的增加值，建筑失效时自动扣减（已弃用）-->
+   <CitizenAbilityConfig>
+    <ID>10101</ID>
+    <!--Buff类型-->
+    <Type>101</Type>
+    <Name>有澡堂时增加健康度下限</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig> 
+
+   <CitizenAbilityConfig>
+    <ID>10102</ID>
+    <!--Buff类型-->
+    <Type>101</Type>
+    <Name>没有澡堂时减少健康度下限</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig>   
+  
+  <CitizenAbilityConfig>
+    <ID>10201</ID>
+    <!--Buff类型-->
+    <Type>102</Type>
+    <Name>有澡堂时增加健康度值</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig> 
+  
+    <CitizenAbilityConfig>
+    <ID>10202</ID>
+    <!--Buff类型-->
+    <Type>102</Type>
+    <Name>没有澡堂时减少健康度值</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig> 
+  
+   <CitizenAbilityConfig>
+    <ID>10301</ID>
+    <!--Buff类型-->
+    <Type>103</Type>
+    <Name>有澡堂时增加健康度触发值</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig> 
+  
+    <CitizenAbilityConfig>
+    <ID>10302</ID>
+    <!--Buff类型-->
+    <Type>103</Type>
+    <Name>没有澡堂时减少健康度触发值</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig> 
+
+   <CitizenAbilityConfig>
+    <ID>10303</ID>
+    <!--Buff类型-->
+    <Type>103</Type>
+    <Name>有医院时增加健康度触发值</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig> 
+ 
+   <CitizenAbilityConfig>
+    <ID>10304</ID>
+    <!--Buff类型-->
+    <Type>103</Type>
+    <Name>没有医院时减少健康度触发值</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig> 
+  
+  <CitizenAbilityConfig>
+    <ID>10305</ID>
+    <!--Buff类型-->
+    <Type>103</Type>
+    <Name>有诊所时增加健康度触发值</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig> 
+ 
+   <CitizenAbilityConfig>
+    <ID>10306</ID>
+    <!--Buff类型-->
+    <Type>103</Type>
+    <Name>没有诊所时减少健康度触发值</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig> 
+ 
+  <CitizenAbilityConfig>
+    <ID>11101</ID>
+    <!--Buff类型-->
+    <Type>111</Type>
+    <Name>有教堂时增加幸福度下限</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig> 
+
+   <CitizenAbilityConfig>
+    <ID>11102</ID>
+    <!--Buff类型-->
+    <Type>111</Type>
+    <Name>没有教堂时减少幸福度下限</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig>   
+  
+    <CitizenAbilityConfig>
+    <ID>11103</ID>
+    <!--Buff类型-->
+    <Type>111</Type>
+    <Name>有神庙时增加幸福度下限</Name>
+    <Num>800</Num>
+  </CitizenAbilityConfig> 
+
+   <CitizenAbilityConfig>
+    <ID>11104</ID>
+    <!--Buff类型-->
+    <Type>111</Type>
+    <Name>没有神庙时减少幸福度下限</Name>
+    <Num>-800</Num>
+  </CitizenAbilityConfig> 
+  
+    <CitizenAbilityConfig>
+    <ID>304301</ID>
+    <!--Buff类型-->
+    <Type>112</Type>
+    <Name>食物增加的幸福度值</Name>
+    <Num>400</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>11201</ID>
+    <!--Buff类型-->
+    <Type>112</Type>
+    <Name>有教堂增加的幸福度值</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>11202</ID>
+    <!--Buff类型-->
+    <Type>112</Type>
+    <Name>没有教堂减少的幸福度值</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig>
+  
+    <CitizenAbilityConfig>
+    <ID>11203</ID>
+    <!--Buff类型-->
+    <Type>112</Type>
+    <Name>有神庙增加的幸福度值</Name>
+    <Num>800</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>11204</ID>
+    <!--Buff类型-->
+    <Type>112</Type>
+    <Name>没有神庙减少的幸福度值</Name>
+    <Num>-800</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>11301</ID>
+    <!--Buff类型-->
+    <Type>113</Type>
+    <Name>有教堂时幸福度最低触发增加</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>11302</ID>
+    <!--Buff类型-->
+    <Type>113</Type>
+    <Name>没有教堂时幸福度最低触发减少</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig> 
+  
+  
+  <CitizenAbilityConfig>
+    <ID>11303</ID>
+    <!--Buff类型-->
+    <Type>113</Type>
+    <Name>有酒馆时幸福度最低触发增加</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>11304</ID>
+    <!--Buff类型-->
+    <Type>113</Type>
+    <Name>没有酒馆时幸福度最低触发减少</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig> 
+    
+   <CitizenAbilityConfig>
+    <ID>11305</ID>
+    <!--Buff类型-->
+    <Type>113</Type>
+    <Name>有剧院时幸福度最低触发增加</Name>
+    <Num>200</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>11306</ID>
+    <!--Buff类型-->
+    <Type>113</Type>
+    <Name>没有剧院时幸福度最低触发减少</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig>  
+  
+	<CitizenAbilityConfig>
+    <ID>11307</ID>
+    <!--Buff类型-->
+    <Type>113</Type>
+    <Name>有神庙时幸福度最低触发增加</Name>
+    <Num>800</Num>
+  </CitizenAbilityConfig>
+  
+   <CitizenAbilityConfig>
+    <ID>11308</ID>
+    <!--Buff类型-->
+    <Type>113</Type>
+    <Name>没有神庙时幸福度最低触发减少</Name>
+    <Num>-800</Num>
+  </CitizenAbilityConfig> 
+
+
+<!--节日效果 120000开始-->
+
+<!--万圣节-->
+  <CitizenAbilityConfig>
+    <ID>120001</ID>
+    <Type>2</Type>
+    <Name>万圣节糖果加移速</Name>
+    <Percent>25</Percent>
+	<LastTime>180</LastTime>
+  </CitizenAbilityConfig>
+
+  <CitizenAbilityConfig>
+    <ID>120002</ID>
+    <Type>112</Type>
+    <Name>巨型南瓜灯加幸福</Name>
+    <Num>2000</Num>
+  </CitizenAbilityConfig>
+
+<!--随机事件buff 130000开始-->
+  <CitizenAbilityConfig>
+    <ID>130001</ID>
+    <!--Buff类型-->
+    <Type>102</Type>
+    <Name>健康度-20%</Name>
+    <Num>-200</Num>
+  </CitizenAbilityConfig>
+
+
+  <CitizenAbilityConfig>
+    <ID>130002</ID>
+    <Type>15</Type>
+    <Name>变大</Name>
+    <Num>350</Num><!--100为小孩，250为成人-->
+  </CitizenAbilityConfig>
+
+  <CitizenAbilityConfig>
+    <ID>130003</ID>
+    <Type>15</Type>
+    <Name>变小</Name>
+    <Num>80</Num><!--100为小孩，250为成人-->
+  </CitizenAbilityConfig>
+
+  <CitizenAbilityConfig>
+    <ID>130004</ID>
+	<!--Buff类型-->
+    <Type>12</Type>
+    <Name>当场死亡</Name>
+    <Num>-1000</Num>
+  </CitizenAbilityConfig>
+
+  
+  <CitizenAbilityConfig>
+    <ID>130005</ID>
+    <!--Buff类型-->
+    <Type>102</Type>
+    <Name>健康度-80%</Name>
+    <Num>-800</Num>
+  </CitizenAbilityConfig>
+
+  <CitizenAbilityConfig>
+    <ID>130006</ID>
+    <Type>13</Type>
+    <Name>饥饿归零</Name>
+	<!--改变的数值-->
+    <P1>2</P1>
+    <Num>-1000</Num><!--1000-->
+</CitizenAbilityConfig>
+
+<CitizenAbilityConfig>
+    <ID>130007</ID>
+    <Type>13</Type>
+    <Name>饥饿补满</Name>
+	<!--改变的数值-->
+    <P1>2</P1>
+    <Num>1000</Num>
+</CitizenAbilityConfig>
+
+<CitizenAbilityConfig>
+    <ID>130008</ID>
+    <Type>13</Type>
+    <Name>负重加500</Name>
+	<!--改变的数值-->
+    <P1>5</P1>
+    <Num>700</Num>
+</CitizenAbilityConfig>
+
+
+<CitizenAbilityConfig>
+    <ID>130009</ID>
+    <Type>2</Type>
+    <Name>移动速度加快100</Name>
+	<!--改变的数值-->
+    <Percent>100</Percent>
+</CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>130010</ID>
+    <Type>13</Type>
+    <Name>口渴归零</Name>
+	<!--改变的数值-->
+    <P1>3</P1>
+    <Num>-1000</Num>
+</CitizenAbilityConfig>
+
+<CitizenAbilityConfig>
+    <ID>130011</ID>
+    <Type>13</Type>
+    <Name>口渴补满</Name>
+	<!--改变的数值-->
+    <P1>3</P1>
+    <Num>1000</Num>
+</CitizenAbilityConfig>
+
+  <CitizenAbilityConfig>
+    <ID>130012</ID>
+	<!--Buff类型-->
+    <Type>12</Type>
+    <Name>生命-30%</Name>
+    <Num>-30</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>130013</ID>
+    <!--Buff类型-->
+    <Type>2</Type>
+    <Name>速度+10%</Name>
+    <Num>10</Num>
+  </CitizenAbilityConfig>
+  
+  <CitizenAbilityConfig>
+    <ID>130014</ID>
+    <!--Buff类型-->
+    <Type>3</Type>
+    <Name>教育效率</Name>
+    <Num>3</Num>
+  </CitizenAbilityConfig>  
+  
+  <CitizenAbilityConfig>
+    <ID>130015</ID>
+    <!--Buff类型-->
+    <Type>2</Type>
+    <Name>教育效率</Name>
+    <Num>3</Num>
+  </CitizenAbilityConfig>
+
+  <CitizenAbilityConfig>
+    <ID>130016</ID>
+    <!--Buff类型-->
+    <Type>113</Type>
+    <Name>幸福值归零</Name>
+    <Num>-2000</Num>
+  </CitizenAbilityConfig>
+  
+  
+</ArrayOfCitizenAbilityConfig>

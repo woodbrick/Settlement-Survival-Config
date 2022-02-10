@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<ArrayOfLogHelpConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--   帮助日志说明  Help Log Instructions
+  字段        所属类型      描述       
+  ID          int            ID不重复   No Duplicates for IDs
+  Name        string           帮助日志的页签说明  Description of help log tag
+  LogHelpList                  帮助日志列表  List of Help Log
+    LogHelp     
+      Title       string          标题  Title
+      Info        string           内容  Content
+      Icon        string           图标路径（不对应多语言）  Path of Icon (Non-corresponding to multiple languages)
+
+			
+
+  备注：  Remarks:
+  int        整型，只能填整数  Integer. Only integers can be filled in
+  string       字符串类型，字母或者文字  String type, letter or text
+
+-->
+
+
+
+  <LogHelpConfig>
+    <ID>1</ID><!--游戏概述-->
+    <Name>LogHelpConfig_Name_1</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_1</Title>
+        <Info>LogHelpConfig_Info_1</Info>
+      </LogHelp>
+      <LogHelp><!--LogHelpConfig_Info_1 按语种拆分的补充-->
+        <Info>LogHelpConfig_Info_1b</Info>
+      </LogHelp>
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>2</ID><!--视角控制-->
+    <Name>LogHelpConfig_Name_2</Name>
+    <LogHelpList>
+      <LogHelp>
+        <!--<Title>100</Title>-->
+        <Info>LogHelpConfig_Info_2</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_2</Title>
+        <Info>LogHelpConfig_Info_3</Info>
+        <Icon>2</Icon>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_3</Title>
+        <Info>LogHelpConfig_Info_4</Info>
+        <Icon>4</Icon>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_4</Title>
+        <Info>LogHelpConfig_Info_5</Info>
+        <Icon>3</Icon>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_34</Title>
+        <Info>LogHelpConfig_Info_42</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_35</Title>
+        <Info>LogHelpConfig_Info_43</Info>
+      </LogHelp>
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>3</ID><!--资源点-->
+    <Name>LogHelpConfig_Name_3</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_5</Title>
+        <Icon>50</Icon>
+        <Info>LogHelpConfig_Info_6</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_6</Title>
+         <Icon>52</Icon>
+        <Info>LogHelpConfig_Info_7</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_7</Title>
+        <Icon>49</Icon>
+        <Info>LogHelpConfig_Info_8</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_8</Title>
+        <Icon>53</Icon>
+        <Info>LogHelpConfig_Info_9</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_9</Title>
+        <Icon>51</Icon>
+        <Info>LogHelpConfig_Info_10</Info>
+      </LogHelp>
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>4</ID><!--建筑和建造-->
+    <Name>LogHelpConfig_Name_4</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Info>LogHelpConfig_Info_11</Info>
+    <Icon>7</Icon>
+      </LogHelp>
+      <LogHelp>
+        <Info>LogHelpConfig_Info_12</Info>
+    <Icon>46</Icon>
+      </LogHelp>
+      <LogHelp>
+        <Info>LogHelpConfig_Info_13</Info>
+    <Icon>12</Icon>
+      </LogHelp>
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>5</ID><!--市民状态-->
+    <Name>LogHelpConfig_Name_5</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_10</Title>
+        <Info>LogHelpConfig_Info_14</Info>
+        <Icon>44</Icon>
+      </LogHelp>
+      <LogHelp>
+        <Info>LogHelpConfig_Info_15</Info>
+      </LogHelp>
+       <Icon>45</Icon>
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>6</ID><!--维持生存-->
+    <Name>LogHelpConfig_Name_6</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Info>LogHelpConfig_Info_16</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_11</Title>
+        <Info>LogHelpConfig_Info_17</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_12</Title>
+        <Info>LogHelpConfig_Info_18</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_13</Title>
+        <Info>LogHelpConfig_Info_19</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_14</Title>
+        <Info>LogHelpConfig_Info_20</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_15</Title>
+        <Info>LogHelpConfig_Info_21</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_16</Title>
+        <Info>LogHelpConfig_Info_22</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_17</Title>
+        <Info>LogHelpConfig_Info_23</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_18</Title>
+        <Info>LogHelpConfig_Info_24</Info>
+      </LogHelp>
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>7</ID><!--健康度-->
+    <Name>LogHelpConfig_Name_7</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_19</Title>
+        <Info>LogHelpConfig_Info_25</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_20</Title>
+        <Info>LogHelpConfig_Info_26</Info>
+      </LogHelp>
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>8</ID><!--幸福度-->
+    <Name>LogHelpConfig_Name_8</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_21</Title>
+        <Info>LogHelpConfig_Info_27</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_22</Title>
+        <Info>LogHelpConfig_Info_28</Info>
+      </LogHelp>
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>9</ID><!--市民压力与生育率-->
+    <Name>LogHelpConfig_Name_9</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Info>LogHelpConfig_Info_29</Info>
+      </LogHelp>
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>10</ID><!--城镇发展-->
+    <Name>LogHelpConfig_Name_10</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_23</Title>
+        <Info>LogHelpConfig_Info_30</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_24</Title>
+        <Info>LogHelpConfig_Info_31</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_25</Title>
+        <Info>LogHelpConfig_Info_32</Info>
+      </LogHelp>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_26</Title>
+        <Info>LogHelpConfig_Info_33</Info>
+      </LogHelp>
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>11</ID><!--灾难和丰收-->
+    <Name>LogHelpConfig_Name_11</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Info>LogHelpConfig_Info_34</Info>
+      </LogHelp>
+      <LogHelp>
+       <Title>LogHelpConfig_Title_27</Title>
+        <Info>LogHelpConfig_Info_35</Info>
+     </LogHelp>
+      <LogHelp>
+      <Title>LogHelpConfig_Title_28</Title>
+        <Info>LogHelpConfig_Info_36</Info>
+      </LogHelp>
+       <LogHelp>
+      <Title>LogHelpConfig_Title_29</Title>
+        <Info>LogHelpConfig_Info_37</Info>
+      </LogHelp>
+      <LogHelp>
+      <Title>LogHelpConfig_Title_30</Title>
+        <Info>LogHelpConfig_Info_38</Info>
+      </LogHelp>
+      <LogHelp>
+      <Title>LogHelpConfig_Title_31</Title>
+        <Info>LogHelpConfig_Info_39</Info>
+      </LogHelp>
+      <LogHelp>
+      <Title>LogHelpConfig_Title_32</Title>
+        <Info>LogHelpConfig_Info_40</Info>
+      </LogHelp>
+      <LogHelp><!--干旱-->
+      <Title>LogHelpConfig_Title_36</Title>
+        <Info>LogHelpConfig_Info_44</Info>
+      </LogHelp>
+	  <LogHelp><!--地震-->
+      <Title>LogHelpConfig_Title_37</Title>
+        <Info>LogHelpConfig_Info_45</Info>
+      </LogHelp>
+	  <LogHelp><!--动物瘟疫-->
+      <Title>LogHelpConfig_Title_38</Title>
+        <Info>LogHelpConfig_Info_46</Info>
+      </LogHelp>
+	  <LogHelp><!--沙尘暴-->
+      <Title>LogHelpConfig_Title_39</Title>
+        <Info>LogHelpConfig_Info_47</Info>
+      </LogHelp>
+
+    </LogHelpList>
+  </LogHelpConfig>
+
+    <LogHelpConfig>
+    <ID>12</ID><!--重要资源-->
+    <Name>LogHelpConfig_Name_12</Name>
+    <LogHelpList>
+      <LogHelp>
+        <Title>LogHelpConfig_Title_33</Title>
+        <Info>LogHelpConfig_Info_41</Info>
+      </LogHelp>
+    </LogHelpList>
+  </LogHelpConfig>
+
+
+   
+</ArrayOfLogHelpConfig>

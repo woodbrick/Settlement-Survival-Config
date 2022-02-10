@@ -1,0 +1,990 @@
+<?xml version="1.0"?>
+<ArrayOfResSeedConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <!--  种子配置说明
+Description of Seed Preparation
+ID  int  ID不重复
+No Duplicates for IDs
+Name string 种子名字
+Seed Name
+Des string 种子的描述
+Description of Seeds
+OutputPath string 获取的途径，帮助日志中用到
+The way to get it is mentioned in the help log
+Icon string 种子的图标（路径，不需要对应多语言）
+Seed Icon (Path. Corresponding multiple languages are not required)
+ResID int 对应ResAttribute中的物件ID
+Corresponding to the object ID in the ResAttribute
+TakeNum int 每组作物的物件数量
+Number of Objects Per Group of Crops
+IsStartRandom bool 是否参与初始种子的随机
+Randomly select whether to participate in the initial seed
+Offset float 种子离散分部程度（在格子内分布的离散程度）
+Degree of Seed Discrete Division (degree of discrete distribution in the grid)
+BuildingFuncType int 归属于哪个功能建筑（对应枚举中functype）枚举查看下方
+Check the enumeration below to find which functional building (Corresponding to functype in the enumeration) is it attributed to
+	
+			
+	备注：
+	int			整型，只能填整数
+    string		字符串类型，字母或者文字
+	float		浮点数类型，小数
+	bool		布尔类型，true或者false
+ ·	
+ 
+	枚举：
+  	BuildingType_Unknow 		= 0;			//未定义
+  	BuildingType_Home 			= 1;			//居住
+  	BuildingType_Warehouse 		= 2;			//仓库
+  	BuildingType_Produce 		= 3;			//生产
+  	BuildingType_Process 		= 4;			//加工
+  	BuildingType_RangeCollect 	= 5;			//范围采集类型
+  	BuildingType_Farm 			= 6;			//农田
+  	BuildingType_Garden			= 7;			//果园
+  	BuildingType_Pasture		= 8;			//牧场
+  	BuildingType_HerbHouse		= 9;			//药草屋
+  	BuildingType_School 		= 11;			//学校
+  	BuildingType_Hospital 		= 12;			//医院
+  	BuildingType_Church 		= 13;			//教堂
+  	BuildingType_Tomb 			= 14;			//墓地
+  	BuildingType_HuntHouse 		= 15;			//狩猎小屋
+  	BuildingType_Market 		= 16;			//市场
+  	BuildingType_ForestCabin	= 17;			//护林小屋
+  	BuildingType_Guildhall		= 18;			//市政厅
+  	BuildingType_Trade			= 19;			//贸易站
+  	BuildingType_Laboratory		= 20;			//科技实验室
+  	BuildingType_RecyleBin		= 22;			//回收店
+  	BuildingType_WarmHouse		= 23;			//篝火
+  	BuildingType_BeeHouse		= 24;			//蜂房
+  //BuildingType_ResearchCarbin	= 25;			//研究小屋
+  	BuildingType_TransferStation= 26;			//中转站
+  	BuildingType_Packet			= 27;			//打包厂
+  	BuildingType_ProcessTransfer= 28;			//货物中转站 供应加工建筑
+  //BuildingType_Science 		= 29;			//科技实验室 研究所
+  	BuildingType_BathHouse		= 30;			// 澡堂
+  	BuildingType_LandTradePost	= 31;			// 陆地贸易站
+  	BuildingType_MagicBoX		= 32;			// magicbox
+  	BuildingType_RandomBuffBox	= 33;			// random event
+  	BuildingType_RepairFactory	= 34;			// 修理厂
+  	BuildingType_Boiler			= 35;			// 锅炉房
+  	BuildingType_PoliceStation	= 36;			// 警局 
+  	BuildingType_Shelter		= 37;			// 避难所 
+  	// 娱乐建筑
+  	BuildingType_Pub			= 40;			// 酒馆
+  	BuildingType_StandWorking	= 41;			// 站立工作类型
+	// 路
+  	BuildingType_Road			= 50;			// 路
+  	// 装饰建筑
+  	BuildingType_NoFunction		= 100;			// 装饰建筑 
+	
+	实例：
+	见下方
+	
+	
+ --> 
+  
+  
+  <ResSeedConfig>
+    <ID>1</ID>
+	<!--土豆-->
+    <Name>ResSeed_Name_1</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_1</Des>
+    <!--图标-->
+    <Icon>Icon_item_1</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1001</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>2</ID>
+	<!--豌豆-->
+    <Name>ResSeed_Name_2</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_2</Des>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--图标-->
+    <Icon>Icon_item_403</Icon>
+    <!--种子对应物件ID-->
+    <ResID>1002</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>3</ID>
+    <!--花椰菜-->
+    <Name>ResSeed_Name_3</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_3</Des>
+    <!--图标-->
+    <Icon>Icon_item_105</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_5</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1003</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>4</ID>
+    <!--玉米-->
+    <Name>ResSeed_Name_4</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_4</Des>
+    <!--图标-->
+    <Icon>Icon_item_2</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1004</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>5</ID>
+    <!--辣椒-->
+    <Name>ResSeed_Name_5</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_5</Des>
+    <!--图标-->
+    <Icon>Icon_item_106</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_5</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1005</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>6</ID>
+    <!--南瓜-->
+    <Name>ResSeed_Name_6</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_6</Des>
+    <!--图标-->
+    <Icon>Icon_item_107</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_5</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1006</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>7</ID>
+    <!--小麦-->
+    <Name>ResSeed_Name_7</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_7</Des>
+    <!--图标-->
+    <Icon>Icon_item_3</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1007</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>8</ID>
+    <!--卷心菜-->
+    <Name>ResSeed_Name_8</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_8</Des>
+    <!--图标-->
+    <Icon>Icon_item_108</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_5</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1008</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>9</ID>
+    <!--龙舌兰-->
+    <Name>ResSeed_Name_9</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_9</Des>
+    <!--图标-->
+    <Icon>Icon_item_33003</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_2</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1011</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>10</ID>
+    <!--亚麻种子-->
+    <Name>ResSeed_Name_10</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_10</Des>
+    <!--图标-->
+    <Icon>Icon_item_6005</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_2</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1012</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>11</ID>
+    <!--棉花-->
+    <Name>ResSeed_Name_11</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_11</Des>
+    <!--图标-->
+    <Icon>Icon_item_6006</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1013</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>12</ID>
+    <!--燕麦-->
+    <Name>ResSeed_Name_12</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_12</Des>
+    <!--图标-->
+    <Icon>Icon_item_4</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1014</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>13</ID>
+    <!--稻米-->
+    <Name>ResSeed_Name_13</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_13</Des>
+    <!--图标-->
+    <Icon>Icon_item_5</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1015</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>15</ID>
+    <!--黄豆-->
+    <Name>ResSeed_Name_14</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_14</Des>
+    <!--图标-->
+    <Icon>Icon_item_404</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1017</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>16</ID>
+    <!--鹰角豆-->
+    <Name>ResSeed_Name_15</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_15</Des>
+    <!--图标-->
+    <Icon>Icon_item_405</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1018</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>17</ID>
+    <!--笋瓜-->
+    <Name>ResSeed_Name_16</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_16</Des>
+    <!--图标-->
+    <Icon>Icon_item_110</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_5</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1019</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>18</ID>
+    <!--生菜-->
+    <Name>ResSeed_Name_17</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_17</Des>
+    <!--图标-->
+    <Icon>Icon_item_111</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_5</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1020</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>19</ID>
+    <!--番茄-->
+    <Name>ResSeed_Name_18</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_18</Des>
+    <!--图标-->
+    <Icon>Icon_item_112</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_5</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1021</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>20</ID>
+    <!--糖甜菜-->
+    <Name>ResSeed_Name_19</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_19</Des>
+    <!--图标-->
+    <Icon>Icon_item_33010</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1022</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>21</ID>
+    <!--甘蔗-->
+    <Name>ResSeed_Name_20</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_20</Des>
+    <!--图标-->
+    <Icon>Icon_item_33011</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1023</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>22</ID>
+    <!--咖啡-->
+    <Name>ResSeed_Name_21</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_21</Des>
+    <!--图标-->
+    <Icon>Icon_item_7002</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1024</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>23</ID>
+    <!--烟草-->
+    <Name>ResSeed_Name_22</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_22</Des>
+    <!--图标-->
+    <Icon>Icon_item_7003</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1025</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>24</ID>
+    <!--茶叶-->
+    <Name>ResSeed_Name_23</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_23</Des>
+    <!--图标-->
+    <Icon>Icon_item_7004</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1026</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>25</ID>
+    <!--可可-->
+    <Name>ResSeed_Name_24</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_24</Des>
+    <!--图标-->
+    <Icon>Icon_item_7005</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1027</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+  
+
+ 
+      <!--草料种子
+    <ResSeedConfig>
+    <ID>26</ID>
+    <Name>ResSeed_Name_38</Name>
+    <Des>ResSeed_Des_38</Des>
+    <Icon>Icon_item_30006</Icon>
+    <OutputPath>OutputPath_6</OutputPath>
+    <ResID>1028</ResID>
+    <TakeNum>1</TakeNum>
+    <IsStartRandom>false</IsStartRandom>
+    <BuildingFuncType>6</BuildingFuncType>
+    <Offset>0.1</Offset>
+  </ResSeedConfig>-->
+
+
+
+  <ResSeedConfig>
+    <ID>102</ID>
+    <!--苹果-->
+    <Name>ResSeed_Name_25</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_25</Des>
+    <!--图标-->
+    <Icon>Icon_item_202</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_2</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>2</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>103</ID>
+    <!--樱桃-->
+    <Name>ResSeed_Name_26</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_26</Des>
+    <!--图标-->
+    <Icon>Icon_item_203</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>3</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>104</ID>
+    <!--栗子-->
+    <Name>ResSeed_Name_27</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_27</Des>
+    <!--图标-->
+    <Icon>Icon_item_204</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>4</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>105</ID>
+    <!--桃子-->
+    <Name>ResSeed_Name_28</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_28</Des>
+    <!--图标-->
+    <Icon>Icon_item_205</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>5</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>106</ID>
+    <!--梨树-->
+    <Name>ResSeed_Name_29</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_29</Des>
+    <!--图标-->
+    <Icon>Icon_item_206</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_2</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>6</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>107</ID>
+    <!--山核桃-->
+    <Name>ResSeed_Name_30</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_30</Des>
+    <!--图标-->
+    <Icon>Icon_item_207</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>7</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>108</ID>
+    <!--李树-->
+    <Name>ResSeed_Name_31</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_31</Des>
+    <!--图标-->
+    <Icon>Icon_item_208</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>8</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>109</ID>
+    <!--葡萄-->
+    <Name>ResSeed_Name_32</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_32</Des>
+    <!--图标-->
+    <Icon>Icon_item_209</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>9</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>true</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>110</ID>
+    <!--枫树-->
+    <Name>ResSeed_Name_33</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_33</Des>
+    <!--图标-->
+    <Icon>Icon_item_33012</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>10</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>111</ID>
+    <!--白桑-->
+    <Name>ResSeed_Name_34</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_34</Des>
+    <!--图标-->
+    <Icon>Icon_item_6010</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>11</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+
+
+  <ResSeedConfig>
+    <ID>201</ID>
+    <!--林木种子-->
+    <Name>ResSeed_Name_35</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_35</Des>
+    <!--图标-->
+    <Icon>Icon_item_101801</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>5001</ResID>
+	<!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>301</ID>
+    <!--树苗-->
+    <Name>ResSeed_Name_36</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_36</Des>
+    <!--图标-->
+    <Icon>Icon_item_103001</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1010</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+
+  <ResSeedConfig>
+    <ID>302</ID>
+    <!--药草-->
+    <Name>ResSeed_Name_37</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_37</Des>
+    <!--图标-->
+    <Icon>Icon_item_2001</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_1</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1009</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+  
+    <ResSeedConfig>
+    <ID>401</ID>
+    <!--竹子-->
+    <Name>ResSeed_Name_401</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_401</Des>
+    <!--图标-->
+    <Icon>Icon_item_200002</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_8</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>5003</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+  
+  <ResSeedConfig>
+    <ID>402</ID>
+    <!--硬木种子-->
+    <Name>ResSeed_Name_402</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_402</Des>
+    <!--图标-->
+    <Icon>Icon_item_200004</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_8</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>5002</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+  
+  <ResSeedConfig>
+    <ID>403</ID>
+    <!--椰枣-->
+    <Name>ResSeed_Name_403</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_403</Des>
+    <!--图标-->
+    <Icon>Icon_item_200010</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_8</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1</ResID>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>7</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+  
+  <ResSeedConfig>
+    <ID>404</ID>
+    <!--仙人掌种子-->
+    <Name>ResSeed_Name_404</Name>
+    <!--种子描述-->
+    <Des>ResSeed_Des_404</Des>
+    <!--图标-->
+    <Icon>Icon_item_200018</Icon>
+	<!--获取途径-->
+    <OutputPath>OutputPath_8</OutputPath>
+    <!--种子对应物件ID-->
+    <ResID>1029</ResID>
+    <!--每组作物的物件数量-->
+    <TakeNum>1</TakeNum>
+    <!--是否为初始种子-->
+    <IsStartRandom>false</IsStartRandom>
+    <!--归属建筑-->
+    <BuildingFuncType>6</BuildingFuncType>
+    <!--偏移半径-->
+    <Offset>0.1</Offset>
+  </ResSeedConfig>
+  
+  
+  
+
+</ArrayOfResSeedConfig>

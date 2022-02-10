@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<FireDisasterConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--   此文件已弃用  This file is deprecated
+-->
+
+ <ID>1</ID>
+  <!--火灾持续时间-->
+  <LastRange>
+    <Lower>30</Lower>
+    <Upper>45</Upper>
+  </LastRange>
+  <!--传播间隔时间（单位：天）-->
+  <SpreadDay>10</SpreadDay>
+  <!--最大救火人数-->
+  <MaxHelp>50</MaxHelp>
+  <!--救火所需次数-->
+  <BeKilledTimes>20</BeKilledTimes>
+  <!--火灾音效-->
+  <SoundEffect></SoundEffect>
+  <!--火灾音效范围-->
+  <SoundEffect></SoundEffect>
+  <!--火灾等级-->
+  <LevelList>
+    <Level>
+      <Level>1</Level>
+      <!--触发间隔条件-->
+      <TriggerCondition>
+        <!--间隔年限-->
+        <Int1>20</Int1>
+        <!--需求人口数-->
+        <Int2>100</Int2>
+      </TriggerCondition>
+      <!--传播范围（单位：米）-->
+      <SpreadRange>8</SpreadRange>
+      <!--传播概率（单位：百分比）-->
+      <SpreadRate>50</SpreadRate>
+    </Level>
+  </LevelList>
+  <!--减少房屋耐久度-->
+  <ReduceDurability>
+  <!--多久扣一次-->
+    <Int1>1</Int1>
+  <!--房屋耐久度减少值-->
+    <Int2>-10</Int2>
+  </ReduceDurability>
+</FireDisasterConfig>

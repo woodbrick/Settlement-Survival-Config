@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<ArrayOfMapSizeConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--  初始点的刷新配置说明
+Description of refreshing configuration at starting point
+ID int 唯一ID
+Unique ID
+Name string 备注使用，需要对应多语言表
+For Remarks. Corresponding multi-language list is needed
+Index int 地图尺寸的类型（查看下方枚举）
+Map Size Type (See the enumeration below)
+MapSize int 地图的尺寸大小，对应RandomMapConfig中尺寸ID
+The Size of the Map, corresponding to the size ID of the RandomMapConfig
+FertileFarmSizeNum Config2Int 沃土点刷新（Int1格子的半径范围 Int2刷新个数）
+Fertile Farm Point Refreshing (Int1 is for grid radius range and Int2 for the number of refreshes)
+FertilePastureSizeNum Config2Int 草地点刷新（Int1格子的半径范围 Int2刷新个数）
+Fertile Pasture Point Refreshing (Int1 is for grid radius range and Int2 for the number of refreshes)
+InitFreeSeedNum int 采集点的刷新个数
+Number of Refreshes of Acquisition Points
+InitFreeAnimalChildNum int 狩猎点的刷新个数
+Number of Refreshes for Hunting Points
+FertileFishing Config2Int 钓鱼点的刷新个数（Int1格子的半径范围 Int2刷新个数）
+Number of Refreshes of Fishing Points (Int1 is for grid radius range and Int2 for the number of refreshes)
+  地图资源枚举
+Map Resource Enumeration
+MapInitResourceType_Farm= 1;  // 沃土
+// Fertile Farm
+MapInitResourceType_Pasture= 2;  // 牧场
+// Ranch
+MapInitResourceType_PropsSeed= 3;  // 种子
+// Seeds
+MapInitResourceType_Animal= 4;  // 动物
+// Animals
+MapInitResourceType_Fishing= 5;  // 鱼点
+// Fish Dots
+  地图尺寸枚举
+Map Size Enumeration
+Index 0 小地图
+Small Map
+Index 1 中地图
+Medium Map
+Index 2 大地图
+Big Map
+
+
+	
+	
+	备注：
+   int			整型，只能填整数
+   string		字符串类型，字母或者文字
+   float		浮点数类型，小数
+   Config2Int 	自定义双整数类型
+   
+   
+  
+--> 
+  
+  
+  
+  <MapSizeConfig>
+    <ID>1</ID>
+    <Name>小地图</Name>
+    <Index>0</Index>
+    <MapSize>400</MapSize>
+    <!--农田-->
+    <FertileFarmSizeNum>
+	  <!--范围-->
+      <Int1>5</Int1>
+	  <!--个数-->
+      <Int2>1</Int2>
+    </FertileFarmSizeNum>
+    <!--牧场-->
+    <FertilePastureSizeNum>
+      <Int1>5</Int1>
+      <Int2>1</Int2>
+    </FertilePastureSizeNum>
+    <!--钓鱼-->
+    <FertileFishing>
+      <Int1>1</Int1>
+      <Int2>3</Int2>
+    </FertileFishing>
+	<!--赠送种子的植物数量-->
+	<InitFreeSeedNum>3</InitFreeSeedNum>
+	<!--赠送动物的种群数量-->
+	<InitFreeAnimalChildNum>3</InitFreeAnimalChildNum>
+  </MapSizeConfig>
+  
+    <MapSizeConfig>
+    <ID>2</ID>
+    <Name>小地图</Name>
+    <Index>1</Index>
+    <MapSize>796</MapSize>
+    <!--农田-->
+    <FertileFarmSizeNum>
+      <Int1>5</Int1>
+      <Int2>2</Int2>
+    </FertileFarmSizeNum>
+    <!--牧场-->
+    <FertilePastureSizeNum>
+      <Int1>5</Int1>
+      <Int2>2</Int2>
+    </FertilePastureSizeNum>
+    <!--钓鱼-->
+    <FertileFishing>
+      <Int1>1</Int1>
+      <Int2>4</Int2>
+    </FertileFishing>
+	<!--赠送种子的植物数量-->
+	<InitFreeSeedNum>4</InitFreeSeedNum>
+	<!--赠送动物的种群数量-->
+	<InitFreeAnimalChildNum>4</InitFreeAnimalChildNum>
+  </MapSizeConfig>
+    <MapSizeConfig>
+    <ID>3</ID>
+    <Name>小地图</Name>
+    <Index>2</Index>
+    <MapSize>1096</MapSize>
+    <!--农田-->
+    <FertileFarmSizeNum>
+      <Int1>5</Int1>
+      <Int2>3</Int2>
+    </FertileFarmSizeNum>
+    <!--牧场-->
+    <FertilePastureSizeNum>
+      <Int1>5</Int1>
+      <Int2>3</Int2>
+    </FertilePastureSizeNum>
+    <!--钓鱼-->
+    <FertileFishing>
+      <Int1>1</Int1>
+      <Int2>5</Int2>
+    </FertileFishing>
+	<!--赠送种子的植物数量-->
+	<InitFreeSeedNum>5</InitFreeSeedNum>
+	<!--赠送动物的种群数量-->
+	<InitFreeAnimalChildNum>5</InitFreeAnimalChildNum>
+  </MapSizeConfig>
+</ArrayOfMapSizeConfig>
