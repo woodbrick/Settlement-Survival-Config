@@ -753,38 +753,38 @@
   </CitizenAbilityConfig>
   
   
+  <!--食物加健康1-->
+  <CitizenAbilityConfig>
+    <ID>1021001</ID>
+    <Type>102</Type>
+    <Name>食物加健康5</Name>
+    <!--改变的数值-->
+    <Num>5</Num>
+  </CitizenAbilityConfig>
   <!--食物加健康2-->
   <CitizenAbilityConfig>
     <ID>1021002</ID>
     <Type>102</Type>
-    <Name>食物加健康2</Name>
+    <Name>食物加健康10</Name>
     <!--改变的数值-->
-    <Num>4</Num>
-  </CitizenAbilityConfig>
-  <!--食物加健康4-->
-  <CitizenAbilityConfig>
-    <ID>1021004</ID>
-    <Type>102</Type>
-    <Name>食物加健康4</Name>
-    <!--改变的数值-->
-    <Num>8</Num>
+    <Num>10</Num>
   </CitizenAbilityConfig>
 
+  <!--食物减健康1-->
+  <CitizenAbilityConfig>
+    <ID>1020001</ID>
+    <Type>102</Type>
+    <Name>食物减健康5</Name>
+    <!--改变的数值-->
+    <Num>-5</Num>
+  </CitizenAbilityConfig>
   <!--食物减健康2-->
   <CitizenAbilityConfig>
     <ID>1020002</ID>
     <Type>102</Type>
-    <Name>食物减健康2</Name>
+    <Name>食物减健康10</Name>
     <!--改变的数值-->
-    <Num>-2</Num>
-  </CitizenAbilityConfig>
-  <!--食物减健康4-->
-  <CitizenAbilityConfig>
-    <ID>1020004</ID>
-    <Type>102</Type>
-    <Name>食物减健康4</Name>
-    <!--改变的数值-->
-    <Num>-4</Num>
+    <Num>-10</Num>
   </CitizenAbilityConfig>
 
   
@@ -805,21 +805,30 @@
     <Num>-4</Num>
   </CitizenAbilityConfig>
   
+  <!--食物加幸福1-->
+  <CitizenAbilityConfig>
+    <ID>1121001</ID>
+    <Type>112</Type>
+    <Name>食物加幸福5</Name>
+    <!--改变的数值-->
+    <Num>5</Num>
+  </CitizenAbilityConfig>
   <!--食物加幸福2-->
   <CitizenAbilityConfig>
     <ID>1121002</ID>
     <Type>112</Type>
-    <Name>食物加幸福2</Name>
+    <Name>食物加幸福10</Name>
     <!--改变的数值-->
     <Num>10</Num>
   </CitizenAbilityConfig>
-  <!--食物加幸福4-->
+  <!--食物加幸福3-->
   <CitizenAbilityConfig>
-    <ID>1121004</ID>
+    <ID>1121003</ID>
     <Type>112</Type>
-    <Name>食物加幸福4</Name>
+    <Name>食物加幸福15</Name>
     <!--改变的数值-->
-    <Num>20</Num>
+    <Num>15</Num>
   </CitizenAbilityConfig>
+  
   
 </ArrayOfCitizenAbilityConfig>
