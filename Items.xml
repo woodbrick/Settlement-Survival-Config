@@ -401,6 +401,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3018|3043</OutputBuilding>
 </ItemsConfig>
@@ -447,6 +451,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3018|3043</OutputBuilding>
 </ItemsConfig>
@@ -493,6 +501,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3018|3043</OutputBuilding>
 </ItemsConfig>
@@ -975,6 +987,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2002|2014|2021|2022|2026</OutputBuilding>
 </ItemsConfig>
@@ -1107,6 +1123,10 @@
     <Priority>2</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
     <!--产出建筑ID-->
@@ -1241,6 +1261,11 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2002|2014|2021|2022|2026</OutputBuilding>
 </ItemsConfig>
@@ -1287,6 +1312,11 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3022</OutputBuilding>
 </ItemsConfig>
@@ -1331,6 +1361,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1375,6 +1409,11 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1419,6 +1458,11 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1463,6 +1507,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1507,6 +1555,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1551,6 +1603,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1595,6 +1651,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1639,6 +1699,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1685,6 +1749,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3037</OutputBuilding>
 </ItemsConfig>
@@ -1731,6 +1799,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3037</OutputBuilding>
 </ItemsConfig>
@@ -1777,6 +1849,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3037</OutputBuilding>
 </ItemsConfig>
@@ -2217,6 +2293,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2004|2020|2025</OutputBuilding>
 </ItemsConfig>
@@ -2485,6 +2565,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福2-->
+      <Buff>1121002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3023</OutputBuilding>
 </ItemsConfig>
@@ -2531,6 +2615,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福2-->
+      <Buff>1121002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2577,6 +2665,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2623,6 +2715,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2669,6 +2765,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2715,6 +2815,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2761,6 +2865,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2807,6 +2915,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2853,6 +2965,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2897,6 +3013,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加幸福2-->
+      <Buff>1121002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2030</OutputBuilding>
 </ItemsConfig>
@@ -2943,6 +3063,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -3196,6 +3320,10 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
+    <BuffList>
+      <!--食物加幸福2-->
+      <Buff>1121002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3023</OutputBuilding>
 </ItemsConfig>
@@ -3372,6 +3500,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2008</OutputBuilding>
 </ItemsConfig>
@@ -3416,6 +3548,10 @@
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
+    <BuffList>
+      <!--食物加幸福2-->
+      <Buff>1121002</Buff>
+    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3021</OutputBuilding>
 </ItemsConfig>
@@ -3549,6 +3685,10 @@
     <DefaultMaxProduced>200</DefaultMaxProduced>
     <!--产出建筑ID-->
     <OutputBuilding>3063</OutputBuilding>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--物品消耗后对应的市民压力值-->
     <PressureAbilityList>
       <PressureAbility>1001</PressureAbility>
@@ -3599,6 +3739,10 @@
     <DefaultMaxProduced>200</DefaultMaxProduced>
     <!--产出建筑ID-->
     <OutputBuilding>3063</OutputBuilding>
+    <BuffList>
+      <!--食物加幸福4-->
+      <Buff>1121004</Buff>
+    </BuffList>
     <!--物品消耗后对应的市民压力值-->
     <PressureAbilityList>
       <PressureAbility>1001</PressureAbility>
@@ -10943,6 +11087,10 @@
     <IsBan>true</IsBan>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
+    <BuffList>
+      <!--食物加健康2-->
+      <Buff>1021002</Buff>
+    </BuffList>
 </ItemsConfig>
 <ItemsConfig>
     <ID>200011</ID>
@@ -11486,6 +11634,10 @@
     <DefaultMaxProduced>200</DefaultMaxProduced>
     <!--产出建筑ID-->
     <OutputBuilding>3069</OutputBuilding>
+    <BuffList>
+      <!--食物加幸福2-->
+      <Buff>1121002</Buff>
+    </BuffList>
 </ItemsConfig>
 <ItemsConfig>
     <ID>200024</ID>
