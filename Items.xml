@@ -394,6 +394,12 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -401,10 +407,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3018|3043</OutputBuilding>
 </ItemsConfig>
@@ -444,6 +446,12 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -451,10 +459,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3018|3043</OutputBuilding>
 </ItemsConfig>
@@ -494,6 +498,12 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -501,10 +511,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3018|3043</OutputBuilding>
 </ItemsConfig>
@@ -543,6 +549,12 @@
         <Int1>1</Int1>
         <!--属性值-->
         <Int2>40</Int2>
+      </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>2</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
       </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
@@ -594,6 +606,12 @@
         <!--属性值-->
         <Int2>40</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>2</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -643,6 +661,12 @@
         <Int1>1</Int1>
         <!--属性值-->
         <Int2>40</Int2>
+      </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>2</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
       </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
@@ -698,6 +722,12 @@
         <!--属性值-->
         <Int2>40</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>2</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>1</Priority>
@@ -751,6 +781,12 @@
         <Int1>1</Int1>
         <!--属性值-->
         <Int2>40</Int2>
+      </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>2</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
       </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
@@ -982,15 +1018,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2002|2014|2021|2022|2026</OutputBuilding>
 </ItemsConfig>
@@ -1118,15 +1156,17 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
     <!--产出建筑ID-->
@@ -1256,16 +1296,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2002|2014|2021|2022|2026</OutputBuilding>
 </ItemsConfig>
@@ -1305,6 +1346,18 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -1312,11 +1365,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3022</OutputBuilding>
 </ItemsConfig>
@@ -1356,15 +1404,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1404,16 +1454,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1453,16 +1504,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1502,15 +1554,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1550,15 +1604,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1598,15 +1654,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1646,15 +1704,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1694,15 +1754,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
 </ItemsConfig>
@@ -1742,6 +1804,18 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -1749,10 +1823,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3037</OutputBuilding>
 </ItemsConfig>
@@ -1792,6 +1862,12 @@
         <!--属性值-->
         <Int2>30</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -1799,10 +1875,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3037</OutputBuilding>
 </ItemsConfig>
@@ -1842,6 +1914,12 @@
         <!--属性值-->
         <Int2>30</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -1849,10 +1927,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3037</OutputBuilding>
 </ItemsConfig>
@@ -1933,6 +2007,12 @@
       <Attributes>
         <!--属性ID-->
         <Int1>1</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
@@ -2288,15 +2368,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2004|2020|2025</OutputBuilding>
 </ItemsConfig>
@@ -2558,6 +2640,12 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -2565,10 +2653,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福1-->
-      <Buff>1121001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3023</OutputBuilding>
 </ItemsConfig>
@@ -2608,6 +2692,12 @@
         <!--属性值-->
         <Int2>30</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -2615,10 +2705,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福1-->
-      <Buff>1121001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2658,6 +2744,12 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -2665,10 +2757,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2708,6 +2796,12 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -2715,10 +2809,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2758,6 +2848,12 @@
         <!--属性值-->
         <Int2>40</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>15</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -2765,10 +2861,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2808,6 +2900,12 @@
         <!--属性值-->
         <Int2>40</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>15</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -2815,10 +2913,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2858,6 +2952,12 @@
         <!--属性值-->
         <Int2>40</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -2865,10 +2965,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福3-->
-      <Buff>1121003</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2908,6 +3004,12 @@
         <!--属性值-->
         <Int2>40</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -2915,10 +3017,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福-->
-      <Buff>1121003</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -2958,6 +3056,12 @@
         <!--属性值-->
         <Int2>40</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -2965,10 +3069,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -3008,15 +3108,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加幸福1-->
-      <Buff>1121001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2030</OutputBuilding>
 </ItemsConfig>
@@ -3056,6 +3158,12 @@
         <!--属性值-->
         <Int2>40</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>15</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -3063,10 +3171,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3061</OutputBuilding>
 </ItemsConfig>
@@ -3105,6 +3209,12 @@
         <Int1>1</Int1>
         <!--属性值-->
         <Int2>40</Int2>
+      </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>2</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
       </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
@@ -3161,6 +3271,12 @@
         <!--属性值-->
         <Int2>40</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>2</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>1</Priority>
@@ -3214,6 +3330,12 @@
         <Int1>1</Int1>
         <!--属性值-->
         <Int2>40</Int2>
+      </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>2</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
       </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
@@ -3313,6 +3435,12 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -3320,10 +3448,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福1-->
-      <Buff>1121001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3023</OutputBuilding>
 </ItemsConfig>
@@ -3495,15 +3619,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>2008</OutputBuilding>
 </ItemsConfig>
@@ -3543,15 +3669,17 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
     <!--是否可以禁用-->
     <IsBan>true</IsBan>
-    <BuffList>
-      <!--食物加幸福1-->
-      <Buff>1121001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3021</OutputBuilding>
 </ItemsConfig>
@@ -3676,6 +3804,12 @@
         <Int2>800</Int2>
         <!--属性值-->
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>1</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -3685,10 +3819,6 @@
     <DefaultMaxProduced>200</DefaultMaxProduced>
     <!--产出建筑ID-->
     <OutputBuilding>3063</OutputBuilding>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--物品消耗后对应的市民压力值-->
     <PressureAbilityList>
       <PressureAbility>1001</PressureAbility>
@@ -3730,6 +3860,12 @@
         <Int2>800</Int2>
         <!--属性值-->
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>1</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>1</Priority>
@@ -3739,10 +3875,6 @@
     <DefaultMaxProduced>200</DefaultMaxProduced>
     <!--产出建筑ID-->
     <OutputBuilding>3063</OutputBuilding>
-    <BuffList>
-      <!--食物加幸福2-->
-      <Buff>1121002</Buff>
-    </BuffList>
     <!--物品消耗后对应的市民压力值-->
     <PressureAbilityList>
       <PressureAbility>1001</PressureAbility>
@@ -10775,6 +10907,12 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -10782,10 +10920,6 @@
     <IsBan>true</IsBan>
     <!--默认最大上限-->
     <DefaultMaxProduced>200</DefaultMaxProduced>
-    <BuffList>
-      <!--食物加幸福1-->
-      <Buff>1121001</Buff>
-    </BuffList>
     <!--产出建筑ID-->
     <OutputBuilding>3016|3017</OutputBuilding>
 </ItemsConfig>
@@ -11084,6 +11218,12 @@
         <!--属性值-->
         <Int2>10</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>12</Int1>
+        <!--属性值-->
+        <Int2>10</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>3</Priority>
@@ -11091,10 +11231,6 @@
     <IsBan>true</IsBan>
     <!--产出建筑ID-->
     <OutputBuilding>2003|2015</OutputBuilding>
-    <BuffList>
-      <!--食物加健康1-->
-      <Buff>1021001</Buff>
-    </BuffList>
 </ItemsConfig>
 <ItemsConfig>
     <ID>200011</ID>
@@ -11629,6 +11765,12 @@
         <!--属性值-->
         <Int2>20</Int2>
       </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>15</Int2>
+      </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
     <Priority>2</Priority>
@@ -11638,10 +11780,6 @@
     <DefaultMaxProduced>200</DefaultMaxProduced>
     <!--产出建筑ID-->
     <OutputBuilding>3069</OutputBuilding>
-    <BuffList>
-      <!--食物加幸福1-->
-      <Buff>1121001</Buff>
-    </BuffList>
 </ItemsConfig>
 <ItemsConfig>
     <ID>200024</ID>
@@ -11680,6 +11818,12 @@
         <Int1>1</Int1>
         <!--属性值-->
         <Int2>40</Int2>
+      </Attributes>
+      <Attributes>
+        <!--属性ID-->
+        <Int1>13</Int1>
+        <!--属性值-->
+        <Int2>20</Int2>
       </Attributes>
     </ItemsAttributes>
     <!--取用优先级-->
